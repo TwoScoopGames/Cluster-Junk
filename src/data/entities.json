@@ -53,9 +53,25 @@
     "width": 101,
     "height": 88
    },
+   "camera": {
+    "x": 0,
+    "y": 0
+   },
    "velocity": {
     "x": 0,
     "y": 0
+   }
+  },
+  {
+   "id": 1,
+   "name": "camera",
+   "position": {
+    "x": 0,
+    "y": 0
+   },
+   "size": {
+    "width": 1136,
+    "height": 640
    }
   }
  ]

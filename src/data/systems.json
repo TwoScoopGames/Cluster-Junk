@@ -63,6 +63,12 @@
    ]
   },
   {
+   "name": "./systems/renderer/tile-background",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "./systems/renderer/render-player",
    "scenes": [
     "main"
