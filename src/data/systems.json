@@ -37,6 +37,12 @@
    ]
   },
   {
+   "name": "splatjs:matchParent",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "splatjs:followParent",
    "scenes": [
     "main"
