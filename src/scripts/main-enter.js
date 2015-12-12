@@ -27,6 +27,7 @@ function makeTrash(entities) {
 		"width": 101,
 		"height": 88
 	};
+	trash.collisions = [];
 }
 
 function randomInRange(min, max) {

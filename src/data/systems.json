@@ -47,6 +47,12 @@
    "scenes": [
     "main"
    ]
+  },
+  {
+   "name": "./systems/simulation/handle-collisions",
+   "scenes": [
+    "main"
+   ]
   }
  ],
  "renderer": [
