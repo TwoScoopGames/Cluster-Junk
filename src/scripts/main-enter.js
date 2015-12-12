@@ -35,6 +35,8 @@ function randomInRange(min, max) {
 }
 
 module.exports = function(data) { // eslint-disable-line no-unused-vars
+	data.sounds.play("ambient-sea-track");
+
 	for (var i = 0; i < 200; i++) {
 		makeTrash(data.entities);
 	}
