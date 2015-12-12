@@ -1,1 +1,8 @@
-{}
+{
+ "box": "images/box.png",
+ "box2": "images/box2.png",
+ "milk": "images/milk.png",
+ "paper-wad": "images/paper-wad.png",
+ "tire": "images/tire.png",
+ "waves": "images/waves.png"
+}

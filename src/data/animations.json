@@ -1,2 +1,86 @@
 {
+ "box": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "box",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 101,
+     "sourceHeight": 88
+    }
+   }
+  }
+ ],
+ "box2": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "box2",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 173,
+     "sourceHeight": 135
+    }
+   }
+  }
+ ],
+ "milk": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "milk",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 51,
+     "sourceHeight": 90
+    }
+   }
+  }
+ ],
+ "paper-wad": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "paper-wad",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 76,
+     "sourceHeight": 55
+    }
+   }
+  }
+ ],
+ "tire": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "tire",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 145,
+     "sourceHeight": 144
+    }
+   }
+  }
+ ],
+ "waves": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "waves",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 1138,
+     "sourceHeight": 146
+    }
+   }
+  }
+ ]
 }
