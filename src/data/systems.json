@@ -13,13 +13,25 @@
    ]
   },
   {
-   "name": "./systems/simulation/control-player",
+   "name": "splatjs:controlPlayer",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "splatjs:applyMovement2d",
    "scenes": [
     "main"
    ]
   },
   {
    "name": "splatjs:applyVelocity",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "splatjs:applyFriction",
    "scenes": [
     "main"
    ]
