@@ -1,7 +1,7 @@
 "use strict";
 
 function getCamera(entities) {
-	return entities[0];
+	return entities[1];
 }
 
 function getScreenTopLeft(camera) {
