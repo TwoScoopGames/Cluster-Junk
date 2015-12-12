@@ -57,7 +57,8 @@
     "x": 0,
     "y": 0
    },
-   "collisions": []
+   "collisions": [],
+   "sticky": true
   },
   {
    "id": 1,
