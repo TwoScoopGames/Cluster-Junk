@@ -78,7 +78,259 @@
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 1138,
-     "sourceHeight": 146
+     "sourceHeight": 147
+    }
+   }
+  }
+ ],
+ "Fries": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "Fries",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 89,
+     "sourceHeight": 94
+    }
+   }
+  }
+ ],
+ "barrel": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "barrel",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 273,
+     "sourceHeight": 158
+    }
+   }
+  }
+ ],
+ "boot": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "boot",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 101,
+     "sourceHeight": 125
+    }
+   }
+  }
+ ],
+ "bottle": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "bottle",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 57,
+     "sourceHeight": 149
+    }
+   }
+  }
+ ],
+ "box3": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "box3",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 75,
+     "sourceHeight": 53
+    }
+   }
+  }
+ ],
+ "buoy": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "buoy",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 300,
+     "sourceHeight": 326
+    }
+   }
+  }
+ ],
+ "cheese": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "cheese",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 40,
+     "sourceHeight": 39
+    }
+   }
+  }
+ ],
+ "chickenLeg": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "chickenLeg",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 69,
+     "sourceHeight": 55
+    }
+   }
+  }
+ ],
+ "egg-carton": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "egg-carton",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 155,
+     "sourceHeight": 58
+    }
+   }
+  }
+ ],
+ "eyes": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "eyes",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 141,
+     "sourceHeight": 63
+    }
+   }
+  }
+ ],
+ "fishbone": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "fishbone",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 100,
+     "sourceHeight": 52
+    }
+   }
+  }
+ ],
+ "fishingBoat": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "fishingBoat",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 686,
+     "sourceHeight": 271
+    }
+   }
+  }
+ ],
+ "foam-plate": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "foam-plate",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 119,
+     "sourceHeight": 84
+    }
+   }
+  }
+ ],
+ "iceburg": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "iceburg",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 461,
+     "sourceHeight": 262
+    }
+   }
+  }
+ ],
+ "paper-wad2": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "paper-wad2",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 93,
+     "sourceHeight": 78
+    }
+   }
+  }
+ ],
+ "pupils": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "pupils",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 92,
+     "sourceHeight": 11
+    }
+   }
+  }
+ ],
+ "timer": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "timer",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 151,
+     "sourceHeight": 150
+    }
+   }
+  }
+ ],
+ "trashbag": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "trashbag",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 233,
+     "sourceHeight": 167
     }
    }
   }
