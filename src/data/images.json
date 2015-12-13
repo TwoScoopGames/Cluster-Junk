@@ -11,8 +11,11 @@
  "buoy": "images/buoy.png",
  "cheese": "images/cheese.png",
  "chickenLeg": "images/chickenLeg.png",
+ "controlPanel": "images/controlPanel.png",
+ "cup": "images/cup.png",
  "driftwood": "images/driftwood.png",
  "egg-carton": "images/egg-carton.png",
+ "eyelashes-f3": "images/eyelashes-f3.png",
  "eyes": "images/eyes.png",
  "fishbone": "images/fishbone.png",
  "fishingBoat": "images/fishingBoat.png",
@@ -20,6 +23,7 @@
  "hazardArea": "images/hazardArea.png",
  "iceberg": "images/iceberg.png",
  "milk": "images/milk.png",
+ "notice": "images/notice.png",
  "orangeBuoy": "images/orangeBuoy.png",
  "paper-wad": "images/paper-wad.png",
  "paper-wad2": "images/paper-wad2.png",
@@ -30,7 +34,5 @@
  "timer": "images/timer.png",
  "tire": "images/tire.png",
  "trashbag": "images/trashbag.png",
- "waves": "images/waves.png",
- "controlPanel": "images/controlPanel.png",
- "notice": "images/notice.png"
+ "waves": "images/waves.png"
 }
