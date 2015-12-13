@@ -101,12 +101,6 @@
    ]
   },
   {
-   "name": "./systems/renderer/render-player",
-   "scenes": [
-    "main"
-   ]
-  },
-  {
    "name": "splatjs:viewport.reset",
    "scenes": [
     "main"
