@@ -1,4 +1,13 @@
 {
  "ambient-sea-track": "sounds/ambient-sea-track.mp3",
- "trash-island-theme": "sounds/trash-island-theme.mp3"
+ "trash-island-theme": "sounds/trash-island-theme.mp3",
+ "sfx-crunch": "sounds/sfx-crunch.mp3",
+ "sfx-crush": "sounds/sfx-crush.mp3",
+ "sfx-metal-boom": "sounds/sfx-metal-boom.mp3",
+ "sfx-metal-dink": "sounds/sfx-metal-dink.mp3",
+ "sfx-metal-tonk": "sounds/sfx-metal-tonk.mp3",
+ "sfx-metal-tube": "sounds/sfx-metal-tube.mp3",
+ "sfx-paper-flip": "sounds/sfx-paper-flip.mp3",
+ "sfx-power-up": "sounds/sfx-power-up-quiet.mp3",
+ "sfx-rolled-paper-slap": "sounds/sfx-rolled-paper-slap.mp3"
 }

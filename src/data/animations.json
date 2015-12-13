@@ -251,12 +251,12 @@
    }
   }
  ],
- "iceburg": [
+ "iceberg": [
   {
    "time": 100,
    "properties": {
     "image": {
-     "name": "iceburg",
+     "name": "iceberg",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 461,

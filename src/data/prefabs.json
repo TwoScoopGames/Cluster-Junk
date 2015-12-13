@@ -31,7 +31,12 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-paper-flip",
+			"sfx-rolled-paper-slap"
+		]
 	},
 	"box2": {
 		"name": "box2",
@@ -65,7 +70,12 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-paper-flip",
+			"sfx-rolled-paper-slap"
+		]
 	},
 	"milk": {
 		"name": "milk",
@@ -99,7 +109,13 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-crush",
+			"sfx-paper-flip",
+			"sfx-rolled-paper-slap",
+		]
 	},
 	"paper-wad": {
 		"name": "paper-wad",
@@ -133,7 +149,13 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-crush",
+			"sfx-paper-flip",
+			"sfx-rolled-paper-slap",
+		]
 	},
 	"tire": {
 		"name": "tire",
@@ -167,7 +189,11 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-metal-boom",
+			"sfx-metal-dink"
+		]
 	},
 	"barrel": {
 		"name": "barrel",
@@ -201,7 +227,13 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-metal-boom",
+			"sfx-metal-dink",
+			"sfx-metal-tonk",
+			"sfx-metal-tube"
+		]
 	},
 	"Fries": {
 		"name": "Fries",
@@ -235,7 +267,13 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-crush",
+			"sfx-paper-flip",
+			"sfx-rolled-paper-slap",
+		]
 	},
 	"boot": {
 		"name": "boot",
@@ -269,7 +307,11 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-metal-dink",
+			"sfx-rolled-paper-slap"
+		]
 	},
 	"bottle": {
 		"name": "bottle",
@@ -303,7 +345,12 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-metal-dink",
+			"sfx-metal-tonk",
+			"sfx-metal-tube"
+		]
 	},
 	"box3": {
 		"name": "box3",
@@ -337,41 +384,12 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
-	},
-	"buoy": {
-		"name": "buoy",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 300,
-			"destinationHeight": 326
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "buoy"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 300,
-			"height": 326
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-paper-flip",
+			"sfx-rolled-paper-slap"
+		]
 	},
 	"cheese": {
 		"name": "cheese",
@@ -405,7 +423,11 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-crush"
+		]
 	},
 	"chickenLeg": {
 		"name": "chickenLeg",
@@ -439,7 +461,11 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-crush"
+		]
 	},
 	"egg-carton": {
 		"name": "egg-carton",
@@ -473,7 +499,13 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-crush",
+			"sfx-paper-flip",
+			"sfx-rolled-paper-slap",
+		]
 	},
 	"fishbone": {
 		"name": "fishbone",
@@ -507,7 +539,11 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-crush"
+		]
 	},
 	"foam-plate": {
 		"name": "foam-plate",
@@ -541,7 +577,12 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-crush",
+			"sfx-rolled-paper-slap"
+		]
 	},
 	"paper-wad2": {
 		"name": "paper-wad2",
@@ -575,7 +616,13 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-crush",
+			"sfx-paper-flip",
+			"sfx-rolled-paper-slap",
+		]
 	},
 	"trashbag": {
 		"name": "trashbag",
@@ -609,10 +656,16 @@
 			"x": 0.97,
 			"y": 0.97
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-crush",
+			"sfx-paper-flip",
+			"sfx-rolled-paper-slap",
+		]
 	},
-	"iceburg": {
-		"name": "iceburg",
+	"iceberg": {
+		"name": "iceberg",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -629,7 +682,7 @@
 			"frame": 0,
 			"loop": true,
 			"speed": 1,
-			"name": "iceburg"
+			"name": "iceberg"
 		},
 		"position": {
 			"x": 0,
@@ -639,7 +692,51 @@
 			"width": 461,
 			"height": 262
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-metal-boom",
+			"sfx-metal-dink"
+		]
+	},
+	"buoy": {
+		"name": "buoy",
+		"image": {
+			"sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 0,
+			"sourceHeight": 0,
+			"destinationX": 0,
+			"destinationY": 0,
+			"destinationWidth": 300,
+			"destinationHeight": 326
+		},
+		"type": "obstacle",
+		"animation": {
+			"time": 0,
+			"frame": 0,
+			"loop": true,
+			"speed": 1,
+			"name": "buoy"
+		},
+		"position": {
+			"x": 0,
+			"y": 0
+		},
+		"size": {
+			"width": 300,
+			"height": 326
+		},
+		"friction": {
+			"x": 0.97,
+			"y": 0.97
+		},
+		"collisions": [],
+		"noises": [
+			"sfx-metal-boom",
+			"sfx-metal-dink",
+			"sfx-metal-tonk",
+			"sfx-metal-tube"
+		]
 	},
 	"fishingBoat": {
 		"name": "fishingBoat",
@@ -669,6 +766,12 @@
 			"width": 686,
 			"height": 271
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-metal-boom",
+			"sfx-metal-dink",
+			"sfx-metal-tonk",
+			"sfx-metal-tube"
+		]
 	}
 }

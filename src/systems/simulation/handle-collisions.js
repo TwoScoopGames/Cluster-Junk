@@ -6,11 +6,11 @@ function getCamera(entities) {
 	return entities[1];
 }
 
-function resolveCollisionShortest(player, entity) {
-	var bottom = [0, entity.position.y + entity.size.height - player.position.y, 0, 0.5];
-	var top = [0, entity.position.y - player.size.height - player.position.y, 0, -0.5];
-	var right = [entity.position.x + entity.size.width - player.position.x, 0, 0.5, 0];
-	var left = [entity.position.x - player.size.width - player.position.x, 0, -0.5, 0];
+function resolveCollisionShortest(a, b, target) {
+	var bottom = [0, b.position.y + b.size.height - a.position.y, 0, 0.5];
+	var top = [0, b.position.y - a.size.height - a.position.y, 0, -0.5];
+	var right = [b.position.x + b.size.width - a.position.x, 0, 0.5, 0];
+	var left = [b.position.x - a.size.width - a.position.x, 0, -0.5, 0];
 
 	var smallest = [bottom, top, right, left].reduce(function(prev, curr) {
 		if (Math.abs(curr[0] + curr[1]) < Math.abs(prev[0] + prev[1])) {
@@ -18,10 +18,11 @@ function resolveCollisionShortest(player, entity) {
 		}
 		return prev;
 	});
-	player.position.x += smallest[0];
-	player.position.y += smallest[1];
-	player.velocity.x += smallest[2];
-	player.velocity.y += smallest[3];
+	target = target || a;
+	target.position.x += smallest[0];
+	target.position.y += smallest[1];
+	target.velocity.x += smallest[2];
+	target.velocity.y += smallest[3];
 }
 
 function center(entity) {
@@ -29,6 +30,7 @@ function center(entity) {
 	var y = entity.position.y + (entity.size.height / 2);
 	return { x: x, y: y };
 }
+
 function distanceSquared(a, b) {
 	var ca = center(a);
 	var cb = center(b);
@@ -49,6 +51,10 @@ function calculateAspectRatio() {
 var aspectRatio = calculateAspectRatio();
 window.onresize = calculateAspectRatio;
 
+function randomFrom(array){
+	return array[Math.floor(Math.random() * array.length)];
+}
+
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
 		var player = data.entities.entities[0];
@@ -58,11 +64,20 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				return;
 			}
 
+			if (other.noises && !other.silent) {
+				data.sounds.play(randomFrom(other.noises));
+				other.silent = true;
+				setTimeout(function () {
+					other.silent = false;
+				}, 800);
+			}
+
 			other.velocity = { x: 0, y: 0 };
 			onEntityDelete(other, data);
 
 			var distSq = distanceSquared(player, other);
-			if (distSq < player.radius * player.radius) {
+			var comparator = other.type === "obstacle" ? distSq * 1.15 : distSq;
+			if (comparator < player.radius * player.radius) {
 				player.area += other.size.width * other.size.height;
 				other.match = {
 					id: player.id,
@@ -70,6 +85,9 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 					offsetY: other.position.y - player.position.y
 				};
 				other.sticky = true;
+				data.sounds.play("sfx-power-up");
+			} else if (other.type === "obstacle") {
+				resolveCollisionShortest(entity, other, player);
 			} else {
 				resolveCollisionShortest(other, entity);
 			}
