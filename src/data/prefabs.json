@@ -114,7 +114,7 @@
 			"sfx-crunch",
 			"sfx-crush",
 			"sfx-paper-flip",
-			"sfx-rolled-paper-slap",
+			"sfx-rolled-paper-slap"
 		]
 	},
 	"paper-wad": {
@@ -154,11 +154,11 @@
 			"sfx-crunch",
 			"sfx-crush",
 			"sfx-paper-flip",
-			"sfx-rolled-paper-slap",
+			"sfx-rolled-paper-slap"
 		]
 	},
 	"tire": {
-		"name": "Tired little boy tire company tire - do not burn",
+		"name": "Tire - Do not burn",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -196,7 +196,7 @@
 		]
 	},
 	"barrel": {
-		"name": "Dinosaur Tears Oil Company barrel",
+		"name": "Dinosaur Leftovers Oil Company barrel",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -236,7 +236,7 @@
 		]
 	},
 	"Fries": {
-		"name": "Fries Queen extra large french fried potatoes",
+		"name": "Fries Queen XL fries",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -272,7 +272,7 @@
 			"sfx-crunch",
 			"sfx-crush",
 			"sfx-paper-flip",
-			"sfx-rolled-paper-slap",
+			"sfx-rolled-paper-slap"
 		]
 	},
 	"boot": {
@@ -504,7 +504,7 @@
 			"sfx-crunch",
 			"sfx-crush",
 			"sfx-paper-flip",
-			"sfx-rolled-paper-slap",
+			"sfx-rolled-paper-slap"
 		]
 	},
 	"fishbone": {
@@ -585,7 +585,7 @@
 		]
 	},
 	"paper-wad2": {
-		"name": "Crushed hopes and dreams, with tear stains",
+		"name": "Trump ballots",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -621,11 +621,11 @@
 			"sfx-crunch",
 			"sfx-crush",
 			"sfx-paper-flip",
-			"sfx-rolled-paper-slap",
+			"sfx-rolled-paper-slap"
 		]
 	},
 	"trashbag": {
-		"name": "Hastily discarded bag...",
+		"name": "Hastily discarded bag",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -661,7 +661,7 @@
 			"sfx-crunch",
 			"sfx-crush",
 			"sfx-paper-flip",
-			"sfx-rolled-paper-slap",
+			"sfx-rolled-paper-slap"
 		]
 	},
 	"iceberg": {
@@ -773,5 +773,126 @@
 			"sfx-metal-tonk",
 			"sfx-metal-tube"
 		]
+	},
+	"birbArea": {
+		"name": "@ProBirdsRights",
+		"image": {
+			"sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 0,
+			"sourceHeight": 0,
+			"destinationX": 0,
+			"destinationY": 0,
+			"destinationWidth": 318,
+			"destinationHeight": 344
+		},
+		"type": "obstacle",
+		"animation": {
+			"time": 0,
+			"frame": 0,
+			"loop": true,
+			"speed": 1,
+			"name": "birbArea"
+		},
+		"position": {
+			"x": 0,
+			"y": 0
+		},
+		"size": {
+			"width": 318,
+			"height": 344
+		},
+		"collisions": []
+	},
+	"hazardArea": {
+		"name": "Posted hazard area",
+		"image": {
+			"sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 0,
+			"sourceHeight": 0,
+			"destinationX": 0,
+			"destinationY": 0,
+			"destinationWidth": 86,
+			"destinationHeight": 220
+		},
+		"type": "obstacle",
+		"animation": {
+			"time": 0,
+			"frame": 0,
+			"loop": true,
+			"speed": 1,
+			"name": "hazardArea"
+		},
+		"position": {
+			"x": 0,
+			"y": 0
+		},
+		"size": {
+			"width": 86,
+			"height": 220
+		},
+		"collisions": []
+	},
+	"orangeBuoy": {
+		"name": "No ships allowed!",
+		"image": {
+			"sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 0,
+			"sourceHeight": 0,
+			"destinationX": 0,
+			"destinationY": 0,
+			"destinationWidth": 134,
+			"destinationHeight": 165
+		},
+		"type": "obstacle",
+		"animation": {
+			"time": 0,
+			"frame": 0,
+			"loop": true,
+			"speed": 1,
+			"name": "orangeBuoy"
+		},
+		"position": {
+			"x": 0,
+			"y": 0
+		},
+		"size": {
+			"width": 134,
+			"height": 165
+		},
+		"collisions": []
+	},
+	"seaweed": {
+		"name": "No ships allowed!",
+		"image": {
+			"sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 0,
+			"sourceHeight": 0,
+			"destinationX": 0,
+			"destinationY": 0,
+			"destinationWidth": 145,
+			"destinationHeight": 267
+		},
+		"type": "obstacle",
+		"animation": {
+			"time": 0,
+			"frame": 0,
+			"loop": true,
+			"speed": 1,
+			"name": "seaweed"
+		},
+		"position": {
+			"x": 0,
+			"y": 0
+		},
+		"size": {
+			"width": 145,
+			"height": 267
+		},
+		"collisions": []
 	}
+
 }

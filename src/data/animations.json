@@ -203,8 +203,8 @@
      "name": "eyes",
      "sourceX": 0,
      "sourceY": 0,
-     "sourceWidth": 141,
-     "sourceHeight": 63
+     "sourceWidth": 246,
+     "sourceHeight": 88
     }
    }
   }
@@ -287,7 +287,7 @@
      "name": "pupils",
      "sourceX": 0,
      "sourceY": 0,
-     "sourceWidth": 92,
+     "sourceWidth": 112,
      "sourceHeight": 11
     }
    }
@@ -399,8 +399,8 @@
      "name": "radar",
      "sourceX": 0,
      "sourceY": 0,
-     "sourceWidth": 160,
-     "sourceHeight": 160
+     "sourceWidth": 206,
+     "sourceHeight": 206
     }
    }
   }
@@ -415,6 +415,234 @@
      "sourceY": 0,
      "sourceWidth": 145,
      "sourceHeight": 267
+    }
+   }
+  }
+ ],
+ "controlPanel": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "controlPanel",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 194,
+     "sourceHeight": 287
+    }
+   }
+  }
+ ],
+ "cup": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "cup",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 61,
+     "sourceHeight": 52
+    }
+   }
+  }
+ ],
+ "driftwood": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "driftwood",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 573,
+     "sourceHeight": 188
+    }
+   }
+  }
+ ],
+ "eyelashes-f3": [
+  {
+   "time": 2500,
+   "properties": {
+    "image": {
+     "name": "eyelashes-f3",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 246,
+     "sourceHeight": 88
+    }
+   }
+  },
+  {
+   "time": 60,
+   "properties": {
+    "image": {
+     "name": "eyelashes-f3",
+     "sourceX": 246,
+     "sourceY": 0,
+     "sourceWidth": 246,
+     "sourceHeight": 88
+    }
+   }
+  },
+  {
+   "time": 60,
+   "properties": {
+    "image": {
+     "name": "eyelashes-f3",
+     "sourceX": 492,
+     "sourceY": 0,
+     "sourceWidth": 246,
+     "sourceHeight": 88
+    }
+   }
+  },
+  {
+   "time": 60,
+   "properties": {
+    "image": {
+     "name": "eyelashes-f3",
+     "sourceX": 246,
+     "sourceY": 0,
+     "sourceWidth": 246,
+     "sourceHeight": 88
+    }
+   }
+  }
+ ],
+ "notice": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "notice",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 583,
+     "sourceHeight": 212
+    }
+   }
+  }
+ ],
+ "sandbar-f10": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "sandbar-f10",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 179,
+     "sourceHeight": 400
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "sandbar-f10",
+     "sourceX": 179,
+     "sourceY": 0,
+     "sourceWidth": 179,
+     "sourceHeight": 400
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "sandbar-f10",
+     "sourceX": 358,
+     "sourceY": 0,
+     "sourceWidth": 179,
+     "sourceHeight": 400
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "sandbar-f10",
+     "sourceX": 537,
+     "sourceY": 0,
+     "sourceWidth": 179,
+     "sourceHeight": 400
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "sandbar-f10",
+     "sourceX": 716,
+     "sourceY": 0,
+     "sourceWidth": 179,
+     "sourceHeight": 400
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "sandbar-f10",
+     "sourceX": 895,
+     "sourceY": 0,
+     "sourceWidth": 179,
+     "sourceHeight": 400
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "sandbar-f10",
+     "sourceX": 1074,
+     "sourceY": 0,
+     "sourceWidth": 179,
+     "sourceHeight": 400
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "sandbar-f10",
+     "sourceX": 1253,
+     "sourceY": 0,
+     "sourceWidth": 179,
+     "sourceHeight": 400
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "sandbar-f10",
+     "sourceX": 1432,
+     "sourceY": 0,
+     "sourceWidth": 179,
+     "sourceHeight": 400
+    }
+   }
+  },
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "sandbar-f10",
+     "sourceX": 1611,
+     "sourceY": 0,
+     "sourceWidth": 179,
+     "sourceHeight": 400
     }
    }
   }
