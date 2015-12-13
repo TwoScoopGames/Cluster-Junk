@@ -76,8 +76,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			onEntityDelete(other, data);
 
 			var distSq = distanceSquared(player, other);
-			var comparator = other.type === "obstacle" ? distSq * 1.15 : distSq;
-			if (comparator < player.radius * player.radius) {
+			if (distSq < player.radius * player.radius) {
 				player.area += other.size.width * other.size.height;
 				other.match = {
 					id: player.id,
