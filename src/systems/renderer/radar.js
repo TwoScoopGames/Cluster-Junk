@@ -45,7 +45,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 
 		Object.keys(data.entities.entities).forEach(function(id) {
 			var entity = data.entities.entities[id];
-			if (entity.type !== "trash" || entity.sticky || entity.player) {
+			if ((entity.type !== "trash" && entity.type !== "obstacle") || entity.sticky || entity.player) {
 				return;
 			}
 
@@ -62,6 +62,9 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			var ey = scaledDist * Math.sin(angle);
 
 			context.strokeStyle = "#6abd44";
+			if (entity.type === "obstacle") {
+				context.strokeStyle = "red";
+			}
 			context.beginPath();
 			context.arc(cx + ex, cy + ey, 3, 0, Math.PI * 2);
 			context.stroke();
