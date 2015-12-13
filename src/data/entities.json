@@ -51,7 +51,16 @@
     "x": 0,
     "y": 0
    },
-   "collisions": []
+   "collisions": [],
+   "sticky": true,
+	 "timers":{
+		"goalTimer":{
+			"running": true,
+			"time": 0,
+			"max": 30000,
+			"script": "./scripts/goal-timer"
+		}
+	 }
   },
   {
    "id": 1,

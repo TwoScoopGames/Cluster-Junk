@@ -1,4 +1,5 @@
 [
 	"./scripts/main-enter",
-	"./scripts/main-exit"
+	"./scripts/main-exit",
+	"./scripts/goal-timer"
 ]

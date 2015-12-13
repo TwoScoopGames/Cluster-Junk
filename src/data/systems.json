@@ -103,6 +103,12 @@
    "scenes": [
     "main"
    ]
-  }
+ },
+ {
+	"name": "./systems/renderer/ui/timer",
+	"scenes": [
+	 "main"
+	]
+ }
  ]
 }
