@@ -86,6 +86,9 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				};
 				other.sticky = true;
 				data.sounds.play("sfx-power-up");
+				var message = other.name;
+				var notice = data.entities.entities[2];
+				notice.message = message;
 			} else if (other.type === "obstacle") {
 				resolveCollisionShortest(entity, other, player);
 			} else {
@@ -94,11 +97,15 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		});
 		player.radius = Math.sqrt(player.area / Math.PI * 2);
 
-		data.canvas.height = Math.floor(player.radius * 2 * 3);
+		var size = 600;
+		var viewportSize = Math.floor(player.radius * 2 * 3);
+		player.scale = size / viewportSize;
+
+		data.canvas.height = size;
 		data.canvas.width = data.canvas.height * aspectRatio;
 
 		var camera = getCamera(data.entities.entities);
-		camera.size.width = data.canvas.width;
-		camera.size.height = data.canvas.height;
+		camera.size.height = Math.floor(player.radius * 2 * 3);
+		camera.size.width = camera.size.height * aspectRatio;
 	}, ["sticky"]);
 };

@@ -75,6 +75,29 @@
     "width": 1136,
     "height": 640
    }
-  }
+ },
+ {
+	"id": 2,
+	"name": "notice",
+	"notice": true,
+	"message": "I am a notice.",
+
+	"position": {
+	 "x": 100,
+	 "y": 100
+	},
+	"size": {
+	 "width": 101,
+	 "height": 88
+	},
+	"timers":{
+	 "noticeTimer":{
+		 "running": false,
+		 "time": 0,
+		 "max": 500,
+		 "script": "./scripts/notice"
+	 }
+	}
+ }
  ]
 }

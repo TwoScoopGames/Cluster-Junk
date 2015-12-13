@@ -36,7 +36,7 @@ function spawnRandomly(entities, type) {
 		"angle": randomInRange(0, (Math.PI *2)),
 		"x": entity.size.width/ 2,
 		"y": entity.size.height/ 2
-	};	
+	};
 }
 
 function randomInRange(min, max) {
@@ -61,21 +61,21 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 		spawnRandomly(data.entities, "obstacle");
 	}
 
-	var cameraPosition = data.entities.entities[1].position;
-	var canvas = data.canvas;
+	var camera = data.entities.entities[1];
+	var cameraPosition = camera.position;
 	var player = data.entities.entities[0];
 	var playerSize = player.size;
 
 	var center = {
-		"x": cameraPosition.x + canvas.width / 2 - playerSize.width / 2,
-		"y": cameraPosition.y + canvas.height / 2 - playerSize.height / 2
+		"x": cameraPosition.x + camera.size.width / 2 - playerSize.width / 2,
+		"y": cameraPosition.y + camera.size.height / 2 - playerSize.height / 2
 	};
 
 	// give player entity a target to propel it toward center of screen
 	// position it at top-center
 	player.target = center;
 	player.position = {
-		"x": cameraPosition.x + canvas.width / 2 - playerSize.width / 2,
+		"x": cameraPosition.x + camera.size.width / 2 - playerSize.width / 2,
 		"y": cameraPosition.y
 	};
 	shrinkBoundingBox(player, 0.4);
@@ -92,8 +92,8 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 			"velocity": player.velocity,
 			"target": center,
 			"position": {
-				"x": cameraPosition.x + (i * canvas.width / 2) + ((i - 1.5) * player.size.width) + (canvas.height / 2),
-				"y": cameraPosition.y + canvas.height
+				"x": cameraPosition.x + (i * camera.size.width / 2) + ((i - 1.5) * player.size.width) + (camera.size.height / 2),
+				"y": cameraPosition.y + camera.size.height
 			}
 		});
 		Object.keys(newComponents).forEach(function(key) {
