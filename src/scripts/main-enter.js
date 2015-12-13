@@ -2,6 +2,12 @@
 
 var prefabs = require("../data/prefabs");
 var objectValues = require("../objectValues");
+var deadZone =  {
+	"x": 0,
+	"y": 0,
+	"width": 800,
+	"height": 600
+};
 
 function clone(obj) {
 	return JSON.parse(JSON.stringify(obj)); // gross
@@ -29,8 +35,10 @@ function spawnRandomly(entities, type) {
 		return prefab.type === type;
 	});
 	var entity = makePrefab(randomFrom(prefabsOfType), entities);
-	entity.position.x = randomInRange(-2000, 2000);
-	entity.position.y = randomInRange(-2000, 2000);
+
+	var randomPoint = randomInRect(-2000, -2000, 2000, 2000, deadZone);
+	entity.position.x = randomPoint.x;
+	entity.position.y = randomPoint.y;
 	shrinkBoundingBox(entity, 0.4);
 	entity.rotation = {
 		"angle": randomInRange(0, (Math.PI *2)),
@@ -43,8 +51,27 @@ function randomInRange(min, max) {
 	return min + Math.random() * (max - min);
 }
 
+function randomInRect(x, y, width, height, deadzone) {
+	var newX = randomInRange(x, x + width);
+	var newY = randomInRange(y, y + width);
+	if(deadZone){
+		newX = randomInRangeExcludingRange(x, x + width, deadzone.x, deadzone.width);
+		newY = randomInRangeExcludingRange(y, y + width, deadzone.y, deadzone.height);
+	}
+	return {"x": newX, "y": newY};
+}
+
 function randomFrom(array){
 	return array[Math.floor(Math.random() * array.length)];
+}
+
+function randomInRangeExcludingRange(min, max, excludeMin, excludeMax){
+	while(true){ // eslint-disable-line no-constant-condition
+		var number = randomInRange(min, max);
+		if (number < excludeMax || number > excludeMin){
+			return number;
+		}
+	}
 }
 
 module.exports = function(data) { // eslint-disable-line no-unused-vars
