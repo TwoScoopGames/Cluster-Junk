@@ -24,6 +24,21 @@ function resolveCollisionShortest(player, entity) {
 	player.velocity.y += smallest[3];
 }
 
+function center(entity) {
+	var x = entity.position.x + (entity.size.width / 2);
+	var y = entity.position.y + (entity.size.height / 2);
+	return { x: x, y: y };
+}
+function distanceSquared(a, b) {
+	var ca = center(a);
+	var cb = center(b);
+
+	var dx = ca.x - cb.x;
+	var dy = ca.y - cb.y;
+
+	return dx * dx + dy * dy;
+}
+
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
 		var player = data.entities.entities[0];
@@ -36,18 +51,23 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			// data.canvas.width += 50;
 			// data.canvas.height += 50;
 
-			// other.match = {
-			// 	id: player.id,
-			// 	offsetX: other.position.x - player.position.x,
-			// 	offsetY: other.position.y - player.position.y
-			// };
-			// other.sticky = true;
 			other.velocity = { x: 0, y: 0 };
-			resolveCollisionShortest(other, player);
 			onEntityDelete(other, data);
+
+			var distSq = distanceSquared(player, other);
+			if (distSq < player.radius * player.radius) {
+				other.match = {
+					id: player.id,
+					offsetX: other.position.x - player.position.x,
+					offsetY: other.position.y - player.position.y
+				};
+				other.sticky = true;
+			} else {
+				resolveCollisionShortest(other, entity);
+			}
 		});
 		// var camera = getCamera(data.entities.entities);
 		// camera.size.width = data.canvas.width;
 		// camera.size.height = data.canvas.height;
-	}, ["player"]);
+	}, ["sticky"]);
 };
