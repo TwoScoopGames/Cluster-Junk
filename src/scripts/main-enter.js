@@ -43,7 +43,6 @@ function randomFrom(array){
 }
 
 module.exports = function(data) { // eslint-disable-line no-unused-vars
-	var i;
 
 	data.sounds.play("ambient-sea-track", {
 		"loopStart": 0,
@@ -79,7 +78,7 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 	var prefabsOfType = objectValues(prefabs).filter(function(prefab){
 		return prefab.type === "trash";
 	});
-	for (i = 0; i < 2; i++) {
+	for (var i = 0; i < 2; i++) {
 		var trash = makePrefab(randomFrom(prefabsOfType), data.entities);
 		var newComponents = clone({
 			"movement2d": player.movement2d,
