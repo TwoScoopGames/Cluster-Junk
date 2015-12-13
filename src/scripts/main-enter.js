@@ -2,12 +2,6 @@
 
 var prefabs = require("../data/prefabs");
 var objectValues = require("../objectValues");
-var deadZone =  {
-	"x": 0,
-	"y": 0,
-	"width": 800,
-	"height": 600
-};
 
 function clone(obj) {
 	return JSON.parse(JSON.stringify(obj)); // gross
@@ -30,13 +24,13 @@ function shrinkBoundingBox(entity, pct) {
 	entity.image.destinationY -= Math.floor(yl / 2);
 }
 
-function spawnRandomly(entities, type) {
+function spawnRandomly(entities, type, deadZone) {
 	var prefabsOfType = objectValues(prefabs).filter(function(prefab){
 		return prefab.type === type;
 	});
 	var entity = makePrefab(randomFrom(prefabsOfType), entities);
 
-	var randomPoint = randomInRect(-2000, -2000, 2000, 2000, deadZone);
+	var randomPoint = randomInRect(-2000, -2000, 4000, 4000, deadZone);
 	entity.position.x = randomPoint.x;
 	entity.position.y = randomPoint.y;
 	shrinkBoundingBox(entity, 0.4);
@@ -51,27 +45,48 @@ function randomInRange(min, max) {
 	return min + Math.random() * (max - min);
 }
 
-function randomInRect(x, y, width, height, deadzone) {
-	var newX = randomInRange(x, x + width);
-	var newY = randomInRange(y, y + width);
-	if(deadZone){
-		newX = randomInRangeExcludingRange(x, x + width, deadzone.x, deadzone.width);
-		newY = randomInRangeExcludingRange(y, y + width, deadzone.y, deadzone.height);
+function randomInRect(x, y, width, height, deadZone) {
+	var point = {
+		"x": randomInRange(x, x + width),
+		"y": randomInRange(y, y + height)
+	};
+	if (deadZone) {
+		while (inDeadZone(point, deadZone)) {
+			console.log("BAD POINT", point);
+			point = {
+				"x": randomInRange(x, x + width),
+				"y": randomInRange(y, y + height)
+			};
+		}
+		console.log("GOOOOOOD POINT!", point);
 	}
-	return {"x": newX, "y": newY};
+	return point;
+}
+
+function inDeadZone(point, deadZone) {
+	var inInnerZone = point.x >= deadZone.x &&
+		point.x < deadZone.x + deadZone.width &&
+		point.y >= deadZone.y &&
+		point.y < deadZone.y + deadZone.height;
+	if (inInnerZone) {
+		return true;
+	}
+	if (!deadZone.plusShaped) {
+		return false;
+	}
+	var inPlusZone =
+		(point.x >= deadZone.x && point.x < deadZone.x + deadZone.width &&
+			point.y >= deadZone.outerY && point.y < deadZone.outerY + deadZone.outerHeight) ||
+		(point.x >= deadZone.outerX && point.x < deadZone.outerX + deadZone.outerWidth &&
+			point.y >= deadZone.y && point.y < deadZone.y + deadZone.height);
+	if (inPlusZone) {
+		return true;
+	}
+	return false;
 }
 
 function randomFrom(array){
 	return array[Math.floor(Math.random() * array.length)];
-}
-
-function randomInRangeExcludingRange(min, max, excludeMin, excludeMax){
-	while(true){ // eslint-disable-line no-constant-condition
-		var number = randomInRange(min, max);
-		if (number < excludeMax || number > excludeMin){
-			return number;
-		}
-	}
 }
 
 module.exports = function(data) { // eslint-disable-line no-unused-vars
@@ -81,30 +96,45 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 		"loopEnd": 0
 	});
 
-	for (var t = 0; t < 100; t++) {
-		spawnRandomly(data.entities, "trash");
-	}
-	for (var o = 0; o < 5; o++) {
-		spawnRandomly(data.entities, "obstacle");
-	}
+	var player = window.player = data.entities.entities[0];
+	var center = {
+		"x": player.position.x,
+		"y": player.position.y + player.size.height / 2
+	};
 
 	var camera = data.entities.entities[1];
-	var cameraPosition = camera.position;
-	var player = data.entities.entities[0];
-	var playerSize = player.size;
+	camera.position.x = window.innerWidth / 2 + player.size.width / 2;
 
-	var center = {
-		"x": cameraPosition.x + camera.size.width / 2 - playerSize.width / 2,
-		"y": cameraPosition.y + camera.size.height / 2 - playerSize.height / 2
+	var trashDeadZone = {
+		"x": player.size.width / 2 - 300,
+		"y": player.size.height / 2 - 200,
+		"width": 600,
+		"height": 400,
+		"plusShaped": true,
+		"outerX": player.size.width / 2 - 400,
+		"outerY": player.size.height / 2 - 300,
+		"outerWidth": 800,
+		"outerHeight": 600
 	};
+	for (var t = 0; t < 100; t++) {
+		spawnRandomly(data.entities, "trash", trashDeadZone);
+	}
+
+	var obstacleDeadZone = {
+		"x": player.size.width / 2 - 400,
+		"y": player.size.height / 2 - 300,
+		"width": 800,
+		"height": 600,
+		"plusShaped": false
+	};
+	for (var o = 0; o < 7; o++) {
+		spawnRandomly(data.entities, "obstacle", obstacleDeadZone);
+	}
 
 	// give player entity a target to propel it toward center of screen
 	// position it at top-center
 	player.target = center;
-	player.position = {
-		"x": cameraPosition.x + camera.size.width / 2 - playerSize.width / 2,
-		"y": cameraPosition.y
-	};
+
 	shrinkBoundingBox(player, 0.4);
 
 	// initialize two pieces of (small) trash to collide with the player
@@ -119,8 +149,8 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 			"velocity": player.velocity,
 			"target": center,
 			"position": {
-				"x": cameraPosition.x + (i * camera.size.width / 2) + ((i - 1.5) * player.size.width) + (camera.size.height / 2),
-				"y": cameraPosition.y + camera.size.height
+				"x": player.position.x + ((i - 0.5) * 600) + ((i - 1.5) * player.size.width),
+				"y": player.position.y + 600
 			}
 		});
 		Object.keys(newComponents).forEach(function(key) {
