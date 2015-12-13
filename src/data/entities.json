@@ -4,24 +4,22 @@
    "id": 0,
    "name": "player",
    "player": true,
-   "movement2d": {
-    "up": false,
-    "down": false,
-    "left": false,
-    "right": false,
+   "movement2d":{
     "upAccel": -0.02,
     "downAccel": 0.02,
     "leftAccel": -0.02,
-    "rightAccel": 0.02,
-    "upMax": -1,
-    "downMax": 1,
-    "leftMax": -1,
-    "rightMax": 1
+    "rightAccel": 0.02
    },
    "friction": {
     "x": 0.97,
     "y": 0.97
    },
+  "playerController2d": {
+    "up": "up",
+    "down": "down",
+    "left": "left",
+    "right": "right"
+    },
    "image": {
     "sourceX": 0,
     "sourceY": 0,

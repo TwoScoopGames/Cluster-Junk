@@ -12,6 +12,8 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		if (onTarget || (entity.sticky && !entity.player)) {
 			if (entity.player) {
 				movement2d.up = movement2d.down = movement2d.left = movement2d.right = false;
+				movement2d.upMax = movement2d.leftMax = -1;
+				movement2d.downMax = movement2d.rightMax = 1;
 				entity.playerController2d = {
 					"up": "up",
 					"down": "down",

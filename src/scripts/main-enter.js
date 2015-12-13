@@ -56,6 +56,8 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 		"x": cameraPosition.x + canvas.width / 2 - playerSize.width / 2,
 		"y": cameraPosition.y
 	};
+	player.movement2d.upMax = player.movement2d.leftMax = -0.03;
+	player.movement2d.downMax = player.movement2d.rightMax = 0.03;
 
 	// initialize two pieces of trash to collide with the player
 
