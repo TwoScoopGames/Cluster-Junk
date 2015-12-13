@@ -1,5 +1,7 @@
 [
 	"./scripts/main-enter",
 	"./scripts/main-exit",
-	"./scripts/goal-timer"
+	"./scripts/goal-timer",
+	"./scripts/title-enter",
+	"./scripts/title-exit"
 ]

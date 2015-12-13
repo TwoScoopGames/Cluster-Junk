@@ -65,13 +65,20 @@
    "scenes": [
     "main"
    ]
-  }
+  },
+	{
+	 "name": "./systems/simulation/start-game",
+	 "scenes": [
+		"title"
+	 ]
+	}
  ],
  "renderer": [
   {
    "name": "splatjs:clearScreen",
    "scenes": [
-    "main"
+    "main",
+		"title"
    ]
   },
   {
@@ -89,13 +96,8 @@
   {
    "name": "splatjs:drawImage",
    "scenes": [
-    "main"
-   ]
-  },
-  {
-   "name": "./systems/renderer/render-player",
-   "scenes": [
-    "main"
+    "main",
+		"title"
    ]
   },
   {
@@ -123,10 +125,22 @@
 	]
  },
  {
+	"name": "./systems/renderer/goal",
+	"scenes": [
+	 "main"
+	]
+ },
+ {
 	"name": "./systems/renderer/draw-notice",
 	"scenes": [
 	 "main"
 	]
- }
+},
+{
+ "name": "./systems/renderer/title-screen",
+ "scenes": [
+	"title"
+ ]
+}
  ]
 }

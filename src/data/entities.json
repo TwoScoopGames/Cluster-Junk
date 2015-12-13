@@ -1,10 +1,18 @@
 {
+"title": [
+	{
+		"id": 3,
+		"name": "title",
+		"title": true
+	}
+],
  "main": [
   {
    "id": 0,
    "name": "player",
    "player": true,
    "radius": 0,
+   "goalRadius": 1000,
    "area": 8888,
    "movement2d": {
     "upMax": -0.03,
@@ -80,7 +88,7 @@
    "id": 2,
    "name": "notice",
    "notice": true,
-   "message": "I am a notice.",
+   "message": "Why hello there...",
    "position": {
     "x": 100,
     "y": 100
@@ -97,6 +105,5 @@
      "script": "./scripts/notice"
     }
    }
-  }
- ]
+  }]
 }

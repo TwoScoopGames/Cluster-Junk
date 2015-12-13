@@ -196,7 +196,7 @@
 		]
 	},
 	"barrel": {
-		"name": "Dinosaur Leftovers Oil Company barrel",
+		"name": "Dinosaur Oil Company barrel",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -673,8 +673,8 @@
 			"sourceHeight": 0,
 			"destinationX": 0,
 			"destinationY": 0,
-			"destinationWidth": 461,
-			"destinationHeight": 262
+			"destinationWidth": 1353,
+			"destinationHeight": 751
 		},
 		"type": "obstacle",
 		"animation": {
@@ -689,8 +689,8 @@
 			"y": 0
 		},
 		"size": {
-			"width": 461,
-			"height": 262
+			"width": 1353,
+			"height": 751
 		},
 		"collisions": [],
 		"noises": [
@@ -747,8 +747,8 @@
 			"sourceHeight": 0,
 			"destinationX": 0,
 			"destinationY": 0,
-			"destinationWidth": 686,
-			"destinationHeight": 271
+			"destinationWidth": 1142,
+			"destinationHeight": 443
 		},
 		"type": "obstacle",
 		"animation": {
@@ -763,8 +763,8 @@
 			"y": 0
 		},
 		"size": {
-			"width": 686,
-			"height": 271
+			"width": 1142,
+			"height": 443
 		},
 		"collisions": [],
 		"noises": [
