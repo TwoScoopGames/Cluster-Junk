@@ -15,7 +15,7 @@ function makePrefab(name, entities) {
 }
 
 function makeTrash(entities, components) {
-	var trash = makePrefab("box", entities);
+	var trash = makePrefab(randomFrom(Object.keys(prefabs)), entities);
 	trash.position.x = randomInRange(-2000, 2000);
 	trash.position.y = randomInRange(-2000, 2000);
 
@@ -27,6 +27,10 @@ function makeTrash(entities, components) {
 
 function randomInRange(min, max) {
 	return min + Math.random() * (max - min);
+}
+
+function randomFrom(array){
+	return array[Math.floor(Math.random() * array.length)];
 }
 
 module.exports = function(data) { // eslint-disable-line no-unused-vars

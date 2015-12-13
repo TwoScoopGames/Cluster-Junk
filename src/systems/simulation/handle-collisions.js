@@ -2,8 +2,26 @@
 
 var onEntityDelete = require("splat-ecs/lib/systems/box-collider").onEntityDelete;
 
-function getCamera(entities) {
-	return entities[1];
+// function getCamera(entities) {
+// 	return entities[1];
+// }
+
+function resolveCollisionShortest(player, entity) {
+	var bottom = [0, entity.position.y + entity.size.height - player.position.y, 0, 0.5];
+	var top = [0, entity.position.y - player.size.height - player.position.y, 0, -0.5];
+	var right = [entity.position.x + entity.size.width - player.position.x, 0, 0.5, 0];
+	var left = [entity.position.x - player.size.width - player.position.x, 0, -0.5, 0];
+
+	var smallest = [bottom, top, right, left].reduce(function(prev, curr) {
+		if (Math.abs(curr[0] + curr[1]) < Math.abs(prev[0] + prev[1])) {
+			return curr;
+		}
+		return prev;
+	});
+	player.position.x += smallest[0];
+	player.position.y += smallest[1];
+	player.velocity.x += smallest[2];
+	player.velocity.y += smallest[3];
 }
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
@@ -15,20 +33,21 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				return;
 			}
 
-			data.canvas.width += 50;
-			data.canvas.height += 50;
+			// data.canvas.width += 50;
+			// data.canvas.height += 50;
 
-			other.match = {
-				id: player.id,
-				offsetX: other.position.x - player.position.x,
-				offsetY: other.position.y - player.position.y
-			};
-			other.sticky = true;
+			// other.match = {
+			// 	id: player.id,
+			// 	offsetX: other.position.x - player.position.x,
+			// 	offsetY: other.position.y - player.position.y
+			// };
+			// other.sticky = true;
 			other.velocity = { x: 0, y: 0 };
+			resolveCollisionShortest(other, player);
 			onEntityDelete(other, data);
 		});
-		var camera = getCamera(data.entities.entities);
-		camera.size.width = data.canvas.width;
-		camera.size.height = data.canvas.height;
-	}, ["sticky"]);
+		// var camera = getCamera(data.entities.entities);
+		// camera.size.width = data.canvas.width;
+		// camera.size.height = data.canvas.height;
+	}, ["player"]);
 };
