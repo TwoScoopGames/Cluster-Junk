@@ -1,6 +1,6 @@
 {
 	"box": {
-		"name": "box",
+		"name": "Undelivered package from 2011",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -34,7 +34,7 @@
 		"collisions": []
 	},
 	"box2": {
-		"name": "box2",
+		"name": "Vagabox tiny house",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -68,7 +68,7 @@
 		"collisions": []
 	},
 	"milk": {
-		"name": "milk",
+		"name": "Organic extra D vitamin milk",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -102,7 +102,7 @@
 		"collisions": []
 	},
 	"paper-wad": {
-		"name": "paper-wad",
+		"name": "'Do not litter' posters",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -136,7 +136,7 @@
 		"collisions": []
 	},
 	"tire": {
-		"name": "tire",
+		"name": "Tired little boy tire company tire - do not burn",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -170,7 +170,7 @@
 		"collisions": []
 	},
 	"barrel": {
-		"name": "barrel",
+		"name": "Dinosaur Tears Oil Company barrel",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -204,7 +204,7 @@
 		"collisions": []
 	},
 	"Fries": {
-		"name": "Fries",
+		"name": "Fries Queen extra large french fried potatoes",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -238,7 +238,7 @@
 		"collisions": []
 	},
 	"boot": {
-		"name": "boot",
+		"name": "Soul Mate branded boot",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -272,7 +272,7 @@
 		"collisions": []
 	},
 	"bottle": {
-		"name": "bottle",
+		"name": "Tap Dat H2O water bottle",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -306,7 +306,7 @@
 		"collisions": []
 	},
 	"box3": {
-		"name": "box3",
+		"name": "Wait, was something in there...?",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -340,7 +340,7 @@
 		"collisions": []
 	},
 	"buoy": {
-		"name": "buoy",
+		"name": "Swim at your own risk",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -374,7 +374,7 @@
 		"collisions": []
 	},
 	"cheese": {
-		"name": "cheese",
+		"name": "Weathered cheddar",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -408,7 +408,7 @@
 		"collisions": []
 	},
 	"chickenLeg": {
-		"name": "chickenLeg",
+		"name": "Piece of poultry",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -442,7 +442,7 @@
 		"collisions": []
 	},
 	"egg-carton": {
-		"name": "egg-carton",
+		"name": "Baby chicken transporter",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -476,7 +476,7 @@
 		"collisions": []
 	},
 	"fishbone": {
-		"name": "fishbone",
+		"name": "Expired aquatic being",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -510,7 +510,7 @@
 		"collisions": []
 	},
 	"foam-plate": {
-		"name": "foam-plate",
+		"name": "Totally wasteful food carrier",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -544,7 +544,7 @@
 		"collisions": []
 	},
 	"paper-wad2": {
-		"name": "paper-wad2",
+		"name": "Crushed hopes and dreams, with tear stains",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -578,7 +578,7 @@
 		"collisions": []
 	},
 	"trashbag": {
-		"name": "trashbag",
+		"name": "Hastily discarded bag...",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -612,7 +612,7 @@
 		"collisions": []
 	},
 	"iceburg": {
-		"name": "iceburg",
+		"name": "OMG an iceburg!",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -642,7 +642,7 @@
 		"collisions": []
 	},
 	"fishingBoat": {
-		"name": "fishingBoat",
+		"name": "SS Not-So-Swole fishing boat",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
