@@ -8,9 +8,6 @@ function getCamera(entities) {
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
-		if (entity.collisions.length === 0) {
-			return;
-		}
 		var player = data.entities.entities[0];
 		entity.collisions.forEach(function(id) {
 			var other = data.entities.entities[id];
