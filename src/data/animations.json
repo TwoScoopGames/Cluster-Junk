@@ -153,20 +153,6 @@
    }
   }
  ],
- "buoy": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "buoy",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 300,
-     "sourceHeight": 326
-    }
-   }
-  }
- ],
  "cheese": [
   {
    "time": 100,
