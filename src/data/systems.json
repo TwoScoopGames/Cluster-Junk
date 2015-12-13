@@ -97,7 +97,7 @@
    "scenes": [
     "main"
    ]
-  },
+ },
   {
    "name": "splatjs:viewport.reset",
    "scenes": [
