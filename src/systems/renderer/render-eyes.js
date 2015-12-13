@@ -10,7 +10,7 @@ function pupilOffset(entity) {
 		px += 20;
 	}
 	if (entity.movement2d.up) {
-		py -= 20;
+		py -= 10;
 	}
 	if (entity.movement2d.down) {
 		py += 20;
@@ -55,6 +55,13 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		py += pupilOffsetY;
 
 		context.drawImage(pupils, px, py);
+
+		var lids = data.images.get("eyelashes-f3");
+		var lw = lids.width / 3;
+		var lidFrame = 0;
+		var lx = x - (lw / 2);
+		var ly = y - (lids.height / 2);
+		context.drawImage(lids, (lidFrame * lw), 0, lw, lids.height, lx, ly, lw, lids.height);
 
 	}, ["player", "position", "size", "radius"]);
 };
