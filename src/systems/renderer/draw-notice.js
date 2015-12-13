@@ -15,8 +15,8 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 
 			context.fillStyle = "#3e311a";
 			context.font = "55px blanch";
-			noticeTextY += simpleEasing(noticeTextY, 105, 0.2);
-			context.fillText(notice.message, 340,noticeTextY);
+			noticeTextY += simpleEasing(noticeTextY, 106, 0.2);
+			context.fillText(notice.message, 295,noticeTextY);
 		}
 	}, ["notice"]);
 };
