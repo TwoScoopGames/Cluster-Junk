@@ -7,7 +7,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		if (remainingSeconds < 100){
 			remainingSeconds = "0" + remainingSeconds;
 		}else if(remainingSeconds < 10){
-			remainingSeconds = "00)" + remainingSeconds;
+			remainingSeconds = "00" + remainingSeconds;
 		}
 		context.drawImage(data.images.get("timer"), 970, 5);
 
