@@ -74,9 +74,9 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 		"y": cameraPosition.y
 	};
 
-	// initialize two pieces of trash to collide with the player
-	var prefabsOfType = objectValues(prefabs).filter(function(prefab){
-		return prefab.type === "trash";
+	// initialize two pieces of (small) trash to collide with the player
+	var prefabsOfType = objectValues(prefabs).filter(function(prefab) {
+		return prefab.type === "trash" && prefab.size.height <= 55;
 	});
 	for (var i = 0; i < 2; i++) {
 		var trash = makePrefab(randomFrom(prefabsOfType), data.entities);
@@ -86,7 +86,7 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 			"velocity": player.velocity,
 			"target": center,
 			"position": {
-				"x": cameraPosition.x + (i * canvas.width),
+				"x": cameraPosition.x + (i * canvas.width / 2) + (canvas.height / 2),
 				"y": cameraPosition.y + canvas.height
 			}
 		});

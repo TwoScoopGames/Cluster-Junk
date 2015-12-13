@@ -52,7 +52,6 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			// data.canvas.height += 50;
 
 			other.velocity = { x: 0, y: 0 };
-			resolveCollisionShortest(other, player);
 			onEntityDelete(other, data);
 
 			var distSq = distanceSquared(player, other);
