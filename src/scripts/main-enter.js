@@ -14,15 +14,10 @@ function makePrefab(name, entities) {
 	return copy;
 }
 
-function makeTrash(entities, components) {
+function makeTrash(entities) {
 	var trash = makePrefab(randomFrom(Object.keys(prefabs)), entities);
 	trash.position.x = randomInRange(-2000, 2000);
 	trash.position.y = randomInRange(-2000, 2000);
-
-	components = components || {};
-	Object.keys(components).forEach(function (key) {
-		trash[key] = components[key];
-	});
 }
 
 function randomInRange(min, max) {
@@ -34,12 +29,14 @@ function randomFrom(array){
 }
 
 module.exports = function(data) { // eslint-disable-line no-unused-vars
+	var i;
+
 	data.sounds.play("ambient-sea-track", {
 		"loopStart": 0,
 		"loopEnd": 0
 	});
 
-	for (var i = 0; i < 200; i++) {
+	for (i = 0; i < 0; i++) {
 		makeTrash(data.entities);
 	}
 
@@ -60,25 +57,22 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 		"x": cameraPosition.x + canvas.width / 2 - playerSize.width / 2,
 		"y": cameraPosition.y
 	};
-	player.movement2d.upMax = player.movement2d.leftMax = -0.03;
-	player.movement2d.downMax = player.movement2d.rightMax = 0.03;
 
 	// initialize two pieces of trash to collide with the player
-
-	// position is bottom-left
-	makeTrash(data.entities, {
-		"target": center,
-		"position": {
-			"x": cameraPosition.x,
-			"y": cameraPosition.y + canvas.height
-		}
-	});
-	// position is bottom-right
-	makeTrash(data.entities, {
-		"target": center,
-		"position": {
-			"x": cameraPosition.x + canvas.width,
-			"y": cameraPosition.y + canvas.height
-		}
-	});
+	for (i = 0; i < 2; i++) {
+		var trash = makePrefab(randomFrom(Object.keys(prefabs)), data.entities);
+		var newComponents = clone({
+			"movement2d": player.movement2d,
+			"friction": player.friction,
+			"velocity": player.velocity,
+			"target": center,
+			"position": {
+				"x": cameraPosition.x + (i * canvas.width),
+				"y": cameraPosition.y + canvas.height
+			}
+		});
+		Object.keys(newComponents).forEach(function(key) {
+			trash[key] = newComponents[key];
+		});
+	}
 };

@@ -30,33 +30,29 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 					"loopEnd": 40.0
 				});
 			} else {
-				entity.movement2d = null;
+				delete entity.movement2d;
 			}
+			delete entity.target;
 		} else {
-			movement2d = entity.movement2d = movement2d || {
-				"upAccel": -0.02,
-				"downAccel": 0.02,
-				"leftAccel": -0.02,
-				"rightAccel": 0.02,
-				"upMax": -1,
-				"downMax": 1,
-				"leftMax": -1,
-				"rightMax": 1
-			};
 			if (entity.position.x > entity.target.x) {
+				console.log(entity.name || entity.animation.name, "left");
 				movement2d.left = true;
 				movement2d.right = false;
 			} else if (entity.position.x < entity.target.x) {
+				console.log(entity.name || entity.animation.name, "right");
 				movement2d.right = true;
 				movement2d.left = false;
 			}
 			if (entity.position.y > entity.target.y) {
+				console.log(entity.name || entity.animation.name, "up");
 				movement2d.up = true;
 				movement2d.down = false;
 			} else if (entity.position.y < entity.target.y) {
+				console.log(entity.name || entity.animation.name, "down");
 				movement2d.down = true;
 				movement2d.up = false;
 			}
+			console.log("endofturn", JSON.stringify(entity));
 		}
 	}, ["target"]);
 };
