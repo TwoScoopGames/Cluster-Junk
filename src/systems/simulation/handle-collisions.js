@@ -70,6 +70,9 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 					offsetY: other.position.y - player.position.y
 				};
 				other.sticky = true;
+				var message = other.name;
+				var notice = data.entities.entities[2];
+				notice.message = message;
 			} else {
 				resolveCollisionShortest(other, entity);
 			}

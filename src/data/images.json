@@ -31,5 +31,6 @@
  "tire": "images/tire.png",
  "trashbag": "images/trashbag.png",
  "waves": "images/waves.png",
- "controlPanel": "images/controlPanel.png"
+ "controlPanel": "images/controlPanel.png",
+ "notice": "images/notice.png"
 }
