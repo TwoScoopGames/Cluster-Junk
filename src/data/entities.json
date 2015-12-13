@@ -87,7 +87,7 @@
    "id": 2,
    "name": "notice",
    "notice": true,
-   "message": "I am a notice.",
+   "message": "Why hello there...",
    "position": {
     "x": 100,
     "y": 100
