@@ -12,6 +12,11 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			entitiesWithTarget.push(entity);
 		}
 		var movement2d = entity.movement2d;
+		movement2d.up = false;
+		movement2d.down = false;
+		movement2d.left = false;
+		movement2d.right = false;
+
 		var fudgeFactor = entity.player ? 5 : data.entities.entities[0].radius - 50;
 		if (closeEnough(entity.position, entity.target, fudgeFactor)) {
 			if (entity.player) {
