@@ -56,6 +56,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 
 			var distSq = distanceSquared(player, other);
 			if (distSq < player.radius * player.radius) {
+				player.area += other.size.width * other.size.height;
 				other.match = {
 					id: player.id,
 					offsetX: other.position.x - player.position.x,
@@ -66,6 +67,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				resolveCollisionShortest(other, entity);
 			}
 		});
+		player.radius = Math.sqrt(player.area / Math.PI * 2);
 		// var camera = getCamera(data.entities.entities);
 		// camera.size.width = data.canvas.width;
 		// camera.size.height = data.canvas.height;

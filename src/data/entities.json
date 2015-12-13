@@ -4,7 +4,8 @@
    "id": 0,
    "name": "player",
    "player": true,
-   "radius": 150,
+   "radius": 0,
+   "area": 8888,
    "movement2d": {
     "up": false,
     "down": false,
