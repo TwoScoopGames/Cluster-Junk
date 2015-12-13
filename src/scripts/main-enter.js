@@ -52,13 +52,11 @@ function randomInRect(x, y, width, height, deadZone) {
 	};
 	if (deadZone) {
 		while (inDeadZone(point, deadZone)) {
-			console.log("BAD POINT", point);
 			point = {
 				"x": randomInRange(x, x + width),
 				"y": randomInRange(y, y + height)
 			};
 		}
-		console.log("GOOOOOOD POINT!", point);
 	}
 	return point;
 }
@@ -99,11 +97,11 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 	var player = window.player = data.entities.entities[0];
 	var center = {
 		"x": player.position.x,
-		"y": player.position.y + player.size.height / 2
+		"y": player.position.y + 300 - player.size.height / 2
 	};
 
 	var camera = data.entities.entities[1];
-	camera.position.x = window.innerWidth / 2 + player.size.width / 2;
+	camera.position.x = -window.innerWidth / 4 + player.size.width / 2;
 
 	var trashDeadZone = {
 		"x": player.size.width / 2 - 300,
@@ -149,7 +147,7 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 			"velocity": player.velocity,
 			"target": center,
 			"position": {
-				"x": player.position.x + ((i - 0.5) * 600) + ((i - 1.5) * player.size.width),
+				"x": player.position.x + ((i - 0.5) * 600) + ((i - 0.5) * player.size.width),
 				"y": player.position.y + 600
 			}
 		});

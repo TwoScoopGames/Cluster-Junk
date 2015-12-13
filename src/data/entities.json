@@ -64,8 +64,8 @@
    "id": 1,
    "name": "camera",
    "position": {
-    "x": 0,
-    "y": -256
+    "x": -518,
+    "y": 0
    },
    "camera": {
     "x": 0,
