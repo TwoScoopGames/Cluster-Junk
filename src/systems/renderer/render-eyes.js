@@ -76,6 +76,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				"left": "left",
 				"right": "right"
 			};
+			entity.timers.goalTimer.running = true;
 		}
 		var lw = lids.width / 3;
 		var lx = x - (lw / 2);

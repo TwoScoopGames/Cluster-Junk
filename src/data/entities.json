@@ -61,9 +61,9 @@
    "sticky": true,
    "timers": {
     "goalTimer": {
-     "running": true,
+     "running": false,
      "time": 0,
-     "max": 30000,
+     "max": 60000,
      "script": "./scripts/goal-timer"
     }
    }
