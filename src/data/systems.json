@@ -97,13 +97,19 @@
    "scenes": [
     "main"
    ]
- },
+  },
   {
    "name": "splatjs:viewport.reset",
    "scenes": [
     "main"
    ]
- },
+  },
+  {
+   "name": "./systems/renderer/render-eyes",
+   "scenes": [
+    "main"
+   ]
+  },
  {
 	"name": "./systems/renderer/timer",
 	"scenes": [
