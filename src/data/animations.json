@@ -320,5 +320,103 @@
     }
    }
   }
+ ],
+ "announcementBox": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "announcementBox",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 614,
+     "sourceHeight": 430
+    }
+   }
+  }
+ ],
+ "birbArea": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "birbArea",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 318,
+     "sourceHeight": 344
+    }
+   }
+  }
+ ],
+ "buoy": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "buoy",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 300,
+     "sourceHeight": 326
+    }
+   }
+  }
+ ],
+ "hazardArea": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "hazardArea",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 86,
+     "sourceHeight": 220
+    }
+   }
+  }
+ ],
+ "orangeBuoy": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "orangeBuoy",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 134,
+     "sourceHeight": 165
+    }
+   }
+  }
+ ],
+ "radar": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "radar",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 160,
+     "sourceHeight": 160
+    }
+   }
+  }
+ ],
+ "seaweed": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "seaweed",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 145,
+     "sourceHeight": 267
+    }
+   }
+  }
  ]
 }
