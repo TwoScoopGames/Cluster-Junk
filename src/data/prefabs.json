@@ -893,6 +893,66 @@
 			"height": 267
 		},
 		"collisions": []
+	},
+	"drifwood": {
+		"name": "Driftwood",
+		"image": {
+			"sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 0,
+			"sourceHeight": 0,
+			"destinationX": 0,
+			"destinationY": 0,
+			"destinationWidth": 573,
+			"destinationHeight": 188
+		},
+		"type": "trash",
+		"animation": {
+			"time": 0,
+			"frame": 0,
+			"loop": true,
+			"speed": 1,
+			"name": "driftwood"
+		},
+		"position": {
+			"x": 0,
+			"y": 0
+		},
+		"size": {
+			"width": 573,
+			"height": 188
+		},
+		"collisions": []
+	},
+	"cup": {
+		"name": "Crushed red partycups",
+		"image": {
+			"sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 0,
+			"sourceHeight": 0,
+			"destinationX": 0,
+			"destinationY": 0,
+			"destinationWidth": 61,
+			"destinationHeight": 52
+		},
+		"type": "trash",
+		"animation": {
+			"time": 0,
+			"frame": 0,
+			"loop": true,
+			"speed": 1,
+			"name": "cup"
+		},
+		"position": {
+			"x": 0,
+			"y": 0
+		},
+		"size": {
+			"width": 61,
+			"height": 52
+		},
+		"collisions": []
 	}
 
 }

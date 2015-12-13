@@ -13,6 +13,34 @@
    }
   }
  ],
+ "cup": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "cup",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 61,
+     "sourceHeight": 52
+    }
+   }
+  }
+ ],
+ "driftwood": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "driftwood",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 573,
+     "sourceHeight": 188
+    }
+   }
+  }
+ ],
  "box2": [
   {
    "time": 100,
