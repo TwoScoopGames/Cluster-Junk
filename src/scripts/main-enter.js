@@ -15,6 +15,15 @@ function makePrefab(prefab, entities) {
 	return copy;
 }
 
+function shrinkBoundingBox(entity, pct) {
+	var xl = Math.floor(entity.size.width * pct);
+	var yl = Math.floor(entity.size.height * pct);
+	entity.size.width -= xl;
+	entity.size.height -= yl;
+	entity.image.destinationX -= Math.floor(xl / 2);
+	entity.image.destinationY -= Math.floor(yl / 2);
+}
+
 function spawnRandomly(entities, type) {
 	var prefabsOfType = objectValues(prefabs).filter(function(prefab){
 		return prefab.type === type;
@@ -22,6 +31,7 @@ function spawnRandomly(entities, type) {
 	var entity = makePrefab(randomFrom(prefabsOfType), entities);
 	entity.position.x = randomInRange(-2000, 2000);
 	entity.position.y = randomInRange(-2000, 2000);
+	shrinkBoundingBox(entity, 0.4);
 }
 
 function randomInRange(min, max) {
