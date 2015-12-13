@@ -36,7 +36,7 @@ function spawnRandomly(entities, type) {
 		"angle": randomInRange(0, (Math.PI *2)),
 		"x": entity.size.width/ 2,
 		"y": entity.size.height/ 2
-	};	
+	};
 }
 
 function randomInRange(min, max) {
