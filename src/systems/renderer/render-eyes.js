@@ -26,9 +26,13 @@ function tween(start, end, pct) {
 
 var pupilOffsetX = 0;
 var pupilOffsetY = 0;
+var lidFrame = 0;
+var lidTime = 0;
+var lidFrames = [0, 1, 2, 1];
+var lidFrameTimes = [2500, 60, 60, 60];
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	ecs.addEach(function(entity, context) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 		var camera = data.entities.entities[1];
 
 		var cx = entity.position.x + entity.size.width / 2;
@@ -57,11 +61,18 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		context.drawImage(pupils, px, py);
 
 		var lids = data.images.get("eyelashes-f3");
+		lidTime += elapsed;
+		while (lidTime > lidFrameTimes[lidFrame]) {
+			lidTime -= lidFrameTimes[lidFrame];
+			lidFrame++;
+			if (lidFrame >= lidFrames.length) {
+				lidFrame = 0;
+			}
+		}
 		var lw = lids.width / 3;
-		var lidFrame = 0;
 		var lx = x - (lw / 2);
 		var ly = y - (lids.height / 2);
-		context.drawImage(lids, (lidFrame * lw), 0, lw, lids.height, lx, ly, lw, lids.height);
+		context.drawImage(lids, (lidFrames[lidFrame] * lw), 0, lw, lids.height, lx, ly, lw, lids.height);
 
 	}, ["player", "position", "size", "radius"]);
 };
