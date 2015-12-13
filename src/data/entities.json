@@ -12,7 +12,7 @@
    "name": "player",
    "player": true,
    "radius": 0,
-   "goalRadius": 1000,
+   "goalRadius": 500,
    "area": 8888,
    "movement2d": {
     "upMax": -0.03,
@@ -63,7 +63,7 @@
     "goalTimer": {
      "running": false,
      "time": 0,
-     "max": 60000,
+     "max": 120000,
      "script": "./scripts/goal-timer"
     },
     "endOfGameTimer": {

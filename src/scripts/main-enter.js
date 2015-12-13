@@ -30,7 +30,7 @@ function spawnRandomly(entities, type, deadZone) {
 	});
 	var entity = makePrefab(randomFrom(prefabsOfType), entities);
 
-	var randomPoint = randomInRect(-2000, -2000, 4000, 4000, deadZone);
+	var randomPoint = randomInRect(-4000, -4000, 8000, 8000, deadZone);
 	entity.position.x = randomPoint.x;
 	entity.position.y = randomPoint.y;
 	shrinkBoundingBox(entity, 0.4);
@@ -114,7 +114,7 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 		"outerWidth": 800,
 		"outerHeight": 600
 	};
-	for (var t = 0; t < 100; t++) {
+	for (var t = 0; t < 200; t++) {
 		spawnRandomly(data.entities, "trash", trashDeadZone);
 	}
 
@@ -125,7 +125,7 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 		"height": 600,
 		"plusShaped": false
 	};
-	for (var o = 0; o < 7; o++) {
+	for (var o = 0; o < 14; o++) {
 		spawnRandomly(data.entities, "obstacle", obstacleDeadZone);
 	}
 
