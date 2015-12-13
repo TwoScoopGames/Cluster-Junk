@@ -2,6 +2,7 @@
 	"./scripts/main-enter",
 	"./scripts/main-exit",
 	"./scripts/goal-timer",
+  "./scripts/end-of-game-timer",
 	"./scripts/title-enter",
 	"./scripts/title-exit"
 ]

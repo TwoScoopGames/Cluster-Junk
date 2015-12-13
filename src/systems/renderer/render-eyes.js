@@ -69,7 +69,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				lidFrame = 2;
 			}
 		}
-		if (lidFrame === 2 && entity.playerController2d === undefined) {
+		if (lidFrame === 2 && entity.playerController2d === undefined && !entity.gameOver) {
 			entity.playerController2d = {
 				"up": "up",
 				"down": "down",
