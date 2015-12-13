@@ -19,6 +19,12 @@
    ]
   },
   {
+   "name": "./systems/simulation/propel-trash",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "splatjs:applyMovement2d",
    "scenes": [
     "main"
