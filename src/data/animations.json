@@ -231,8 +231,8 @@
      "name": "fishingBoat",
      "sourceX": 0,
      "sourceY": 0,
-     "sourceWidth": 686,
-     "sourceHeight": 271
+     "sourceWidth": 1142,
+     "sourceHeight": 443
     }
    }
   }
@@ -259,8 +259,8 @@
      "name": "iceberg",
      "sourceX": 0,
      "sourceY": 0,
-     "sourceWidth": 461,
-     "sourceHeight": 262
+     "sourceWidth": 1353,
+     "sourceHeight": 751
     }
    }
   }
