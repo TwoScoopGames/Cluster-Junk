@@ -83,5 +83,10 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		var ly = y - (lids.height / 2);
 		context.drawImage(lids, (lidFrames[lidFrame] * lw), 0, lw, lids.height, lx, ly, lw, lids.height);
 
+		if (entity.gameOver) {
+			var whaleSwell = data.images.get("whaleSwell");
+
+			context.drawImage(whaleSwell, 0, data.canvas.height - whaleSwell.height);
+		}
 	}, ["player", "position", "size", "radius", "eyes"]);
 };
