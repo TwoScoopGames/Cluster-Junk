@@ -125,6 +125,12 @@
 	]
  },
  {
+	"name": "./systems/renderer/goal",
+	"scenes": [
+	 "main"
+	]
+ },
+ {
 	"name": "./systems/renderer/draw-notice",
 	"scenes": [
 	 "main"

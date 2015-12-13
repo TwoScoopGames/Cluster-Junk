@@ -12,6 +12,7 @@
    "name": "player",
    "player": true,
    "radius": 0,
+   "goalRadius": 1000,
    "area": 8888,
    "movement2d": {
     "upMax": -0.03,
