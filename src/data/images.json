@@ -30,5 +30,6 @@
  "timer": "images/timer.png",
  "tire": "images/tire.png",
  "trashbag": "images/trashbag.png",
- "waves": "images/waves.png"
+ "waves": "images/waves.png",
+ "controlPanel": "images/controlPanel.png"
 }

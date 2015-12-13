@@ -105,13 +105,13 @@
    ]
  },
  {
-	"name": "./systems/renderer/ui/timer",
+	"name": "./systems/renderer/timer",
 	"scenes": [
 	 "main"
 	]
  },
  {
-	"name": "./systems/renderer/ui/radar",
+	"name": "./systems/renderer/radar",
 	"scenes": [
 	 "main"
 	]

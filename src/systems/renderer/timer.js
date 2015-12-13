@@ -1,5 +1,10 @@
 "use strict";
 
+var simpleEasing = require("../../simpleEasing");
+
+var timerY = -50;
+var timerTextY = timerY - 88;
+
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(player, context) { // eslint-disable-line no-unused-vars
 		var goalTimer = player.timers.goalTimer;
@@ -9,10 +14,13 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		}else if(remainingSeconds < 10){
 			remainingSeconds = "00" + remainingSeconds;
 		}
-		context.drawImage(data.images.get("timer"), 970, 5);
+
+		timerY += simpleEasing(timerY, 5, 0.2);
+		context.drawImage(data.images.get("timer"), 970, timerY);
 
 		context.fillStyle = "white";
 		context.font = "54px blanch";
-		context.fillText(remainingSeconds, 1020, 93);
+		timerTextY += simpleEasing(timerTextY, 93, 0.2);
+		context.fillText(remainingSeconds, 1020, timerTextY);
 	}, ["player"]);
 };
