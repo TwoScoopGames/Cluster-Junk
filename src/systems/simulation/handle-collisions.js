@@ -39,12 +39,10 @@ function distanceSquared(a, b) {
 	return dx * dx + dy * dy;
 }
 
-
 function calculateAspectRatio() {
 	var canvas = document.getElementById("canvas");
 	var canvasStyle = window.getComputedStyle(canvas);
 	var ar = parseInt(canvasStyle.width) / parseInt(canvasStyle.height);
-	console.log("aspectratio", ar);
 	aspectRatio = ar;
 	return ar;
 }
