@@ -87,13 +87,13 @@
    ]
   },
   {
-   "name": "./systems/renderer/render-player",
+   "name": "splatjs:drawImage",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "splatjs:drawImage",
+   "name": "./systems/renderer/render-player",
    "scenes": [
     "main"
    ]
@@ -106,6 +106,12 @@
  },
  {
 	"name": "./systems/renderer/ui/timer",
+	"scenes": [
+	 "main"
+	]
+ },
+ {
+	"name": "./systems/renderer/ui/radar",
 	"scenes": [
 	 "main"
 	]

@@ -1,23 +1,27 @@
 "use strict";
 
 var prefabs = require("../data/prefabs");
+var objectValues = require("../objectValues");
 
 function clone(obj) {
 	return JSON.parse(JSON.stringify(obj)); // gross
 }
 
-function makePrefab(name, entities) {
+function makePrefab(prefab, entities) {
 	var e = entities.add();
-	var copy = clone(prefabs[name]);
+	var copy = clone(prefab);
 	copy.id = e.id;
 	entities.entities[copy.id] = copy;
 	return copy;
 }
 
-function makeTrash(entities) {
-	var trash = makePrefab(randomFrom(Object.keys(prefabs)), entities);
-	trash.position.x = randomInRange(-2000, 2000);
-	trash.position.y = randomInRange(-2000, 2000);
+function spawnRandomly(entities, type) {
+	var prefabsOfType = objectValues(prefabs).filter(function(prefab){
+		return prefab.type === type;
+	});
+	var entity = makePrefab(randomFrom(prefabsOfType), entities);
+	entity.position.x = randomInRange(-2000, 2000);
+	entity.position.y = randomInRange(-2000, 2000);
 }
 
 function randomInRange(min, max) {
@@ -36,8 +40,11 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 		"loopEnd": 0
 	});
 
-	for (i = 0; i < 0; i++) {
-		makeTrash(data.entities);
+	for (var t = 0; t < 100; t++) {
+		spawnRandomly(data.entities, "trash");
+	}
+	for (var o = 0; o < 5; o++) {
+		spawnRandomly(data.entities, "obstacle");
 	}
 
 	var cameraPosition = data.entities.entities[1].position;
@@ -59,8 +66,11 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 	};
 
 	// initialize two pieces of trash to collide with the player
+	var prefabsOfType = objectValues(prefabs).filter(function(prefab){
+		return prefab.type === "trash";
+	});
 	for (i = 0; i < 2; i++) {
-		var trash = makePrefab(randomFrom(Object.keys(prefabs)), data.entities);
+		var trash = makePrefab(randomFrom(prefabsOfType), data.entities);
 		var newComponents = clone({
 			"movement2d": player.movement2d,
 			"friction": player.friction,
