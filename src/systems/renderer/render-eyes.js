@@ -28,8 +28,8 @@ var pupilOffsetX = 0;
 var pupilOffsetY = 0;
 var lidFrame = 0;
 var lidTime = 0;
-var lidFrames = [0, 1, 2, 1];
-var lidFrameTimes = [2500, 60, 60, 60];
+var lidFrames = [2, 1, 0, 1, 2, 1];
+var lidFrameTimes = [2000, 200, 2500, 60, 60, 60];
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
@@ -66,13 +66,21 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			lidTime -= lidFrameTimes[lidFrame];
 			lidFrame++;
 			if (lidFrame >= lidFrames.length) {
-				lidFrame = 0;
+				lidFrame = 2;
 			}
+		}
+		if (lidFrame === 2 && entity.playerController2d === undefined) {
+			entity.playerController2d = {
+				"up": "up",
+				"down": "down",
+				"left": "left",
+				"right": "right"
+			};
 		}
 		var lw = lids.width / 3;
 		var lx = x - (lw / 2);
 		var ly = y - (lids.height / 2);
 		context.drawImage(lids, (lidFrames[lidFrame] * lw), 0, lw, lids.height, lx, ly, lw, lids.height);
 
-	}, ["player", "position", "size", "radius"]);
+	}, ["player", "position", "size", "radius", "eyes"]);
 };

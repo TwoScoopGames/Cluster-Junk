@@ -25,12 +25,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				}
 				movement2d.upMax = movement2d.leftMax = -1;
 				movement2d.downMax = movement2d.rightMax = 1;
-				entity.playerController2d = {
-					"up": "up",
-					"down": "down",
-					"left": "left",
-					"right": "right"
-				};
+				entity.eyes = true;
 				var camera = data.entities.entities[1];
 				camera.follow = {
 					"id": 0,
