@@ -65,13 +65,20 @@
    "scenes": [
     "main"
    ]
-  }
+  },
+	{
+	 "name": "./systems/simulation/start-game",
+	 "scenes": [
+		"title"
+	 ]
+	}
  ],
  "renderer": [
   {
    "name": "splatjs:clearScreen",
    "scenes": [
-    "main"
+    "main",
+		"title"
    ]
   },
   {
@@ -89,7 +96,8 @@
   {
    "name": "splatjs:drawImage",
    "scenes": [
-    "main"
+    "main",
+		"title"
    ]
   },
   {
@@ -127,6 +135,12 @@
 	"scenes": [
 	 "main"
 	]
- }
+},
+{
+ "name": "./systems/renderer/title-screen",
+ "scenes": [
+	"title"
+ ]
+}
  ]
 }

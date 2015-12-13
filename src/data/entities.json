@@ -1,4 +1,11 @@
 {
+"title": [
+	{
+		"id": 3,
+		"name": "title",
+		"title": true
+	}
+],
  "main": [
   {
    "id": 0,
@@ -97,6 +104,5 @@
      "script": "./scripts/notice"
     }
    }
-  }
- ]
+  }]
 }
