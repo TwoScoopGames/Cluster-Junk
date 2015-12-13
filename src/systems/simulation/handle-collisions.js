@@ -2,9 +2,9 @@
 
 var onEntityDelete = require("splat-ecs/lib/systems/box-collider").onEntityDelete;
 
-// function getCamera(entities) {
-// 	return entities[1];
-// }
+function getCamera(entities) {
+	return entities[1];
+}
 
 function resolveCollisionShortest(player, entity) {
 	var bottom = [0, entity.position.y + entity.size.height - player.position.y, 0, 0.5];
@@ -39,6 +39,18 @@ function distanceSquared(a, b) {
 	return dx * dx + dy * dy;
 }
 
+
+function calculateAspectRatio() {
+	var canvas = document.getElementById("canvas");
+	var canvasStyle = window.getComputedStyle(canvas);
+	var ar = parseInt(canvasStyle.width) / parseInt(canvasStyle.height);
+	console.log("aspectratio", ar);
+	aspectRatio = ar;
+	return ar;
+}
+var aspectRatio = calculateAspectRatio();
+window.onresize = calculateAspectRatio;
+
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
 		var player = data.entities.entities[0];
@@ -47,9 +59,6 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			if (other.sticky) {
 				return;
 			}
-
-			// data.canvas.width += 50;
-			// data.canvas.height += 50;
 
 			other.velocity = { x: 0, y: 0 };
 			onEntityDelete(other, data);
@@ -68,8 +77,12 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			}
 		});
 		player.radius = Math.sqrt(player.area / Math.PI * 2);
-		// var camera = getCamera(data.entities.entities);
-		// camera.size.width = data.canvas.width;
-		// camera.size.height = data.canvas.height;
+
+		data.canvas.height = Math.floor(player.radius * 2 * 3);
+		data.canvas.width = data.canvas.height * aspectRatio;
+
+		var camera = getCamera(data.entities.entities);
+		camera.size.width = data.canvas.width;
+		camera.size.height = data.canvas.height;
 	}, ["sticky"]);
 };
