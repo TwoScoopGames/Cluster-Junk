@@ -33,7 +33,7 @@ function spawnRandomly(entities, type) {
 	entity.position.y = randomInRange(-2000, 2000);
 	shrinkBoundingBox(entity, 0.4);
 	entity.rotation = {
-		"angle": randomInRange(0, (Math.PI *2)),
+		"angle": entity.type === "obstacle" ? 0 : randomInRange((Math.PI / -3), (Math.PI / 3)),
 		"x": entity.size.width/ 2,
 		"y": entity.size.height/ 2
 	};
