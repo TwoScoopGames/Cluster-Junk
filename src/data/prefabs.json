@@ -765,6 +765,10 @@
 			"width": 1142,
 			"height": 443
 		},
+		"friction": {
+			"x": 0.97,
+			"y": 0.97
+		},
 		"collisions": [],
 		"noises": [
 			"sfx-metal-boom",
@@ -801,6 +805,10 @@
 			"width": 318,
 			"height": 344
 		},
+		"friction": {
+			"x": 0.97,
+			"y": 0.97
+		},
 		"collisions": [],
 		"noises": [
 			"sfx-metal-dink",
@@ -835,6 +843,10 @@
 		"size": {
 			"width": 86,
 			"height": 220
+		},
+		"friction": {
+			"x": 0.97,
+			"y": 0.97
 		},
 		"collisions": [],
 		"noises": [
@@ -872,6 +884,10 @@
 			"width": 134,
 			"height": 165
 		},
+		"friction": {
+			"x": 0.97,
+			"y": 0.97
+		},
 		"collisions": [],
 		"noises": [
 			"sfx-metal-boom",
@@ -908,6 +924,10 @@
 			"width": 145,
 			"height": 267
 		},
+		"friction": {
+			"x": 0.97,
+			"y": 0.97
+		},
 		"collisions": [],
 		"noises": [
 			"sfx-crunch",
@@ -941,6 +961,10 @@
 		"size": {
 			"width": 573,
 			"height": 188
+		},
+		"friction": {
+			"x": 0.97,
+			"y": 0.97
 		},
 		"collisions": [],
 		"noises": [
@@ -977,6 +1001,10 @@
 		"size": {
 			"width": 61,
 			"height": 52
+		},
+		"friction": {
+			"x": 0.97,
+			"y": 0.97
 		},
 		"collisions": [],
 		"noises": [
