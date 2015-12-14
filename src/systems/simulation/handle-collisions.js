@@ -76,8 +76,12 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			onEntityDelete(other, data);
 
 			var distSq = distanceSquared(player, other);
+			var otherArea = other.size.width * other.size.height;
 			if (distSq < player.radius * player.radius) {
-				player.area += other.size.width * other.size.height;
+				player.area += otherArea;
+				var newPoints = Math.ceil(Math.sqrt(otherArea) / 10) * 10;
+				player.points += newPoints;
+				player.pointsDisplayQueue.push(newPoints);
 				other.match = {
 					id: player.id,
 					offsetX: other.position.x - player.position.x,
@@ -90,6 +94,11 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				notice.message = message;
 			} else if (other.type === "obstacle") {
 				resolveCollisionShortest(entity, other, player);
+				var pointDeduction = -1 * Math.min(Math.floor(Math.sqrt(otherArea) / 10), player.points);
+				if (pointDeduction) {
+					player.points += pointDeduction;
+					player.pointsDisplayQueue.push(pointDeduction);
+				}
 			} else {
 				resolveCollisionShortest(other, entity);
 			}

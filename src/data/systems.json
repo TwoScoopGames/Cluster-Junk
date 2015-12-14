@@ -66,19 +66,19 @@
     "main"
    ]
   },
-	{
-	 "name": "./systems/simulation/start-game",
-	 "scenes": [
-		"title"
-	 ]
-	}
+  {
+   "name": "./systems/simulation/start-game",
+   "scenes": [
+    "title"
+   ]
+  }
  ],
  "renderer": [
   {
    "name": "splatjs:clearScreen",
    "scenes": [
     "main",
-		"title"
+    "title"
    ]
   },
   {
@@ -97,7 +97,7 @@
    "name": "splatjs:drawImage",
    "scenes": [
     "main",
-		"title"
+    "title"
    ]
   },
   {
@@ -112,35 +112,47 @@
     "main"
    ]
   },
- {
-	"name": "./systems/renderer/timer",
-	"scenes": [
-	 "main"
-	]
- },
- {
-	"name": "./systems/renderer/radar",
-	"scenes": [
-	 "main"
-	]
- },
- {
-	"name": "./systems/renderer/goal",
-	"scenes": [
-	 "main"
-	]
- },
- {
-	"name": "./systems/renderer/draw-notice",
-	"scenes": [
-	 "main"
-	]
-},
-{
- "name": "./systems/renderer/title-screen",
- "scenes": [
-	"title"
- ]
-}
+  {
+   "name": "./systems/renderer/timer",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "./systems/renderer/radar",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "./systems/renderer/goal",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "./systems/renderer/draw-notice",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "./systems/renderer/draw-notice",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "./systems/renderer/points",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "./systems/renderer/title-screen",
+   "scenes": [
+    "title"
+   ]
+  }
  ]
 }
