@@ -347,9 +347,8 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-metal-dink",
-			"sfx-metal-tonk",
-			"sfx-metal-tube"
+			"sfx-crunch",
+			"sfx-crush"
 		]
 	},
 	"box3": {
@@ -665,7 +664,7 @@
 		]
 	},
 	"iceberg": {
-		"name": "OMG an iceburg!",
+		"name": "OMG an iceberg!",
 		"image": {
 			"sourceX": 0,
 			"sourceY": 0,
@@ -802,7 +801,12 @@
 			"width": 318,
 			"height": 344
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-metal-dink",
+			"sfx-metal-tonk",
+			"sfx-metal-tube"
+		]
 	},
 	"hazardArea": {
 		"name": "Posted hazard area",
@@ -832,7 +836,13 @@
 			"width": 86,
 			"height": 220
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-metal-boom",
+			"sfx-metal-dink",
+			"sfx-metal-tonk",
+			"sfx-metal-tube"
+		]
 	},
 	"orangeBuoy": {
 		"name": "No ships allowed!",
@@ -862,7 +872,13 @@
 			"width": 134,
 			"height": 165
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-metal-boom",
+			"sfx-metal-dink",
+			"sfx-metal-tonk",
+			"sfx-metal-tube"
+		]
 	},
 	"seaweed": {
 		"name": "No ships allowed!",
@@ -892,9 +908,13 @@
 			"width": 145,
 			"height": 267
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-rolled-paper-slap"
+		]
 	},
-	"drifwood": {
+	"driftwood": {
 		"name": "Driftwood",
 		"image": {
 			"sourceX": 0,
@@ -922,7 +942,13 @@
 			"width": 573,
 			"height": 188
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-rolled-paper-slap",
+			"sfx-metal-boom",
+			"sfx-metal-dink"
+		]
 	},
 	"cup": {
 		"name": "Crushed red partycups",
@@ -952,7 +978,11 @@
 			"width": 61,
 			"height": 52
 		},
-		"collisions": []
+		"collisions": [],
+		"noises": [
+			"sfx-crunch",
+			"sfx-crush"
+		]
 	}
 
 }
