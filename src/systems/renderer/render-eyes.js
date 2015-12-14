@@ -84,9 +84,13 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		context.drawImage(lids, (lidFrames[lidFrame] * lw), 0, lw, lids.height, lx, ly, lw, lids.height);
 
 		if (entity.gameOver) {
-			var whaleSwell = data.images.get("whaleSwell");
-
-			context.drawImage(whaleSwell, 0, data.canvas.height - whaleSwell.height);
+			if (entity.radius >= entity.goalRadius) {
+				var whaleSwell = data.images.get("whaleSwell");
+				context.drawImage(whaleSwell, 0, data.canvas.height - whaleSwell.height);
+			} else {
+				var whaleShucks = data.images.get("whaleShucks");
+				context.drawImage(whaleShucks, 0, data.canvas.height - whaleShucks.height);
+			}
 		}
 	}, ["player", "position", "size", "radius", "eyes"]);
 };
