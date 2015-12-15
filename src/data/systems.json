@@ -77,6 +77,12 @@
    "scenes": [
     "title"
    ]
+  },
+  {
+   "name": "./systems/simulation/restart-game",
+   "scenes": [
+    "finished"
+   ]
   }
  ],
  "renderer": [
@@ -84,7 +90,8 @@
    "name": "splatjs:clearScreen",
    "scenes": [
     "main",
-    "title"
+    "title",
+    "finished"
    ]
   },
   {
@@ -103,7 +110,8 @@
    "name": "splatjs:drawImage",
    "scenes": [
     "main",
-    "title"
+    "title",
+    "finished"
    ]
   },
   {
@@ -158,6 +166,12 @@
    "name": "./systems/renderer/title-screen",
    "scenes": [
     "title"
+   ]
+  },
+  {
+   "name": "./systems/renderer/finished-screen",
+   "scenes": [
+    "finished"
    ]
   }
  ]

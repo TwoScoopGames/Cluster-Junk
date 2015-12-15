@@ -6,6 +6,13 @@
 		"title": true
 	}
 ],
+"finished": [
+	{
+		"id": 3,
+		"name": "title",
+		"title": true
+	}
+],
  "main": [
   {
    "id": 0,
