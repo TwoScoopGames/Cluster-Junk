@@ -114,8 +114,10 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				var numLevels = require("../../data/levels.json").length;
 				var level = data.arguments.level || 0;
 				level++;
-				if (!won || data.arguments.level + 1 === numLevels) {
+				if (!won) {
 					data.switchScene("title");
+				} else if (data.arguments.level + 1 === numLevels) {
+					data.switchScene("finished");
 				} else {
 					data.switchScene("main", { level: level });
 				}
