@@ -67,6 +67,12 @@
    ]
   },
   {
+   "name": "./systems/simulation/jingle-on-success",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "./systems/simulation/start-game",
    "scenes": [
     "title"
