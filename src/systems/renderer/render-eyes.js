@@ -86,10 +86,10 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		if (entity.gameOver) {
 			if (entity.radius >= entity.goalRadius) {
 				var whaleSwell = data.images.get("whaleSwell");
-				context.drawImage(whaleSwell, 0, data.canvas.height - whaleSwell.height);
+				context.drawImage(whaleSwell, -111, (data.canvas.height - whaleSwell.height) + 145);
 			} else {
 				var whaleShucks = data.images.get("whaleShucks");
-				context.drawImage(whaleShucks, 0, data.canvas.height - whaleShucks.height);
+				context.drawImage(whaleShucks, -111, (data.canvas.height - whaleShucks.height) + 145);
 			}
 		}
 	}, ["player", "position", "size", "radius", "eyes"]);
