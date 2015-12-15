@@ -4,5 +4,6 @@
 	"./scripts/goal-timer",
   "./scripts/end-of-game-timer",
 	"./scripts/title-enter",
-	"./scripts/title-exit"
+	"./scripts/title-exit",
+  "./scripts/recovery-timer"
 ]

@@ -62,6 +62,7 @@
    },
    "collisions": [],
    "sticky": true,
+   "recovering": false,
    "timers": {
     "goalTimer": {
      "running": false,
@@ -69,7 +70,12 @@
      "max": 120,
      "script": "./scripts/goal-timer"
     },
-    ""
+    "recoveryTimer": {
+      "running": false,
+      "time": 0,
+      "max": 1000,
+      "script": "./scripts/recovery-timer"
+    },
     "endOfGameTimer": {
      "running": false,
      "time": 0,

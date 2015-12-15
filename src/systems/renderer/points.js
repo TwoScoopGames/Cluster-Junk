@@ -9,13 +9,15 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		context.font = "70px blanch";
 		bottomRightAlignText(data.canvas, context, entity.points, 30, 30);
 
+		context.font = "50px blanch";
+
 		entity.pointsDisplayQueue.forEach(function(pointChange) {
-			var offsetX = Math.floor(Math.random() * 460 - 230);
-			var offsetY = Math.floor(Math.random() * 460 - 230);
+			var offsetX = Math.floor(Math.random() * 380 - 190);
+			var offsetY = Math.floor(Math.random() * 380 - 190);
 			entity.pointsDisappearQueue.push({
-				pointChange: pointChange,
-				offsetX: offsetX,
-				offsetY: offsetY
+				"pointChange": pointChange,
+				"offsetX": offsetX,
+				"offsetY": offsetY
 			});
 			setTimeout(function () {
 				if (entity.pointsDisappearQueue.length) {
@@ -31,11 +33,11 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			var offsetX = item.offsetX;
 			var offsetY = item.offsetY;
 			if (pointChange >= 0) {
-				centerText(data.canvas, context, "+" + pointChange, offsetX, offsetY);
+				centerTextInMiddle(data.canvas, context, "+" + pointChange, offsetX, offsetY);
 			} else {
-				context.strokeStyle = "#b22222";
-				centerText(data.canvas, context, "-" + Math.abs(pointChange), offsetX, offsetY);
-				context.strokeStyle = "#ffffff";
+				context.fillStyle = "#b22222";
+				centerTextInMiddle(data.canvas, context, "-" + Math.abs(pointChange), offsetX, offsetY);
+				context.fillStyle = "#ffffff";
 			}
 		});
 
@@ -45,16 +47,16 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 function bottomRightAlignText(canvas, context, text, offsetX, offsetY) {
 	var w = context.measureText(text).width;
 	var h = 20; // approximate; figure out how to detect dynamically later.
-	var x = canvas.width - w - offsetX;
-	var y = canvas.height - h - offsetY;
+	var x = Math.floor(canvas.width - w - offsetX);
+	var y = Math.floor(canvas.height - h - offsetY);
 	context.strokeText(text, x, y);
 	context.fillText(text, x, y);
 }
 
-function centerText(canvas, context, text, offsetX, offsetY) {
+function centerTextInMiddle(canvas, context, text, offsetX, offsetY) {
 	var w = context.measureText(text).width;
-	var x = offsetX + (canvas.width / 2) - (w / 2) | 0;
-	var y = offsetY | 0;
+	var x = Math.floor(offsetX + (canvas.width / 2) - (w / 2));
+	var y = Math.floor(canvas.height / 2 + offsetY);
 	context.strokeText(text, x, y);
 	context.fillText(text, x, y);
 }

@@ -94,10 +94,14 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				notice.message = message;
 			} else if (other.type === "obstacle") {
 				resolveCollisionShortest(entity, other, player);
-				var pointDeduction = -1 * Math.min(Math.floor(Math.sqrt(otherArea) / 10), player.points);
-				if (pointDeduction) {
-					player.points += pointDeduction;
-					player.pointsDisplayQueue.push(pointDeduction);
+				if (!player.recovering) {
+					var pointDeduction = -1 * Math.min(Math.floor(Math.sqrt(otherArea) / 10), player.points);
+					if (pointDeduction) {
+						player.points += pointDeduction;
+						player.pointsDisplayQueue.push(pointDeduction);
+						player.recovering = true;
+						player.timers.recoveryTimer.running = true;
+					}
 				}
 			} else {
 				resolveCollisionShortest(other, entity);
