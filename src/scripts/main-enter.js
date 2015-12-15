@@ -129,10 +129,10 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 	}
 
 	var obstacleDeadZone = {
-		"x": player.size.width / 2 - 400,
-		"y": player.size.height / 2 - 300,
-		"width": 800,
-		"height": 600,
+		"x": player.size.width / 2 - 700,
+		"y": player.size.height / 2 - 700,
+		"width": 1400,
+		"height": 1400,
 		"plusShaped": false
 	};
 	for (var o = 0; o < levels[level].obstacleCount; o++) {
