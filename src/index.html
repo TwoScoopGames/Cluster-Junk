@@ -52,6 +52,16 @@
 <body>
 	<canvas id="canvas" width="1136" height="640"></canvas>
 	<script type="text/javascript" src="index.js"></script>
+	<script>
+		window.addEventListener("keydown", function(event) {
+			event.preventDefault();
+			return false;
+		});
+		window.addEventListener("keyup", function(event) {
+			event.preventDefault();
+			return false;
+		});
+	</script>
 	<p> Created for <a href="http://ludumdare.com">#LDJAM</a> Dec 11-14 2015 by <a href="https://twitter.com/alexbezuska">Alex Bezuska</a>, <a href="https://twitter.com/ericlathrop">Eric Lathrop</a>, <a href="https://twitter.com/howdycara">Cara Smith</a>, and <a href="https://twitter.com/benwiley4000">Ben Wiley</a>.</p>
 </body>
 </html>
