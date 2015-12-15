@@ -65,7 +65,7 @@
     "goalTimer": {
      "running": false,
      "time": 0,
-     "max": 120000,
+     "max": 120,
      "script": "./scripts/goal-timer"
     },
     "endOfGameTimer": {

@@ -85,11 +85,15 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 
 		if (entity.gameOver) {
 			if (entity.radius >= entity.goalRadius) {
-				var whaleSwell = data.images.get("whaleSwell");
-				context.drawImage(whaleSwell, -111, (data.canvas.height - whaleSwell.height) + 145);
+				var whaleLeftHappy = data.images.get("whaleLeftHappy");
+				context.drawImage(whaleLeftHappy, -111, (data.canvas.height - whaleLeftHappy.height) + 145);
+				var whaleLeftFlipperHappy = data.images.get("whaleLeftFlipperHappy");
+				context.drawImage(whaleLeftFlipperHappy, 320, (data.canvas.height - whaleLeftFlipperHappy.height) + 45);
 			} else {
-				var whaleShucks = data.images.get("whaleShucks");
-				context.drawImage(whaleShucks, -111, (data.canvas.height - whaleShucks.height) + 145);
+				var whaleLeftSad = data.images.get("whaleLeftSad");
+				context.drawImage(whaleLeftSad, -111, (data.canvas.height - whaleLeftSad.height) + 145);
+				var whaleLeftFlipperSad = data.images.get("whaleLeftFlipperSad");
+				context.drawImage(whaleLeftFlipperSad, 320, (data.canvas.height - whaleLeftFlipperSad.height) + 45);
 			}
 		}
 	}, ["player", "position", "size", "radius", "eyes"]);
