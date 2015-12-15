@@ -1,41 +1,18 @@
 {
- "name": "App",
- "icons": [
-  {
-   "src": "\/android-icon-36x36.png",
-   "sizes": "36x36",
-   "type": "image\/png",
-   "density": "0.75"
-  },
-  {
-   "src": "\/android-icon-48x48.png",
-   "sizes": "48x48",
-   "type": "image\/png",
-   "density": "1.0"
-  },
-  {
-   "src": "\/android-icon-72x72.png",
-   "sizes": "72x72",
-   "type": "image\/png",
-   "density": "1.5"
-  },
-  {
-   "src": "\/android-icon-96x96.png",
-   "sizes": "96x96",
-   "type": "image\/png",
-   "density": "2.0"
-  },
-  {
-   "src": "\/android-icon-144x144.png",
-   "sizes": "144x144",
-   "type": "image\/png",
-   "density": "3.0"
-  },
-  {
-   "src": "\/android-icon-192x192.png",
-   "sizes": "192x192",
-   "type": "image\/png",
-   "density": "4.0"
-  }
- ]
+	"name": "Cluster Junk: The Secret of Trash Island",
+	"description": "There are millions of tons of trash floating in the oceans. So what goes on while no one is looking in these trash piles? Explore the garbage of humans and try to become the largest trash island in the sea! But hurry, don't let the timer run out! ",
+	"version": "1.0.0",
+	"manifest_version": 0,
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"icons": {
+		"16": "images/icons/favicon-16x16.png",
+		"128": "images/icons/favicon-128x128.png"
+	},
+	"permissions": [
+		"storage"
+	]
 }
