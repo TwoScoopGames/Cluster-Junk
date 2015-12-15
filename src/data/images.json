@@ -1,6 +1,7 @@
 {
- "titleScreen": "images/titleScreen.png",
  "Fries": "images/Fries.png",
+ "TimesUp": "images/TimesUp.png",
+ "TimesUpwRope": "images/TimesUpwRope.png",
  "announcementBox": "images/announcementBox.png",
  "barrel": "images/barrel.png",
  "birbArea": "images/birbArea.png",
@@ -30,12 +31,20 @@
  "paper-wad2": "images/paper-wad2.png",
  "pupils": "images/pupils.png",
  "radar": "images/radar.png",
+ "radarObstacle": "images/radarObstacle.png",
+ "radarPaper": "images/radarPaper.png",
+ "radarTrash": "images/radarTrash.png",
  "sandbar-f10": "images/sandbar-f10.png",
  "seaweed": "images/seaweed.png",
  "timer": "images/timer.png",
  "tire": "images/tire.png",
+ "titleScreen": "images/titleScreen.png",
  "trashbag": "images/trashbag.png",
  "waves": "images/waves.png",
- "whaleShucks": "images/whaleShucks.png",
- "whaleSwell": "images/whaleSwell.png"
+ "whaleLeftFlipperHappy": "images/whaleLeftFlipperHappy.png",
+ "whaleLeftFlipperSad": "images/whaleLeftFlipperSad.png",
+ "whaleLeftHappy": "images/whaleLeftHappy.png",
+ "whaleLeftSad": "images/whaleLeftSad.png",
+ "whaleRightFlipperArrowMsg": "images/whaleRightFlipperArrowMsg.png",
+ "whaleRightHappy": "images/whaleRightHappy.png"
 }

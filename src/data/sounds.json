@@ -6,6 +6,7 @@
  "trash-island-success": "sounds/trash-island-success.mp3",
  "sfx-crunch": "sounds/sfx-crunch.mp3",
  "sfx-crush": "sounds/sfx-crush.mp3",
+ "sfx-fog-horn": "sounds/sfx-fog-horn.mp3",
  "sfx-metal-boom": "sounds/sfx-metal-boom.mp3",
  "sfx-metal-dink": "sounds/sfx-metal-dink.mp3",
  "sfx-metal-tonk": "sounds/sfx-metal-tonk.mp3",
@@ -13,5 +14,8 @@
  "sfx-paper-flip": "sounds/sfx-paper-flip.mp3",
  "sfx-power-up-quiet": "sounds/sfx-power-up-quiet.mp3",
  "sfx-power-up": "sounds/sfx-power-up.mp3",
- "sfx-rolled-paper-slap": "sounds/sfx-rolled-paper-slap.mp3"
+ "sfx-rolled-paper-slap": "sounds/sfx-rolled-paper-slap.mp3",
+ "trash-island-failure": "sounds/trash-island-failure.mp3",
+ "trash-island-theme": "sounds/trash-island-theme.mp3",
+ "trash-island-victory": "sounds/trash-island-victory.mp3"
 }
