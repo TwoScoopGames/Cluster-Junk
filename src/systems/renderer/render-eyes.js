@@ -1,5 +1,7 @@
 "use strict";
 
+var centerText = require("../../center-text");
+
 function pupilOffset(entity) {
 	var px = 0;
 	var py = 0;
@@ -88,22 +90,31 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		context.drawImage(lids, (lidFrames[lidFrame] * lw), 0, lw, lids.height, lx, ly, lw, lids.height);
 
 		if (entity.gameOver) {
-			if (entity.radius >= entity.goalRadius) {
+			var won = entity.radius >= entity.goalRadius;
+			if (won) {
 				var whaleLeftHappy = data.images.get("whaleLeftHappy");
 				context.drawImage(whaleLeftHappy, -111, (data.canvas.height - whaleLeftHappy.height) + 145);
 				var whaleLeftFlipperHappy = data.images.get("whaleLeftFlipperHappy");
 				context.drawImage(whaleLeftFlipperHappy, 320, (data.canvas.height - whaleLeftFlipperHappy.height) + 45);
+
+				context.fillStyle = "white";
+				context.font = "55px blanch";
+				centerText(data.canvas, context, "PRESS SPACE TO CONTINUE", 0, data.canvas.height - 50);
 			} else {
 				var whaleLeftSad = data.images.get("whaleLeftSad");
 				context.drawImage(whaleLeftSad, -111, (data.canvas.height - whaleLeftSad.height) + 145);
 				var whaleLeftFlipperSad = data.images.get("whaleLeftFlipperSad");
 				context.drawImage(whaleLeftFlipperSad, 320, (data.canvas.height - whaleLeftFlipperSad.height) + 45);
+
+				context.fillStyle = "white";
+				context.font = "55px blanch";
+				centerText(data.canvas, context, "PRESS SPACE FOR TITLE", 0, data.canvas.height - 50);
 			}
 			if (actionPressed()) {
 				var numLevels = require("../../data/levels.json").length;
 				var level = data.arguments.level || 0;
 				level++;
-				if (data.arguments.level + 1 === numLevels) {
+				if (!won || data.arguments.level + 1 === numLevels) {
 					data.switchScene("title");
 				} else {
 					data.switchScene("main", { level: level });

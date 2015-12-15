@@ -1,21 +1,21 @@
 [
 	{
 		"radius": 0,
-		"goalRadius": 500,
-		"message": "Grow to 500 meters",
-		"maxTime": 12,
+		"goalRadius": 200,
+		"message": "Grow to 200 meters",
+		"maxTime": 30,
 		"trashCount": 200,
-		"obstacleCount": 140,
-		"levelSizeX": 100,
-		"levelSizeY": 100
+		"obstacleCount": 14,
+		"levelSizeX": 3000,
+		"levelSizeY": 3000
 	},
 	{
 		"radius": 0,
 		"goalRadius": 500,
-		"message": "Even bigger!",
-		"maxTime": 12,
+		"message": "Even bigger! 500m",
+		"maxTime": 120,
 		"trashCount": 200,
-		"obstacleCount": 14,
+		"obstacleCount": 25,
 		"levelSizeX": 8000,
 		"levelSizeY": 8000
 	}
