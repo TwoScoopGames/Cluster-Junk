@@ -16,6 +16,7 @@
    "area": 8888,
    "points": 0,
    "pointsDisplayQueue": [],
+   "pointsDisappearQueue": [],
    "movement2d": {
     "upMax": -0.03,
     "downMax": 0.03,
@@ -68,6 +69,7 @@
      "max": 120000,
      "script": "./scripts/goal-timer"
     },
+    ""
     "endOfGameTimer": {
      "running": false,
      "time": 0,
