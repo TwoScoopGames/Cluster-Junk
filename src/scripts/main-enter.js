@@ -2,6 +2,7 @@
 
 var prefabs = require("../data/prefabs");
 var objectValues = require("../objectValues");
+var resetCollisions = require("splat-ecs/lib/systems/box-collider").reset;
 
 function clone(obj) {
 	return JSON.parse(JSON.stringify(obj)); // gross
@@ -87,12 +88,15 @@ function randomFrom(array){
 	return array[Math.floor(Math.random() * array.length)];
 }
 
-module.exports = function(data) { // eslint-disable-line no-unused-vars
+var levels = require("../data/levels.json");
 
+module.exports = function(data) { // eslint-disable-line no-unused-vars
 	data.sounds.play("ambient-sea-track", {
 		"loopStart": 0,
 		"loopEnd": 0
 	});
+
+	resetCollisions();
 
 	var player = window.player = data.entities.entities[0];
 	var center = {
@@ -102,6 +106,12 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 
 	var camera = data.entities.entities[1];
 	camera.position.x = -window.innerWidth / 4 + player.size.width / 2;
+
+	var level = data.arguments.level || 0;
+	player.radius = levels[level].radius;
+	player.goalRadius = levels[level].goalRadius;
+	player.timers.goalTimer.max = levels[level].maxTime * 1000;
+	data.entities.entities[2].message = levels[level].message;
 
 	var trashDeadZone = {
 		"x": player.size.width / 2 - 300,
@@ -114,7 +124,7 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 		"outerWidth": 800,
 		"outerHeight": 600
 	};
-	for (var t = 0; t < 200; t++) {
+	for (var t = 0; t < levels[level].trashCount; t++) {
 		spawnRandomly(data.entities, "trash", trashDeadZone);
 	}
 
@@ -125,7 +135,7 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 		"height": 600,
 		"plusShaped": false
 	};
-	for (var o = 0; o < 14; o++) {
+	for (var o = 0; o < levels[level].obstacleCount; o++) {
 		spawnRandomly(data.entities, "obstacle", obstacleDeadZone);
 	}
 

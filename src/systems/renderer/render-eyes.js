@@ -31,7 +31,11 @@ var lidTime = 0;
 var lidFrames = [2, 1, 0, 1, 2, 1];
 var lidFrameTimes = [2000, 200, 2500, 60, 60, 60];
 
+var fallingEdge = require("../../falling-edge");
+
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+	var actionPressed = fallingEdge(data.input.button.bind(data.input, "action"));
+
 	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 		var camera = data.entities.entities[1];
 
@@ -94,6 +98,16 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				context.drawImage(whaleLeftSad, -111, (data.canvas.height - whaleLeftSad.height) + 145);
 				var whaleLeftFlipperSad = data.images.get("whaleLeftFlipperSad");
 				context.drawImage(whaleLeftFlipperSad, 320, (data.canvas.height - whaleLeftFlipperSad.height) + 45);
+			}
+			if (actionPressed()) {
+				var numLevels = require("../../data/levels.json").length;
+				var level = data.arguments.level || 0;
+				level++;
+				if (data.arguments.level + 1 === numLevels) {
+					data.switchScene("title");
+				} else {
+					data.switchScene("main", { level: level });
+				}
 			}
 		}
 	}, ["player", "position", "size", "radius", "eyes"]);
