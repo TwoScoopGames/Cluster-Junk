@@ -1,5 +1,7 @@
 "use strict";
 
+var centerText = require("../../center-text");
+
 function pupilOffset(entity) {
 	var px = 0;
 	var py = 0;
@@ -31,7 +33,11 @@ var lidTime = 0;
 var lidFrames = [2, 1, 0, 1, 2, 1];
 var lidFrameTimes = [2000, 200, 2500, 60, 60, 60];
 
+var fallingEdge = require("../../falling-edge");
+
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+	var actionPressed = fallingEdge(data.input.button.bind(data.input, "action"));
+
 	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 		var camera = data.entities.entities[1];
 
@@ -84,12 +90,35 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		context.drawImage(lids, (lidFrames[lidFrame] * lw), 0, lw, lids.height, lx, ly, lw, lids.height);
 
 		if (entity.gameOver) {
-			if (entity.radius >= entity.goalRadius) {
-				var whaleSwell = data.images.get("whaleSwell");
-				context.drawImage(whaleSwell, -111, (data.canvas.height - whaleSwell.height) + 145);
+			var won = entity.radius >= entity.goalRadius;
+			if (won) {
+				var whaleLeftHappy = data.images.get("whaleLeftHappy");
+				context.drawImage(whaleLeftHappy, -111, (data.canvas.height - whaleLeftHappy.height) + 145);
+				var whaleLeftFlipperHappy = data.images.get("whaleLeftFlipperHappy");
+				context.drawImage(whaleLeftFlipperHappy, 320, (data.canvas.height - whaleLeftFlipperHappy.height) + 45);
+
+				context.fillStyle = "white";
+				context.font = "55px blanch";
+				centerText(data.canvas, context, "PRESS SPACE TO CONTINUE", 0, data.canvas.height - 50);
 			} else {
-				var whaleShucks = data.images.get("whaleShucks");
-				context.drawImage(whaleShucks, -111, (data.canvas.height - whaleShucks.height) + 145);
+				var whaleLeftSad = data.images.get("whaleLeftSad");
+				context.drawImage(whaleLeftSad, -111, (data.canvas.height - whaleLeftSad.height) + 145);
+				var whaleLeftFlipperSad = data.images.get("whaleLeftFlipperSad");
+				context.drawImage(whaleLeftFlipperSad, 320, (data.canvas.height - whaleLeftFlipperSad.height) + 45);
+
+				context.fillStyle = "white";
+				context.font = "55px blanch";
+				centerText(data.canvas, context, "PRESS SPACE FOR TITLE", 0, data.canvas.height - 50);
+			}
+			if (actionPressed()) {
+				var numLevels = require("../../data/levels.json").length;
+				var level = data.arguments.level || 0;
+				level++;
+				if (!won || data.arguments.level + 1 === numLevels) {
+					data.switchScene("title");
+				} else {
+					data.switchScene("main", { level: level });
+				}
 			}
 		}
 	}, ["player", "position", "size", "radius", "eyes"]);

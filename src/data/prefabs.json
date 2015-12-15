@@ -963,8 +963,8 @@
 			"height": 188
 		},
 		"friction": {
-			"x": 0.97,
-			"y": 0.97
+			"x": 0.999,
+			"y": 0.999
 		},
 		"collisions": [],
 		"noises": [

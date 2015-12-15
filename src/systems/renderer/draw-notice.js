@@ -1,6 +1,7 @@
 "use strict";
 
 var easing = require("../../easing");
+var centerText = require("../../center-text");
 
 var noticeStart = -300;
 
@@ -31,12 +32,3 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		}
 	}, ["notice"]);
 };
-
-
-
-function centerText(canvas, context, text, offsetX, offsetY) {
-	var w = context.measureText(text).width;
-	var x = offsetX + (canvas.width / 2) - (w / 2) | 0;
-	var y = offsetY | 0;
-	context.fillText(text, x, y);
-}
