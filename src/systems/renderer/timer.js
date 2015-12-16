@@ -1,6 +1,6 @@
 "use strict";
 
-var easing = require("../../easing");
+var easing = require("easing-js");
 
 var timerStart = -50;
 
