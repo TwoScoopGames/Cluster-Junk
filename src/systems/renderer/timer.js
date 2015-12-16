@@ -14,7 +14,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		var timerY = 5;
 		if(time < duration){
 			time += elapsed;
-			timerY = easing.bounceEaseOut(time, timerStart, 55, duration);
+			timerY = easing.easeOutElastic(time, timerStart, 55, duration);
 		}
 		context.drawImage(data.images.get("timer"), (data.canvas.width - (data.images.get("timer").width)) -5 , timerY);
 

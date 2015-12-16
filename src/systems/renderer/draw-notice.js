@@ -16,7 +16,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			var noticeY = -60;
 			if(time < duration){
 				time += elapsed;
-				noticeY = easing.bounceEaseOut(time, noticeStart, 230, duration);
+				noticeY = easing.easeOutElastic(time, noticeStart, 240, duration);
 			}
 			var noticeBoard = data.images.get("notice");
 			context.drawImage(noticeBoard, (data.canvas.width / 2) - (noticeBoard.width /2), noticeY);

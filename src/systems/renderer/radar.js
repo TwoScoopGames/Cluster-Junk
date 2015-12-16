@@ -19,7 +19,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		var radarY = 5;
 		if(time < duration){
 			time += elapsed;
-			radarY = easing.bounceEaseOut(time, radarStart, 55, duration);
+			radarY = easing.easeOutElastic(time, radarStart, 55, duration);
 		}
 		var radarImage = data.images.get("radar");
 		context.drawImage(radarImage, 5, radarY);
