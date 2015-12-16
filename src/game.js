@@ -51,17 +51,22 @@ function setTouchInput(controlName, x, y, width, height) {
 var movementFreeZoneRadius = 200;
 
 function createTouchTargets() {
-	var upDownTargetWidth = canvas.width;
-	var upDownTargetHeight = canvas.height / 2 - movementFreeZoneRadius;
-	var leftRightTargetWidth = canvas.width / 2 - movementFreeZoneRadius;
-	var leftRightTargetHeight = canvas.height;
-	var actionTargetWidth = canvas.width;
-	var actionTargetHeight = canvas.height;
+	var computedCanvasStyle = getComputedStyle(canvas); // to get size in CSS pixels
+	var canvasSize = {
+		"width": parseInt(computedCanvasStyle.width),
+		"height": parseInt(computedCanvasStyle.height)
+	};
+	var upDownTargetWidth = canvasSize.width;
+	var upDownTargetHeight = canvasSize.height / 2 - movementFreeZoneRadius;
+	var leftRightTargetWidth = canvasSize.width / 2 - movementFreeZoneRadius;
+	var leftRightTargetHeight = canvasSize.height;
+	var actionTargetWidth = canvasSize.width;
+	var actionTargetHeight = canvasSize.height;
 
 	setTouchInput("up", 0, 0, upDownTargetWidth, upDownTargetHeight);
-	setTouchInput("down", 0, canvas.height + movementFreeZoneRadius, upDownTargetWidth, upDownTargetHeight);
+	setTouchInput("down", 0, canvasSize.height - upDownTargetHeight, upDownTargetWidth, upDownTargetHeight);
 	setTouchInput("left", 0, 0, leftRightTargetWidth, leftRightTargetHeight);
-	setTouchInput("right", canvas.width + movementFreeZoneRadius, 0, leftRightTargetWidth, leftRightTargetHeight);
+	setTouchInput("right", canvasSize.width - leftRightTargetWidth, 0, leftRightTargetWidth, leftRightTargetHeight);
 	setTouchInput("action", 0, 0, actionTargetWidth, actionTargetHeight);
 }
 
