@@ -31,7 +31,7 @@ function spawnRandomly(entities, type, deadZone) {
 	});
 	var entity = makePrefab(randomFrom(prefabsOfType), entities);
 
-	var randomPoint = randomInRect(-4000, -4000, 8000, 8000, deadZone);
+	var randomPoint = randomInRect(-4000, -4000, 8000, 8000, deadZone, entity.size);
 	entity.position.x = randomPoint.x;
 	entity.position.y = randomPoint.y;
 	shrinkBoundingBox(entity, 0.4);
@@ -46,13 +46,13 @@ function randomInRange(min, max) {
 	return min + Math.random() * (max - min);
 }
 
-function randomInRect(x, y, width, height, deadZone) {
+function randomInRect(x, y, width, height, deadZone, entitySize) {
 	var point = {
 		"x": randomInRange(x, x + width),
 		"y": randomInRange(y, y + height)
 	};
 	if (deadZone) {
-		while (inDeadZone(point, deadZone)) {
+		while (inDeadZone(point, deadZone, entitySize)) {
 			point = {
 				"x": randomInRange(x, x + width),
 				"y": randomInRange(y, y + height)
@@ -62,24 +62,41 @@ function randomInRect(x, y, width, height, deadZone) {
 	return point;
 }
 
-function inDeadZone(point, deadZone) {
-	var inInnerZone = point.x >= deadZone.x &&
-		point.x < deadZone.x + deadZone.width &&
-		point.y >= deadZone.y &&
-		point.y < deadZone.y + deadZone.height;
-	if (inInnerZone) {
-		return true;
-	}
-	if (!deadZone.plusShaped) {
-		return false;
-	}
-	var inPlusZone =
-		(point.x >= deadZone.x && point.x < deadZone.x + deadZone.width &&
-			point.y >= deadZone.outerY && point.y < deadZone.outerY + deadZone.outerHeight) ||
-		(point.x >= deadZone.outerX && point.x < deadZone.outerX + deadZone.outerWidth &&
-			point.y >= deadZone.y && point.y < deadZone.y + deadZone.height);
-	if (inPlusZone) {
-		return true;
+function inDeadZone(upperLeftPoint, deadZone, entitySize) {
+	var points = [
+		upperLeftPoint,
+		{
+			"x": upperLeftPoint.x + entitySize.width,
+			"y": upperLeftPoint.y
+		},
+		{
+			"x": upperLeftPoint.x,
+			"y": upperLeftPoint.y + entitySize.height
+		},
+		{
+			"x": upperLeftPoint.x + entitySize.width,
+			"y": upperLeftPoint.x + entitySize.height
+		}
+	];
+	for (var i = 0; i < 4; i++) {
+		var point = points[i];
+		var inInnerZone = point.x >= deadZone.x &&
+			point.x < deadZone.x + deadZone.width &&
+			point.y >= deadZone.y &&
+			point.y < deadZone.y + deadZone.height;
+		if (inInnerZone) {
+			return true;
+		}
+		if (deadZone.plusShaped) {
+			var inPlusZone =
+				(point.x >= deadZone.x && point.x < deadZone.x + deadZone.width &&
+					point.y >= deadZone.outerY && point.y < deadZone.outerY + deadZone.outerHeight) ||
+				(point.x >= deadZone.outerX && point.x < deadZone.outerX + deadZone.outerWidth &&
+					point.y >= deadZone.y && point.y < deadZone.y + deadZone.height);
+			if (inPlusZone) {
+				return true;
+			}
+		}
 	}
 	return false;
 }
@@ -114,14 +131,14 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 	data.entities.entities[2].message = levels[level].message;
 
 	var trashDeadZone = {
-		"x": player.size.width / 2 - 300,
-		"y": player.size.height / 2 - 200,
-		"width": 600,
-		"height": 400,
+		"x": player.size.width / 2 - 180,
+		"y": player.size.height / 2 - 120,
+		"width": 360,
+		"height": 240,
 		"plusShaped": true,
-		"outerX": player.size.width / 2 - 400,
-		"outerY": player.size.height / 2 - 300,
-		"outerWidth": 800,
+		"outerX": player.size.width / 2 - 240,
+		"outerY": player.size.height / 2 - 450,
+		"outerWidth": 480,
 		"outerHeight": 600
 	};
 	for (var t = 0; t < levels[level].trashCount; t++) {
@@ -129,11 +146,15 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 	}
 
 	var obstacleDeadZone = {
-		"x": player.size.width / 2 - 700,
-		"y": player.size.height / 2 - 700,
-		"width": 1400,
-		"height": 1400,
-		"plusShaped": false
+		"x": player.size.width / 2 - 300,
+		"y": player.size.height / 2 - 200,
+		"width": 600,
+		"height": 400,
+		"plusShaped": true,
+		"outerX": player.size.width / 2 - 400,
+		"outerY": player.size.height / 2 - 1000,
+		"outerWidth": 800,
+		"outerHeight": 1400
 	};
 	for (var o = 0; o < levels[level].obstacleCount; o++) {
 		spawnRandomly(data.entities, "obstacle", obstacleDeadZone);
