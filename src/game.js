@@ -41,37 +41,14 @@ function setTouchInput(controlName, x, y, width, height) {
 	inputs[index] = newInput;
 }
 
-/*
- * the radius of the inscribed circle of the zone where touching won't
- * cause the player to move; A.K.A.: 1/2 the length of one side (it's a
- * square). this is intentionally chosen to be the same as the camera's
- * follow distance in relation to the player, though these two variables
- * are not currently linked to one another (but maybe they should be).
- */
-var movementFreeZoneRadius = 200;
-
 function createTouchTargets() {
+	// for now, "action" is the only static touch target (takes up full screen)
 	var computedCanvasStyle = getComputedStyle(canvas); // to get size in CSS pixels
-	var canvasSize = {
-		"width": parseInt(computedCanvasStyle.width),
-		"height": parseInt(computedCanvasStyle.height)
-	};
-	var upDownTargetWidth = canvasSize.width;
-	var upDownTargetHeight = canvasSize.height / 2 - movementFreeZoneRadius;
-	var leftRightTargetWidth = canvasSize.width / 2 - movementFreeZoneRadius;
-	var leftRightTargetHeight = canvasSize.height;
-	var actionTargetWidth = canvasSize.width;
-	var actionTargetHeight = canvasSize.height;
-
-	setTouchInput("up", 0, 0, upDownTargetWidth, upDownTargetHeight);
-	setTouchInput("down", 0, canvasSize.height - upDownTargetHeight, upDownTargetWidth, upDownTargetHeight);
-	setTouchInput("left", 0, 0, leftRightTargetWidth, leftRightTargetHeight);
-	setTouchInput("right", canvasSize.width - leftRightTargetWidth, 0, leftRightTargetWidth, leftRightTargetHeight);
-	setTouchInput("action", 0, 0, actionTargetWidth, actionTargetHeight);
+	setTouchInput("action", 0, 0, parseInt(computedCanvasStyle.width), parseInt(computedCanvasStyle.height));
 }
 
 createTouchTargets();
-window.onresize = createTouchTargets;
+window.addEventListener("resize", createTouchTargets);
 
 function percentLoaded() {
 	if (images.totalImages + sounds.totalSounds === 0) {
