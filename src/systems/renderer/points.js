@@ -3,32 +3,37 @@
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 
+		var points = data.entities.get(entity, "points");
+		var pointsDisplayQueue = data.entities.get(entity, "pointsDisplayQueue");
+		var pointsDisappearQueue = data.entities.get(entity, "pointsDisappearQueue");
+
 		context.fillStyle = "#3e311a";
 		context.strokeStyle = "#ffffff";
 		context.lineWidth = 7;
 		context.font = "70px blanch";
-		bottomRightAlignText(data.canvas, context, entity.points, 30, 30);
+		bottomRightAlignText(data.canvas, context, points, 30, 30);
 
 		context.font = "50px blanch";
 
-		entity.pointsDisplayQueue.forEach(function(pointChange) {
+		pointsDisplayQueue.forEach(function(pointChange) {
 			var offsetX = Math.floor(Math.random() * 380 - 190);
 			var offsetY = Math.floor(Math.random() * 380 - 190);
-			entity.pointsDisappearQueue.push({
+			pointsDisappearQueue.push({
 				"pointChange": pointChange,
 				"offsetX": offsetX,
 				"offsetY": offsetY
 			});
+			// FIXME: this is evil
 			setTimeout(function () {
-				if (entity.pointsDisappearQueue.length) {
-					entity.pointsDisappearQueue.splice(0, 1);
+				if (pointsDisappearQueue.length) {
+					pointsDisappearQueue.splice(0, 1);
 				}
 			}, 900);
 		});
 
-		entity.pointsDisplayQueue = [];
+		data.entities.set(entity, "pointsDisplayQueue", []);
 
-		entity.pointsDisappearQueue.forEach(function (item) {
+		pointsDisappearQueue.forEach(function (item) {
 			var pointChange = item.pointChange;
 			var offsetX = item.offsetX;
 			var offsetY = item.offsetY;

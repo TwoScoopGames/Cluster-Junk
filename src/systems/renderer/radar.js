@@ -13,7 +13,7 @@ var period = 5000;
 var radius = 80;
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	ecs.addEach(function(player, context, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 
 		//timer image
 		var radarY = 5;
@@ -44,26 +44,30 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			};
 			drawLine(context, linePoints, "1px", "#6abd44");
 
-			Object.keys(data.entities.entities).forEach(function(id) {
-				var entity = data.entities.entities[id];
-				if ((entity.type !== "trash" && entity.type !== "obstacle") || entity.sticky || entity.player) {
+			data.entities.find("position").forEach(function(id) {
+				var entityType = data.entities.get(id, "type");
+				var entitySticky = data.entities.get(id, "sticky");
+				var entityPlayer = data.entities.get(id, "player");
+				var entityPosition = data.entities.get(id, "position");
+
+				if ((entityType !== "trash" && entityType !== "obstacle") || entitySticky || entityPlayer) {
 					return;
 				}
 
-				var dx = entity.position.x - player.position.x;
-				var dy = entity.position.y - player.position.y;
+				var dx = entityPosition.x - entityPosition.x;
+				var dy = entityPosition.y - entityPosition.y;
 
 				var max = 1000 * 1000;
 				var dist = Math.max(Math.min((dx * dx + dy * dy), max), -max);
 				var scaledDist = dist / max * (radius - 3);
 
-				var angle = Math.atan2(entity.position.y - player.position.y, entity.position.x - player.position.x);
+				var angle = Math.atan2(entityPosition.y - entityPosition.y, entityPosition.x - entityPosition.x);
 
 				var ex = scaledDist * Math.cos(angle);
 				var ey = scaledDist * Math.sin(angle);
 
 				context.strokeStyle = "#6abd44";
-				if (entity.type === "obstacle") {
+				if (entityType === "obstacle") {
 					context.strokeStyle = "red";
 				}
 				context.beginPath();
