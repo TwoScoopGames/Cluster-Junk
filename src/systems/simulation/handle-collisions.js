@@ -1,39 +1,14 @@
 "use strict";
 
-var onEntityDelete = require("splat-ecs/lib/systems/box-collider").onEntityDelete;
-
-function getCamera(entities) {
-	return entities[1];
-}
-
-function resolveCollisionShortest(a, b, target) {
-	var bottom = [0, b.position.y + b.size.height - a.position.y, 0, 0.5];
-	var top = [0, b.position.y - a.size.height - a.position.y, 0, -0.5];
-	var right = [b.position.x + b.size.width - a.position.x, 0, 0.5, 0];
-	var left = [b.position.x - a.size.width - a.position.x, 0, -0.5, 0];
-
-	var smallest = [bottom, top, right, left].reduce(function(prev, curr) {
-		if (Math.abs(curr[0] + curr[1]) < Math.abs(prev[0] + prev[1])) {
-			return curr;
-		}
-		return prev;
-	});
-	target = target || a;
-	target.position.x += smallest[0];
-	target.position.y += smallest[1];
-	target.velocity.x += smallest[2];
-	target.velocity.y += smallest[3];
-}
-
-function center(entity) {
-	var x = entity.position.x + (entity.size.width / 2);
-	var y = entity.position.y + (entity.size.height / 2);
+function center(position, size) {
+	var x = position.x + (size.width / 2);
+	var y = position.y + (size.height / 2);
 	return { x: x, y: y };
 }
 
-function distanceSquared(a, b) {
-	var ca = center(a);
-	var cb = center(b);
+function distanceSquared(aPosition, aSize, bPosition, bSize) {
+	var ca = center(aPosition, aSize);
+	var cb = center(bPosition, bSize);
 
 	var dx = ca.x - cb.x;
 	var dy = ca.y - cb.y;
@@ -51,73 +26,113 @@ function calculateAspectRatio() {
 var aspectRatio = calculateAspectRatio();
 window.onresize = calculateAspectRatio;
 
-function randomFrom(array){
+function randomFrom(array) {
 	return array[Math.floor(Math.random() * array.length)];
 }
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+	function resolveCollisionShortest(a, b, target) {
+		var aPosition = data.entities.get(a, "position");
+		var aSize = data.entities.get(a, "size");
+		var bPosition = data.entities.get(b, "position");
+		var bSize = data.entities.get(b, "size");
+		target = target || a;
+		var targetPosition = data.entities.get(target, "position");
+		var targetVelocity = data.entities.get(target, "velocity");
+
+		var bottom = [0, bPosition.y + bSize.height - aPosition.y, 0, 0.5];
+		var top = [0, bPosition.y - aSize.height - aPosition.y, 0, -0.5];
+		var right = [bPosition.x + bSize.width - aPosition.x, 0, 0.5, 0];
+		var left = [bPosition.x - aSize.width - aPosition.x, 0, -0.5, 0];
+
+		var smallest = [bottom, top, right, left].reduce(function(prev, curr) {
+			if (Math.abs(curr[0] + curr[1]) < Math.abs(prev[0] + prev[1])) {
+				return curr;
+			}
+			return prev;
+		});
+		targetPosition.x += smallest[0];
+		targetPosition.y += smallest[1];
+		targetVelocity.x += smallest[2];
+		targetVelocity.y += smallest[3];
+	}
+
+	data.entities.registerSearch("handleCollisions", ["sticky", "collisions"]);
 	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
-		var player = data.entities.entities[0];
-		entity.collisions.forEach(function(id) {
-			var other = data.entities.entities[id];
-			if (other.sticky) {
+		var player = 0;
+		var playerPosition = data.entities.get(player, "position");
+		var playerSize = data.entities.get(player, "size");
+		var playerRadius = data.entities.get(player, "radius");
+		var playerArea = data.entities.get(player, "area");
+		var playerPoints = data.entities.get(player, "points");
+		var playerPointsDisplayQueue = data.entities.get(player, "pointsDisplayQueue");
+		var playerTimers = data.entities.get(player, "timers");
+
+		entity.collisions.forEach(function(other) {
+			if (data.entities.get(other, "sticky")) {
 				return;
 			}
 
-			if (other.noises && !other.silent) {
-				data.sounds.play(randomFrom(other.noises));
-				other.silent = true;
+			var otherNoises = data.entities.get(other, "noises");
+			if (otherNoises && !data.entities.get(other, "silent")) {
+				data.sounds.play(randomFrom(otherNoises));
+				data.entities.set(other, "silent", true);
+				// FIXME: this is evil
 				setTimeout(function () {
-					other.silent = false;
+					data.entities.remove(other, "silent");
 				}, 800);
 			}
 
-			other.velocity = { x: 0, y: 0 };
-			onEntityDelete(other, data);
+			data.entities.set(other, "velocity", { x: 0, y: 0 });
+			// onEntityDelete(other, data);
 
-			var distSq = distanceSquared(player, other);
-			var otherArea = other.size.width * other.size.height;
-			if (distSq < player.radius * player.radius) {
-				player.area += otherArea;
+
+			var otherPosition = data.entities.get(other, "position");
+			var otherSize = data.entities.get(other, "size");
+			var otherType = data.entities.get(other, "type");
+
+			var distSq = distanceSquared(playerPosition, playerSize, otherPosition, otherSize);
+			var otherArea = otherSize.width * otherSize.height;
+			if (distSq < playerRadius * playerRadius) {
+				playerArea += otherArea;
 				var newPoints = Math.ceil(Math.sqrt(otherArea) / 10) * 10;
-				player.points += newPoints;
-				player.pointsDisplayQueue.push(newPoints);
-				other.match = {
-					id: player.id,
-					offsetX: other.position.x - player.position.x,
-					offsetY: other.position.y - player.position.y
-				};
-				other.sticky = true;
+				playerPoints += newPoints;
+				playerPointsDisplayQueue.push(newPoints);
+				data.entities.set(other, "match", {
+					id: player,
+					offsetX: otherPosition.x - playerPosition.x,
+					offsetY: otherPosition.y - playerPosition.y
+				});
+				data.entities.set(other, "sticky", true);
 				data.sounds.play("sfx-power-up");
-				var message = other.name;
-				var notice = data.entities.entities[2];
-				notice.message = message;
-			} else if (other.type === "obstacle") {
+				var notice = 2;
+				data.entities.set(notice, "message", data.entities.get(other, "name"));
+			} else if (otherType === "obstacle") {
 				resolveCollisionShortest(entity, other, player);
-				if (!player.recovering) {
-					var pointDeduction = -1 * Math.min(Math.floor(Math.sqrt(otherArea) / 10), player.points);
+				if (!data.entities.get(player, "recovering")) {
+					var pointDeduction = -1 * Math.min(Math.floor(Math.sqrt(otherArea) / 10), playerPoints);
 					if (pointDeduction) {
-						player.points += pointDeduction;
-						player.pointsDisplayQueue.push(pointDeduction);
-						player.recovering = true;
-						player.timers.recoveryTimer.running = true;
+						playerPoints += pointDeduction;
+						playerPointsDisplayQueue.push(pointDeduction);
+						data.entities.set(player, "recovering", true);
+						playerTimers.recoveryTimer.running = true;
 					}
 				}
 			} else {
 				resolveCollisionShortest(other, entity);
 			}
 		});
-		player.radius = Math.sqrt(player.area / Math.PI * 2);
+		playerRadius = Math.sqrt(playerArea / Math.PI * 2);
 
 		var size = 600;
-		var viewportSize = Math.floor(player.radius * 2 * 3);
-		player.scale = size / viewportSize;
+		var viewportSize = Math.floor(playerRadius * 2 * 3);
+		data.entities.set(player, "scale", size / viewportSize);
 
 		data.canvas.height = size;
 		data.canvas.width = data.canvas.height * aspectRatio;
 
-		var camera = getCamera(data.entities.entities);
-		camera.size.height = Math.floor(player.radius * 2 * 3);
+		var camera = 1;
+		camera.size.height = Math.floor(playerRadius * 2 * 3);
 		camera.size.width = camera.size.height * aspectRatio;
-	}, ["sticky"]);
+	}, "handleCollisions");
 };

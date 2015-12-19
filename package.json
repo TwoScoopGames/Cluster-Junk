@@ -30,6 +30,6 @@
   },
   "dependencies": {
     "easing-js": "^1.0.1",
-    "splat-ecs": "^0.3.2"
+    "splat-ecs": "^0.4.1"
   }
 }

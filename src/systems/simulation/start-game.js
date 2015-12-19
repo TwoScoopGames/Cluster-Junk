@@ -5,7 +5,7 @@ var fallingEdge = require("../../falling-edge");
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	var actionPressed = fallingEdge(data.input.button.bind(data.input, "action"));
 
-	ecs.addEach(function(title, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
 		data.sounds.play("ambient-sea-track", {
 			"loopStart": 0,
 			"loopEnd": 0
@@ -13,5 +13,5 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		if (actionPressed()) {
 			data.switchScene("main");
 		}
-	}, ["title"]);
+	}, "title");
 };
