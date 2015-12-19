@@ -161,7 +161,7 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 		data.entities.set(trash, "movement2d", clone(data.entities.get(player, "movement2d")));
 		data.entities.set(trash, "friction", clone(data.entities.get(player, "friction")));
 		data.entities.set(trash, "velocity", { x: 0, y: 0 });
-		data.entities.set(trash, "center", clone(center));
+		data.entities.set(trash, "target", clone(center));
 		data.entities.set(trash, "position", {
 			"x": playerPosition.x + ((i - 0.5) * 600) + ((i - 0.5) * playerSize.width),
 			"y": playerPosition.y + 600

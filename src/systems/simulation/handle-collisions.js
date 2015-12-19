@@ -86,7 +86,6 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			data.entities.set(other, "velocity", { x: 0, y: 0 });
 			// onEntityDelete(other, data);
 
-
 			var otherPosition = data.entities.get(other, "position");
 			var otherSize = data.entities.get(other, "size");
 			var otherType = data.entities.get(other, "type");
@@ -123,6 +122,9 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			}
 		});
 		playerRadius = Math.sqrt(playerArea / Math.PI * 2);
+		data.entities.set(player, "radius", playerRadius);
+		data.entities.set(player, "area", playerArea);
+		data.entities.set(player, "points", playerPoints);
 
 		var size = 600;
 		var viewportSize = Math.floor(playerRadius * 2 * 3);
