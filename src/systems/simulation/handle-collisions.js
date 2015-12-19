@@ -30,6 +30,24 @@ function randomFrom(array) {
 	return array[Math.floor(Math.random() * array.length)];
 }
 
+function makePoints(entities, points) {
+	var id = entities.create();
+
+	entities.set(id, "position", {
+		x: Math.floor(Math.random() * 380 - 190),
+		y: Math.floor(Math.random() * 380 - 190)
+	});
+	entities.set(id, "pointChange", points);
+	entities.set(id, "timers", {
+		disappear: {
+			running: true,
+			time: 0,
+			max: 900,
+			script: "./scripts/delete-entity"
+		}
+	});
+}
+
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	function resolveCollisionShortest(a, b, target) {
 		var aPosition = data.entities.get(a, "position");
@@ -65,7 +83,6 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		var playerRadius = data.entities.get(player, "radius");
 		var playerArea = data.entities.get(player, "area");
 		var playerPoints = data.entities.get(player, "points");
-		var playerPointsDisplayQueue = data.entities.get(player, "pointsDisplayQueue");
 		var playerTimers = data.entities.get(player, "timers");
 
 		data.entities.get(entity, "collisions").forEach(function(other) {
@@ -96,7 +113,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				playerArea += otherArea;
 				var newPoints = Math.ceil(Math.sqrt(otherArea) / 10) * 10;
 				playerPoints += newPoints;
-				playerPointsDisplayQueue.push(newPoints);
+				makePoints(data.entities, newPoints);
 				data.entities.set(other, "match", {
 					id: player,
 					offsetX: otherPosition.x - playerPosition.x,
@@ -112,7 +129,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 					var pointDeduction = -1 * Math.min(Math.floor(Math.sqrt(otherArea) / 10), playerPoints);
 					if (pointDeduction) {
 						playerPoints += pointDeduction;
-						playerPointsDisplayQueue.push(pointDeduction);
+						makePoints(data.entities, pointDeduction);
 						data.entities.set(player, "recovering", true);
 						playerTimers.recoveryTimer.running = true;
 					}

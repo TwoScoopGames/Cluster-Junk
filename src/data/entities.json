@@ -22,8 +22,6 @@
    "goalRadius": 500,
    "area": 8888,
    "points": 0,
-   "pointsDisplayQueue": [],
-   "pointsDisappearQueue": [],
    "movement2d": {
     "upMax": -0.03,
     "downMax": 0.03,
