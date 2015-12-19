@@ -43,8 +43,7 @@ function setTouchInput(controlName, x, y, width, height) {
 
 function createTouchTargets() {
 	// for now, "action" is the only static touch target (takes up full screen)
-	var computedCanvasStyle = getComputedStyle(canvas); // to get size in CSS pixels
-	setTouchInput("action", 0, 0, parseInt(computedCanvasStyle.width), parseInt(computedCanvasStyle.height));
+	setTouchInput("action", 0, 0, canvas.width, canvas.height);
 }
 
 createTouchTargets();
