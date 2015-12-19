@@ -91,17 +91,12 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			}
 
 			var otherNoises = data.entities.get(other, "noises");
-			if (otherNoises && !data.entities.get(other, "silent")) {
+			if (otherNoises && !playerTimers.silent.running) {
 				data.sounds.play(randomFrom(otherNoises));
-				data.entities.set(other, "silent", true);
-				// FIXME: this is evil
-				setTimeout(function () {
-					data.entities.remove(other, "silent");
-				}, 800);
+				playerTimers.silent.running = true;
 			}
 
 			data.entities.set(other, "velocity", { x: 0, y: 0 });
-			// onEntityDelete(other, data);
 
 			var otherPosition = data.entities.get(other, "position");
 			var otherSize = data.entities.get(other, "size");

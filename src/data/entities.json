@@ -81,6 +81,11 @@
       "max": 1000,
       "script": "./scripts/recovery-timer"
     },
+    "silent": {
+     "running": false,
+     "time": 0,
+     "max": 800
+    },
     "endOfGameTimer": {
      "running": false,
      "time": 0,
