@@ -1,7 +1,9 @@
 "use strict";
 
-module.exports = function(player, data) { // eslint-disable-line no-unused-vars
-	if (player.radius >= player.goalRadius) {
+module.exports = function(entity, data) { // eslint-disable-line no-unused-vars
+	var radius = data.entities.get(entity, "radius");
+	var goalRadius = data.entities.get(entity, "goalRadius");
+	if (radius >= goalRadius) {
 		data.sounds.play("trash-island-victory");
 	} else {
 		data.sounds.play("trash-island-failure");

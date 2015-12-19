@@ -151,12 +151,6 @@
    ]
   },
   {
-   "name": "./systems/renderer/draw-notice",
-   "scenes": [
-    "main"
-   ]
-  },
-  {
    "name": "./systems/renderer/points",
    "scenes": [
     "main"

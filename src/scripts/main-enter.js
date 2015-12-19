@@ -2,27 +2,29 @@
 
 var prefabs = require("../data/prefabs");
 var objectValues = require("../objectValues");
-var resetCollisions = require("splat-ecs/lib/systems/box-collider").reset;
 
 function clone(obj) {
 	return JSON.parse(JSON.stringify(obj)); // gross
 }
 
 function makePrefab(prefab, entities) {
-	var e = entities.add();
-	var copy = clone(prefab);
-	copy.id = e.id;
-	entities.entities[copy.id] = copy;
-	return copy;
+	var id = entities.create();
+	Object.keys(prefab).forEach(function(key) {
+		if (key === "id") {
+			return;
+		}
+		entities.set(id, key, clone(prefab[key]));
+	});
+	return id;
 }
 
-function shrinkBoundingBox(entity, pct) {
-	var xl = Math.floor(entity.size.width * pct);
-	var yl = Math.floor(entity.size.height * pct);
-	entity.size.width -= xl;
-	entity.size.height -= yl;
-	entity.image.destinationX -= Math.floor(xl / 2);
-	entity.image.destinationY -= Math.floor(yl / 2);
+function shrinkBoundingBox(entitySize, entityImage, pct) {
+	var xl = Math.floor(entitySize.width * pct);
+	var yl = Math.floor(entitySize.height * pct);
+	entitySize.width -= xl;
+	entitySize.height -= yl;
+	entityImage.destinationX -= Math.floor(xl / 2);
+	entityImage.destinationY -= Math.floor(yl / 2);
 }
 
 function spawnRandomly(entities, type, deadZone) {
@@ -32,14 +34,17 @@ function spawnRandomly(entities, type, deadZone) {
 	var entity = makePrefab(randomFrom(prefabsOfType), entities);
 
 	var randomPoint = randomInRect(-4000, -4000, 8000, 8000, deadZone);
-	entity.position.x = randomPoint.x;
-	entity.position.y = randomPoint.y;
-	shrinkBoundingBox(entity, 0.4);
-	entity.rotation = {
-		"angle": entity.type === "obstacle" ? 0 : randomInRange((Math.PI / -3), (Math.PI / 3)),
-		"x": entity.size.width/ 2,
-		"y": entity.size.height/ 2
-	};
+	entities.set(entity, "position", randomPoint);
+
+	var size = entities.get(entity, "size");
+	var image = entities.get(entity, "image");
+	shrinkBoundingBox(size, image, 0.4);
+
+	entities.set(entity, "rotation", {
+		"angle": type === "obstacle" ? 0 : randomInRange((Math.PI / -3), (Math.PI / 3)),
+		"x": size.width / 2,
+		"y": size.height / 2
+	});
 }
 
 function randomInRange(min, max) {
@@ -96,31 +101,29 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 		"loopEnd": 0
 	});
 
-	resetCollisions();
+	var player = 0;
+	var playerPosition = data.entities.get(player, "position");
+	var playerSize = data.entities.get(player, "size");
+	var playerImage = data.entities.get(player, "image");
 
-	var player = window.player = data.entities.entities[0];
-	var center = {
-		"x": player.position.x,
-		"y": player.position.y + 300 - player.size.height / 2
-	};
-
-	var camera = data.entities.entities[1];
-	camera.position.x = -window.innerWidth / 4 + player.size.width / 2;
+	var camera = 1;
+	var cameraPosition = data.entities.get(camera, "position");
+	cameraPosition.x = -window.innerWidth / 4 + playerSize.width / 2;
 
 	var level = data.arguments.level || 0;
-	player.radius = levels[level].radius;
-	player.goalRadius = levels[level].goalRadius;
-	player.timers.goalTimer.max = levels[level].maxTime * 1000;
-	data.entities.entities[2].message = levels[level].message;
+	data.entities.set(player, "radius", levels[level].radius);
+	data.entities.set(player, "goalRadius", levels[level].goalRadius);
+	data.entities.get(player, "timers").goalTimer.max = levels[level].maxTime * 1000;
+	data.entities.set(2, "message", levels[level].message);
 
 	var trashDeadZone = {
-		"x": player.size.width / 2 - 300,
-		"y": player.size.height / 2 - 200,
+		"x": playerSize.width / 2 - 300,
+		"y": playerSize.height / 2 - 200,
 		"width": 600,
 		"height": 400,
 		"plusShaped": true,
-		"outerX": player.size.width / 2 - 400,
-		"outerY": player.size.height / 2 - 300,
+		"outerX": playerSize.width / 2 - 400,
+		"outerY": playerSize.height / 2 - 300,
 		"outerWidth": 800,
 		"outerHeight": 600
 	};
@@ -129,8 +132,8 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 	}
 
 	var obstacleDeadZone = {
-		"x": player.size.width / 2 - 700,
-		"y": player.size.height / 2 - 700,
+		"x": playerSize.width / 2 - 700,
+		"y": playerSize.height / 2 - 700,
 		"width": 1400,
 		"height": 1400,
 		"plusShaped": false
@@ -141,9 +144,13 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 
 	// give player entity a target to propel it toward center of screen
 	// position it at top-center
-	player.target = center;
+	var center = {
+		"x": playerPosition.x,
+		"y": playerPosition.y + 300 - playerSize.height / 2
+	};
+	data.entities.set(player, "target", center);
 
-	shrinkBoundingBox(player, 0.4);
+	shrinkBoundingBox(playerSize, playerImage, 0.4);
 
 	// initialize two pieces of (small) trash to collide with the player
 	var prefabsOfType = objectValues(prefabs).filter(function(prefab) {
@@ -151,19 +158,14 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 	});
 	for (var i = 0; i < 2; i++) {
 		var trash = makePrefab(randomFrom(prefabsOfType), data.entities);
-		var newComponents = clone({
-			"movement2d": player.movement2d,
-			"friction": player.friction,
-			"velocity": player.velocity,
-			"target": center,
-			"position": {
-				"x": player.position.x + ((i - 0.5) * 600) + ((i - 0.5) * player.size.width),
-				"y": player.position.y + 600
-			}
+		data.entities.set(trash, "movement2d", clone(data.entities.get(player, "movement2d")));
+		data.entities.set(trash, "friction", clone(data.entities.get(player, "friction")));
+		data.entities.set(trash, "velocity", { x: 0, y: 0 });
+		data.entities.set(trash, "center", clone(center));
+		data.entities.set(trash, "position", {
+			"x": playerPosition.x + ((i - 0.5) * 600) + ((i - 0.5) * playerSize.width),
+			"y": playerPosition.y + 600
 		});
-		Object.keys(newComponents).forEach(function(key) {
-			trash[key] = newComponents[key];
-		});
-		shrinkBoundingBox(trash, 0.4);
+		shrinkBoundingBox(data.entities.get(trash, "size"), data.entities.get(trash, "image"), 0.4);
 	}
 };

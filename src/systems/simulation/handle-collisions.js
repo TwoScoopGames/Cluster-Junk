@@ -68,7 +68,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		var playerPointsDisplayQueue = data.entities.get(player, "pointsDisplayQueue");
 		var playerTimers = data.entities.get(player, "timers");
 
-		entity.collisions.forEach(function(other) {
+		data.entities.get(entity, "collisions").forEach(function(other) {
 			if (data.entities.get(other, "sticky")) {
 				return;
 			}
@@ -132,7 +132,8 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		data.canvas.width = data.canvas.height * aspectRatio;
 
 		var camera = 1;
-		camera.size.height = Math.floor(playerRadius * 2 * 3);
-		camera.size.width = camera.size.height * aspectRatio;
+		var cameraSize = data.entities.get(camera, "size");
+		cameraSize.height = Math.floor(playerRadius * 2 * 3);
+		cameraSize.width = cameraSize.height * aspectRatio;
 	}, "handleCollisions");
 };
