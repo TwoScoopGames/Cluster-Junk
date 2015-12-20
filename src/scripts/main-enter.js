@@ -134,13 +134,13 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 	data.entities.set(2, "message", levels[level].message);
 
 	var trashDeadZone = {
-		"x": player.size.width / 2 - 180,
-		"y": player.size.height / 2 - 120,
+		"x": playerSize.width / 2 - 180,
+		"y": playerSize.height / 2 - 120,
 		"width": 360,
 		"height": 240,
 		"plusShaped": true,
-		"outerX": player.size.width / 2 - 240,
-		"outerY": player.size.height / 2 - 450,
+		"outerX": playerSize.width / 2 - 240,
+		"outerY": playerSize.height / 2 - 450,
 		"outerWidth": 480,
 		"outerHeight": 600
 	};
@@ -149,13 +149,13 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 	}
 
 	var obstacleDeadZone = {
-		"x": player.size.width / 2 - 300,
-		"y": player.size.height / 2 - 200,
+		"x": playerSize.width / 2 - 300,
+		"y": playerSize.height / 2 - 200,
 		"width": 600,
 		"height": 400,
 		"plusShaped": true,
-		"outerX": player.size.width / 2 - 400,
-		"outerY": player.size.height / 2 - 1000,
+		"outerX": playerSize.width / 2 - 400,
+		"outerY": playerSize.height / 2 - 1000,
 		"outerWidth": 800,
 		"outerHeight": 1400
 	};
