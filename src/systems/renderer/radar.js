@@ -68,13 +68,11 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				var ex = scaledDist * Math.cos(angle);
 				var ey = scaledDist * Math.sin(angle);
 
-				context.strokeStyle = "#6abd44";
+				context.fillStyle = "#6abd44";
 				if (entityType === "obstacle") {
-					context.strokeStyle = "red";
+					context.fillStyle = "red";
 				}
-				context.beginPath();
-				context.arc(cx + ex, cy + ey, 3, 0, Math.PI * 2);
-				context.stroke();
+				context.fillRect(cx + ex - 1, cy + ey - 1, 3, 3);
 			});
 		}
 	}, "player");
