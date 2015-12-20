@@ -38,9 +38,10 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				movement2d.downMax = movement2d.rightMax = 1;
 				data.entities.set(entity, "eyes", true);
 
+				var canvas = data.canvas;
 				data.entities.set(cameraId, "follow", {
 					"id": 0,
-					"distance": 200
+					"distance": Math.min(200, Math.min(canvas.height / 5, canvas.width / 5))
 				});
 				data.sounds.play("trash-island-theme", {
 					"loopStart": 8.0,
