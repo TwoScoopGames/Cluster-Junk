@@ -1,12 +1,13 @@
 "use strict";
 
-module.exports = function(player, data) { // eslint-disable-line no-unused-vars
+module.exports = function(entity, data) { // eslint-disable-line no-unused-vars
 	data.sounds.stop("trash-island-theme");
-	player.gameOver = true;
-	delete player.playerController2d;
-	player.movement2d.up = false;
-	player.movement2d.down = false;
-	player.movement2d.left = false;
-	player.movement2d.right = false;
-	player.timers.endOfGameTimer.running = true;
+	data.entities.set(entity, "gameOver", true);
+	data.entities.remove(entity, "playerController2d");
+	var movement2d = data.entities.get(entity, "movement2d");
+	movement2d.up = false;
+	movement2d.down = false;
+	movement2d.left = false;
+	movement2d.right = false;
+	data.entities.get(entity, "timers").endOfGameTimer.running = true;
 };

@@ -89,7 +89,6 @@
   {
    "name": "splatjs:clearScreen",
    "scenes": [
-    "main",
     "title",
     "finished"
    ]
@@ -140,12 +139,6 @@
   },
   {
    "name": "./systems/renderer/goal",
-   "scenes": [
-    "main"
-   ]
-  },
-  {
-   "name": "./systems/renderer/draw-notice",
    "scenes": [
     "main"
    ]

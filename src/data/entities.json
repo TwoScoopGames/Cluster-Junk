@@ -22,8 +22,6 @@
    "goalRadius": 500,
    "area": 8888,
    "points": 0,
-   "pointsDisplayQueue": [],
-   "pointsDisappearQueue": [],
    "movement2d": {
     "upMax": -0.03,
     "downMax": 0.03,
@@ -82,6 +80,11 @@
       "time": 0,
       "max": 1000,
       "script": "./scripts/recovery-timer"
+    },
+    "silent": {
+     "running": false,
+     "time": 0,
+     "max": 800
     },
     "endOfGameTimer": {
      "running": false,

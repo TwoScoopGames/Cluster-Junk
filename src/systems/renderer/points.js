@@ -1,47 +1,32 @@
 "use strict";
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function renderPointsChange(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+		context.fillStyle = "#3e311a";
+		context.strokeStyle = "#ffffff";
+		context.lineWidth = 7;
+		context.font = "50px blanch";
+
+		var pointChange = data.entities.get(entity, "pointChange");
+		var position = data.entities.get(entity, "position");
+
+		if (pointChange >= 0) {
+			centerTextInMiddle(data.canvas, context, "+" + pointChange, position.x, position.y);
+		} else {
+			context.fillStyle = "#b22222";
+			centerTextInMiddle(data.canvas, context, "-" + Math.abs(pointChange), position.x, position.y);
+		}
+	}, "pointChange");
+
+	ecs.addEach(function renderTotalPoints(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+		var points = data.entities.get(entity, "points");
 
 		context.fillStyle = "#3e311a";
 		context.strokeStyle = "#ffffff";
 		context.lineWidth = 7;
 		context.font = "70px blanch";
-		bottomRightAlignText(data.canvas, context, entity.points, 30, 30);
-
-		context.font = "50px blanch";
-
-		entity.pointsDisplayQueue.forEach(function(pointChange) {
-			var offsetX = Math.floor(Math.random() * 380 - 190);
-			var offsetY = Math.floor(Math.random() * 380 - 190);
-			entity.pointsDisappearQueue.push({
-				"pointChange": pointChange,
-				"offsetX": offsetX,
-				"offsetY": offsetY
-			});
-			setTimeout(function () {
-				if (entity.pointsDisappearQueue.length) {
-					entity.pointsDisappearQueue.splice(0, 1);
-				}
-			}, 900);
-		});
-
-		entity.pointsDisplayQueue = [];
-
-		entity.pointsDisappearQueue.forEach(function (item) {
-			var pointChange = item.pointChange;
-			var offsetX = item.offsetX;
-			var offsetY = item.offsetY;
-			if (pointChange >= 0) {
-				centerTextInMiddle(data.canvas, context, "+" + pointChange, offsetX, offsetY);
-			} else {
-				context.fillStyle = "#b22222";
-				centerTextInMiddle(data.canvas, context, "-" + Math.abs(pointChange), offsetX, offsetY);
-				context.fillStyle = "#ffffff";
-			}
-		});
-
-	}, ["player"]);
+		bottomRightAlignText(data.canvas, context, points, 30, 30);
+	}, "player");
 };
 
 function bottomRightAlignText(canvas, context, text, offsetX, offsetY) {
