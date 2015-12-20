@@ -19,6 +19,12 @@
    ]
   },
   {
+   "name": "./systems/simulation/follow-touch",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "./systems/simulation/propel-trash",
    "scenes": [
     "main"

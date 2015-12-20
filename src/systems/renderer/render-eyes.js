@@ -75,12 +75,27 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				lidFrame = 2;
 			}
 		}
-		if (lidFrame === 2 && entity.playerController2d === undefined && !entity.gameOver) {
+		if (lidFrame === 2 && (entity.playerController2d === undefined || !entity.touchFollowBounds) && !entity.gameOver) {
 			entity.playerController2d = {
 				"up": "up",
 				"down": "down",
 				"left": "left",
 				"right": "right"
+			};
+			// bounds coordinates are relative to the player
+			entity.touchFollowBounds = {
+				"up": {
+					"yMax": -100
+				},
+				"down": {
+					"yMin": 100
+				},
+				"left": {
+					"xMax": -100
+				},
+				"right": {
+					"xMin": 100
+				}
 			};
 			entity.timers.goalTimer.running = true;
 		}
