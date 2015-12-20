@@ -8,7 +8,7 @@ var time = 0;
 var duration = 500;
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function renderTimer(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 
 		//timer image
 		var timerY = 5;

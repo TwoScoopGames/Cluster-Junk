@@ -40,7 +40,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 
 	data.entities.registerSearch("renderEyes", ["player", "position", "size", "radius", "eyes"]);
 
-	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function renderEyes(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 		var position = data.entities.get(entity, "position");
 		var size = data.entities.get(entity, "size");
 		var radius = data.entities.get(entity, "radius");

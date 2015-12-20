@@ -2,7 +2,7 @@
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	data.entities.registerSearch("renderPlayer", ["player", "position", "size", "radius"]);
-	ecs.addEach(function(entity, context) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function renderPlayer(entity, context) { // eslint-disable-line no-unused-vars
 		context.strokeStyle = "yellow";
 		context.beginPath();
 

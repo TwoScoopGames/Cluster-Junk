@@ -8,7 +8,7 @@ var rowsBeforeRepeat = 8;
 var rowsOffset = Math.PI * 2 / rowsBeforeRepeat;
 
 module.exports = function(ecs, data) { // jshint ignore:line
-	ecs.add(function(entities, context, elapsed) { // jshint ignore:line
+	ecs.add(function tileBackground(entities, context, elapsed) { // jshint ignore:line
 		var camera = 1;
 		var cameraPosition = data.entities.get(camera, "position");
 		var cameraSize = data.entities.get(camera, "size");

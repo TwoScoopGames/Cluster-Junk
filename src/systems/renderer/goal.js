@@ -5,7 +5,7 @@ var cy = 300;
 var radius = 50;
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function renderGoal(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 
 		var playerRadius = data.entities.get(entity, "radius");
 		var goalRadius = data.entities.get(entity, "goalRadius");

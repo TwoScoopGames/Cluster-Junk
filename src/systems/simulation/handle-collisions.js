@@ -76,7 +76,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	}
 
 	data.entities.registerSearch("handleCollisions", ["sticky", "collisions"]);
-	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function handleCollisions(entity, elapsed) { // eslint-disable-line no-unused-vars
 		var player = 0;
 		var playerPosition = data.entities.get(player, "position");
 		var playerSize = data.entities.get(player, "size");

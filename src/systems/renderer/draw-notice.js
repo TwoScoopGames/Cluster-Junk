@@ -10,7 +10,7 @@ var duration = 2000;
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	data.entities.registerSearch("drawNotice", ["notice", "message"]);
-	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function drawNotice(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 		var noticeY = -60;
 		if (time < duration) {
 			time += elapsed;

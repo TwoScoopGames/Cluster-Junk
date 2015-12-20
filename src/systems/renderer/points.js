@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function renderPointsChange(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 		context.fillStyle = "#3e311a";
 		context.strokeStyle = "#ffffff";
 		context.lineWidth = 7;
@@ -18,7 +18,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		}
 	}, "pointChange");
 
-	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function renderTotalPoints(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 		var points = data.entities.get(entity, "points");
 
 		context.fillStyle = "#3e311a";

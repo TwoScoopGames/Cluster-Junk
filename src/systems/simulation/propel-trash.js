@@ -9,7 +9,7 @@ var playerId = 0;
 var cameraId = 1;
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function propelTrash(entity, elapsed) { // eslint-disable-line no-unused-vars
 		var movement2d = data.entities.get(entity, "movement2d");
 		movement2d.up = false;
 		movement2d.down = false;

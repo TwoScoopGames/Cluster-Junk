@@ -13,7 +13,7 @@ var period = 5000;
 var radius = 80;
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function renderRadar(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 
 		//timer image
 		var radarY = 5;
