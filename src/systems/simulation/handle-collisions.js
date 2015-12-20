@@ -54,7 +54,9 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		var aSize = data.entities.get(a, "size");
 		var bPosition = data.entities.get(b, "position");
 		var bSize = data.entities.get(b, "size");
-		target = target || a;
+		if (target === undefined) {
+			target = a;
+		}
 		var targetPosition = data.entities.get(target, "position");
 		var targetVelocity = data.entities.get(target, "velocity");
 
