@@ -1,0 +1,18 @@
+{
+	"name": "Cluster Junk: The Secret of Trash Island",
+	"description": "There are millions of tons of trash floating in the oceans. So what goes on while no one is looking in these trash piles? Explore the garbage of humans and try to become the largest trash island in the sea! But hurry, don't let the timer run out! ",
+	"version": "1.0.0",
+	"manifest_version": 0,
+	"app": {
+		"background": {
+			"scripts": ["background.js"]
+		}
+	},
+	"icons": {
+		"16": "images/icons/icon-16x16.png",
+		"128": "images/icons/icon-128x128.png"
+	},
+	"permissions": [
+		"storage"
+	]
+}

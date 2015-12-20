@@ -1,6 +1,6 @@
 "use strict";
 
-var easing = require("../../easing");
+var easing = require("easing-js");
 
 //easing
 var radarStart = -50;
@@ -13,13 +13,13 @@ var period = 5000;
 var radius = 80;
 
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	ecs.addEach(function(player, context, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function renderRadar(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 
 		//timer image
 		var radarY = 5;
 		if(time < duration){
 			time += elapsed;
-			radarY = easing.bounceEaseOut(time, radarStart, 55, duration);
+			radarY = easing.easeOutElastic(time, radarStart, 55, duration);
 		}
 		var radarImage = data.images.get("radar");
 		context.drawImage(radarImage, 5, radarY);
@@ -44,34 +44,38 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			};
 			drawLine(context, linePoints, "1px", "#6abd44");
 
-			Object.keys(data.entities.entities).forEach(function(id) {
-				var entity = data.entities.entities[id];
-				if ((entity.type !== "trash" && entity.type !== "obstacle") || entity.sticky || entity.player) {
+			var playerPosition = data.entities.get(entity, "position");
+
+			data.entities.find("position").forEach(function(id) {
+				var entityType = data.entities.get(id, "type");
+				var entitySticky = data.entities.get(id, "sticky");
+				var entityPlayer = data.entities.get(id, "player");
+				var entityPosition = data.entities.get(id, "position");
+
+				if ((entityType !== "trash" && entityType !== "obstacle") || entitySticky || entityPlayer) {
 					return;
 				}
 
-				var dx = entity.position.x - player.position.x;
-				var dy = entity.position.y - player.position.y;
+				var dx = entityPosition.x - playerPosition.x;
+				var dy = entityPosition.y - playerPosition.y;
 
 				var max = 1000 * 1000;
 				var dist = Math.max(Math.min((dx * dx + dy * dy), max), -max);
 				var scaledDist = dist / max * (radius - 3);
 
-				var angle = Math.atan2(entity.position.y - player.position.y, entity.position.x - player.position.x);
+				var angle = Math.atan2(entityPosition.y - playerPosition.y, entityPosition.x - playerPosition.x);
 
 				var ex = scaledDist * Math.cos(angle);
 				var ey = scaledDist * Math.sin(angle);
 
-				context.strokeStyle = "#6abd44";
-				if (entity.type === "obstacle") {
-					context.strokeStyle = "red";
+				context.fillStyle = "#6abd44";
+				if (entityType === "obstacle") {
+					context.fillStyle = "red";
 				}
-				context.beginPath();
-				context.arc(cx + ex, cy + ey, 3, 0, Math.PI * 2);
-				context.stroke();
+				context.fillRect(cx + ex - 1, cy + ey - 1, 3, 3);
 			});
 		}
-	}, ["player"]);
+	}, "player");
 };
 
 function drawLine(context, ray, width, color) {

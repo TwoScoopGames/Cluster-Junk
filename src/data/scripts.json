@@ -1,9 +1,10 @@
 [
+	"./scripts/delete-entity",
+	"./scripts/end-of-game-timer",
+	"./scripts/goal-timer",
 	"./scripts/main-enter",
 	"./scripts/main-exit",
-	"./scripts/goal-timer",
-  "./scripts/end-of-game-timer",
+	"./scripts/recovery-timer",
 	"./scripts/title-enter",
-	"./scripts/title-exit",
-  "./scripts/recovery-timer"
+	"./scripts/title-exit"
 ]

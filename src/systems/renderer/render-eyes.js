@@ -2,19 +2,19 @@
 
 var centerText = require("../../center-text");
 
-function pupilOffset(entity) {
+function pupilOffset(movement2d) {
 	var px = 0;
 	var py = 0;
-	if (entity.movement2d.left) {
+	if (movement2d.left) {
 		px -= 20;
 	}
-	if (entity.movement2d.right) {
+	if (movement2d.right) {
 		px += 20;
 	}
-	if (entity.movement2d.up) {
+	if (movement2d.up) {
 		py -= 10;
 	}
-	if (entity.movement2d.down) {
+	if (movement2d.down) {
 		py += 20;
 	}
 	return { x: px, y: py };
@@ -38,15 +38,24 @@ var fallingEdge = require("../../falling-edge");
 module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 	var actionPressed = fallingEdge(data.input.button.bind(data.input, "action"));
 
-	ecs.addEach(function(entity, context, elapsed) { // eslint-disable-line no-unused-vars
-		var camera = data.entities.entities[1];
+	data.entities.registerSearch("renderEyes", ["player", "position", "size", "radius", "eyes"]);
 
-		var cx = entity.position.x + entity.size.width / 2;
-		var cy = entity.position.y + entity.size.height / 2;
+	ecs.addEach(function renderEyes(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+		var position = data.entities.get(entity, "position");
+		var size = data.entities.get(entity, "size");
+		var radius = data.entities.get(entity, "radius");
+		var goalRadius = data.entities.get(entity, "goalRadius");
 
-		var cpctx = (cx - camera.position.x) / camera.size.width;
+		var cx = position.x + size.width / 2;
+		var cy = position.y + size.height / 2;
+
+		var camera = 1;
+		var cameraPosition = data.entities.get(camera, "position");
+		var cameraSize = data.entities.get(camera, "size");
+
+		var cpctx = (cx - cameraPosition.x) / cameraSize.width;
 		var x = data.canvas.width * cpctx;
-		var cpcty = (cy - camera.position.y) / camera.size.height;
+		var cpcty = (cy - cameraPosition.y) / cameraSize.height;
 		var y = data.canvas.height * cpcty;
 
 		var eyes = data.images.get("eyes");
@@ -58,7 +67,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		var px = x - (pupils.width / 2);
 		var py = y - (pupils.height / 2);
 
-		var po = pupilOffset(entity);
+		var po = pupilOffset(data.entities.get(entity, "movement2d"));
 		pupilOffsetX = tween(pupilOffsetX, po.x);
 		pupilOffsetY = tween(pupilOffsetY, po.y);
 		px += pupilOffsetX;
@@ -75,15 +84,16 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				lidFrame = 2;
 			}
 		}
-		if (lidFrame === 2 && (entity.playerController2d === undefined || !entity.touchFollowBounds) && !entity.gameOver) {
-			entity.playerController2d = {
+		var gameOver = data.entities.get(entity, "gameOver");
+		if (lidFrame === 2 && (data.entities.get(entity, "playerController2d") === undefined || !data.entities.get(entity, "touchFollowBounds")) && !gameOver) {
+			data.entities.set(entity, "playerController2d", {
 				"up": "up",
 				"down": "down",
 				"left": "left",
 				"right": "right"
-			};
+			});
 			// bounds coordinates are relative to the player
-			entity.touchFollowBounds = {
+			data.entities.set(entity, "touchFollowBounds", {
 				"up": {
 					"yMax": -100
 				},
@@ -96,16 +106,16 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				"right": {
 					"xMin": 100
 				}
-			};
-			entity.timers.goalTimer.running = true;
+			});
+			data.entities.get(entity, "timers").goalTimer.running = true;
 		}
 		var lw = lids.width / 3;
 		var lx = x - (lw / 2);
 		var ly = y - (lids.height / 2);
 		context.drawImage(lids, (lidFrames[lidFrame] * lw), 0, lw, lids.height, lx, ly, lw, lids.height);
 
-		if (entity.gameOver) {
-			var won = entity.radius >= entity.goalRadius;
+		if (gameOver) {
+			var won = radius >= goalRadius;
 			if (won) {
 				var whaleLeftHappy = data.images.get("whaleLeftHappy");
 				context.drawImage(whaleLeftHappy, -111, (data.canvas.height - whaleLeftHappy.height) + 145);
@@ -138,5 +148,5 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				}
 			}
 		}
-	}, ["player", "position", "size", "radius", "eyes"]);
+	}, "renderEyes");
 };

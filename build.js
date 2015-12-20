@@ -36,6 +36,10 @@ var out = fs.createWriteStream("./build/index.js");
 b.bundle().pipe(out);
 
 ncp("src/index.html", "build/index.html");
+ncp("src/brackground.js", "build/brackground.js");
+ncp("src/browserconfig.xml", "build/browserconfig.xml");
+ncp("src/favicon.ico", "build/favicon.ico");
+ncp("src/manifest.json", "build/manifest.json");
 ncp("src/images", "build/images");
 ncp("src/sounds", "build/sounds");
 ncp("src/fonts", "build/fonts");

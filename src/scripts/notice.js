@@ -1,11 +1,10 @@
 "use strict";
 
-module.exports = function(player, data) { // eslint-disable-line no-unused-vars
+module.exports = function(entity, data) { // eslint-disable-line no-unused-vars
 	// create notice entity
-	var notice = data.entities.entities[2];
-	notice.message = "notice from timer.";
+	var notice = 2;
+	data.entities.set(notice, "message", "notice from timer.");
 	//timer expires
 	//delete notice entity
 	//stop timer
-
 };
