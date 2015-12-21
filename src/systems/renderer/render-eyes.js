@@ -95,16 +95,16 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			// bounds coordinates are relative to the player
 			data.entities.set(entity, "touchFollowBounds", {
 				"up": {
-					"yMax": -70
+					"yMax": -60
 				},
 				"down": {
-					"yMin": 70
+					"yMin": 60
 				},
 				"left": {
-					"xMax": -70
+					"xMax": -60
 				},
 				"right": {
-					"xMin": 70
+					"xMin": 60
 				}
 			});
 			data.entities.get(entity, "timers").goalTimer.running = true;
