@@ -2,7 +2,7 @@
 
 module.exports = function(ecs, data) {
 	data.entities.registerSearch("followTouch", ["movement2d", "touchFollowBounds"]);
-	ecs.addEach(function(entity, elapsed) { // eslint-disable-line no-unused-vars
+	ecs.addEach(function followTouch(entity, elapsed) { // eslint-disable-line no-unused-vars
 		var cameraPosition = data.entities.get(1, "position");
 		var entityScale = data.entities.get(entity, "scale") || 1;
 		var touchPoints = data.input.mouse.touches.map(function(touch) {
