@@ -122,10 +122,11 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 	var playerPosition = data.entities.get(player, "position");
 	var playerSize = data.entities.get(player, "size");
 	var playerImage = data.entities.get(player, "image");
+	var playerScale = player.scale || 1;
 
 	var camera = 1;
 	var cameraPosition = data.entities.get(camera, "position");
-	cameraPosition.x = -window.innerWidth / 4 + playerSize.width / 2;
+	cameraPosition.x = -(data.canvas.width / 2) / playerScale + playerSize.width / 2;
 
 	var level = data.arguments.level || 0;
 	data.entities.set(player, "radius", levels[level].radius);
