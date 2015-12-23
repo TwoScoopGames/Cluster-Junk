@@ -122,7 +122,7 @@ module.exports = function(data) { // eslint-disable-line no-unused-vars
 	var playerPosition = data.entities.get(player, "position");
 	var playerSize = data.entities.get(player, "size");
 	var playerImage = data.entities.get(player, "image");
-	var playerScale = player.scale || 1;
+	var playerScale = player.scale || 1.33; // approximately the initial player scale - we need a way to get this before the initial frame!
 
 	var camera = 1;
 	var cameraPosition = data.entities.get(camera, "position");
