@@ -91,6 +91,12 @@
      "time": 0,
      "max": 900,
      "script": "./scripts/end-of-game-timer"
+    },
+    "promptToContinueTimer": {
+      "running": false,
+      "time": 0,
+      "max": 3000,
+      "script": "./scripts/prompt-to-continue-timer"
     }
    }
   },

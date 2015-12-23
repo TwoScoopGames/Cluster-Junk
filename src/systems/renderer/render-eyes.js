@@ -85,6 +85,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			}
 		}
 		var gameOver = data.entities.get(entity, "gameOver");
+		var timers = data.entities.get(entity, "timers");
 		if (lidFrame === 2 && (data.entities.get(entity, "playerController2d") === undefined || !data.entities.get(entity, "touchFollowBounds")) && !gameOver) {
 			data.entities.set(entity, "playerController2d", {
 				"up": "up",
@@ -107,7 +108,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 					"xMin": 60
 				}
 			});
-			data.entities.get(entity, "timers").goalTimer.running = true;
+			timers.goalTimer.running = true;
 		}
 		var lw = lids.width / 3;
 		var lx = x - (lw / 2);
@@ -115,36 +116,35 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		context.drawImage(lids, (lidFrames[lidFrame] * lw), 0, lw, lids.height, lx, ly, lw, lids.height);
 
 		if (gameOver) {
+			timers.promptToContinueTimer.running = true;
 			var won = radius >= goalRadius;
 			if (won) {
 				var whaleLeftHappy = data.images.get("whaleLeftHappy");
 				context.drawImage(whaleLeftHappy, -111, (data.canvas.height - whaleLeftHappy.height) + 145);
 				var whaleLeftFlipperHappy = data.images.get("whaleLeftFlipperHappy");
 				context.drawImage(whaleLeftFlipperHappy, 320, (data.canvas.height - whaleLeftFlipperHappy.height) + 45);
-
-				context.fillStyle = "white";
-				context.font = "55px blanch";
-				centerText(data.canvas, context, "PRESS SPACE TO CONTINUE", 0, data.canvas.height - 50);
 			} else {
 				var whaleLeftSad = data.images.get("whaleLeftSad");
 				context.drawImage(whaleLeftSad, -111, (data.canvas.height - whaleLeftSad.height) + 145);
 				var whaleLeftFlipperSad = data.images.get("whaleLeftFlipperSad");
 				context.drawImage(whaleLeftFlipperSad, 320, (data.canvas.height - whaleLeftFlipperSad.height) + 45);
-
+			}
+			if (data.entities.get(entity, "readyToContinue")) {
 				context.fillStyle = "white";
 				context.font = "55px blanch";
 				centerText(data.canvas, context, "PRESS SPACE FOR TITLE", 0, data.canvas.height - 50);
-			}
-			if (actionPressed()) {
-				var numLevels = require("../../data/levels.json").length;
-				var level = data.arguments.level || 0;
-				level++;
-				if (!won) {
-					data.switchScene("title");
-				} else if (data.arguments.level + 1 === numLevels) {
-					data.switchScene("finished");
-				} else {
-					data.switchScene("main", { level: level });
+
+				if (actionPressed()) {
+					var numLevels = require("../../data/levels.json").length;
+					var level = data.arguments.level || 0;
+					level++;
+					if (!won) {
+						data.switchScene("title");
+					} else if (data.arguments.level + 1 === numLevels) {
+						data.switchScene("finished");
+					} else {
+						data.switchScene("main", { level: level });
+					}
 				}
 			}
 		}

@@ -2,6 +2,7 @@
 	"./scripts/delete-entity",
 	"./scripts/end-of-game-timer",
 	"./scripts/goal-timer",
+  "./scripts/prompt-to-continue-timer",
 	"./scripts/main-enter",
 	"./scripts/main-exit",
 	"./scripts/recovery-timer",
