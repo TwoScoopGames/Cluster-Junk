@@ -7,18 +7,18 @@ var wavePeriod = 4000;
 var rowsBeforeRepeat = 8;
 var rowsOffset = Math.PI * 2 / rowsBeforeRepeat;
 
-module.exports = function(ecs, data) { // jshint ignore:line
-	ecs.add(function tileBackground(entities, context, elapsed) { // jshint ignore:line
+module.exports = function(ecs, game) {
+	ecs.add(function tileBackground(entities, context, elapsed) {
 		var camera = 1;
-		var cameraPosition = data.entities.get(camera, "position");
-		var cameraSize = data.entities.get(camera, "size");
+		var cameraPosition = game.entities.get(camera, "position");
+		var cameraSize = game.entities.get(camera, "size");
 
 		context.fillStyle = "#1c325f";
 		context.fillRect(Math.floor(cameraPosition.x), Math.floor(cameraPosition.y), cameraSize.width, cameraSize.height);
 
 		time += elapsed;
 
-		var f1 = data.images.get("waves");
+		var f1 = game.images.get("waves");
 
 		var startX = Math.floor(cameraPosition.x / f1.width) * f1.width;
 		var startRow = Math.floor(cameraPosition.y / rowHeight);

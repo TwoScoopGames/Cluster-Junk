@@ -1,31 +1,31 @@
 "use strict";
 
-module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function renderPointsChange(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 		context.fillStyle = "#3e311a";
 		context.strokeStyle = "#ffffff";
 		context.lineWidth = 7;
 		context.font = "50px blanch";
 
-		var pointChange = data.entities.get(entity, "pointChange");
-		var position = data.entities.get(entity, "position");
+		var pointChange = game.entities.get(entity, "pointChange");
+		var position = game.entities.get(entity, "position");
 
 		if (pointChange >= 0) {
-			centerTextInMiddle(data.canvas, context, "+" + pointChange, position.x, position.y);
+			centerTextInMiddle(game.canvas, context, "+" + pointChange, position.x, position.y);
 		} else {
 			context.fillStyle = "#b22222";
-			centerTextInMiddle(data.canvas, context, "-" + Math.abs(pointChange), position.x, position.y);
+			centerTextInMiddle(game.canvas, context, "-" + Math.abs(pointChange), position.x, position.y);
 		}
 	}, "pointChange");
 
 	ecs.addEach(function renderTotalPoints(entity, context, elapsed) { // eslint-disable-line no-unused-vars
-		var points = data.entities.get(entity, "points");
+		var points = game.entities.get(entity, "points");
 
 		context.fillStyle = "#3e311a";
 		context.strokeStyle = "#ffffff";
 		context.lineWidth = 7;
 		context.font = "70px blanch";
-		bottomRightAlignText(data.canvas, context, points, 30, 30);
+		bottomRightAlignText(game.canvas, context, points, 30, 30);
 	}, "player");
 };
 

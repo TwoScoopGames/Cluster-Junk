@@ -12,7 +12,7 @@ var angle = 0;
 var period = 5000;
 var radius = 80;
 
-module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function renderRadar(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 
 		//timer image
@@ -21,7 +21,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			time += elapsed;
 			radarY = easing.easeOutElastic(time, radarStart, 55, duration);
 		}
-		var radarImage = data.images.get("radar");
+		var radarImage = game.images.get("radar");
 		context.drawImage(radarImage, 5, radarY);
 
 		// radar screen
@@ -44,13 +44,13 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			};
 			drawLine(context, linePoints, "1px", "#6abd44");
 
-			var playerPosition = data.entities.get(entity, "position");
+			var playerPosition = game.entities.get(entity, "position");
 
-			data.entities.find("position").forEach(function(id) {
-				var entityType = data.entities.get(id, "type");
-				var entitySticky = data.entities.get(id, "sticky");
-				var entityPlayer = data.entities.get(id, "player");
-				var entityPosition = data.entities.get(id, "position");
+			game.entities.find("position").forEach(function(id) {
+				var entityType = game.entities.get(id, "type");
+				var entitySticky = game.entities.get(id, "sticky");
+				var entityPlayer = game.entities.get(id, "player");
+				var entityPosition = game.entities.get(id, "position");
 
 				if ((entityType !== "trash" && entityType !== "obstacle") || entitySticky || entityPlayer) {
 					return;

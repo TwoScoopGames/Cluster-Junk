@@ -38,17 +38,17 @@ function makePoints(entities, points) {
 	});
 }
 
-module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 	function resolveCollisionShortest(a, b, target) {
-		var aPosition = data.entities.get(a, "position");
-		var aSize = data.entities.get(a, "size");
-		var bPosition = data.entities.get(b, "position");
-		var bSize = data.entities.get(b, "size");
+		var aPosition = game.entities.get(a, "position");
+		var aSize = game.entities.get(a, "size");
+		var bPosition = game.entities.get(b, "position");
+		var bSize = game.entities.get(b, "size");
 		if (target === undefined) {
 			target = a;
 		}
-		var targetPosition = data.entities.get(target, "position");
-		var targetVelocity = data.entities.get(target, "velocity");
+		var targetPosition = game.entities.get(target, "position");
+		var targetVelocity = game.entities.get(target, "velocity");
 
 		var bottom = [0, bPosition.y + bSize.height - aPosition.y, 0, 0.5];
 		var top = [0, bPosition.y - aSize.height - aPosition.y, 0, -0.5];
@@ -67,32 +67,32 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		targetVelocity.y += smallest[3];
 	}
 
-	data.entities.registerSearch("handleCollisions", ["sticky", "collisions"]);
+	game.entities.registerSearch("handleCollisions", ["sticky", "collisions"]);
 	ecs.addEach(function handleCollisions(entity, elapsed) { // eslint-disable-line no-unused-vars
 		var player = 0;
-		var playerPosition = data.entities.get(player, "position");
-		var playerSize = data.entities.get(player, "size");
-		var playerRadius = data.entities.get(player, "radius");
-		var playerArea = data.entities.get(player, "area");
-		var playerPoints = data.entities.get(player, "points");
-		var playerTimers = data.entities.get(player, "timers");
+		var playerPosition = game.entities.get(player, "position");
+		var playerSize = game.entities.get(player, "size");
+		var playerRadius = game.entities.get(player, "radius");
+		var playerArea = game.entities.get(player, "area");
+		var playerPoints = game.entities.get(player, "points");
+		var playerTimers = game.entities.get(player, "timers");
 
-		data.entities.get(entity, "collisions").forEach(function(other) {
-			if (data.entities.get(other, "sticky")) {
+		game.entities.get(entity, "collisions").forEach(function(other) {
+			if (game.entities.get(other, "sticky")) {
 				return;
 			}
 
-			var otherNoises = data.entities.get(other, "noises");
+			var otherNoises = game.entities.get(other, "noises");
 			if (otherNoises && !playerTimers.silent.running) {
-				data.sounds.play(randomFrom(otherNoises));
+				game.sounds.play(randomFrom(otherNoises));
 				playerTimers.silent.running = true;
 			}
 
-			data.entities.set(other, "velocity", { x: 0, y: 0 });
+			game.entities.set(other, "velocity", { x: 0, y: 0 });
 
-			var otherPosition = data.entities.get(other, "position");
-			var otherSize = data.entities.get(other, "size");
-			var otherType = data.entities.get(other, "type");
+			var otherPosition = game.entities.get(other, "position");
+			var otherSize = game.entities.get(other, "size");
+			var otherType = game.entities.get(other, "type");
 
 			var distSq = distanceSquared(playerPosition, playerSize, otherPosition, otherSize);
 			var otherArea = otherSize.width * otherSize.height;
@@ -100,24 +100,24 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				playerArea += otherArea;
 				var newPoints = Math.ceil(Math.sqrt(otherArea) / 10) * 10;
 				playerPoints += newPoints;
-				makePoints(data.entities, newPoints);
-				data.entities.set(other, "match", {
+				makePoints(game.entities, newPoints);
+				game.entities.set(other, "match", {
 					id: player,
 					offsetX: otherPosition.x - playerPosition.x,
 					offsetY: otherPosition.y - playerPosition.y
 				});
-				data.entities.set(other, "sticky", true);
-				data.sounds.play("sfx-power-up");
+				game.entities.set(other, "sticky", true);
+				game.sounds.play("sfx-power-up");
 				var notice = 2;
-				data.entities.set(notice, "message", data.entities.get(other, "name"));
+				game.entities.set(notice, "message", game.entities.get(other, "name"));
 			} else if (otherType === "obstacle") {
 				resolveCollisionShortest(entity, other, player);
-				if (!data.entities.get(player, "recovering")) {
+				if (!game.entities.get(player, "recovering")) {
 					var pointDeduction = -1 * Math.min(Math.floor(Math.sqrt(otherArea) / 10), playerPoints);
 					if (pointDeduction) {
 						playerPoints += pointDeduction;
-						makePoints(data.entities, pointDeduction);
-						data.entities.set(player, "recovering", true);
+						makePoints(game.entities, pointDeduction);
+						game.entities.set(player, "recovering", true);
 						playerTimers.recoveryTimer.running = true;
 					}
 				}
@@ -126,12 +126,12 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			}
 		});
 		playerRadius = Math.sqrt(playerArea / Math.PI * 2);
-		data.entities.set(player, "radius", playerRadius);
-		data.entities.set(player, "area", playerArea);
-		data.entities.set(player, "points", playerPoints);
+		game.entities.set(player, "radius", playerRadius);
+		game.entities.set(player, "area", playerArea);
+		game.entities.set(player, "points", playerPoints);
 
 		var camera = 1;
-		var cameraSize = data.entities.get(camera, "size");
+		var cameraSize = game.entities.get(camera, "size");
 		var size = Math.floor(playerRadius * 2 * 3);
 		cameraSize.height = size;
 		cameraSize.width = size;

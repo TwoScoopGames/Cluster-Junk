@@ -7,7 +7,7 @@ var timerStart = -50;
 var time = 0;
 var duration = 500;
 
-module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function renderTimer(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 
 		//timer image
@@ -16,11 +16,11 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			time += elapsed;
 			timerY = easing.easeOutElastic(time, timerStart, 55, duration);
 		}
-		context.drawImage(data.images.get("timer"), (data.canvas.width - (data.images.get("timer").width)) -5 , timerY);
+		context.drawImage(game.images.get("timer"), (game.canvas.width - (game.images.get("timer").width)) -5 , timerY);
 
 		// Time text
 		if (time >= duration) {
-			var goalTimer = data.entities.get(entity, "timers").goalTimer;
+			var goalTimer = game.entities.get(entity, "timers").goalTimer;
 			var remainingSeconds = Math.round((goalTimer.max - goalTimer.time) / 1000);
 
 			if (remainingSeconds < 10) {
@@ -30,7 +30,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 			}
 			context.fillStyle = "white";
 			context.font = "54px blanch";
-			context.fillText(remainingSeconds, (data.canvas.width - 107), 93);
+			context.fillText(remainingSeconds, (game.canvas.width - 107), 93);
 		}
 	}, "player");
 };

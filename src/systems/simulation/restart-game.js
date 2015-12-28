@@ -2,16 +2,16 @@
 
 var fallingEdge = require("../../falling-edge");
 
-module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	var actionPressed = fallingEdge(data.input.button.bind(data.input, "action"));
+module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
+	var actionPressed = fallingEdge(game.input.button.bind(game.input, "action"));
 
 	ecs.addEach(function restartGame(entity, elapsed) { // eslint-disable-line no-unused-vars
-		data.sounds.play("ambient-sea-track", {
+		game.sounds.play("ambient-sea-track", {
 			"loopStart": 0,
 			"loopEnd": 0
 		});
 		if (actionPressed()) {
-			data.switchScene("title");
+			game.switchScene("title");
 		}
 	}, "title");
 };

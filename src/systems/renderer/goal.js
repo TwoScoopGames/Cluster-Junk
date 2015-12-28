@@ -4,11 +4,11 @@ var cx = 100;
 var cy = 300;
 var radius = 50;
 
-module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
+module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 	ecs.addEach(function renderGoal(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 
-		var playerRadius = data.entities.get(entity, "radius");
-		var goalRadius = data.entities.get(entity, "goalRadius");
+		var playerRadius = game.entities.get(entity, "radius");
+		var goalRadius = game.entities.get(entity, "goalRadius");
 		var progressRadius = (playerRadius / goalRadius) * radius;
 
 		context.fillStyle = "rgba(106, 189, 68, 0.55)";

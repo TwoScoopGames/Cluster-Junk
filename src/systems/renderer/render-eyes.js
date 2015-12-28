@@ -35,39 +35,39 @@ var lidFrameTimes = [2000, 200, 2500, 60, 60, 60];
 
 var fallingEdge = require("../../falling-edge");
 
-module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
-	var actionPressed = fallingEdge(data.input.button.bind(data.input, "action"));
+module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
+	var actionPressed = fallingEdge(game.input.button.bind(game.input, "action"));
 
-	data.entities.registerSearch("renderEyes", ["player", "position", "size", "radius", "eyes"]);
+	game.entities.registerSearch("renderEyes", ["player", "position", "size", "radius", "eyes"]);
 
 	ecs.addEach(function renderEyes(entity, context, elapsed) { // eslint-disable-line no-unused-vars
-		var position = data.entities.get(entity, "position");
-		var size = data.entities.get(entity, "size");
-		var radius = data.entities.get(entity, "radius");
-		var goalRadius = data.entities.get(entity, "goalRadius");
+		var position = game.entities.get(entity, "position");
+		var size = game.entities.get(entity, "size");
+		var radius = game.entities.get(entity, "radius");
+		var goalRadius = game.entities.get(entity, "goalRadius");
 
 		var cx = position.x + size.width / 2;
 		var cy = position.y + size.height / 2;
 
 		var camera = 1;
-		var cameraPosition = data.entities.get(camera, "position");
-		var cameraSize = data.entities.get(camera, "size");
+		var cameraPosition = game.entities.get(camera, "position");
+		var cameraSize = game.entities.get(camera, "size");
 
 		var cpctx = (cx - cameraPosition.x) / cameraSize.width;
-		var x = data.canvas.width * cpctx;
+		var x = game.canvas.width * cpctx;
 		var cpcty = (cy - cameraPosition.y) / cameraSize.height;
-		var y = data.canvas.height * cpcty;
+		var y = game.canvas.height * cpcty;
 
-		var eyes = data.images.get("eyes");
+		var eyes = game.images.get("eyes");
 		var ex = x - (eyes.width / 2);
 		var ey = y - (eyes.height / 2);
 		context.drawImage(eyes, ex, ey);
 
-		var pupils = data.images.get("pupils");
+		var pupils = game.images.get("pupils");
 		var px = x - (pupils.width / 2);
 		var py = y - (pupils.height / 2);
 
-		var po = pupilOffset(data.entities.get(entity, "movement2d"));
+		var po = pupilOffset(game.entities.get(entity, "movement2d"));
 		pupilOffsetX = tween(pupilOffsetX, po.x);
 		pupilOffsetY = tween(pupilOffsetY, po.y);
 		px += pupilOffsetX;
@@ -75,7 +75,7 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 
 		context.drawImage(pupils, px, py);
 
-		var lids = data.images.get("eyelashes-f3");
+		var lids = game.images.get("eyelashes-f3");
 		lidTime += elapsed;
 		while (lidTime > lidFrameTimes[lidFrame]) {
 			lidTime -= lidFrameTimes[lidFrame];
@@ -84,15 +84,15 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 				lidFrame = 2;
 			}
 		}
-		var gameOver = data.entities.get(entity, "gameOver");
-		if (lidFrame === 2 && data.entities.get(entity, "playerController2d") === undefined && !gameOver) {
-			data.entities.set(entity, "playerController2d", {
+		var gameOver = game.entities.get(entity, "gameOver");
+		if (lidFrame === 2 && game.entities.get(entity, "playerController2d") === undefined && !gameOver) {
+			game.entities.set(entity, "playerController2d", {
 				"up": "up",
 				"down": "down",
 				"left": "left",
 				"right": "right"
 			});
-			data.entities.get(entity, "timers").goalTimer.running = true;
+			game.entities.get(entity, "timers").goalTimer.running = true;
 		}
 		var lw = lids.width / 3;
 		var lx = x - (lw / 2);
@@ -102,34 +102,34 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		if (gameOver) {
 			var won = radius >= goalRadius;
 			if (won) {
-				var whaleLeftHappy = data.images.get("whaleLeftHappy");
-				context.drawImage(whaleLeftHappy, -111, (data.canvas.height - whaleLeftHappy.height) + 145);
-				var whaleLeftFlipperHappy = data.images.get("whaleLeftFlipperHappy");
-				context.drawImage(whaleLeftFlipperHappy, 320, (data.canvas.height - whaleLeftFlipperHappy.height) + 45);
+				var whaleLeftHappy = game.images.get("whaleLeftHappy");
+				context.drawImage(whaleLeftHappy, -111, (game.canvas.height - whaleLeftHappy.height) + 145);
+				var whaleLeftFlipperHappy = game.images.get("whaleLeftFlipperHappy");
+				context.drawImage(whaleLeftFlipperHappy, 320, (game.canvas.height - whaleLeftFlipperHappy.height) + 45);
 
 				context.fillStyle = "white";
 				context.font = "55px blanch";
-				centerText(data.canvas, context, "PRESS SPACE TO CONTINUE", 0, data.canvas.height - 50);
+				centerText(game.canvas, context, "PRESS SPACE TO CONTINUE", 0, game.canvas.height - 50);
 			} else {
-				var whaleLeftSad = data.images.get("whaleLeftSad");
-				context.drawImage(whaleLeftSad, -111, (data.canvas.height - whaleLeftSad.height) + 145);
-				var whaleLeftFlipperSad = data.images.get("whaleLeftFlipperSad");
-				context.drawImage(whaleLeftFlipperSad, 320, (data.canvas.height - whaleLeftFlipperSad.height) + 45);
+				var whaleLeftSad = game.images.get("whaleLeftSad");
+				context.drawImage(whaleLeftSad, -111, (game.canvas.height - whaleLeftSad.height) + 145);
+				var whaleLeftFlipperSad = game.images.get("whaleLeftFlipperSad");
+				context.drawImage(whaleLeftFlipperSad, 320, (game.canvas.height - whaleLeftFlipperSad.height) + 45);
 
 				context.fillStyle = "white";
 				context.font = "55px blanch";
-				centerText(data.canvas, context, "PRESS SPACE FOR TITLE", 0, data.canvas.height - 50);
+				centerText(game.canvas, context, "PRESS SPACE FOR TITLE", 0, game.canvas.height - 50);
 			}
 			if (actionPressed()) {
 				var numLevels = require("../../data/levels.json").length;
-				var level = data.arguments.level || 0;
+				var level = game.arguments.level || 0;
 				level++;
 				if (!won) {
-					data.switchScene("title");
-				} else if (data.arguments.level + 1 === numLevels) {
-					data.switchScene("finished");
+					game.switchScene("title");
+				} else if (game.arguments.level + 1 === numLevels) {
+					game.switchScene("finished");
 				} else {
-					data.switchScene("main", { level: level });
+					game.switchScene("main", { level: level });
 				}
 			}
 		}
