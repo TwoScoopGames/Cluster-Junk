@@ -33,13 +33,8 @@ var lidTime = 0;
 var lidFrames = [2, 1, 0, 1, 2, 1];
 var lidFrameTimes = [2000, 200, 2500, 60, 60, 60];
 
-var fallingEdge = require("../../falling-edge");
-
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
-	var actionPressed = fallingEdge(game.input.button.bind(game.input, "action"));
-
 	game.entities.registerSearch("renderEyes", ["player", "position", "size", "radius", "eyes"]);
-
 	ecs.addEach(function renderEyes(entity, context, elapsed) { // eslint-disable-line no-unused-vars
 		var position = game.entities.get(entity, "position");
 		var size = game.entities.get(entity, "size");
@@ -120,7 +115,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 				context.font = "55px blanch";
 				centerText(game.canvas, context, "PRESS SPACE FOR TITLE", 0, game.canvas.height - 50);
 			}
-			if (actionPressed()) {
+			if (game.input.buttonReleased("action")) {
 				var numLevels = require("../../data/levels.json").length;
 				var level = game.arguments.level || 0;
 				level++;
