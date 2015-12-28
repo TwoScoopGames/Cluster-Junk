@@ -108,6 +108,9 @@
    "size": {
     "width": 1136,
     "height": 640
+   },
+   "matchAspectRatio": {
+    "id": 3
    }
   },
   {
@@ -131,5 +134,10 @@
      "script": "./scripts/notice"
     }
    }
+  },
+  {
+   "id": 3,
+   "name": "canvas",
+   "matchCanvasSize": true
   }]
 }

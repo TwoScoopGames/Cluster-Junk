@@ -1,6 +1,12 @@
 {
  "simulation": [
   {
+   "name": "splatjs:matchCanvasSize",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "splatjs:advanceTimers",
    "scenes": [
     "main"
@@ -62,6 +68,12 @@
   },
   {
    "name": "./systems/simulation/handle-collisions",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
+   "name": "splatjs:matchAspectRatio",
    "scenes": [
     "main"
    ]

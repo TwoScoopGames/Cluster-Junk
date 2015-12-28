@@ -16,16 +16,6 @@ function distanceSquared(aPosition, aSize, bPosition, bSize) {
 	return dx * dx + dy * dy;
 }
 
-function calculateAspectRatio() {
-	var canvas = document.getElementById("canvas");
-	var canvasStyle = window.getComputedStyle(canvas);
-	var ar = parseInt(canvasStyle.width) / parseInt(canvasStyle.height);
-	aspectRatio = ar;
-	return ar;
-}
-var aspectRatio = calculateAspectRatio();
-window.onresize = calculateAspectRatio;
-
 function randomFrom(array) {
 	return array[Math.floor(Math.random() * array.length)];
 }
@@ -140,16 +130,10 @@ module.exports = function(ecs, data) { // eslint-disable-line no-unused-vars
 		data.entities.set(player, "area", playerArea);
 		data.entities.set(player, "points", playerPoints);
 
-		var size = 600;
-		var viewportSize = Math.floor(playerRadius * 2 * 3);
-		data.entities.set(player, "scale", size / viewportSize);
-
-		data.canvas.height = size;
-		data.canvas.width = data.canvas.height * aspectRatio;
-
 		var camera = 1;
 		var cameraSize = data.entities.get(camera, "size");
-		cameraSize.height = Math.floor(playerRadius * 2 * 3);
-		cameraSize.width = cameraSize.height * aspectRatio;
+		var size = Math.floor(playerRadius * 2 * 3);
+		cameraSize.height = size;
+		cameraSize.width = size;
 	}, "handleCollisions");
 };
