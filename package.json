@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "easing-js": "^1.0.1",
-    "splat-ecs": "^1.0.0"
+    "splat-ecs": "^1.0.0",
+		"html5-gamepad": "0.1.1"
   }
 }

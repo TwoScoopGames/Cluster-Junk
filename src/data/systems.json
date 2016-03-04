@@ -31,6 +31,12 @@
    ]
   },
   {
+   "name": "./systems/simulation/controller",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "splatjs:applyMovement2d",
    "scenes": [
     "main"
