@@ -8,7 +8,7 @@ var time = 0;
 var duration = 500;
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
-  ecs.addEach(function renderTimer(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+  ecs.addEach(function renderTimer(entity, elapsed) { // eslint-disable-line no-unused-vars
 
     //timer image
     var timerY = 5;
@@ -16,7 +16,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       time += elapsed;
       timerY = easing.easeOutElastic(time, timerStart, 55, duration);
     }
-    context.drawImage(game.images.get("timer.png"), (game.canvas.width - (game.images.get("timer.png").width)) - 5 , timerY);
+    game.context.drawImage(game.images.get("timer.png"), (game.canvas.width - (game.images.get("timer.png").width)) - 5 , timerY);
 
     // Time text
     if (time >= duration) {
@@ -28,9 +28,9 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       } else if (remainingSeconds < 100) {
         remainingSeconds = "0" + remainingSeconds;
       }
-      context.fillStyle = "white";
-      context.font = "54px blanch";
-      context.fillText(remainingSeconds, (game.canvas.width - 107), 93);
+      game.context.fillStyle = "white";
+      game.context.font = "54px blanch";
+      game.context.fillText(remainingSeconds, (game.canvas.width - 107), 93);
     }
   }, "player");
 };

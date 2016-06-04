@@ -35,7 +35,7 @@ var lidFrameTimes = [2000, 200, 2500, 60, 60, 60];
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   game.entities.registerSearch("renderEyes", ["player", "position", "size", "radius", "eyes"]);
-  ecs.addEach(function renderEyes(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+  ecs.addEach(function renderEyes(entity, elapsed) { // eslint-disable-line no-unused-vars
     var position = game.entities.get(entity, "position");
     var size = game.entities.get(entity, "size");
     var radius = game.entities.get(entity, "radius");
@@ -56,7 +56,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var eyes = game.images.get("eyes.png");
     var ex = x - (eyes.width / 2);
     var ey = y - (eyes.height / 2);
-    context.drawImage(eyes, ex, ey);
+    game.context.drawImage(eyes, ex, ey);
 
     var pupils = game.images.get("pupils.png");
     var px = x - (pupils.width / 2);
@@ -68,7 +68,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     px += pupilOffsetX;
     py += pupilOffsetY;
 
-    context.drawImage(pupils, px, py);
+    game.context.drawImage(pupils, px, py);
 
     var lids = game.images.get("eyelashes-f3.png");
     lidTime += elapsed;
@@ -92,28 +92,28 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var lw = lids.width / 3;
     var lx = x - (lw / 2);
     var ly = y - (lids.height / 2);
-    context.drawImage(lids, (lidFrames[lidFrame] * lw), 0, lw, lids.height, lx, ly, lw, lids.height);
+    game.context.drawImage(lids, (lidFrames[lidFrame] * lw), 0, lw, lids.height, lx, ly, lw, lids.height);
 
     if (gameOver) {
       var won = radius >= goalRadius;
       if (won) {
         var whaleLeftHappy = game.images.get("whaleLeftHappy.png");
-        context.drawImage(whaleLeftHappy, -111, (game.canvas.height - whaleLeftHappy.height) + 145);
+        game.context.drawImage(whaleLeftHappy, -111, (game.canvas.height - whaleLeftHappy.height) + 145);
         var whaleLeftFlipperHappy = game.images.get("whaleLeftFlipperHappy.png");
-        context.drawImage(whaleLeftFlipperHappy, 320, (game.canvas.height - whaleLeftFlipperHappy.height) + 45);
+        game.context.drawImage(whaleLeftFlipperHappy, 320, (game.canvas.height - whaleLeftFlipperHappy.height) + 45);
 
-        context.fillStyle = "white";
-        context.font = "55px blanch";
-        centerText(game.canvas, context, "PRESS SPACE TO CONTINUE", 0, game.canvas.height - 50);
+        game.context.fillStyle = "white";
+        game.context.font = "55px blanch";
+        centerText(game.canvas, game.context, "PRESS SPACE TO CONTINUE", 0, game.canvas.height - 50);
       } else {
         var whaleLeftSad = game.images.get("whaleLeftSad.png");
-        context.drawImage(whaleLeftSad, -111, (game.canvas.height - whaleLeftSad.height) + 145);
+        game.context.drawImage(whaleLeftSad, -111, (game.canvas.height - whaleLeftSad.height) + 145);
         var whaleLeftFlipperSad = game.images.get("whaleLeftFlipperSad.png");
-        context.drawImage(whaleLeftFlipperSad, 320, (game.canvas.height - whaleLeftFlipperSad.height) + 45);
+        game.context.drawImage(whaleLeftFlipperSad, 320, (game.canvas.height - whaleLeftFlipperSad.height) + 45);
 
-        context.fillStyle = "white";
-        context.font = "55px blanch";
-        centerText(game.canvas, context, "PRESS SPACE FOR TITLE", 0, game.canvas.height - 50);
+        game.context.fillStyle = "white";
+        game.context.font = "55px blanch";
+        centerText(game.canvas, game.context, "PRESS SPACE FOR TITLE", 0, game.canvas.height - 50);
       }
       if (game.inputs.buttonReleased("action")) {
         var numLevels = require("../../data/levels.json").length;

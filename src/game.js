@@ -73,5 +73,5 @@ function percentLoaded() {
   }
   return (game.images.loadedImages + game.sounds.loadedSounds) / (game.images.totalImages + game.sounds.totalSounds);
 }
-var loading = Splat.loadingScene(canvas, percentLoaded, game.scene);
+var loading = Splat.loadingScene(game, percentLoaded, game.scene);
 loading.start(context);

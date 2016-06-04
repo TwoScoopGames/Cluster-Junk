@@ -8,13 +8,13 @@ var rowsBeforeRepeat = 8;
 var rowsOffset = Math.PI * 2 / rowsBeforeRepeat;
 
 module.exports = function(ecs, game) {
-  ecs.add(function tileBackground(entities, context, elapsed) {
+  ecs.add(function tileBackground(entities, elapsed) {
     var camera = 1;
     var cameraPosition = game.entities.get(camera, "position");
     var cameraSize = game.entities.get(camera, "size");
 
-    context.fillStyle = "#1c325f";
-    context.fillRect(Math.floor(cameraPosition.x), Math.floor(cameraPosition.y), cameraSize.width, cameraSize.height);
+    game.context.fillStyle = "#1c325f";
+    game.context.fillRect(Math.floor(cameraPosition.x), Math.floor(cameraPosition.y), cameraSize.width, cameraSize.height);
 
     time += elapsed;
 
@@ -31,7 +31,7 @@ module.exports = function(ecs, game) {
 
       for (var x = startX; x <= cameraPosition.x + cameraSize.width + f1.width; x += f1.width) {
         var waveX = x + Math.sin(time / wavePeriod * 2 * Math.PI * 2 + offset) * waveHeight / 2;
-        context.drawImage(f1, even ? waveX : waveX - 100, waveY, f1.width, f1.height);
+        game.context.drawImage(f1, even ? waveX : waveX - 100, waveY, f1.width, f1.height);
       }
     }
   });

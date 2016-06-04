@@ -13,7 +13,7 @@ var period = 5000;
 var radius = 80;
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
-  ecs.addEach(function renderRadar(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+  ecs.addEach(function renderRadar(entity, elapsed) { // eslint-disable-line no-unused-vars
 
     //timer image
     var radarY = 5;
@@ -22,7 +22,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       radarY = easing.easeOutElastic(time, radarStart, 55, duration);
     }
     var radarImage = game.images.get("radar.png");
-    context.drawImage(radarImage, 5, radarY);
+    game.context.drawImage(radarImage, 5, radarY);
 
     // radar screen
     if (time >= duration) {
@@ -42,7 +42,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         "endX": cx + x,
         "endY": cy + y
       };
-      drawLine(context, linePoints, "1px", "#6abd44");
+      drawLine(game.context, linePoints, "1px", "#6abd44");
 
       var playerPosition = game.entities.get(entity, "position");
 
@@ -68,11 +68,11 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         var ex = scaledDist * Math.cos(angle);
         var ey = scaledDist * Math.sin(angle);
 
-        context.fillStyle = "#6abd44";
+        game.context.fillStyle = "#6abd44";
         if (entityType === "obstacle") {
-          context.fillStyle = "red";
+          game.context.fillStyle = "red";
         }
-        context.fillRect(cx + ex - 1, cy + ey - 1, 3, 3);
+        game.context.fillRect(cx + ex - 1, cy + ey - 1, 3, 3);
       });
     }
   }, "player");

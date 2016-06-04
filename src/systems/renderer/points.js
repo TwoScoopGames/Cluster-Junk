@@ -1,31 +1,31 @@
 "use strict";
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
-  ecs.addEach(function renderPointsChange(entity, context, elapsed) { // eslint-disable-line no-unused-vars
-    context.fillStyle = "#3e311a";
-    context.strokeStyle = "#ffffff";
-    context.lineWidth = 7;
-    context.font = "50px blanch";
+  ecs.addEach(function renderPointsChange(entity, elapsed) { // eslint-disable-line no-unused-vars
+    game.context.fillStyle = "#3e311a";
+    game.context.strokeStyle = "#ffffff";
+    game.context.lineWidth = 7;
+    game.context.font = "50px blanch";
 
     var pointChange = game.entities.get(entity, "pointChange");
     var position = game.entities.get(entity, "position");
 
     if (pointChange >= 0) {
-      centerTextInMiddle(game.canvas, context, "+" + pointChange, position.x, position.y);
+      centerTextInMiddle(game.canvas, game.context, "+" + pointChange, position.x, position.y);
     } else {
-      context.fillStyle = "#b22222";
-      centerTextInMiddle(game.canvas, context, "-" + Math.abs(pointChange), position.x, position.y);
+      game.context.fillStyle = "#b22222";
+      centerTextInMiddle(game.canvas, game.context, "-" + Math.abs(pointChange), position.x, position.y);
     }
   }, "pointChange");
 
-  ecs.addEach(function renderTotalPoints(entity, context, elapsed) { // eslint-disable-line no-unused-vars
+  ecs.addEach(function renderTotalPoints(entity, elapsed) { // eslint-disable-line no-unused-vars
     var points = game.entities.get(entity, "points");
 
-    context.fillStyle = "#3e311a";
-    context.strokeStyle = "#ffffff";
-    context.lineWidth = 7;
-    context.font = "70px blanch";
-    bottomRightAlignText(game.canvas, context, points, 30, 30);
+    game.context.fillStyle = "#3e311a";
+    game.context.strokeStyle = "#ffffff";
+    game.context.lineWidth = 7;
+    game.context.font = "70px blanch";
+    bottomRightAlignText(game.canvas, game.context, points, 30, 30);
   }, "player");
 };
 
