@@ -1,63 +1,51 @@
 {
-	"action": {
-		"type": "button",
-		"inputs": [
-			{
-				"device": "keyboard",
-				"key": "space"
-			}
-		]
-	},
-	"up": {
-		"type": "button",
-		"inputs": [
-			{
-				"device": "keyboard",
-				"key": "w"
-			},
-			{
-				"device": "keyboard",
-				"key": "up"
-			}
-		]
-	},
-	"down": {
-		"type": "button",
-		"inputs": [
-			{
-				"device": "keyboard",
-				"key": "s"
-			},
-			{
-				"device": "keyboard",
-				"key": "down"
-			}
-		]
-	},
-	"left": {
-		"type": "button",
-		"inputs": [
-			{
-				"device": "keyboard",
-				"key": "a"
-			},
-			{
-				"device": "keyboard",
-				"key": "left"
-			}
-		]
-	},
-	"right": {
-		"type": "button",
-		"inputs": [
-			{
-				"device": "keyboard",
-				"key": "d"
-			},
-			{
-				"device": "keyboard",
-				"key": "right"
-			}
-		]
-	}
+  "axes": {},
+  "buttons": {
+    "action": [
+      {
+        "device": "keyboard",
+        "button": "space"
+      }
+    ],
+    "up": [
+      {
+        "device": "keyboard",
+        "button": "w"
+      },
+      {
+        "device": "keyboard",
+        "button": "up"
+      }
+    ],
+    "down": [
+      {
+        "device": "keyboard",
+        "button": "s"
+      },
+      {
+        "device": "keyboard",
+        "button": "down"
+      }
+    ],
+    "left": [
+      {
+        "device": "keyboard",
+        "button": "a"
+      },
+      {
+        "device": "keyboard",
+        "button": "left"
+      }
+    ],
+    "right": [
+      {
+        "device": "keyboard",
+        "button": "d"
+      },
+      {
+        "device": "keyboard",
+        "button": "right"
+      }
+    ]
+  }
 }

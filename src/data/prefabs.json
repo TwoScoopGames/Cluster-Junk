@@ -33,9 +33,9 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-paper-flip",
-			"sfx-rolled-paper-slap"
+			"sfx-crunch.mp3",
+			"sfx-paper-flip.mp3",
+			"sfx-rolled-paper-slap.mp3"
 		]
 	},
 	"box2": {
@@ -72,9 +72,9 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-paper-flip",
-			"sfx-rolled-paper-slap"
+			"sfx-crunch.mp3",
+			"sfx-paper-flip.mp3",
+			"sfx-rolled-paper-slap.mp3"
 		]
 	},
 	"milk": {
@@ -111,10 +111,10 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-crush",
-			"sfx-paper-flip",
-			"sfx-rolled-paper-slap"
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3",
+			"sfx-paper-flip.mp3",
+			"sfx-rolled-paper-slap.mp3"
 		]
 	},
 	"paper-wad": {
@@ -151,10 +151,10 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-crush",
-			"sfx-paper-flip",
-			"sfx-rolled-paper-slap"
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3",
+			"sfx-paper-flip.mp3",
+			"sfx-rolled-paper-slap.mp3"
 		]
 	},
 	"tire": {
@@ -191,8 +191,8 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-metal-boom",
-			"sfx-metal-dink"
+			"sfx-metal-boom.mp3",
+			"sfx-metal-dink.mp3"
 		]
 	},
 	"barrel": {
@@ -229,10 +229,10 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-metal-boom",
-			"sfx-metal-dink",
-			"sfx-metal-tonk",
-			"sfx-metal-tube"
+			"sfx-metal-boom.mp3",
+			"sfx-metal-dink.mp3",
+			"sfx-metal-tonk.mp3",
+			"sfx-metal-tube.mp3"
 		]
 	},
 	"Fries": {
@@ -269,10 +269,10 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-crush",
-			"sfx-paper-flip",
-			"sfx-rolled-paper-slap"
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3",
+			"sfx-paper-flip.mp3",
+			"sfx-rolled-paper-slap.mp3"
 		]
 	},
 	"boot": {
@@ -309,8 +309,8 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-metal-dink",
-			"sfx-rolled-paper-slap"
+			"sfx-metal-dink.mp3",
+			"sfx-rolled-paper-slap.mp3"
 		]
 	},
 	"bottle": {
@@ -347,8 +347,8 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-crush"
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3"
 		]
 	},
 	"box3": {
@@ -385,9 +385,9 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-paper-flip",
-			"sfx-rolled-paper-slap"
+			"sfx-crunch.mp3",
+			"sfx-paper-flip.mp3",
+			"sfx-rolled-paper-slap.mp3"
 		]
 	},
 	"cheese": {
@@ -424,8 +424,8 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-crush"
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3"
 		]
 	},
 	"chickenLeg": {
@@ -462,8 +462,8 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-crush"
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3"
 		]
 	},
 	"egg-carton": {
@@ -500,10 +500,10 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-crush",
-			"sfx-paper-flip",
-			"sfx-rolled-paper-slap"
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3",
+			"sfx-paper-flip.mp3",
+			"sfx-rolled-paper-slap.mp3"
 		]
 	},
 	"fishbone": {
@@ -540,8 +540,8 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-crush"
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3"
 		]
 	},
 	"foam-plate": {
@@ -578,9 +578,9 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-crush",
-			"sfx-rolled-paper-slap"
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3",
+			"sfx-rolled-paper-slap.mp3"
 		]
 	},
 	"paper-wad2": {
@@ -617,10 +617,10 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-crush",
-			"sfx-paper-flip",
-			"sfx-rolled-paper-slap"
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3",
+			"sfx-paper-flip.mp3",
+			"sfx-rolled-paper-slap.mp3"
 		]
 	},
 	"trashbag": {
@@ -657,10 +657,10 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-crush",
-			"sfx-paper-flip",
-			"sfx-rolled-paper-slap"
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3",
+			"sfx-paper-flip.mp3",
+			"sfx-rolled-paper-slap.mp3"
 		]
 	},
 	"iceberg": {
@@ -693,8 +693,8 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-metal-boom",
-			"sfx-metal-dink"
+			"sfx-metal-boom.mp3",
+			"sfx-metal-dink.mp3"
 		]
 	},
 	"buoy": {
@@ -731,10 +731,10 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-metal-boom",
-			"sfx-metal-dink",
-			"sfx-metal-tonk",
-			"sfx-metal-tube"
+			"sfx-metal-boom.mp3",
+			"sfx-metal-dink.mp3",
+			"sfx-metal-tonk.mp3",
+			"sfx-metal-tube.mp3"
 		]
 	},
 	"fishingBoat": {
@@ -771,10 +771,10 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-metal-boom",
-			"sfx-metal-dink",
-			"sfx-metal-tonk",
-			"sfx-metal-tube"
+			"sfx-metal-boom.mp3",
+			"sfx-metal-dink.mp3",
+			"sfx-metal-tonk.mp3",
+			"sfx-metal-tube.mp3"
 		]
 	},
 	"birbArea": {
@@ -811,9 +811,9 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-metal-dink",
-			"sfx-metal-tonk",
-			"sfx-metal-tube"
+			"sfx-metal-dink.mp3",
+			"sfx-metal-tonk.mp3",
+			"sfx-metal-tube.mp3"
 		]
 	},
 	"hazardArea": {
@@ -850,10 +850,10 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-metal-boom",
-			"sfx-metal-dink",
-			"sfx-metal-tonk",
-			"sfx-metal-tube"
+			"sfx-metal-boom.mp3",
+			"sfx-metal-dink.mp3",
+			"sfx-metal-tonk.mp3",
+			"sfx-metal-tube.mp3"
 		]
 	},
 	"orangeBuoy": {
@@ -890,10 +890,10 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-metal-boom",
-			"sfx-metal-dink",
-			"sfx-metal-tonk",
-			"sfx-metal-tube"
+			"sfx-metal-boom.mp3",
+			"sfx-metal-dink.mp3",
+			"sfx-metal-tonk.mp3",
+			"sfx-metal-tube.mp3"
 		]
 	},
 	"seaweed": {
@@ -930,8 +930,8 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-rolled-paper-slap"
+			"sfx-crunch.mp3",
+			"sfx-rolled-paper-slap.mp3"
 		]
 	},
 	"driftwood": {
@@ -968,10 +968,10 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-rolled-paper-slap",
-			"sfx-metal-boom",
-			"sfx-metal-dink"
+			"sfx-crunch.mp3",
+			"sfx-rolled-paper-slap.mp3",
+			"sfx-metal-boom.mp3",
+			"sfx-metal-dink.mp3"
 		]
 	},
 	"cup": {
@@ -1008,8 +1008,8 @@
 		},
 		"collisions": [],
 		"noises": [
-			"sfx-crunch",
-			"sfx-crush"
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3"
 		]
 	}
 

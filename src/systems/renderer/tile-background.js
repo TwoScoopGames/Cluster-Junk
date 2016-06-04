@@ -8,31 +8,31 @@ var rowsBeforeRepeat = 8;
 var rowsOffset = Math.PI * 2 / rowsBeforeRepeat;
 
 module.exports = function(ecs, game) {
-	ecs.add(function tileBackground(entities, context, elapsed) {
-		var camera = 1;
-		var cameraPosition = game.entities.get(camera, "position");
-		var cameraSize = game.entities.get(camera, "size");
+  ecs.add(function tileBackground(entities, context, elapsed) {
+    var camera = 1;
+    var cameraPosition = game.entities.get(camera, "position");
+    var cameraSize = game.entities.get(camera, "size");
 
-		context.fillStyle = "#1c325f";
-		context.fillRect(Math.floor(cameraPosition.x), Math.floor(cameraPosition.y), cameraSize.width, cameraSize.height);
+    context.fillStyle = "#1c325f";
+    context.fillRect(Math.floor(cameraPosition.x), Math.floor(cameraPosition.y), cameraSize.width, cameraSize.height);
 
-		time += elapsed;
+    time += elapsed;
 
-		var f1 = game.images.get("waves");
+    var f1 = game.images.get("waves.png");
 
-		var startX = Math.floor(cameraPosition.x / f1.width) * f1.width;
-		var startRow = Math.floor(cameraPosition.y / rowHeight);
-		var startY = (startRow - 1) * rowHeight;
+    var startX = Math.floor(cameraPosition.x / f1.width) * f1.width;
+    var startRow = Math.floor(cameraPosition.y / rowHeight);
+    var startY = (startRow - 1) * rowHeight;
 
-		for (var y = startY; y <= cameraPosition.y + cameraSize.height; y += rowHeight) {
-			var even = Math.floor(y / rowHeight) % 2;
-			var offset = y / rowHeight % rowsBeforeRepeat * rowsOffset;
-			var waveY = y + Math.sin(time / wavePeriod * Math.PI * 2 + offset) * waveHeight;
+    for (var y = startY; y <= cameraPosition.y + cameraSize.height; y += rowHeight) {
+      var even = Math.floor(y / rowHeight) % 2;
+      var offset = y / rowHeight % rowsBeforeRepeat * rowsOffset;
+      var waveY = y + Math.sin(time / wavePeriod * Math.PI * 2 + offset) * waveHeight;
 
-			for (var x = startX; x <= cameraPosition.x + cameraSize.width + f1.width; x += f1.width) {
-				var waveX = x + Math.sin(time / wavePeriod * 2 * Math.PI * 2 + offset) * waveHeight / 2;
-				context.drawImage(f1, even ? waveX : waveX - 100, waveY, f1.width, f1.height);
-			}
-		}
-	});
+      for (var x = startX; x <= cameraPosition.x + cameraSize.width + f1.width; x += f1.width) {
+        var waveX = x + Math.sin(time / wavePeriod * 2 * Math.PI * 2 + offset) * waveHeight / 2;
+        context.drawImage(f1, even ? waveX : waveX - 100, waveY, f1.width, f1.height);
+      }
+    }
+  });
 };

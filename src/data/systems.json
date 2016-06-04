@@ -1,25 +1,25 @@
 {
  "simulation": [
   {
-   "name": "splatjs:matchCanvasSize",
+   "name": "splat-ecs/lib/systems/match-canvas-size",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "splatjs:advanceTimers",
+   "name": "splat-ecs/lib/systems/advance-timers",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "splatjs:advanceAnimations",
+   "name": "splat-ecs/lib/systems/advance-animations",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "splatjs:controlPlayer",
+   "name": "splat-ecs/lib/systems/control-player",
    "scenes": [
     "main"
    ]
@@ -31,37 +31,37 @@
    ]
   },
   {
-   "name": "splatjs:applyMovement2d",
+   "name": "splat-ecs/lib/systems/apply-movement-2d",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "splatjs:applyVelocity",
+   "name": "splat-ecs/lib/systems/apply-velocity",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "splatjs:applyFriction",
+   "name": "splat-ecs/lib/systems/apply-friction",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "splatjs:matchParent",
+   "name": "splat-ecs/lib/systems/match-parent",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "splatjs:followParent",
+   "name": "splat-ecs/lib/systems/follow-parent",
    "scenes": [
     "main"
    ]
   },
   {
-   "name": "splatjs:boxCollider",
+   "name": "splat-ecs/lib/systems/box-collider",
    "scenes": [
     "main"
    ]
@@ -73,7 +73,7 @@
    ]
   },
   {
-   "name": "splatjs:matchAspectRatio",
+   "name": "splat-ecs/lib/systems/match-aspect-ratio",
    "scenes": [
     "main"
    ]
@@ -99,14 +99,14 @@
  ],
  "renderer": [
   {
-   "name": "splatjs:clearScreen",
+   "name": "splat-ecs/lib/systems/clear-screen",
    "scenes": [
     "title",
     "finished"
    ]
   },
   {
-   "name": "splatjs:viewport.moveToCamera",
+   "name": "splat-ecs/lib/systems/viewport-move-to-camera",
    "scenes": [
     "main"
    ]
@@ -118,7 +118,7 @@
    ]
   },
   {
-   "name": "splatjs:drawImage",
+   "name": "splat-ecs/lib/systems/draw-image",
    "scenes": [
     "main",
     "title",
@@ -126,7 +126,7 @@
    ]
   },
   {
-   "name": "splatjs:viewport.reset",
+   "name": "splat-ecs/lib/systems/viewport-reset",
    "scenes": [
     "main"
    ]

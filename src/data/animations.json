@@ -4,7 +4,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "box",
+     "name": "box.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 101,
@@ -18,7 +18,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cup",
+     "name": "cup.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 61,
@@ -32,7 +32,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "driftwood",
+     "name": "driftwood.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 573,
@@ -46,7 +46,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "box2",
+     "name": "box2.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 173,
@@ -60,7 +60,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "milk",
+     "name": "milk.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 51,
@@ -74,7 +74,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "paper-wad",
+     "name": "paper-wad.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 76,
@@ -88,7 +88,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "tire",
+     "name": "tire.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 145,
@@ -102,7 +102,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "waves",
+     "name": "waves.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 1138,
@@ -116,7 +116,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "Fries",
+     "name": "Fries.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 89,
@@ -130,7 +130,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "barrel",
+     "name": "barrel.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 273,
@@ -144,7 +144,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "boot",
+     "name": "boot.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 101,
@@ -158,7 +158,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "bottle",
+     "name": "bottle.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 57,
@@ -172,7 +172,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "box3",
+     "name": "box3.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 75,
@@ -186,7 +186,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "cheese",
+     "name": "cheese.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 40,
@@ -200,7 +200,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "chickenLeg",
+     "name": "chickenLeg.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 69,
@@ -214,7 +214,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "egg-carton",
+     "name": "egg-carton.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 155,
@@ -228,7 +228,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "eyes",
+     "name": "eyes.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 246,
@@ -242,7 +242,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "fishbone",
+     "name": "fishbone.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 100,
@@ -256,7 +256,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "fishingBoat",
+     "name": "fishingBoat.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 1142,
@@ -270,7 +270,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "foam-plate",
+     "name": "foam-plate.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 119,
@@ -284,7 +284,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "iceberg",
+     "name": "iceberg.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 1353,
@@ -298,7 +298,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "paper-wad2",
+     "name": "paper-wad2.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 93,
@@ -312,7 +312,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "pupils",
+     "name": "pupils.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 112,
@@ -326,7 +326,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "timer",
+     "name": "timer.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 151,
@@ -340,7 +340,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "trashbag",
+     "name": "trashbag.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 243,
@@ -354,7 +354,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "announcementBox",
+     "name": "announcementBox.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 614,
@@ -368,7 +368,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "birbArea",
+     "name": "birbArea.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 318,
@@ -382,7 +382,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "buoy",
+     "name": "buoy.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 300,
@@ -396,7 +396,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "hazardArea",
+     "name": "hazardArea.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 86,
@@ -410,7 +410,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "orangeBuoy",
+     "name": "orangeBuoy.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 134,
@@ -424,7 +424,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "radar",
+     "name": "radar.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 206,
@@ -438,7 +438,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "seaweed",
+     "name": "seaweed.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 145,
@@ -452,7 +452,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "controlPanel",
+     "name": "controlPanel.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 194,
@@ -466,7 +466,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "eyelashes-f3",
+     "name": "eyelashes-f3.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 246,
@@ -478,7 +478,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "eyelashes-f3",
+     "name": "eyelashes-f3.png",
      "sourceX": 246,
      "sourceY": 0,
      "sourceWidth": 246,
@@ -490,7 +490,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "eyelashes-f3",
+     "name": "eyelashes-f3.png",
      "sourceX": 492,
      "sourceY": 0,
      "sourceWidth": 246,
@@ -504,7 +504,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "notice",
+     "name": "notice.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 583,
@@ -518,7 +518,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "sandbar-f10",
+     "name": "sandbar-f10.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 179,
@@ -530,7 +530,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "sandbar-f10",
+     "name": "sandbar-f10.png",
      "sourceX": 179,
      "sourceY": 0,
      "sourceWidth": 179,
@@ -542,7 +542,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "sandbar-f10",
+     "name": "sandbar-f10.png",
      "sourceX": 358,
      "sourceY": 0,
      "sourceWidth": 179,
@@ -554,7 +554,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "sandbar-f10",
+     "name": "sandbar-f10.png",
      "sourceX": 537,
      "sourceY": 0,
      "sourceWidth": 179,
@@ -566,7 +566,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "sandbar-f10",
+     "name": "sandbar-f10.png",
      "sourceX": 716,
      "sourceY": 0,
      "sourceWidth": 179,
@@ -578,7 +578,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "sandbar-f10",
+     "name": "sandbar-f10.png",
      "sourceX": 895,
      "sourceY": 0,
      "sourceWidth": 179,
@@ -590,7 +590,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "sandbar-f10",
+     "name": "sandbar-f10.png",
      "sourceX": 1074,
      "sourceY": 0,
      "sourceWidth": 179,
@@ -602,7 +602,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "sandbar-f10",
+     "name": "sandbar-f10.png",
      "sourceX": 1253,
      "sourceY": 0,
      "sourceWidth": 179,
@@ -614,7 +614,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "sandbar-f10",
+     "name": "sandbar-f10.png",
      "sourceX": 1432,
      "sourceY": 0,
      "sourceWidth": 179,
@@ -626,7 +626,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "sandbar-f10",
+     "name": "sandbar-f10.png",
      "sourceX": 1611,
      "sourceY": 0,
      "sourceWidth": 179,
@@ -640,7 +640,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "radarObstacle",
+     "name": "radarObstacle.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 15,
@@ -654,7 +654,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "radarPaper",
+     "name": "radarPaper.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 28,
@@ -668,7 +668,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "radarTrash",
+     "name": "radarTrash.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 27,
@@ -682,7 +682,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "titleScreen",
+     "name": "titleScreen.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 1140,
@@ -696,7 +696,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "whaleLeftFlipperHappy",
+     "name": "whaleLeftFlipperHappy.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 295,
@@ -710,7 +710,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "whaleLeftFlipperSad",
+     "name": "whaleLeftFlipperSad.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 295,
@@ -724,7 +724,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "whaleLeftHappy",
+     "name": "whaleLeftHappy.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 505,
@@ -738,7 +738,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "whaleLeftSad",
+     "name": "whaleLeftSad.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 505,
@@ -752,7 +752,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "whaleRightFlipperArrowMsg",
+     "name": "whaleRightFlipperArrowMsg.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 296,
@@ -766,7 +766,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "whaleRightHappy",
+     "name": "whaleRightHappy.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 505,
@@ -780,7 +780,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "TimesUp",
+     "name": "TimesUp.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 286,
@@ -794,7 +794,7 @@
    "time": 100,
    "properties": {
     "image": {
-     "name": "TimesUpwRope",
+     "name": "TimesUpwRope.png",
      "sourceX": 0,
      "sourceY": 0,
      "sourceWidth": 286,
