@@ -41,6 +41,13 @@ function makePoints(entities, points) {
 var camera = 1;
 var viewport = 3;
 
+var particles = require("splat-ecs/lib/particles");
+var cfg = new particles.Config("debris");
+cfg.arcWidth = Math.PI * 2;
+cfg.qtyMin = 2;
+cfg.qtyMax = 8;
+cfg.velocityMax = 2;
+
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   function resolveCollisionShortest(a, b, target) {
     var aPosition = game.entities.get(a, "position");
@@ -113,12 +120,21 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         game.sounds.play("sfx-power-up.mp3");
         var notice = 2;
         game.entities.set(notice, "message", game.entities.get(other, "name"));
+
+        game.entities.set(camera, "shake", {
+          duration: 100,
+          magnitude: 10
+        });
       } else if (otherType === "obstacle") {
         resolveCollisionShortest(entity, other, player);
         game.entities.set(camera, "shake", {
           duration: 100,
           magnitude: 30
         });
+
+        cfg.origin = other;
+        particles.create(game, cfg);
+
         if (!game.entities.get(player, "recovering")) {
           var pointDeduction = -1 * Math.min(Math.floor(Math.sqrt(otherArea) / 10), playerPoints);
           if (pointDeduction) {

@@ -1,4 +1,31 @@
 {
+	"debris": {
+		"name": "debris",
+		"image": {
+			"name": "radarPaper.png"
+		},
+		"position": {
+			"x": 0,
+			"y": 0
+		},
+		"size": {
+			"width": 28,
+			"height": 19
+		},
+		"lifeSpan": {
+			"current": 0,
+			"max": 300
+		},
+		"easing": {
+			"image.alpha": {
+				"time": 0,
+				"max": 300,
+				"start": 1,
+				"end": 0,
+				"type": "easeInOutQuad"
+			}
+		}
+	},
 	"box": {
 		"name": "Undelivered package from 2011",
 		"image": {

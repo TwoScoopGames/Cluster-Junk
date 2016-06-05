@@ -2,21 +2,19 @@
  "simulation": [
   {
    "name": "splat-ecs/lib/systems/match-canvas-size",
-   "scenes": [
-    "main"
-   ]
+   "scenes": "all"
+  },
+  {
+   "name": "splat-ecs/lib/systems/decay-life-span",
+   "scenes": "all"
   },
   {
    "name": "splat-ecs/lib/systems/advance-timers",
-   "scenes": [
-    "main"
-   ]
+   "scenes": "all"
   },
   {
    "name": "splat-ecs/lib/systems/advance-animations",
-   "scenes": [
-    "main"
-   ]
+   "scenes": "all"
   },
   {
    "name": "splat-ecs/lib/systems/apply-easing",
