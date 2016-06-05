@@ -19,6 +19,10 @@
    ]
   },
   {
+   "name": "splat-ecs/lib/systems/apply-easing",
+   "scenes": "all"
+  },
+  {
    "name": "splat-ecs/lib/systems/control-player",
    "scenes": [
     "main"

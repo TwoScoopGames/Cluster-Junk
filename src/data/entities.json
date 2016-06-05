@@ -109,8 +109,7 @@
     "width": 1136,
     "height": 640
    },
-   "matchAspectRatio": {
-    "id": 3
+   "easing": {
    }
   },
   {
