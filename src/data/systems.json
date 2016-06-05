@@ -83,6 +83,12 @@
    ]
   },
   {
+   "name": "./systems/simulation/countdown-warning",
+   "scenes": [
+    "main"
+   ]
+  },
+  {
    "name": "./systems/simulation/jingle-on-success",
    "scenes": [
     "main"
