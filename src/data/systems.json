@@ -103,6 +103,10 @@
  ],
  "renderer": [
   {
+   "name": "splat-ecs/lib/systems/apply-shake",
+   "scenes": "all"
+  },
+  {
    "name": "splat-ecs/lib/systems/clear-screen",
    "scenes": [
     "title",
@@ -182,6 +186,10 @@
    "scenes": [
     "finished"
    ]
+  },
+  {
+   "name": "splat-ecs/lib/systems/revert-shake",
+   "scenes": "all"
   }
  ]
 }

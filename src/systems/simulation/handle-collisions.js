@@ -38,6 +38,9 @@ function makePoints(entities, points) {
   });
 }
 
+var camera = 1;
+var viewport = 3;
+
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   function resolveCollisionShortest(a, b, target) {
     var aPosition = game.entities.get(a, "position");
@@ -112,6 +115,10 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         game.entities.set(notice, "message", game.entities.get(other, "name"));
       } else if (otherType === "obstacle") {
         resolveCollisionShortest(entity, other, player);
+        game.entities.set(camera, "shake", {
+          duration: 100,
+          magnitude: 30
+        });
         if (!game.entities.get(player, "recovering")) {
           var pointDeduction = -1 * Math.min(Math.floor(Math.sqrt(otherArea) / 10), playerPoints);
           if (pointDeduction) {
@@ -130,11 +137,9 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     game.entities.set(player, "area", playerArea);
     game.entities.set(player, "points", playerPoints);
 
-    var viewport = 3;
     var viewportSize = game.entities.get(viewport, "size");
     var viewportAspectRatio = viewportSize.width / viewportSize.height;
 
-    var camera = 1;
     var cameraSize = game.entities.get(camera, "size");
     var size = Math.floor(playerRadius * 2 * 3);
     var easing = game.entities.get(camera, "easing");
