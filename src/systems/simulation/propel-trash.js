@@ -42,10 +42,17 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
           "id": 0,
           "distance": 200
         });
-        game.sounds.play("trash-island-theme.mp3", {
-          "loopStart": 8.0,
-          "loopEnd": 40.0
-        });
+        if (Math.random() < 0.5) {
+          game.sounds.play("trash-island-theme.mp3", {
+            "loopStart": 8.0,
+            "loopEnd": 40.0
+          });
+        } else {
+          game.sounds.play("trash-island-bossa.mp3", {
+            "loopStart": 7.111,
+            "loopEnd": 64.0
+          });
+        }
         game.entities.remove(entity, "target");
       } else {
         game.entities.remove(entity, "movement2d");
