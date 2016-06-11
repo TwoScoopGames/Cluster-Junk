@@ -68,10 +68,10 @@ function customRequire(path) {
 var game = new Splat.Game(canvas, customRequire);
 
 function percentLoaded() {
-  if (game.images.totalImages + game.sounds.totalSounds === 0) {
+  if (game.images.totalBytes() + game.sounds.assets.totalBytes() === 0) {
     return 1;
   }
-  return (game.images.loadedImages + game.sounds.loadedSounds) / (game.images.totalImages + game.sounds.totalSounds);
+  return (game.images.bytesLoaded() + game.sounds.assets.bytesLoaded()) / (game.images.totalBytes() + game.sounds.assets.totalBytes());
 }
 var loading = Splat.loadingScene(game, percentLoaded, game.scene);
 loading.start(context);
