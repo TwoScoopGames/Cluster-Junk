@@ -1,8 +1,13 @@
 {
 	"title": {
-		"first": true,
+		"first": false,
 		"onEnter": "./scripts/title-enter",
 		"onExit": "./scripts/title-exit"
+	},
+	"level": {
+		"first": true,
+		"onEnter": "./scripts/level-enter",
+		"onExit": "./scripts/level-exit"
 	},
 	"main": {
 		"first": false,

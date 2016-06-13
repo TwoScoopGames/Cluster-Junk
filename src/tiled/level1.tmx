@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tiles" tilewidth="32" tileheight="32">
+  <image source="../images/tiles.png" width="640" height="400"/>
+  <tile id="0">
+   <properties>
+    <property name="tileSize" value="small"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="tileSize" value="medium"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="tileSize" value="large"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="spawn" value="true"/>
+   </properties>
+  </tile>
+  <tile id="20">
+   <properties>
+    <property name="tileSize" value="small"/>
+   </properties>
+  </tile>
+  <tile id="21">
+   <properties>
+    <property name="tileSize" value="medium"/>
+   </properties>
+  </tile>
+  <tile id="22">
+   <properties>
+    <property name="tileSize" value="large"/>
+   </properties>
+  </tile>
+  <tile id="40">
+   <properties>
+    <property name="tileSize" value="small"/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="tileSize" value="medium"/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="tileSize" value="large"/>
+   </properties>
+  </tile>
+  <tile id="60">
+   <properties>
+    <property name="tileSize" value="small"/>
+   </properties>
+  </tile>
+  <tile id="61">
+   <properties>
+    <property name="tileSize" value="medium"/>
+   </properties>
+  </tile>
+  <tile id="62">
+   <properties>
+    <property name="tileSize" value="large"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt2EEKgCAQBVCL7n/mloWYKGgqvrcRWsUfx8lCAAAAAAAAdnGOfoHNleSvRn3JF+od0fqmp9rK5ZnKn//l6qBH5qR3+pMxPOJz/6s/rsQzc4Td1MwPs2Zezqm+au8ftGV/ryH+b+Wbip3Z6+tRs7HkDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJS6AYANADM=
+  </data>
+ </layer>
+</map>

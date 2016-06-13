@@ -22,74 +22,62 @@
   },
   {
    "name": "splat-ecs/lib/systems/control-player",
-   "scenes": [
-    "main"
-   ]
+   "scenes": "all"
   },
   {
    "name": "./systems/simulation/propel-trash",
    "scenes": [
-    "main"
+    "main",
+    "level"
    ]
   },
   {
    "name": "splat-ecs/lib/systems/apply-movement-2d",
-   "scenes": [
-    "main"
-   ]
+   "scenes": "all"
   },
   {
    "name": "splat-ecs/lib/systems/apply-velocity",
-   "scenes": [
-    "main"
-   ]
+   "scenes": "all"
   },
   {
    "name": "splat-ecs/lib/systems/apply-friction",
-   "scenes": [
-    "main"
-   ]
+   "scenes": "all"
   },
   {
    "name": "splat-ecs/lib/systems/match-parent",
-   "scenes": [
-    "main"
-   ]
+   "scenes": "all"
   },
   {
    "name": "splat-ecs/lib/systems/follow-parent",
-   "scenes": [
-    "main"
-   ]
+   "scenes": "all"
   },
   {
    "name": "splat-ecs/lib/systems/box-collider",
-   "scenes": [
-    "main"
-   ]
+   "scenes": "all"
   },
   {
    "name": "./systems/simulation/handle-collisions",
    "scenes": [
-    "main"
+    "main",
+    "level"
    ]
   },
   {
    "name": "splat-ecs/lib/systems/match-aspect-ratio",
-   "scenes": [
-    "main"
-   ]
+   "scenes": "all"
   },
   {
    "name": "./systems/simulation/countdown-warning",
    "scenes": [
-    "main"
+    "main",
+    "level"
    ]
   },
   {
    "name": "./systems/simulation/jingle-on-success",
    "scenes": [
-    "main"
+    "main",
+    "level"
    ]
   },
   {
@@ -120,63 +108,68 @@
   {
    "name": "splat-ecs/lib/systems/viewport-move-to-camera",
    "scenes": [
-    "main"
+    "main",
+    "level"
    ]
   },
   {
    "name": "./systems/renderer/tile-background",
    "scenes": [
-    "main"
+    "main",
+    "level"
    ]
   },
   {
    "name": "splat-ecs/lib/systems/draw-image",
-   "scenes": [
-    "main",
-    "title",
-    "finished"
-   ]
+   "scenes": "all"
   },
   {
    "name": "splat-ecs/lib/systems/viewport-reset",
    "scenes": [
-    "main"
+    "main",
+    "level"
    ]
   },
   {
    "name": "./systems/renderer/render-eyes",
    "scenes": [
-    "main"
+    "main",
+    "level"
    ]
   },
   {
    "name": "./systems/renderer/timer",
    "scenes": [
-    "main"
+    "main",
+    "level"
    ]
   },
   {
    "name": "./systems/renderer/radar",
    "scenes": [
-    "main"
+    "main",
+    "level"
    ]
   },
   {
    "name": "./systems/renderer/goal",
    "scenes": [
-    "main"
+    "main",
+    "level"
    ]
   },
   {
    "name": "./systems/renderer/draw-notice",
    "scenes": [
-    "main"
+    "main",
+    "level"
    ]
   },
   {
    "name": "./systems/renderer/points",
    "scenes": [
-    "main"
+    "main",
+    "level"
    ]
   },
   {

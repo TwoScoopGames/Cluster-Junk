@@ -1,7 +1,7 @@
 "use strict";
 
-var prefabs = require("../data/prefabs");
 var objectValues = require("../objectValues");
+var prefabs = require("../data/prefabs");
 
 function clone(obj) {
   return JSON.parse(JSON.stringify(obj)); // gross
