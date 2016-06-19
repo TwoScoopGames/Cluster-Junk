@@ -149,6 +149,17 @@
    ]
   },
   {
+   "name": "./systems/renderer/render-loading-bar",
+   "scenes": [
+    "loading"
+   ]
+  },
+  {
+   "name": "splat-ecs/lib/systems/viewport-reset",
+   "scenes": [
+   ]
+  },
+  {
    "name": "./systems/renderer/flash",
    "scenes": [
     "intro"

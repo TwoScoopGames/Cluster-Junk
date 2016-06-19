@@ -1,6 +1,9 @@
 {
+	"loading": {
+		"first": true
+	},
 	"intro": {
-		"first": true,
+		"first": false,
 		"onEnter": "./scripts/intro-enter",
 		"onExit": "./scripts/intro-exit"
 	},
