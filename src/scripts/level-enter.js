@@ -37,24 +37,28 @@ function calculateSizes() {
   }, []);
   console.log(buckets);
 
-  var sizes = {};
-  for (var w = 10; w < 1300; w += 10) {
-    for (var h = 10; h < 1300; h += 10) {
-      var s = getSize(w, h, min, max);
-      if (sizes[s] === undefined) {
-        sizes[s] = [];
-      }
-      sizes[s].push(w + "x" + h);
+  var mins = [];
+  var maxs = [];
+  for (var a = 1; a < max * max; a++) {
+    var s = getSize(a, min, max);
+    if (mins[s] === undefined || a < mins[s]) {
+      mins[s] = a;
+    }
+    if (maxs[s] === undefined || a > maxs[s]) {
+      maxs[s] = a;
     }
   }
-  console.log(sizes);
+  for (var i = 0; i < mins.length; i++) {
+    console.log("size " + (i + 1) + " min: ", mins[i], " max: ", maxs[i]);
+  }
+
   return buckets;
 }
 
-function getSize(w, h, min, max) {
+function getSize(a, min, max) {
   var numBuckets = 10;
   var range = max - min;
-  var area = Math.sqrt(w * h);
+  var area = Math.sqrt(a);
   var size = Math.round((area - min) / range * numBuckets);
   size = Math.min(numBuckets - 1, size);
   size = Math.max(0, size);
