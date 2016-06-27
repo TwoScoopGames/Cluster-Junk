@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" nextobjectid="1">
- <tileset firstgid="1" name="tiles" tilewidth="32" tileheight="32" tilecount="240" columns="20">
+<map version="1.0" orientation="orthogonal" width="100" height="100" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tiles" tilewidth="32" tileheight="32">
   <image source="../images/tiles.png" width="640" height="400"/>
   <tile id="0">
    <properties>
@@ -250,7 +250,7 @@
  </tileset>
  <layer name="Tile Layer 1" width="100" height="100">
   <data encoding="base64" compression="zlib">
-   eJzt2EEKgCAQBVCL7n/mloWYKGgqvrcRWsUfx8lCAAAAAAAAdnGOfoHNleSvRn3JF+od0fqmp9rK5ZnKn//l6qBH5qR3+pMxPOJz/6s/rsQzc4Td1MwPs2Zezqm+au8ftGV/ryH+b+Wbip3Z6+tRs7HkDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJS6AYANADM=
+   eJztziEBACAQBEHQaEIQgv61aACcejOjVm5rAAAAAAAAbz1sgCozbIAqK2yAKjts7kb1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADw5QAwNAH8
   </data>
  </layer>
 </map>

@@ -3,12 +3,6 @@ var level1 = require("../tiled/level1.json");
 var prefabs = require("../data/prefabs");
 var random = require("splat-ecs/lib/random");
 
-var prefabsBySize = {
-  "small": 0,
-  "medium": 1,
-  "large": 2
-};
-
 function calculateSizes() {
   var areas = Object.keys(prefabs).map(function(name) {
     var prefab = prefabs[name];
@@ -24,6 +18,9 @@ function calculateSizes() {
 
   var buckets = Object.keys(prefabs).reduce(function(accum, name) {
     var prefab = prefabs[name];
+    if (prefab.type === undefined) {
+      return accum;
+    }
     var area = Math.sqrt(prefab.size.width * prefab.size.height);
     var size = Math.round((area - min) / range * numBuckets);
     size = Math.min(numBuckets - 1, size);
@@ -76,11 +73,26 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
 
   var tiles = game.entities.find("tileSize");
   while (tiles.length > 0) {
-    var size = game.entities.get(tiles[0], "tileSize");
-    var trash = game.instantiatePrefab(random.from(buckets[prefabsBySize[size]]));
+    var size = game.entities.get(tiles[0], "tileSize") - 1;
+    var group = game.entities.get(tiles[0], "tileGroup");
+    var prefab = pickPrefabByGroup(buckets[size], group);
+    console.log(size, group, prefab);
+    var trash = game.instantiatePrefab(prefab);
     center(game, trash, tiles[0]);
   }
 };
+
+function pickPrefabByGroup(bucket, group) {
+  if (group === "a") {
+    return bucket[0];
+  } else if (group === "b") {
+    return bucket[1];
+  } else if (group === "c") {
+    return bucket[2];
+  } else {
+    return random.from(bucket);
+  }
+}
 
 function center(game, entity, target) {
   var targetPosition = game.entities.get(target, "position");
