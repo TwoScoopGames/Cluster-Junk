@@ -36,7 +36,29 @@ function calculateSizes() {
     return accum;
   }, []);
   console.log(buckets);
+
+  var sizes = {};
+  for (var w = 10; w < 1300; w += 10) {
+    for (var h = 10; h < 1300; h += 10) {
+      var s = getSize(w, h, min, max);
+      if (sizes[s] === undefined) {
+        sizes[s] = [];
+      }
+      sizes[s].push(w + "x" + h);
+    }
+  }
+  console.log(sizes);
   return buckets;
+}
+
+function getSize(w, h, min, max) {
+  var numBuckets = 10;
+  var range = max - min;
+  var area = Math.sqrt(w * h);
+  var size = Math.round((area - min) / range * numBuckets);
+  size = Math.min(numBuckets - 1, size);
+  size = Math.max(0, size);
+  return size;
 }
 
 module.exports = function(game) { // eslint-disable-line no-unused-vars
