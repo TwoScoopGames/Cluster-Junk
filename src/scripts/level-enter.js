@@ -71,27 +71,51 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
   var player = 0;
   center(game, player, spawn);
 
+  var gs = {};
+
   var tiles = game.entities.find("tileSize");
   while (tiles.length > 0) {
     var size = game.entities.get(tiles[0], "tileSize") - 1;
+    if (gs[size] === undefined) {
+      gs[size] = groups(buckets[size]);
+    }
     var group = game.entities.get(tiles[0], "tileGroup");
-    var prefab = pickPrefabByGroup(buckets[size], group);
+    var prefab = pickPrefabByGroup(buckets[size], group, gs[size]);
     console.log(size, group, prefab);
     var trash = game.instantiatePrefab(prefab);
     center(game, trash, tiles[0]);
   }
 };
 
-function pickPrefabByGroup(bucket, group) {
-  if (group === "a") {
-    return bucket[0];
-  } else if (group === "b") {
-    return bucket[1];
-  } else if (group === "c") {
-    return bucket[2];
+function groups(bucket) {
+  bucket = bucket.slice(0);
+  var g = {};
+
+  var pos = Math.floor(Math.random() * bucket.length);
+  g.a = bucket[pos];
+  bucket.splice(pos, 1);
+
+  if (bucket.length === 0) {
+    g.b = g.a;
   } else {
-    return random.from(bucket);
+    pos = Math.floor(Math.random() * bucket.length);
+    g.b = bucket[pos];
+    bucket.splice(pos, 1);
   }
+
+  if (bucket.length === 0) {
+    g.c = g.b;
+  } else {
+    pos = Math.floor(Math.random() * bucket.length);
+    g.c = bucket[pos];
+    bucket.splice(pos, 1);
+  }
+
+  return g;
+}
+
+function pickPrefabByGroup(bucket, group, gs) {
+  return gs[group] || random.from(bucket);
 }
 
 function center(game, entity, target) {
