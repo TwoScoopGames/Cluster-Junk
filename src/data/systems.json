@@ -124,6 +124,12 @@
    "scenes": "all"
   },
   {
+   "name": "./systems/renderer/draw-grid",
+   "scenes": [
+    "level"
+   ]
+  },
+  {
    "name": "splat-ecs/lib/systems/viewport-reset",
    "scenes": [
     "main",
