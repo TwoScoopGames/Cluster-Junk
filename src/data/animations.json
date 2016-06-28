@@ -1,4 +1,88 @@
 {
+  "size-9-test": [
+   {
+    "time": 100,
+    "properties": {
+     "image": {
+      "name": "size-9-test.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 860,
+      "sourceHeight": 860
+     }
+    }
+  }
+],
+"size-8-test": [
+ {
+  "time": 100,
+  "properties": {
+   "image": {
+    "name": "size-8-test.png",
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 761,
+    "sourceHeight": 761
+   }
+  }
+}
+],
+"size-7-test": [
+ {
+  "time": 100,
+  "properties": {
+   "image": {
+    "name": "size-7-test.png",
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 662,
+    "sourceHeight": 662
+   }
+  }
+}
+],
+"size-6-test": [
+ {
+  "time": 100,
+  "properties": {
+   "image": {
+    "name": "size-6-test.png",
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 563,
+    "sourceHeight": 563
+   }
+  }
+}
+],
+"size-5-test": [
+ {
+  "time": 100,
+  "properties": {
+   "image": {
+    "name": "size-5-test.png",
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 465,
+    "sourceHeight": 465
+   }
+  }
+}
+],
+"size-4-test": [
+ {
+  "time": 100,
+  "properties": {
+   "image": {
+    "name": "size-4-test.png",
+    "sourceX": 0,
+    "sourceY": 0,
+    "sourceWidth": 366,
+    "sourceHeight": 366
+   }
+  }
+}
+],
  "box": [
   {
    "time": 100,
