@@ -81,7 +81,6 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
     }
     var group = game.entities.get(tiles[0], "tileGroup");
     var prefab = pickPrefabByGroup(buckets[size], group, gs[size]);
-    console.log(size, group, prefab);
     var trash = game.instantiatePrefab(prefab);
     center(game, trash, tiles[0]);
   }
