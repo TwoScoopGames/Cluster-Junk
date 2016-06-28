@@ -1,5 +1,5 @@
 var importTilemap = require("splat-ecs/lib/import-from-tiled");
-var level1 = require("../tiled/level1.json");
+var levels = require("../data/levels.json");
 var prefabs = require("../data/prefabs");
 var random = require("splat-ecs/lib/random");
 
@@ -62,13 +62,25 @@ function getSize(a, min, max) {
   return size;
 }
 
+var player = 0;
+
 module.exports = function(game) { // eslint-disable-line no-unused-vars
-  importTilemap(level1, game.entities);
+  var level = levels[game.arguments.level || 0];
+
+  game.entities.set(player, "radius", level.radius);
+  game.entities.set(player, "goalRadius", level.goalRadius);
+  game.entities.get(player, "timers").goalTimer.max = level.maxTime * 1000;
+  game.entities.set(2, "message", level.message);
+  loadTilemap(game, level.map);
+};
+
+function loadTilemap(game, map) {
+  var tilemap = require("../tiled/" + map + ".json");
+  importTilemap(tilemap, game.entities);
 
   var buckets = calculateSizes();
 
   var spawn = game.entities.find("spawn")[0];
-  var player = 0;
   center(game, player, spawn);
 
   var gs = {};
@@ -84,7 +96,7 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
     var trash = game.instantiatePrefab(prefab);
     center(game, trash, tiles[0]);
   }
-};
+}
 
 function groups(bucket) {
   bucket = bucket.slice(0);

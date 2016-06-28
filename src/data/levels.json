@@ -1,5 +1,6 @@
 [
 	{
+		"map": "level1",
 		"radius": 0,
 		"goalRadius": 250,
 		"message": "Grow to 250 meters",
@@ -10,6 +11,7 @@
 		"levelSizeY": 3000
 	},
 	{
+		"map": "level1",
 		"radius": 0,
 		"goalRadius": 500,
 		"message": "Even bigger! 500m",
@@ -20,6 +22,7 @@
 		"levelSizeY": 8000
 	},
 	{
+		"map": "level1",
 		"radius": 0,
 		"goalRadius": 750,
 		"message": "Is this even possible? 750m!",
