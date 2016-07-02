@@ -1,7 +1,7 @@
 {
-  "name": "splat-ecs-starter-project",
+  "name": "cluster-junk",
   "version": "0.0.0",
-  "description": "A Sample game",
+  "description": "Cluster Junk: The Secret of Trash Island",
   "private": true,
   "main": "src/game.js",
   "scripts": {
