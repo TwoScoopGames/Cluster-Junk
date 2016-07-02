@@ -39,7 +39,7 @@ function makePoints(entities, points) {
 }
 
 var camera = 1;
-var viewport = 3;
+// var viewport = 3;
 
 var particles = require("splat-ecs/lib/particles");
 var cfg = new particles.Config("debris");

@@ -126,7 +126,6 @@
   {
    "name": "./systems/renderer/draw-grid",
    "scenes": [
-    "level"
    ]
   },
   {
