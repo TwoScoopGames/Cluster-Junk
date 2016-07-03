@@ -34,6 +34,9 @@
       "image": {
         "name": "level-select-1.png"
       },
+      "text": {
+        "text": "1"
+      },
       "level": 0,
       "onPress": {
         "script": "./scripts/select-level"
@@ -52,6 +55,9 @@
       },
       "image": {
         "name": "level-select-2.png"
+      },
+      "text": {
+        "text": "2"
       },
       "level": 1,
       "onPress": {
@@ -72,6 +78,9 @@
       "image": {
         "name": "level-select-3.png"
       },
+      "text": {
+        "text": "3"
+      },
       "level": 2,
       "onPress": {
         "script": "./scripts/select-level"
@@ -90,6 +99,9 @@
       },
       "image": {
         "name": "level-select-4.png"
+      },
+      "text": {
+        "text": "4"
       },
       "level": 3,
       "onPress": {
@@ -110,6 +122,9 @@
       "image": {
         "name": "level-select-5.png"
       },
+      "text": {
+        "text": "5"
+      },
       "level": 4,
       "onPress": {
         "script": "./scripts/select-level"
@@ -125,6 +140,9 @@
       "size": {
         "width": 220,
         "height": 198
+      },
+      "text": {
+        "text": "6"
       },
       "image": {
         "name": "level-select-6.png"
@@ -148,6 +166,9 @@
       "image": {
         "name": "level-select-7.png"
       },
+      "text": {
+        "text": "7"
+      },
       "level": 6,
       "onPress": {
         "script": "./scripts/select-level"
@@ -166,6 +187,9 @@
       },
       "image": {
         "name": "level-select-8.png"
+      },
+      "text": {
+        "text": "8"
       },
       "level": 7,
       "onPress": {

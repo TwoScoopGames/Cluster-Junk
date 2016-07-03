@@ -118,6 +118,10 @@
    "scenes": "all"
   },
   {
+   "name": "./systems/renderer/draw-text",
+   "scenes": "all"
+  },
+  {
    "name": "./systems/renderer/draw-grid",
    "scenes": [
    ]
