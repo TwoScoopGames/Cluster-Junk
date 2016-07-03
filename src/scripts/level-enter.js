@@ -35,9 +35,12 @@ function loadTilemap(game, map) {
 
     if (prefab) {
       var trash = game.instantiatePrefab(prefab);
+      var trashImage = game.entities.get(trash, "image");
       var trashPosition = game.entities.get(trash, "position");
+      var trashSize = game.entities.get(trash, "size");
       trashPosition.x = tilePosition.x;
       trashPosition.y = tilePosition.y;
+      shrinkBoundingBox(trashSize, trashImage, 0.4);
 
       game.entities.destroy(tile);
     }
@@ -54,3 +57,13 @@ function center(game, entity, target) {
   entityPosition.x = targetPosition.x + (targetSize.width / 2) - (entitySize.width / 2);
   entityPosition.y = targetPosition.y + (targetSize.height / 2) - (entitySize.height / 2);
 }
+
+function shrinkBoundingBox(entitySize, entityImage, pct) {
+  var xl = Math.floor(entitySize.width * pct);
+  var yl = Math.floor(entitySize.height * pct);
+  entitySize.width -= xl;
+  entitySize.height -= yl;
+  entityImage.destinationX -= Math.floor(xl / 2);
+  entityImage.destinationY -= Math.floor(yl / 2);
+}
+
