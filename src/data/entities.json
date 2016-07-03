@@ -6,6 +6,141 @@
       "title": true
     }
   ],
+  "level-select": [
+    {
+      "id": 1,
+      "name": "camera",
+      "camera": true,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1136,
+        "height": 640
+      }
+    },
+    {
+      "id": 2,
+      "name": "level select 1",
+      "position": {
+        "x": 74,
+        "y": 95
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-1.png"
+      }
+    },
+    {
+      "id": 3,
+      "name": "level select 2",
+      "position": {
+        "x": 331,
+        "y": 95
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-2.png"
+      }
+    },
+    {
+      "id": 4,
+      "name": "level select 3",
+      "position": {
+        "x": 585,
+        "y": 95
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-3.png"
+      }
+    },
+    {
+      "id": 5,
+      "name": "level select 4",
+      "position": {
+        "x": 839,
+        "y": 95
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-4.png"
+      }
+    },
+    {
+      "id": 6,
+      "name": "level select 5",
+      "position": {
+        "x": 74,
+        "y": 366
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-5.png"
+      }
+    },
+    {
+      "id": 7,
+      "name": "level select 6",
+      "position": {
+        "x": 331,
+        "y": 366
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-6.png"
+      }
+    },
+    {
+      "id": 8,
+      "name": "level select 7",
+      "position": {
+        "x": 585,
+        "y": 366
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-7.png"
+      }
+    },
+    {
+      "id": 9,
+      "name": "level select 8",
+      "position": {
+        "x": 839,
+        "y": 366
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-8.png"
+      }
+    }
+  ],
   "finished": [
     {
       "id": 3,

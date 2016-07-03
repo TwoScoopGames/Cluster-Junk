@@ -104,7 +104,8 @@
   {
    "name": "./systems/renderer/tile-background",
    "scenes": [
-    "level"
+    "level",
+    "level-select"
    ]
   },
   {
