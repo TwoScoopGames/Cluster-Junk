@@ -20,26 +20,8 @@ function randomFrom(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-function makePoints(entities, points) {
-  var id = entities.create();
-
-  entities.set(id, "position", {
-    x: Math.floor(Math.random() * 380 - 190),
-    y: Math.floor(Math.random() * 380 - 190)
-  });
-  entities.set(id, "pointChange", points);
-  entities.set(id, "timers", {
-    disappear: {
-      running: true,
-      time: 0,
-      max: 900,
-      script: "./scripts/delete-entity"
-    }
-  });
-}
-
 var camera = 1;
-// var viewport = 3;
+var viewport = 3;
 
 var particles = require("splat-ecs/lib/particles");
 var cfg = new particles.Config("debris");
@@ -84,7 +66,6 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var playerSize = game.entities.get(player, "size");
     var playerRadius = game.entities.get(player, "radius");
     var playerArea = game.entities.get(player, "area");
-    var playerPoints = game.entities.get(player, "points");
     var playerTimers = game.entities.get(player, "timers");
 
     game.entities.get(entity, "collisions").forEach(function(other) {
@@ -108,9 +89,6 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       var otherArea = otherSize.width * otherSize.height;
       if (distSq < playerRadius * playerRadius) {
         playerArea += otherArea;
-        var newPoints = Math.ceil(Math.sqrt(otherArea) / 10) * 10;
-        playerPoints += newPoints;
-        makePoints(game.entities, newPoints);
         game.entities.set(other, "match", {
           id: player,
           offsetX: otherPosition.x - playerPosition.x,
@@ -134,16 +112,6 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 
         cfg.origin = other;
         particles.create(game, cfg);
-
-        if (!game.entities.get(player, "recovering")) {
-          var pointDeduction = -1 * Math.min(Math.floor(Math.sqrt(otherArea) / 10), playerPoints);
-          if (pointDeduction) {
-            playerPoints += pointDeduction;
-            makePoints(game.entities, pointDeduction);
-            game.entities.set(player, "recovering", true);
-            playerTimers.recoveryTimer.running = true;
-          }
-        }
       } else {
         resolveCollisionShortest(other, entity);
       }
@@ -151,29 +119,28 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     playerRadius = Math.sqrt(playerArea / Math.PI * 2);
     game.entities.set(player, "radius", playerRadius);
     game.entities.set(player, "area", playerArea);
-    game.entities.set(player, "points", playerPoints);
 
-    // var viewportSize = game.entities.get(viewport, "size");
-    // var viewportAspectRatio = viewportSize.width / viewportSize.height;
-    //
-    // var cameraSize = game.entities.get(camera, "size");
-    // var size = Math.floor(playerRadius * 2 * 3);
-    // var easing = game.entities.get(camera, "easing");
-    // if (cameraSize.height !== size && (easing["size.height"] === undefined || easing["size.height"].end !== size)) {
-    //   easing["size.width"] = {
-    //     time: 0,
-    //     max: 1000,
-    //     start: cameraSize.width,
-    //     end: size * viewportAspectRatio,
-    //     type: "easeInOutQuad"
-    //   };
-    //   easing["size.height"] = {
-    //     time: 0,
-    //     max: 1000,
-    //     start: cameraSize.height,
-    //     end: size,
-    //     type: "easeInOutQuad"
-    //   };
-    // }
+    var viewportSize = game.entities.get(viewport, "size");
+    var viewportAspectRatio = viewportSize.width / viewportSize.height;
+
+    var cameraSize = game.entities.get(camera, "size");
+    var size = Math.floor(playerRadius * 2 * 3);
+    var easing = game.entities.get(camera, "easing");
+    if (cameraSize.height !== size && (easing["size.height"] === undefined || easing["size.height"].end !== size)) {
+      easing["size.width"] = {
+        time: 0,
+        max: 1000,
+        start: cameraSize.width,
+        end: size * viewportAspectRatio,
+        type: "easeInOutQuad"
+      };
+      easing["size.height"] = {
+        time: 0,
+        max: 1000,
+        start: cameraSize.height,
+        end: size,
+        type: "easeInOutQuad"
+      };
+    }
   }, "handleCollisions");
 };

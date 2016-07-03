@@ -171,13 +171,6 @@
    ]
   },
   {
-   "name": "./systems/renderer/points",
-   "scenes": [
-    "main",
-    "level"
-   ]
-  },
-  {
    "name": "./systems/renderer/title-screen",
    "scenes": [
     "title"

@@ -8,9 +8,15 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
 
   game.entities.set(player, "radius", level.radius);
   game.entities.set(player, "goalRadius", level.goalRadius);
+  game.entities.get(player, "timers").goalTimer.running = true;
   game.entities.get(player, "timers").goalTimer.max = level.maxTime * 1000;
   game.entities.set(2, "message", level.message);
   loadTilemap(game, level.map);
+
+  game.sounds.play("ambient-sea-track.mp3", {
+    "loopStart": 0,
+    "loopEnd": 0
+  });
 };
 
 function loadTilemap(game, map) {
@@ -29,9 +35,12 @@ function loadTilemap(game, map) {
 
     if (prefab) {
       var trash = game.instantiatePrefab(prefab);
+      var trashImage = game.entities.get(trash, "image");
       var trashPosition = game.entities.get(trash, "position");
+      var trashSize = game.entities.get(trash, "size");
       trashPosition.x = tilePosition.x;
       trashPosition.y = tilePosition.y;
+      shrinkBoundingBox(trashSize, trashImage, 0.4);
 
       game.entities.destroy(tile);
     }
@@ -48,3 +57,13 @@ function center(game, entity, target) {
   entityPosition.x = targetPosition.x + (targetSize.width / 2) - (entitySize.width / 2);
   entityPosition.y = targetPosition.y + (targetSize.height / 2) - (entitySize.height / 2);
 }
+
+function shrinkBoundingBox(entitySize, entityImage, pct) {
+  var xl = Math.floor(entitySize.width * pct);
+  var yl = Math.floor(entitySize.height * pct);
+  entitySize.width -= xl;
+  entitySize.height -= yl;
+  entityImage.destinationX -= Math.floor(xl / 2);
+  entityImage.destinationY -= Math.floor(yl / 2);
+}
+
