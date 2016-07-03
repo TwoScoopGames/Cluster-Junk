@@ -25,13 +25,6 @@
    "scenes": "all"
   },
   {
-   "name": "./systems/simulation/propel-trash",
-   "scenes": [
-    "main",
-    "level"
-   ]
-  },
-  {
    "name": "splat-ecs/lib/systems/apply-movement-2d",
    "scenes": "all"
   },

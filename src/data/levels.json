@@ -1,6 +1,7 @@
 [
 	{
 		"map": "level1",
+		"music": "trash-island-theme.mp3",
 		"radius": 0,
 		"goalRadius": 250,
 		"message": "Grow to 250 meters",
@@ -12,6 +13,7 @@
 	},
 	{
 		"map": "level1",
+		"music": "trash-island-theme.mp3",
 		"radius": 0,
 		"goalRadius": 500,
 		"message": "Even bigger! 500m",
@@ -23,6 +25,7 @@
 	},
 	{
 		"map": "level1",
+		"music": "trash-island-theme.mp3",
 		"radius": 0,
 		"goalRadius": 750,
 		"message": "Is this even possible? 750m!",
