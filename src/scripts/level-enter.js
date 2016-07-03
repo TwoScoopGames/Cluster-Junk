@@ -30,7 +30,10 @@ function loadTilemap(game, map) {
   var tiles = game.entities.find("tile").slice();
   for (var i = 0; i < tiles.length; i++) {
     var tile = tiles[i];
+    var tileImage = game.entities.get(tile, "image");
     var tilePosition = game.entities.get(tile, "position");
+    var tileSize = game.entities.get(tile, "size");
+    shrinkBoundingBox(tileSize, tileImage, 0.4);
     var prefab = game.entities.get(tile, "prefab");
 
     if (prefab) {
