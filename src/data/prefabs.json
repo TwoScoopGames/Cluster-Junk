@@ -1102,5 +1102,69 @@
 			"sfx-crunch.mp3",
 			"sfx-crush.mp3"
 		]
-	}
+	},
+  "banjo": {
+    "name": "Ba na ner ner ner ner ner ner ner",
+    "image": {
+      "name": "banjo.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 258,
+      "destinationHeight": 95
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 258,
+      "height": 95
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  },
+  "chicken-bucket": {
+    "name": "0% trans fat!",
+    "image": {
+      "name": "chicken-bucket.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 85,
+      "destinationHeight": 84
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 85,
+      "height": 84
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  }
 }
