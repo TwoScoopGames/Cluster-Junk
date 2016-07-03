@@ -155,8 +155,24 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 
       var scoreBackground = game.images.get("score-background.png");
       game.context.drawImage(scoreBackground, 264, 60);
-      var scoreStars = game.images.get("score-stars-0.png");
-      game.context.drawImage(scoreStars, 264, 60);
+      var stars = [
+        game.images.get("score-stars-0.png"),
+        game.images.get("score-stars-1.png"),
+        game.images.get("score-stars-2.png"),
+        game.images.get("score-stars-3.png")
+      ];
+      var words = [
+        "Too bad!",
+        "Passable",
+        "Good job!",
+        "Great!"
+      ];
+      var score = won ? 3 : 0;
+      game.context.drawImage(stars[score], 264, 60);
+
+      game.context.fillStyle = "black";
+      game.context.font = "54px blanch";
+      game.context.fillText(words[score], 334, 150);
 
       var notice = game.entities.find("notice")[0];
       if (notice) {
