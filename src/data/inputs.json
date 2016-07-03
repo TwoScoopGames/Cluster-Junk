@@ -5,6 +5,10 @@
       {
         "device": "keyboard",
         "button": "space"
+      },
+      {
+        "device": "mouse",
+        "button": 0
       }
     ],
     "up": [
