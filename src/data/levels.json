@@ -15,44 +15,44 @@
 		"message": "Even bigger! 100m",
 		"maxTime": 20
 	},
-	{
+  {
 		"map": "level4",
 		"music": "trash-island-theme.mp3",
 		"radius": 0,
-		"goalRadius": 200,
-		"message": "Is this even possible? 500m!",
+		"goalRadius": 150,
+		"message": "Keep growing! 150m!",
 		"maxTime": 30,
 	},
   {
     "map": "level3",
     "music": "trash-island-theme.mp3",
     "radius": 0,
-    "goalRadius": 300,
-    "message": "Even bigger! 300m",
+    "goalRadius": 200,
+    "message": "Grow your island! 200m",
     "maxTime": 40
+  },
+  {
+    "map": "kfp",
+    "music": "trash-island-theme.mp3",
+    "radius": 0,
+    "goalRadius": 275,
+    "message": "Kentucky Fried Pixels! 275m",
+    "maxTime": 50,
   },
   {
     "map": "level2",
     "music": "trash-island-theme.mp3",
     "radius": 0,
-    "goalRadius": 300,
-    "message": "Even bigger! 300m",
-    "maxTime": 50
-  },
-  {
-    "map": "cluster1",
-    "music": "trash-island-theme.mp3",
-    "radius": 0,
-    "goalRadius": 300,
-    "message": "Even bigger! 300m",
+    "goalRadius": 325,
+    "message": "OM NOM NOM! 325m",
     "maxTime": 60
   },
   {
     "map": "cluster1",
     "music": "trash-island-theme.mp3",
     "radius": 0,
-    "goalRadius": 300,
-    "message": "Even bigger! 300m",
+    "goalRadius": 400,
+    "message": "Can you do it? 400m",
     "maxTime": 90
   },
   {
