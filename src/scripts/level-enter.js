@@ -1,5 +1,6 @@
 var importTilemap = require("splat-ecs/lib/import-from-tiled");
 var levels = require("../data/levels.json");
+var random = require("splat-ecs/lib/random");
 
 var player = 0;
 
@@ -44,6 +45,11 @@ function loadTilemap(game, map) {
       trashPosition.y = tilePosition.y;
       shrinkBoundingBox(trashSize, trashImage, 0.4);
 
+      game.entities.set(trash, "rotation", {
+        "angle": game.entities.get(trash, "type") === "obstacle" ? 0 : random.inRange((Math.PI / -3), (Math.PI / 3)),
+        "x": trashSize.width / 2,
+        "y": trashSize.height / 2
+      });
       game.entities.destroy(tile);
     }
   }
