@@ -51,7 +51,6 @@
   {
    "name": "./systems/simulation/handle-collisions",
    "scenes": [
-    "main",
     "level"
    ]
   },
@@ -62,14 +61,12 @@
   {
    "name": "./systems/simulation/countdown-warning",
    "scenes": [
-    "main",
     "level"
    ]
   },
   {
    "name": "./systems/simulation/jingle-on-success",
    "scenes": [
-    "main",
     "level"
    ]
   },
@@ -101,14 +98,12 @@
   {
    "name": "splat-ecs/lib/systems/viewport-move-to-camera",
    "scenes": [
-    "main",
     "level"
    ]
   },
   {
    "name": "./systems/renderer/tile-background",
    "scenes": [
-    "main",
     "level"
    ]
   },
@@ -124,42 +119,36 @@
   {
    "name": "splat-ecs/lib/systems/viewport-reset",
    "scenes": [
-    "main",
     "level"
    ]
   },
   {
    "name": "./systems/renderer/render-eyes",
    "scenes": [
-    "main",
     "level"
    ]
   },
   {
    "name": "./systems/renderer/timer",
    "scenes": [
-    "main",
     "level"
    ]
   },
   {
    "name": "./systems/renderer/radar",
    "scenes": [
-    "main",
     "level"
    ]
   },
   {
    "name": "./systems/renderer/goal",
    "scenes": [
-    "main",
     "level"
    ]
   },
   {
    "name": "./systems/renderer/draw-notice",
    "scenes": [
-    "main",
     "level"
    ]
   },

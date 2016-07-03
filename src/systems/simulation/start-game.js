@@ -7,7 +7,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       "loopEnd": 0
     });
     if (game.inputs.buttonReleased("action")) {
-      game.switchScene("main");
+      game.switchScene("level");
     }
   }, "title");
 };
