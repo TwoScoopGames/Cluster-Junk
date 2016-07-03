@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" nextobjectid="11">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" nextobjectid="13">
  <tileset firstgid="1" name="junk" tilewidth="1353" tileheight="751" tilecount="28" columns="0">
+  <properties>
+   <property name="prefab" value="buttTrash"/>
+  </properties>
   <tile id="1">
    <properties>
     <property name="prefab" value="barrel"/>
@@ -161,10 +164,13 @@
    <image width="39" height="15" source="../images/buttTrash.png"/>
   </tile>
   <tile id="50">
+   <properties>
+    <property name="prefab" value="straw"/>
+   </properties>
    <image width="64" height="52" source="../images/straw.png"/>
   </tile>
  </tileset>
- <layer name="Tile Layer 1" width="100" height="100">
+ <layer name="Tile Layer 1" width="100" height="100" offsetx="12" offsety="-8">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -268,7 +274,14 @@
 0,0,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,0,0,0,18,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup name="Object Layer 1" offsetx="31" offsety="-196">
-  <object id="8" name="spawn" x="1391" y="2891" width="288" height="102"/>
+ <objectgroup name="Object Layer 1" offsetx="27" offsety="-200">
+  <properties>
+   <property name="spawn" type="bool" value="true"/>
+  </properties>
+  <object id="8" name="spawn" x="1391" y="2891" width="288" height="102">
+   <properties>
+    <property name="spawn" type="bool" value="true"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

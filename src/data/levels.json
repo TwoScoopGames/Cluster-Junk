@@ -1,38 +1,26 @@
 [
 	{
-		"map": "level1",
+		"map": "sunshine",
 		"music": "trash-island-theme.mp3",
 		"radius": 0,
-		"goalRadius": 150,
-		"message": "Grow to 250 meters",
-		"maxTime": 45,
-		"trashCount": 200,
-		"obstacleCount": 14,
-		"levelSizeX": 3000,
-		"levelSizeY": 3000
+		"goalRadius": 100,
+		"message": "Grow to 150 meters",
+		"maxTime": 15
+		},
+	{
+		"map": "cluster1",
+		"music": "trash-island-theme.mp3",
+		"radius": 0,
+		"goalRadius": 300,
+		"message": "Even bigger! 300m",
+		"maxTime": 40
 	},
 	{
-		"map": "level1",
+		"map": "funnel",
 		"music": "trash-island-theme.mp3",
 		"radius": 0,
 		"goalRadius": 500,
-		"message": "Even bigger! 500m",
-		"maxTime": 100,
-		"trashCount": 200,
-		"obstacleCount": 25,
-		"levelSizeX": 8000,
-		"levelSizeY": 8000
-	},
-	{
-		"map": "level1",
-		"music": "trash-island-theme.mp3",
-		"radius": 0,
-		"goalRadius": 750,
-		"message": "Is this even possible? 750m!",
-		"maxTime": 150,
-		"trashCount": 200,
-		"obstacleCount": 40,
-		"levelSizeX": 12000,
-		"levelSizeY": 12000
+		"message": "Is this even possible? 500m!",
+		"maxTime": 50
 	}
 ]

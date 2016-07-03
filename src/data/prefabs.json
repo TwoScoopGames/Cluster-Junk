@@ -1038,5 +1038,69 @@
 			"sfx-crunch.mp3",
 			"sfx-crush.mp3"
 		]
+	},
+  "straw": {
+		"name": "Single-use plastic sipping device",
+		"image": {
+      "name": "straw.png",
+			"sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 0,
+			"sourceHeight": 0,
+			"destinationX": 0,
+			"destinationY": 0,
+			"destinationWidth": 64,
+			"destinationHeight": 52
+		},
+		"type": "trash",
+		"position": {
+			"x": 0,
+			"y": 0
+		},
+		"size": {
+			"width": 64,
+			"height": 52
+		},
+		"friction": {
+			"x": 0.97,
+			"y": 0.97
+		},
+		"collisions": [],
+		"noises": [
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3"
+		]
+	},
+  "buttTrash": {
+		"name": "Nonbiodegradable tobacco filter",
+		"image": {
+      "name": "buttTrash.png",
+      "sourceX": 0,
+			"sourceY": 0,
+			"sourceWidth": 0,
+			"sourceHeight": 0,
+			"destinationX": 0,
+			"destinationY": 0,
+			"destinationWidth": 39,
+			"destinationHeight": 15
+		},
+		"type": "trash",
+		"position": {
+			"x": 0,
+			"y": 0
+		},
+		"size": {
+			"width": 39,
+			"height": 15
+		},
+		"friction": {
+			"x": 0.97,
+			"y": 0.97
+		},
+		"collisions": [],
+		"noises": [
+			"sfx-crunch.mp3",
+			"sfx-crush.mp3"
+		]
 	}
 }

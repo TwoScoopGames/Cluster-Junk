@@ -158,9 +158,15 @@
    <image width="243" height="177" source="../images/trashbag.png"/>
   </tile>
   <tile id="49">
+   <properties>
+    <property name="prefab" value="buttTrash"/>
+   </properties>
    <image width="39" height="15" source="../images/buttTrash.png"/>
   </tile>
   <tile id="50">
+   <properties>
+    <property name="prefab" value="straw"/>
+   </properties>
    <image width="64" height="52" source="../images/straw.png"/>
   </tile>
  </tileset>

@@ -34,7 +34,7 @@ function loadTilemap(game, map) {
     var tileSize = game.entities.get(tile, "size");
     shrinkBoundingBox(tileSize, tileImage, 0.4);
     var prefab = game.entities.get(tile, "prefab");
-
+    console.log(tileImage.name,prefab);
     if (prefab) {
       var trash = game.instantiatePrefab(prefab);
       var trashImage = game.entities.get(trash, "image");
@@ -68,4 +68,3 @@ function shrinkBoundingBox(entitySize, entityImage, pct) {
   entityImage.destinationX -= Math.floor(xl / 2);
   entityImage.destinationY -= Math.floor(yl / 2);
 }
-
