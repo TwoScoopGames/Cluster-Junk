@@ -96,8 +96,10 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         });
         game.entities.set(other, "sticky", true);
         game.sounds.play("sfx-power-up.mp3");
-        var notice = 2;
-        game.entities.set(notice, "message", game.entities.get(other, "name"));
+        var notice = game.entities.find("notice")[0];
+        if (notice) {
+          game.entities.set(notice, "message", game.entities.get(other, "name"));
+        }
 
         game.entities.set(camera, "shake", {
           duration: 100,
