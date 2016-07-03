@@ -3,7 +3,7 @@
 		"map": "level1",
 		"music": "trash-island-theme.mp3",
 		"radius": 0,
-		"goalRadius": 250,
+		"goalRadius": 150,
 		"message": "Grow to 250 meters",
 		"maxTime": 45,
 		"trashCount": 200,
