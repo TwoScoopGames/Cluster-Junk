@@ -39,7 +39,7 @@ function makePoints(entities, points) {
 }
 
 var camera = 1;
-// var viewport = 3;
+var viewport = 3;
 
 var particles = require("splat-ecs/lib/particles");
 var cfg = new particles.Config("debris");
@@ -153,27 +153,27 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     game.entities.set(player, "area", playerArea);
     game.entities.set(player, "points", playerPoints);
 
-    // var viewportSize = game.entities.get(viewport, "size");
-    // var viewportAspectRatio = viewportSize.width / viewportSize.height;
-    //
-    // var cameraSize = game.entities.get(camera, "size");
-    // var size = Math.floor(playerRadius * 2 * 3);
-    // var easing = game.entities.get(camera, "easing");
-    // if (cameraSize.height !== size && (easing["size.height"] === undefined || easing["size.height"].end !== size)) {
-    //   easing["size.width"] = {
-    //     time: 0,
-    //     max: 1000,
-    //     start: cameraSize.width,
-    //     end: size * viewportAspectRatio,
-    //     type: "easeInOutQuad"
-    //   };
-    //   easing["size.height"] = {
-    //     time: 0,
-    //     max: 1000,
-    //     start: cameraSize.height,
-    //     end: size,
-    //     type: "easeInOutQuad"
-    //   };
-    // }
+    var viewportSize = game.entities.get(viewport, "size");
+    var viewportAspectRatio = viewportSize.width / viewportSize.height;
+
+    var cameraSize = game.entities.get(camera, "size");
+    var size = Math.floor(playerRadius * 2 * 3);
+    var easing = game.entities.get(camera, "easing");
+    if (cameraSize.height !== size && (easing["size.height"] === undefined || easing["size.height"].end !== size)) {
+      easing["size.width"] = {
+        time: 0,
+        max: 1000,
+        start: cameraSize.width,
+        end: size * viewportAspectRatio,
+        type: "easeInOutQuad"
+      };
+      easing["size.height"] = {
+        time: 0,
+        max: 1000,
+        start: cameraSize.height,
+        end: size,
+        type: "easeInOutQuad"
+      };
+    }
   }, "handleCollisions");
 };
