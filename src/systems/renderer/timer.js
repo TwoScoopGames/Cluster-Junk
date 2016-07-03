@@ -2,6 +2,19 @@
 
 var easing = require("easing-js");
 
+function drawTimeNotice(canvas, context) {
+  var text = "Time is running out!";
+  context.fillStyle = "#3e311a";
+  context.strokeStyle = "#ffffff";
+  context.lineWidth = 10;
+  context.font = "120px blanch";
+  var measurements = context.measureText(text);
+  var x = (canvas.width / 2) - (measurements.width / 2) | 0;
+  var y = (canvas.height / 2) - 120 | 0;
+  context.strokeText(text, x, y);
+  context.fillText(text, x, y);
+}
+
 var timerStart = -50;
 
 var time = 0;
@@ -31,6 +44,10 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       game.context.fillStyle = "white";
       game.context.font = "54px blanch";
       game.context.fillText(remainingSeconds, (game.canvas.width - 107), 93);
+    }
+
+    if (game.entities.get(entity, "timers").startFasterMusicTimer.running) {
+      drawTimeNotice(game.canvas, game.context);
     }
   }, "player");
 };

@@ -11,6 +11,7 @@ module.exports = function(entity, game) { // eslint-disable-line no-unused-vars
   tracksToStop.forEach(function(track) {
     game.sounds.stop(track);
   });
+  game.sounds.play("sfx-fog-horn.mp3");
   game.entities.set(entity, "gameOver", true);
   game.entities.remove(entity, "playerController2d");
   var movement2d = game.entities.get(entity, "movement2d");

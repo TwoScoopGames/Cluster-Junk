@@ -82,6 +82,11 @@
           "max": 120,
           "script": "./scripts/goal-timer"
         },
+        "startFasterMusicTimer": {
+          "running": false,
+          "time": 0,
+          "max": 1800
+        },
         "recoveryTimer": {
           "running": false,
           "time": 0,
@@ -96,7 +101,7 @@
         "endOfGameTimer": {
           "running": false,
           "time": 0,
-          "max": 900,
+          "max": 2000,
           "script": "./scripts/end-of-game-timer"
         }
       }
