@@ -33,6 +33,18 @@ var lidTime = 0;
 var lidFrames = [2, 1, 0, 1, 2, 1];
 var lidFrameTimes = [2000, 200, 2500, 60, 60, 60];
 
+var songs = {
+  "trash-island-theme.mp3": {
+    "loopStart": 8.0,
+    "loopEnd": 40.0
+  },
+  "trash-island-bossa.mp3": {
+    "loopStart": 7.111,
+    "loopEnd": 64.0
+  }
+};
+var levels = require("../../data/levels.json");
+
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   game.entities.registerSearch("renderEyes", ["player", "position", "size", "radius", "eyes"]);
   ecs.addEach(function renderEyes(entity, elapsed) { // eslint-disable-line no-unused-vars
@@ -78,6 +90,11 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       if (lidFrame >= lidFrames.length) {
         lidFrame = 2;
       }
+      var levelData = levels[game.arguments.level || 0];
+      game.sounds.play(levelData.music, {
+        "loopStart": songs[levelData.music].loopStart,
+        "loopEnd": songs[levelData.music].loopEnd
+      });
     }
     var gameOver = game.entities.get(entity, "gameOver");
     if (lidFrame === 2 && game.entities.get(entity, "playerController2d") === undefined && !gameOver) {
