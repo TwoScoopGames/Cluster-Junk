@@ -1,28 +1,28 @@
 [
-	{
-		"map": "level1",
-		"music": "trash-island-theme.mp3",
-		"radius": 0,
-		"goalRadius": 50,
-		"message": "Can you grow to 50 meters?",
-		"maxTime": 10
-		},
-	{
-		"map": "sunshine",
-		"music": "trash-island-theme.mp3",
-		"radius": 0,
-		"goalRadius": 100,
-		"message": "Even bigger! 100m",
-		"maxTime": 20
-	},
   {
-		"map": "level4",
-		"music": "trash-island-theme.mp3",
-		"radius": 0,
-		"goalRadius": 150,
-		"message": "Keep growing! 150m!",
-		"maxTime": 30,
-	},
+    "map": "level1",
+    "music": "trash-island-theme.mp3",
+    "radius": 0,
+    "goalRadius": 50,
+    "message": "Can you grow to 50 meters?",
+    "maxTime": 10
+  },
+  {
+    "map": "sunshine",
+    "music": "trash-island-theme.mp3",
+    "radius": 0,
+    "goalRadius": 100,
+    "message": "Even bigger! 100m",
+    "maxTime": 20
+  },
+  {
+    "map": "level4",
+    "music": "trash-island-theme.mp3",
+    "radius": 0,
+    "goalRadius": 150,
+    "message": "Keep growing! 150m!",
+    "maxTime": 30
+  },
   {
     "map": "level3",
     "music": "trash-island-theme.mp3",
@@ -37,7 +37,7 @@
     "radius": 0,
     "goalRadius": 275,
     "message": "Kentucky Fried Pixels! 275m",
-    "maxTime": 50,
+    "maxTime": 50
   },
   {
     "map": "level2",
