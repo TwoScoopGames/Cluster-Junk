@@ -1198,5 +1198,37 @@
       "sfx-crunch.mp3",
       "sfx-crush.mp3"
     ]
+  },
+  "ticket": {
+    "name": "Another downtown parking ticket",
+    "image": {
+      "name": "ticket.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 107,
+      "destinationHeight": 57
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 107,
+      "height": 57
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
   }
 }
