@@ -135,7 +135,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       game.context.drawImage(won ? buttonGreen : buttonGrey, 696, 361);
 
       drawClickableImage(game, "btn-level-select.png", 310, 361, function() {
-        game.switchScene("title");
+        game.switchScene("level-select");
       });
       drawClickableImage(game, "btn-retry-level.png", 505, 361, function() {
         game.switchScene("level", { level: game.arguments.level });

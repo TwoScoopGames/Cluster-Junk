@@ -33,6 +33,10 @@
       },
       "image": {
         "name": "level-select-1.png"
+      },
+      "level": 0,
+      "onPress": {
+        "script": "./scripts/select-level"
       }
     },
     {
@@ -48,6 +52,10 @@
       },
       "image": {
         "name": "level-select-2.png"
+      },
+      "level": 1,
+      "onPress": {
+        "script": "./scripts/select-level"
       }
     },
     {
@@ -63,6 +71,10 @@
       },
       "image": {
         "name": "level-select-3.png"
+      },
+      "level": 2,
+      "onPress": {
+        "script": "./scripts/select-level"
       }
     },
     {
@@ -78,6 +90,10 @@
       },
       "image": {
         "name": "level-select-4.png"
+      },
+      "level": 3,
+      "onPress": {
+        "script": "./scripts/select-level"
       }
     },
     {
@@ -93,6 +109,10 @@
       },
       "image": {
         "name": "level-select-5.png"
+      },
+      "level": 4,
+      "onPress": {
+        "script": "./scripts/select-level"
       }
     },
     {
@@ -108,6 +128,10 @@
       },
       "image": {
         "name": "level-select-6.png"
+      },
+      "level": 5,
+      "onPress": {
+        "script": "./scripts/select-level"
       }
     },
     {
@@ -123,6 +147,10 @@
       },
       "image": {
         "name": "level-select-7.png"
+      },
+      "level": 6,
+      "onPress": {
+        "script": "./scripts/select-level"
       }
     },
     {
@@ -138,6 +166,10 @@
       },
       "image": {
         "name": "level-select-8.png"
+      },
+      "level": 7,
+      "onPress": {
+        "script": "./scripts/select-level"
       }
     }
   ],

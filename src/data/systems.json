@@ -21,6 +21,10 @@
    "scenes": "all"
   },
   {
+   "name": "./systems/simulation/on-press",
+   "scenes": "all"
+  },
+  {
    "name": "splat-ecs/lib/systems/control-player",
    "scenes": "all"
   },
@@ -91,6 +95,7 @@
   {
    "name": "splat-ecs/lib/systems/clear-screen",
    "scenes": [
+    "level-select",
     "title",
     "finished"
    ]

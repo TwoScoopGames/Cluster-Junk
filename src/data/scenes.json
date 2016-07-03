@@ -4,6 +4,9 @@
 		"onEnter": "./scripts/title-enter",
 		"onExit": "./scripts/title-exit"
 	},
+	"level-select": {
+		"first": false
+	},
 	"level": {
 		"first": false,
 		"onEnter": "./scripts/level-enter",
