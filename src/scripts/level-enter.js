@@ -8,7 +8,6 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
 
   game.entities.set(player, "radius", level.radius);
   game.entities.set(player, "goalRadius", level.goalRadius);
-  game.entities.get(player, "timers").goalTimer.running = true;
   game.entities.get(player, "timers").goalTimer.max = level.maxTime * 1000;
   game.entities.set(2, "message", level.message);
   loadTilemap(game, level.map);

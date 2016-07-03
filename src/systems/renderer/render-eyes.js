@@ -90,21 +90,15 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       if (lidFrame >= lidFrames.length) {
         lidFrame = 2;
       }
+    }
+    var gameOver = game.entities.get(entity, "gameOver");
+    if (lidFrame === 2 && !game.entities.get(entity, "timers").goalTimer.running && !gameOver) {
+      game.entities.get(entity, "timers").goalTimer.running = true;
       var levelData = levels[game.arguments.level || 0];
       game.sounds.play(levelData.music, {
         "loopStart": songs[levelData.music].loopStart,
         "loopEnd": songs[levelData.music].loopEnd
       });
-    }
-    var gameOver = game.entities.get(entity, "gameOver");
-    if (lidFrame === 2 && game.entities.get(entity, "playerController2d") === undefined && !gameOver) {
-      game.entities.set(entity, "playerController2d", {
-        "up": "up",
-        "down": "down",
-        "left": "left",
-        "right": "right"
-      });
-      game.entities.get(entity, "timers").goalTimer.running = true;
     }
     var lw = lids.width / 3;
     var lx = x - (lw / 2);
@@ -141,7 +135,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         } else if (game.arguments.level + 1 === numLevels) {
           game.switchScene("finished");
         } else {
-          game.switchScene("main", { level: level });
+          game.switchScene("level", { level: level });
         }
       }
     }
