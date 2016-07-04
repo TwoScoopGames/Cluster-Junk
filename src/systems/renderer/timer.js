@@ -2,15 +2,16 @@
 
 var easing = require("easing-js");
 
-function drawTimeNotice(canvas, context) {
+function drawTimeNotice(canvas, context, cameraHeight) {
   var text = "Time is running out!";
+  var fontSize = 120;
   context.fillStyle = "#3e311a";
   context.strokeStyle = "#ffffff";
   context.lineWidth = 10;
-  context.font = "120px blanch";
-  var measurements = context.measureText(text);
-  var x = (canvas.width / 2) - (measurements.width / 2) | 0;
-  var y = (canvas.height / 2) - 120 | 0;
+  context.font = fontSize + "px blanch";
+  var w = context.measureText(text).width;
+  var x = (canvas.width / 2) - (w / 2) | 0;
+  var y = (canvas.height / 2) - (fontSize / 2 * canvas.height / cameraHeight) | 0;
   context.strokeText(text, x, y);
   context.fillText(text, x, y);
 }
@@ -47,7 +48,9 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     }
 
     if (game.entities.get(entity, "timers").startFasterMusicTimer.running) {
-      drawTimeNotice(game.canvas, game.context);
+      var camera = game.entities.find("camera")[0];
+      var cameraHeight = game.entities.get(camera, "size").height;
+      drawTimeNotice(game.canvas, game.context, cameraHeight);
     }
   }, "player");
 };
