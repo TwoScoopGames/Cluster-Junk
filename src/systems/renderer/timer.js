@@ -2,8 +2,7 @@
 
 var easing = require("easing-js");
 
-function drawTimeNotice(canvas, context, cameraHeight) {
-  var text = "Time is running out!";
+function drawTimeNotice(text, canvas, context, cameraHeight) {
   var fontSize = 120;
   context.fillStyle = "#3e311a";
   context.strokeStyle = "#ffffff";
@@ -23,6 +22,7 @@ var duration = 500;
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   ecs.addEach(function renderTimer(entity, elapsed) { // eslint-disable-line no-unused-vars
+    var timers = game.entities.get(entity, "timers");
 
     //timer image
     var timerY = 5;
@@ -34,7 +34,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 
     // Time text
     if (time >= duration) {
-      var goalTimer = game.entities.get(entity, "timers").goalTimer;
+      var goalTimer = timers.goalTimer;
       var remainingSeconds = Math.round((goalTimer.max - goalTimer.time) / 1000);
 
       if (remainingSeconds < 10) {
@@ -47,10 +47,13 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       game.context.fillText(remainingSeconds, (game.canvas.width - 107), 93);
     }
 
-    if (game.entities.get(entity, "timers").startFasterMusicTimer.running) {
-      var camera = game.entities.find("camera")[0];
-      var cameraHeight = game.entities.get(camera, "size").height;
-      drawTimeNotice(game.canvas, game.context, cameraHeight);
+    var camera = game.entities.find("camera")[0];
+    var cameraHeight = game.entities.get(camera, "size").height;
+    if (timers.startFasterMusicTimer.running) {
+      drawTimeNotice("Time is running out!", game.canvas, game.context, cameraHeight);
+    }
+    if (timers.endOfGameTimer.running) {
+      drawTimeNotice("Time's up!", game.canvas, game.context, cameraHeight);
     }
   }, "player");
 };
