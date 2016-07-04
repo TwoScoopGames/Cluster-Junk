@@ -104,8 +104,9 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       }
     }
     var gameOver = game.entities.get(entity, "gameOver");
-    if (lidFrame === 2 && !game.entities.get(entity, "timers").goalTimer.running && !gameOver) {
-      game.entities.get(entity, "timers").goalTimer.running = true;
+    var timers = game.entities.get(entity, "timers");
+    if (lidFrame === 2 && !timers.goalTimer.running && !gameOver) {
+      timers.goalTimer.running = true;
       var levelData = levels[game.arguments.level || 0];
       game.sounds.play(levelData.music, {
         "loopStart": songs[levelData.music].loopStart,
@@ -117,7 +118,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var ly = y - (lids.height / 2);
     game.context.drawImage(lids, (lidFrames[lidFrame] * lw), 0, lw, lids.height, lx, ly, lw, lids.height);
 
-    if (gameOver) {
+    if (gameOver && !timers.endOfGameTimer.running) {
       var won = radius >= goalRadius;
 
       var rope = game.images.get("rope-tall.png");
