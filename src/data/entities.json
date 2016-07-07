@@ -199,6 +199,19 @@
   ],
   "finished": [
     {
+      "id": 1,
+      "name": "camera",
+      "camera": true,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1136,
+        "height": 640
+      }
+    },
+    {
       "id": 3,
       "name": "title",
       "title": true
