@@ -5,6 +5,14 @@
    "scenes": "all"
   },
   {
+   "name": "splat-ecs/lib/systems/match-center-x",
+   "scenes": "all"
+  },
+  {
+   "name": "splat-ecs/lib/systems/match-center-y",
+   "scenes": "all"
+  },
+  {
    "name": "splat-ecs/lib/systems/decay-life-span",
    "scenes": "all"
   },
@@ -102,9 +110,7 @@
   },
   {
    "name": "splat-ecs/lib/systems/viewport-move-to-camera",
-   "scenes": [
-    "level"
-   ]
+   "scenes": "all"
   },
   {
    "name": "./systems/renderer/tile-background",
@@ -130,9 +136,7 @@
   },
   {
    "name": "splat-ecs/lib/systems/viewport-reset",
-   "scenes": [
-    "level"
-   ]
+   "scenes": "all"
   },
   {
    "name": "./systems/renderer/render-eyes",
@@ -162,12 +166,6 @@
    "name": "./systems/renderer/draw-notice",
    "scenes": [
     "level"
-   ]
-  },
-  {
-   "name": "./systems/renderer/finished-screen",
-   "scenes": [
-    "finished"
    ]
   },
   {

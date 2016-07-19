@@ -1,9 +1,8 @@
 {
   "title": [
     {
-      "id": 1,
-      "name": "camera",
-      "camera": true,
+      "id": 0,
+      "name": "viewport",
       "position": {
         "x": 0,
         "y": 0
@@ -11,6 +10,22 @@
       "size": {
         "width": 1136,
         "height": 640
+      }
+    },
+    {
+      "id": 1,
+      "name": "camera",
+      "camera": true,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "matchCanvasSize": true,
+      "matchCenterX": {
+        "id": 0
+      },
+      "matchCenterY": {
+        "id": 0
       }
     },
     {
@@ -46,9 +61,8 @@
   ],
   "level-select": [
     {
-      "id": 1,
-      "name": "camera",
-      "camera": true,
+      "id": 0,
+      "name": "viewport",
       "position": {
         "x": 0,
         "y": 0
@@ -56,6 +70,22 @@
       "size": {
         "width": 1136,
         "height": 640
+      }
+    },
+    {
+      "id": 1,
+      "name": "camera",
+      "camera": true,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "matchCanvasSize": true,
+      "matchCenterX": {
+        "id": 0
+      },
+      "matchCenterY": {
+        "id": 0
       }
     },
     {
@@ -237,9 +267,8 @@
   ],
   "finished": [
     {
-      "id": 1,
-      "name": "camera",
-      "camera": true,
+      "id": 0,
+      "name": "viewport",
       "position": {
         "x": 0,
         "y": 0
@@ -250,9 +279,42 @@
       }
     },
     {
-      "id": 3,
-      "name": "title",
-      "title": true
+      "id": 1,
+      "name": "camera",
+      "camera": true,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "matchCanvasSize": true,
+      "matchCenterX": {
+        "id": 0
+      },
+      "matchCenterY": {
+        "id": 0
+      }
+    },
+    {
+      "id": 2,
+      "name": "replay",
+      "title": true,
+      "position": {
+        "x": 93,
+        "y": -600,
+        "z": 2
+      },
+      "easing": {
+        "position.y": {
+          "type": "easeOutElastic",
+          "start": -500,
+          "end": -140,
+          "time": 0,
+          "max": 2000
+        }
+      },
+      "image": {
+        "name": "replay.png"
+      }
     }
   ],
   "level": [
