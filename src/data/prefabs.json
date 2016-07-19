@@ -19,6 +19,26 @@
 			"name": "controls.png"
 		}
 	},
+	"play-again": {
+		"name": "play again",
+		"position": {
+			"x": 230,
+			"y": 200,
+			"z": 1
+		},
+		"easing": {
+			"position.y": {
+				"type": "easeOutElastic",
+				"start": 350,
+				"end": 400,
+				"time": 0,
+				"max": 2000
+			}
+		},
+		"image": {
+			"name": "play-again.png"
+		}
+	},
 	"debris": {
 		"name": "debris",
 		"image": {

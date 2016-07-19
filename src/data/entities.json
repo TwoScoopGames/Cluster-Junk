@@ -296,7 +296,7 @@
     },
     {
       "id": 2,
-      "name": "replay",
+      "name": "credits",
       "title": true,
       "position": {
         "x": 93,
@@ -313,7 +313,15 @@
         }
       },
       "image": {
-        "name": "replay.png"
+        "name": "credits.png"
+      },
+      "timers": {
+        "spawn-play-again": {
+          "running": true,
+          "time": 0,
+          "max": 1000,
+          "script": "./scripts/spawn-play-again"
+        }
       }
     }
   ],
