@@ -19,23 +19,28 @@
       "title": true,
       "position": {
         "x": 93,
-        "y": -140,
+        "y": -600,
         "z": 2
+      },
+      "easing": {
+        "position.y": {
+          "type": "easeOutElastic",
+          "start": -500,
+          "end": -140,
+          "time": 0,
+          "max": 2000
+        }
       },
       "image": {
         "name": "logo.png"
-      }
-    },
-    {
-      "id": 3,
-      "name": "controls",
-      "position": {
-        "x": 230,
-        "y": 400,
-        "z": 1
       },
-      "image": {
-        "name": "controls.png"
+      "timers": {
+        "spawn-controls": {
+          "running": true,
+          "time": 0,
+          "max": 1000,
+          "script": "./scripts/spawn-controls"
+        }
       }
     }
   ],
