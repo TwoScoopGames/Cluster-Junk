@@ -1,9 +1,42 @@
 {
   "title": [
     {
+      "id": 1,
+      "name": "camera",
+      "camera": true,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1136,
+        "height": 640
+      }
+    },
+    {
+      "id": 2,
+      "name": "logo",
+      "title": true,
+      "position": {
+        "x": 93,
+        "y": -140,
+        "z": 2
+      },
+      "image": {
+        "name": "logo.png"
+      }
+    },
+    {
       "id": 3,
-      "name": "title",
-      "title": true
+      "name": "controls",
+      "position": {
+        "x": 230,
+        "y": 400,
+        "z": 1
+      },
+      "image": {
+        "name": "controls.png"
+      }
     }
   ],
   "level-select": [
