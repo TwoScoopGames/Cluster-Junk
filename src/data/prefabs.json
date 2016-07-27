@@ -42,7 +42,7 @@
 	"debris": {
 		"name": "debris",
 		"image": {
-			"name": "radarPaper.png"
+			"name": "particle-water-drop.png"
 		},
 		"position": {
 			"x": 0,
