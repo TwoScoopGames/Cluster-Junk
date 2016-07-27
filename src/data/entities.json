@@ -57,7 +57,9 @@
         "width": 101,
         "height": 88
       },
-      "scale": 2.0,
+      "scale": {
+        "scale": 1.0
+      },
       "velocity": {
         "x": 0,
         "y": 0,
@@ -75,6 +77,8 @@
       "onPositionLeftOf": {
         "x": 1000,
         "script": "./scripts/strike-box"
+      },
+      "timers": {
       }
     }
   ],

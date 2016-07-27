@@ -1,7 +1,7 @@
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   ecs.addEach(function onPositionLeftOf(entity, elapsed) { // eslint-disable-line no-unused-vars
-    var scale = game.entities.get(entity, "scale");
+    var scale = game.entities.get(entity, "scale").scale;
     var image = game.entities.get(entity, "image");
     var size = game.entities.get(entity, "size");
 
