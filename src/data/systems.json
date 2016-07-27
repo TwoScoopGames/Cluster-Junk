@@ -63,6 +63,12 @@
    ]
   },
   {
+   "name": "./systems/simulation/apply-scale",
+   "scenes": [
+     "intro"
+   ]
+  },
+  {
    "name": "splat-ecs/lib/systems/box-collider",
    "scenes": "all"
   },
