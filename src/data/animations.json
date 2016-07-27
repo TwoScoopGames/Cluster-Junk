@@ -886,5 +886,19 @@
     }
    }
   }
+ ],
+ "barge-radar": [
+  {
+   "time": 100,
+   "properties": {
+    "image": {
+     "name": "barge-radar-f9.png",
+     "sourceX": 0,
+     "sourceY": 0,
+     "sourceWidth": 219,
+     "sourceHeight": 220
+    }
+   }
+  }
  ]
 }

@@ -76,6 +76,37 @@
         "x": 1000,
         "script": "./scripts/strike-box"
       }
+    },
+    {
+      "id": 4,
+      "name": "barge-radar",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 2
+      },
+      "size": {
+        "width": 219,
+        "height": 220
+      },
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "animation": {
+        "name": "barge-radar",
+        "time": 0,
+        "frame": 0,
+        "loop": true,
+        "speed": 1
+      },
+      "match": {
+        "id": 2,
+        "offsetX": 550,
+        "offsetY": 220,
+        "offsetZ": 0
+      }
     }
   ],
   "title": [
