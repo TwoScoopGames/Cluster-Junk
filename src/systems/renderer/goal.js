@@ -27,10 +27,6 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     game.context.fillStyle = "#ffffff";
     game.context.strokeStyle = "#3e311a";
 
-    var camera = game.entities.find("camera")[0];
-    var cameraHeight = game.entities.get(camera, "size").height;
-    var scale = game.canvas.height / cameraHeight;
-
     game.context.font = "68px blanch";
     game.context.lineWidth = 8;
     var progressTextX = cx - (game.context.measureText(progressText).width / 2) | 0;
