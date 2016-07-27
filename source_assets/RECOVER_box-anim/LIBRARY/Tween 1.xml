@@ -1,0 +1,57 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Tween 1" itemID="579818a8-00000311" symbolType="graphic" lastModified="1469585576">
+  <timeline>
+    <DOMTimeline name="Tween 1">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isFloating="true">
+                  <matrix>
+                    <Matrix tx="-274.85" ty="-208.25"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#C1A794"/>
+                    </FillStyle>
+                    <FillStyle index="2">
+                      <SolidColor color="#AF9078"/>
+                    </FillStyle>
+                    <FillStyle index="3">
+                      <SolidColor color="#352C28"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal">
+                        <fill>
+                          <SolidColor/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge strokeStyle="1" edges="!6436 3549S4|6439 3550!6439 3550|6436 3553"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!6436 3553S6|6413 4310!6413 4310|5989 4958"/>
+                    <Edge fillStyle1="2" strokeStyle="1" edges="!5989 4958S6|4555 4735!4555 4735|4577 4030"/>
+                    <Edge fillStyle1="1" strokeStyle="1" edges="!4577 4030S6|4577 4029!4577 4029|5059 3373!5059 3373|5719 3457!5719 3457|5774 3386!5774 3386|6436 3549"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!6436 3553S5|6436 3549"/>
+                    <Edge fillStyle0="2" strokeStyle="1" edges="!5271 4136S5|5265 4143!5265 4143|5240 4139"/>
+                    <Edge fillStyle0="2" fillStyle1="1" strokeStyle="1" edges="!5240 4139S7|4577 4030"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!5240 4139S5|5271 4136"/>
+                    <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="!5271 4136S7|5340 4049"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!5340 4049S7|5283 4036!5283 4036|5719 3457"/>
+                    <Edge fillStyle0="2" fillStyle1="3" strokeStyle="1" edges="!6013 4230S7|5271 4136"/>
+                    <Edge fillStyle0="1" fillStyle1="2" strokeStyle="1" edges="!6013 4230S7|5989 4958"/>
+                    <Edge fillStyle0="1" fillStyle1="3" strokeStyle="1" edges="!5340 4049S7|6013 4230"/>
+                    <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="!6013 4230S7|6436 3553"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
