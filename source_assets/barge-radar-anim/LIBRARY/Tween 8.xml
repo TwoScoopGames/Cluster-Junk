@@ -1,0 +1,46 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Tween 8" itemID="579811a6-00000263" symbolType="graphic" lastModified="1469583782">
+  <timeline>
+    <DOMTimeline name="Tween 8">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape selected="true" isDrawingObject="true">
+                  <matrix>
+                    <Matrix tx="-626.1" ty="-720.35"/>
+                  </matrix>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#B7B7B8"/>
+                    </FillStyle>
+                  </fills>
+                  <strokes>
+                    <StrokeStyle index="1">
+                      <SolidStroke scaleMode="normal" caps="none" weight="1.4" joints="miter" miterLimit="10">
+                        <fill>
+                          <SolidColor color="#292929"/>
+                        </fill>
+                      </SolidStroke>
+                    </StrokeStyle>
+                  </strokes>
+                  <edges>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="!12743 12366S5[12699 12232 12550 12232!12550 12232[12401 12232 12326 12352!12326 12352[12289 12411 12282 12471!12282 12471|12285 16344!12285 16344|12293 16381!12293 16381[12307 16426 12330 16464!12330 16464[12404 16583 12553 16583!12553
+ 16583[12702 16583 12747 16449!12747 16449[12761 16407 12763 16356!12763 16356|12758 12500!12758 12500[12766 12433 12743 12366"/>
+                    <Edge cubics="!12285 16344(;12285,16344 12315,16583 12553,16583q12285 16344Q12285 16344q12293 16381Q12307 16426q12330 16464Q12404 16583q12553 16583);"/>
+                    <Edge cubics="!12758 12500(;12758,12500 12788,12232 12550,12232q12758 12500Q12766 12433q12743 12366Q12699 12232q12550 12232);"/>
+                    <Edge cubics="!12550 12232(;12311,12232 12282,12471 12282,12471q12550 12232Q12401 12232q12326 12352Q12289 12411q12282 12471);"/>
+                    <Edge cubics="!12282 12471(;12282,12471 12285,16344 12285,16344q12282 12471 12285 16344);"/>
+                    <Edge cubics="!12747 16449(;12756,16421 12762,16390 12763,16356q12747 16449Q12761 16407q12763 16356);"/>
+                    <Edge cubics="!12553 16583(;12652,16583 12717,16538 12747,16449q12553 16583Q12702 16583q12747 16449);"/>
+                    <Edge cubics="!12763 16356(;12763,16356 12758,12500 12758,12500q12763 16356 12758 12500);"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
