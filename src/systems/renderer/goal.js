@@ -11,6 +11,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var goalRadius = game.entities.get(entity, "goalRadius");
     var progressRadius = (playerRadius / goalRadius) * radius;
 
+    game.context.lineWidth = 1;
     game.context.fillStyle = "rgba(106, 189, 68, 0.55)";
     game.context.beginPath();
     game.context.arc(cx, cy, progressRadius, 0, Math.PI * 2);
