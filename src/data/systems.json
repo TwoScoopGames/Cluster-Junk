@@ -103,9 +103,6 @@
   {
    "name": "splat-ecs/lib/systems/clear-screen",
    "scenes": [
-    "level-select",
-    "title",
-    "finished"
    ]
   },
   {
@@ -114,12 +111,7 @@
   },
   {
    "name": "./systems/renderer/tile-background",
-   "scenes": [
-    "title",
-    "level",
-    "level-select",
-    "finished"
-   ]
+   "scenes": "all"
   },
   {
    "name": "splat-ecs/lib/systems/draw-image",
@@ -160,6 +152,12 @@
    "name": "./systems/renderer/goal",
    "scenes": [
     "level"
+   ]
+  },
+  {
+   "name": "./systems/renderer/rain",
+   "scenes": [
+    "intro"
    ]
   },
   {
