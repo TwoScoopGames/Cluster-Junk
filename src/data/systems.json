@@ -57,6 +57,18 @@
    "scenes": "all"
   },
   {
+   "name": "./systems/simulation/on-position-left-of",
+   "scenes": [
+     "intro"
+   ]
+  },
+  {
+   "name": "./systems/simulation/apply-scale",
+   "scenes": [
+     "intro"
+   ]
+  },
+  {
    "name": "splat-ecs/lib/systems/box-collider",
    "scenes": "all"
   },
@@ -103,9 +115,6 @@
   {
    "name": "splat-ecs/lib/systems/clear-screen",
    "scenes": [
-    "level-select",
-    "title",
-    "finished"
    ]
   },
   {
@@ -114,12 +123,7 @@
   },
   {
    "name": "./systems/renderer/tile-background",
-   "scenes": [
-    "title",
-    "level",
-    "level-select",
-    "finished"
-   ]
+   "scenes": "all"
   },
   {
    "name": "splat-ecs/lib/systems/draw-image",
@@ -132,6 +136,12 @@
   {
    "name": "./systems/renderer/draw-grid",
    "scenes": [
+   ]
+  },
+  {
+   "name": "./systems/renderer/draw-lightning",
+   "scenes": [
+    "intro"
    ]
   },
   {
@@ -160,6 +170,12 @@
    "name": "./systems/renderer/goal",
    "scenes": [
     "level"
+   ]
+  },
+  {
+   "name": "./systems/renderer/rain",
+   "scenes": [
+    "intro"
    ]
   },
   {

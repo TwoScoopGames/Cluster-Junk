@@ -1,4 +1,83 @@
 {
+  "intro": [
+    {
+      "id": 0,
+      "name": "viewport",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1136,
+        "height": 640
+      }
+    },
+    {
+      "id": 1,
+      "name": "camera",
+      "camera": true,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "matchCanvasSize": true,
+      "matchCenterX": {
+        "id": 0
+      },
+      "matchCenterY": {
+        "id": 0
+      }
+    },
+    {
+      "id": 2,
+      "name": "barge",
+      "position": {
+        "x": 1000,
+        "y": 0,
+        "z": 2
+      },
+      "velocity": {
+        "x": -0.15,
+        "y": 0,
+        "z": 0
+      },
+      "image": {
+        "name": "barge.png"
+      }
+    },
+    {
+      "id": 3,
+      "name": "box",
+      "position": {
+        "x": 1000,
+        "y": 0,
+        "z": 2
+      },
+      "size": {
+        "width": 101,
+        "height": 88
+      },
+      "scale": 2.0,
+      "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "image": {
+        "name": "box.png"
+      },
+      "match": {
+        "id": 2,
+        "offsetX": 1000,
+        "offsetY": 400,
+        "offsetZ": 0
+      },
+      "onPositionLeftOf": {
+        "x": 1000,
+        "script": "./scripts/strike-box"
+      }
+    }
+  ],
   "title": [
     {
       "id": 0,
