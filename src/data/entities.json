@@ -263,6 +263,126 @@
       "onPress": {
         "script": "./scripts/select-level"
       }
+    },
+    {
+      "id": 10,
+      "name": "level select 1 overlay",
+      "position": {
+        "x": 74,
+        "y": 95
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-disabled.png"
+      }
+    },
+    {
+      "id": 11,
+      "name": "level select 2 overlay",
+      "position": {
+        "x": 331,
+        "y": 95
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-disabled.png"
+      }
+    },
+    {
+      "id": 12,
+      "name": "level select 3 overlay",
+      "position": {
+        "x": 585,
+        "y": 95
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-disabled.png"
+      }
+    },
+    {
+      "id": 13,
+      "name": "level select 4 overlay",
+      "position": {
+        "x": 839,
+        "y": 95
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-disabled.png"
+      }
+    },
+    {
+      "id": 14,
+      "name": "level select 5 overlay",
+      "position": {
+        "x": 74,
+        "y": 366
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-disabled.png"
+      }
+    },
+    {
+      "id": 15,
+      "name": "level select 6 overlay",
+      "position": {
+        "x": 331,
+        "y": 366
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-disabled.png"
+      }
+    },
+    {
+      "id": 16,
+      "name": "level select 7 overlay",
+      "position": {
+        "x": 585,
+        "y": 366
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-disabled.png"
+      }
+    },
+    {
+      "id": 17,
+      "name": "level select 8 overlay",
+      "position": {
+        "x": 839,
+        "y": 366
+      },
+      "size": {
+        "width": 220,
+        "height": 198
+      },
+      "image": {
+        "name": "level-select-disabled.png"
+      }
     }
   ],
   "finished": [
