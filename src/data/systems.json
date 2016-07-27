@@ -57,6 +57,12 @@
    "scenes": "all"
   },
   {
+   "name": "./systems/simulation/on-position-left-of",
+   "scenes": [
+     "intro"
+   ]
+  },
+  {
    "name": "splat-ecs/lib/systems/box-collider",
    "scenes": "all"
   },
@@ -152,6 +158,12 @@
    "name": "./systems/renderer/goal",
    "scenes": [
     "level"
+   ]
+  },
+  {
+   "name": "./systems/renderer/draw-lightning",
+   "scenes": [
+    "intro"
    ]
   },
   {

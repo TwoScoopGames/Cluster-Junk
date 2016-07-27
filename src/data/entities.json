@@ -37,7 +37,7 @@
         "z": 2
       },
       "velocity": {
-        "x": -0.05,
+        "x": -0.15,
         "y": 0,
         "z": 0
       },
@@ -53,8 +53,12 @@
         "y": 0,
         "z": 2
       },
+      "size": {
+        "width": 101,
+        "height": 88
+      },
       "velocity": {
-        "x": -0.05,
+        "x": 0,
         "y": 0,
         "z": 0
       },
@@ -64,8 +68,12 @@
       "match": {
         "id": 2,
         "offsetX": 1000,
-        "offsetY": 300,
+        "offsetY": 400,
         "offsetZ": 0
+      },
+      "onPositionLeftOf": {
+        "x": 1000,
+        "script": "./scripts/strike-box"
       }
     }
   ],
