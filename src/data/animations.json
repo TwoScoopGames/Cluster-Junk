@@ -889,13 +889,14 @@
  ],
  "barge-radar": [
   {
-   "time": 100,
+  "filmstripFrames": 9,
+   "time": 250,
    "properties": {
     "image": {
      "name": "barge-radar-f9.png",
      "sourceX": 0,
      "sourceY": 0,
-     "sourceWidth": 219,
+     "sourceWidth": 1971,
      "sourceHeight": 220
     }
    }
