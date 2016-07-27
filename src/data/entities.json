@@ -27,6 +27,46 @@
       "matchCenterY": {
         "id": 0
       }
+    },
+    {
+      "id": 2,
+      "name": "barge",
+      "position": {
+        "x": 1000,
+        "y": 0,
+        "z": 2
+      },
+      "velocity": {
+        "x": -0.05,
+        "y": 0,
+        "z": 0
+      },
+      "image": {
+        "name": "barge.png"
+      }
+    },
+    {
+      "id": 3,
+      "name": "box",
+      "position": {
+        "x": 1000,
+        "y": 0,
+        "z": 2
+      },
+      "velocity": {
+        "x": -0.05,
+        "y": 0,
+        "z": 0
+      },
+      "image": {
+        "name": "box.png"
+      },
+      "match": {
+        "id": 2,
+        "offsetX": 1000,
+        "offsetY": 300,
+        "offsetZ": 0
+      }
     }
   ],
   "title": [
