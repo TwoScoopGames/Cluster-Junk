@@ -133,6 +133,12 @@
    ]
   },
   {
+   "name": "./systems/renderer/draw-lightning",
+   "scenes": [
+    "intro"
+   ]
+  },
+  {
    "name": "splat-ecs/lib/systems/viewport-reset",
    "scenes": "all"
   },
@@ -158,12 +164,6 @@
    "name": "./systems/renderer/goal",
    "scenes": [
     "level"
-   ]
-  },
-  {
-   "name": "./systems/renderer/draw-lightning",
-   "scenes": [
-    "intro"
    ]
   },
   {

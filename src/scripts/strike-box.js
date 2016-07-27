@@ -5,15 +5,22 @@ var spawnLightning = require("../spawn-lightning");
 var lastLeft = false;
 module.exports = function(entity, game) {
   var position = game.entities.get(entity, "position");
-  var size = game.entities.get(1, "size");
-  var x = lastLeft ? 0 : size.width;
+  var camera = 1;
+  var cameraPosition = game.entities.get(camera, "position");
+  var cameraSize = game.entities.get(camera, "size");
+  var x = lastLeft ? cameraPosition.x : cameraPosition.x + cameraSize.width;
   lastLeft = !lastLeft;
-  spawnLightning(x, 0, position.x + 50, position.y + 150, game, 0.5);
+  spawnLightning(x, cameraPosition.y, position.x + 50, position.y + 40, game, 0.5);
   game.entities.remove(entity, "onPositionLeftOf");
   if (position.x < 500) {
-    game.entities.set(1, "follow", {
+    game.entities.set(camera, "follow", {
       "id": entity,
       "distance": 200
+    });
+    game.entities.set(entity, "velocity", {
+      "x": 0.1,
+      "y": 0.1,
+      "z": 0
     });
     game.entities.set(entity, "easing", {
       "position.y": {
