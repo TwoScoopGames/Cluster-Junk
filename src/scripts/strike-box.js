@@ -23,12 +23,26 @@ module.exports = function(entity, game) {
       "z": 0
     });
     game.entities.set(entity, "easing", {
+      "scale.scale": {
+        "type": "easeOutCubic",
+        "start": 2.0,
+        "end": 1.0,
+        "time": 0,
+        "max": 500
+      },
+      "position.x": {
+        "type": "easeOutQuart",
+        "start": position.x,
+        "end": position.x + 500,
+        "time": 0,
+        "max": 3000
+      },
       "position.y": {
         "type": "easeOutElastic",
         "start": position.y,
         "end": position.y + 500,
         "time": 0,
-        "max": 2000
+        "max": 3000
       }
     });
     game.entities.remove(entity, "match");
