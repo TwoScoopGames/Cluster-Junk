@@ -62,5 +62,13 @@
     "goalRadius": 500,
     "message": "Is this even possible? 500m!",
     "maxTime": 120
+  },
+  {
+    "map": "trail",
+    "music": "trash-island-theme.mp3",
+    "radius": 0,
+    "goalRadius": 500,
+    "message": "Escape Iceberg Canyon",
+    "maxTime": 400
   }
 ]
