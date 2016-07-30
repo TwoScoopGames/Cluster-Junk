@@ -159,6 +159,12 @@
    ]
   },
   {
+   "name": "./systems/renderer/render-level-end",
+   "scenes": [
+    "level"
+   ]
+  },
+  {
    "name": "./systems/renderer/timer",
    "scenes": [
     "level"
