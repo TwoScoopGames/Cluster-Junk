@@ -1,1308 +1,1308 @@
 {
-	"controls": {
-		"name": "controls",
-		"position": {
-			"x": 230,
-			"y": 200,
-			"z": 1
-		},
-		"easing": {
-			"position.y": {
-				"type": "easeOutElastic",
-				"start": 350,
-				"end": 400,
-				"time": 0,
-				"max": 2000
-			}
-		},
-		"image": {
-			"name": "controls.png"
-		}
-	},
-	"play-again": {
-		"name": "play again",
-		"position": {
-			"x": 230,
-			"y": 200,
-			"z": 1
-		},
-		"easing": {
-			"position.y": {
-				"type": "easeOutElastic",
-				"start": 350,
-				"end": 400,
-				"time": 0,
-				"max": 2000
-			}
-		},
-		"image": {
-			"name": "play-again.png"
-		}
-	},
-	"debris": {
-		"name": "debris",
-		"image": {
-			"name": "particle-water-drop.png"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 28,
-			"height": 19
-		},
-		"lifeSpan": {
-			"current": 0,
-			"max": 300
-		},
-		"easing": {
-			"image.alpha": {
-				"time": 0,
-				"max": 300,
-				"start": 1,
-				"end": 0,
-				"type": "easeInOutQuad"
-			}
-		}
-	},
-	"box": {
-		"name": "Undelivered package from 2011",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 101,
-			"destinationHeight": 88
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "box"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 101,
-			"height": 88
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-paper-flip.mp3",
-			"sfx-rolled-paper-slap.mp3"
-		]
-	},
-	"box2": {
-		"name": "Vagabox tiny house",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 173,
-			"destinationHeight": 135
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "box2"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 173,
-			"height": 135
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-paper-flip.mp3",
-			"sfx-rolled-paper-slap.mp3"
-		]
-	},
-	"milk": {
-		"name": "Organic extra D vitamin milk",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 51,
-			"destinationHeight": 90
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "milk"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 51,
-			"height": 90
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3",
-			"sfx-paper-flip.mp3",
-			"sfx-rolled-paper-slap.mp3"
-		]
-	},
-	"paper-wad": {
-		"name": "'Do not litter' posters",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 76,
-			"destinationHeight": 55
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "paper-wad"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 76,
-			"height": 55
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3",
-			"sfx-paper-flip.mp3",
-			"sfx-rolled-paper-slap.mp3"
-		]
-	},
-	"tire": {
-		"name": "Tire - Do not burn",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 145,
-			"destinationHeight": 144
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "tire"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 145,
-			"height": 144
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-metal-boom.mp3",
-			"sfx-metal-dink.mp3"
-		]
-	},
-	"barrel": {
-		"name": "Dinosaur Oil Company barrel",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 273,
-			"destinationHeight": 158
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "barrel"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 273,
-			"height": 158
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-metal-boom.mp3",
-			"sfx-metal-dink.mp3",
-			"sfx-metal-tonk.mp3",
-			"sfx-metal-tube.mp3"
-		]
-	},
-	"Fries": {
-		"name": "Fries Queen XL fries",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 89,
-			"destinationHeight": 94
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "Fries"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 89,
-			"height": 94
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3",
-			"sfx-paper-flip.mp3",
-			"sfx-rolled-paper-slap.mp3"
-		]
-	},
-	"boot": {
-		"name": "Sole Mate branded boot",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 101,
-			"destinationHeight": 125
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "boot"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 101,
-			"height": 125
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-metal-dink.mp3",
-			"sfx-rolled-paper-slap.mp3"
-		]
-	},
-	"bottle": {
-		"name": "Tap Dat H2O water bottle",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 57,
-			"destinationHeight": 149
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "bottle"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 57,
-			"height": 149
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3"
-		]
-	},
-	"box3": {
-		"name": "Wait, was something in there...?",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 75,
-			"destinationHeight": 53
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "box3"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 75,
-			"height": 53
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-paper-flip.mp3",
-			"sfx-rolled-paper-slap.mp3"
-		]
-	},
-	"cheese": {
-		"name": "Weathered cheddar",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 40,
-			"destinationHeight": 39
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "cheese"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 40,
-			"height": 39
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3"
-		]
-	},
-	"chickenLeg": {
-		"name": "Piece of poultry",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 69,
-			"destinationHeight": 55
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "chickenLeg"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 69,
-			"height": 55
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3"
-		]
-	},
-	"egg-carton": {
-		"name": "Baby chicken transporter",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 155,
-			"destinationHeight": 58
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "egg-carton"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 155,
-			"height": 58
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3",
-			"sfx-paper-flip.mp3",
-			"sfx-rolled-paper-slap.mp3"
-		]
-	},
-	"fishbone": {
-		"name": "Expired aquatic being",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 100,
-			"destinationHeight": 52
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "fishbone"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 100,
-			"height": 52
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3"
-		]
-	},
-	"foam-plate": {
-		"name": "Totally wasteful food carrier",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 119,
-			"destinationHeight": 84
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "foam-plate"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 119,
-			"height": 84
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3",
-			"sfx-rolled-paper-slap.mp3"
-		]
-	},
-	"paper-wad2": {
-		"name": "Trump ballots",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 93,
-			"destinationHeight": 78
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "paper-wad2"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 93,
-			"height": 78
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3",
-			"sfx-paper-flip.mp3",
-			"sfx-rolled-paper-slap.mp3"
-		]
-	},
-	"trashbag": {
-		"name": "Hastily discarded bag",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 243,
-			"destinationHeight": 177
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "trashbag"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 233,
-			"height": 167
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3",
-			"sfx-paper-flip.mp3",
-			"sfx-rolled-paper-slap.mp3"
-		]
-	},
-	"iceberg": {
-		"name": "OMG an iceberg!",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 1353,
-			"destinationHeight": 751
-		},
-		"type": "obstacle",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "iceberg"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 1353,
-			"height": 751
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-metal-boom.mp3",
-			"sfx-metal-dink.mp3"
-		]
-	},
-	"buoy": {
-		"name": "Swim at your own risk",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 300,
-			"destinationHeight": 326
-		},
-		"type": "obstacle",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "buoy"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 300,
-			"height": 326
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-metal-boom.mp3",
-			"sfx-metal-dink.mp3",
-			"sfx-metal-tonk.mp3",
-			"sfx-metal-tube.mp3"
-		]
-	},
-	"fishingBoat": {
-		"name": "SS Not-So-Swole fishing boat",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 1142,
-			"destinationHeight": 443
-		},
-		"type": "obstacle",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "fishingBoat"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 1142,
-			"height": 443
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-metal-boom.mp3",
-			"sfx-metal-dink.mp3",
-			"sfx-metal-tonk.mp3",
-			"sfx-metal-tube.mp3"
-		]
-	},
-	"birbArea": {
-		"name": "@ProBirdsRights",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 318,
-			"destinationHeight": 344
-		},
-		"type": "obstacle",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "birbArea"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 318,
-			"height": 344
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-metal-dink.mp3",
-			"sfx-metal-tonk.mp3",
-			"sfx-metal-tube.mp3"
-		]
-	},
-	"hazardArea": {
-		"name": "Posted hazard area",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 86,
-			"destinationHeight": 220
-		},
-		"type": "obstacle",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "hazardArea"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 86,
-			"height": 220
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-metal-boom.mp3",
-			"sfx-metal-dink.mp3",
-			"sfx-metal-tonk.mp3",
-			"sfx-metal-tube.mp3"
-		]
-	},
-	"orangeBuoy": {
-		"name": "No ships allowed!",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 134,
-			"destinationHeight": 165
-		},
-		"type": "obstacle",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "orangeBuoy"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 134,
-			"height": 165
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-metal-boom.mp3",
-			"sfx-metal-dink.mp3",
-			"sfx-metal-tonk.mp3",
-			"sfx-metal-tube.mp3"
-		]
-	},
-	"seaweed": {
-		"name": "No ships allowed!",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 145,
-			"destinationHeight": 267
-		},
-		"type": "obstacle",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "seaweed"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 145,
-			"height": 267
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-rolled-paper-slap.mp3"
-		]
-	},
-	"driftwood": {
-		"name": "Driftwood",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 573,
-			"destinationHeight": 188
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "driftwood"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 573,
-			"height": 188
-		},
-		"friction": {
-			"x": 0.999,
-			"y": 0.999
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-rolled-paper-slap.mp3",
-			"sfx-metal-boom.mp3",
-			"sfx-metal-dink.mp3"
-		]
-	},
-	"cup": {
-		"name": "Crushed red partycups",
-		"image": {
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 61,
-			"destinationHeight": 52
-		},
-		"type": "trash",
-		"animation": {
-			"time": 0,
-			"frame": 0,
-			"loop": true,
-			"speed": 1,
-			"name": "cup"
-		},
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 61,
-			"height": 52
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3"
-		]
-	},
-	"straw": {
-		"name": "Single-use plastic sipping device",
-		"image": {
-			"name": "straw.png",
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 64,
-			"destinationHeight": 52
-		},
-		"type": "trash",
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 64,
-			"height": 52
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3"
-		]
-	},
-	"buttTrash": {
-		"name": "Nonbiodegradable tobacco filter",
-		"image": {
-			"name": "buttTrash.png",
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 39,
-			"destinationHeight": 15
-		},
-		"type": "trash",
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 39,
-			"height": 15
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3"
-		]
-	},
-	"banjo": {
-		"name": "Ba na ner ner ner ner ner ner ner",
-		"image": {
-			"name": "banjo.png",
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 258,
-			"destinationHeight": 95
-		},
-		"type": "trash",
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 258,
-			"height": 95
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3"
-		]
-	},
-	"chicken-bucket": {
-		"name": "0% trans fat!",
-		"image": {
-			"name": "chicken-bucket.png",
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 85,
-			"destinationHeight": 84
-		},
-		"type": "trash",
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 85,
-			"height": 84
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3"
-		]
-	},
-	"moonshine": {
-		"name": "800 proof",
-		"image": {
-			"name": "moonshine.png",
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 154,
-			"destinationHeight": 192
-		},
-		"type": "trash",
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 154,
-			"height": 192
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3"
-		]
-	},
-	"ticket": {
-		"name": "Another downtown parking ticket",
-		"image": {
-			"name": "ticket.png",
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 107,
-			"destinationHeight": 57
-		},
-		"type": "trash",
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 107,
-			"height": 57
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3"
-		]
-	},
-	"bourbon": {
-		"name": "Some hipster bourbon",
-		"image": {
-			"name": "bourbon.png",
-			"sourceX": 0,
-			"sourceY": 0,
-			"sourceWidth": 0,
-			"sourceHeight": 0,
-			"destinationX": 0,
-			"destinationY": 0,
-			"destinationWidth": 80,
-			"destinationHeight": 154
-		},
-		"type": "trash",
-		"position": {
-			"x": 0,
-			"y": 0
-		},
-		"size": {
-			"width": 80,
-			"height": 154
-		},
-		"friction": {
-			"x": 0.97,
-			"y": 0.97
-		},
-		"collisions": [],
-		"noises": [
-			"sfx-crunch.mp3",
-			"sfx-crush.mp3"
-		]
-	},
+  "controls": {
+    "name": "controls",
+    "position": {
+      "x": 230,
+      "y": 200,
+      "z": 1
+    },
+    "easing": {
+      "position.y": {
+        "type": "easeOutElastic",
+        "start": 350,
+        "end": 400,
+        "time": 0,
+        "max": 2000
+      }
+    },
+    "image": {
+      "name": "controls.png"
+    }
+  },
+  "play-again": {
+    "name": "play again",
+    "position": {
+      "x": 230,
+      "y": 200,
+      "z": 1
+    },
+    "easing": {
+      "position.y": {
+        "type": "easeOutElastic",
+        "start": 350,
+        "end": 400,
+        "time": 0,
+        "max": 2000
+      }
+    },
+    "image": {
+      "name": "play-again.png"
+    }
+  },
+  "debris": {
+    "name": "debris",
+    "image": {
+      "name": "particle-water-drop.png"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 28,
+      "height": 19
+    },
+    "lifeSpan": {
+      "current": 0,
+      "max": 300
+    },
+    "easing": {
+      "image.alpha": {
+        "time": 0,
+        "max": 300,
+        "start": 1,
+        "end": 0,
+        "type": "easeInOutQuad"
+      }
+    }
+  },
+  "box": {
+    "name": "Undelivered package from 2011",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 101,
+      "destinationHeight": 88
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "box"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 101,
+      "height": 88
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "box2": {
+    "name": "Vagabox tiny house",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 173,
+      "destinationHeight": 135
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "box2"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 173,
+      "height": 135
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "milk": {
+    "name": "Organic extra D vitamin milk",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 51,
+      "destinationHeight": 90
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "milk"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 51,
+      "height": 90
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "paper-wad": {
+    "name": "'Do not litter' posters",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 76,
+      "destinationHeight": 55
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "paper-wad"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 76,
+      "height": 55
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "tire": {
+    "name": "Tire - Do not burn",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 145,
+      "destinationHeight": 144
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "tire"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 145,
+      "height": 144
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-metal-boom.mp3",
+      "sfx-metal-dink.mp3"
+    ]
+  },
+  "barrel": {
+    "name": "Dinosaur Oil Company barrel",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 273,
+      "destinationHeight": 158
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "barrel"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 273,
+      "height": 158
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-metal-boom.mp3",
+      "sfx-metal-dink.mp3",
+      "sfx-metal-tonk.mp3",
+      "sfx-metal-tube.mp3"
+    ]
+  },
+  "Fries": {
+    "name": "Fries Queen XL fries",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 89,
+      "destinationHeight": 94
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "Fries"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 89,
+      "height": 94
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "boot": {
+    "name": "Sole Mate branded boot",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 101,
+      "destinationHeight": 125
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "boot"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 101,
+      "height": 125
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-metal-dink.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "bottle": {
+    "name": "Tap Dat H2O water bottle",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 57,
+      "destinationHeight": 149
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "bottle"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 57,
+      "height": 149
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  },
+  "box3": {
+    "name": "Wait, was something in there...?",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 75,
+      "destinationHeight": 53
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "box3"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 75,
+      "height": 53
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "cheese": {
+    "name": "Weathered cheddar",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 40,
+      "destinationHeight": 39
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "cheese"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 40,
+      "height": 39
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  },
+  "chickenLeg": {
+    "name": "Piece of poultry",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 69,
+      "destinationHeight": 55
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "chickenLeg"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 69,
+      "height": 55
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  },
+  "egg-carton": {
+    "name": "Baby chicken transporter",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 155,
+      "destinationHeight": 58
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "egg-carton"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 155,
+      "height": 58
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "fishbone": {
+    "name": "Expired aquatic being",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 100,
+      "destinationHeight": 52
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "fishbone"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 100,
+      "height": 52
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  },
+  "foam-plate": {
+    "name": "Totally wasteful food carrier",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 119,
+      "destinationHeight": 84
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "foam-plate"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 119,
+      "height": 84
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "paper-wad2": {
+    "name": "Trump ballots",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 93,
+      "destinationHeight": 78
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "paper-wad2"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 93,
+      "height": 78
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "trashbag": {
+    "name": "Hastily discarded bag",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 243,
+      "destinationHeight": 177
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "trashbag"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 233,
+      "height": 167
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "iceberg": {
+    "name": "OMG an iceberg!",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 1353,
+      "destinationHeight": 751
+    },
+    "type": "obstacle",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "iceberg"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 1353,
+      "height": 751
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-metal-boom.mp3",
+      "sfx-metal-dink.mp3"
+    ]
+  },
+  "buoy": {
+    "name": "Swim at your own risk",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 300,
+      "destinationHeight": 326
+    },
+    "type": "obstacle",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "buoy"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 300,
+      "height": 326
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-metal-boom.mp3",
+      "sfx-metal-dink.mp3",
+      "sfx-metal-tonk.mp3",
+      "sfx-metal-tube.mp3"
+    ]
+  },
+  "fishingBoat": {
+    "name": "SS Not-So-Swole fishing boat",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 1142,
+      "destinationHeight": 443
+    },
+    "type": "obstacle",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "fishingBoat"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 1142,
+      "height": 443
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-metal-boom.mp3",
+      "sfx-metal-dink.mp3",
+      "sfx-metal-tonk.mp3",
+      "sfx-metal-tube.mp3"
+    ]
+  },
+  "birbArea": {
+    "name": "@ProBirdsRights",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 318,
+      "destinationHeight": 344
+    },
+    "type": "obstacle",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "birbArea"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 318,
+      "height": 344
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-metal-dink.mp3",
+      "sfx-metal-tonk.mp3",
+      "sfx-metal-tube.mp3"
+    ]
+  },
+  "hazardArea": {
+    "name": "Posted hazard area",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 86,
+      "destinationHeight": 220
+    },
+    "type": "obstacle",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "hazardArea"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 86,
+      "height": 220
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-metal-boom.mp3",
+      "sfx-metal-dink.mp3",
+      "sfx-metal-tonk.mp3",
+      "sfx-metal-tube.mp3"
+    ]
+  },
+  "orangeBuoy": {
+    "name": "No ships allowed!",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 134,
+      "destinationHeight": 165
+    },
+    "type": "obstacle",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "orangeBuoy"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 134,
+      "height": 165
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-metal-boom.mp3",
+      "sfx-metal-dink.mp3",
+      "sfx-metal-tonk.mp3",
+      "sfx-metal-tube.mp3"
+    ]
+  },
+  "seaweed": {
+    "name": "No ships allowed!",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 145,
+      "destinationHeight": 267
+    },
+    "type": "obstacle",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "seaweed"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 145,
+      "height": 267
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "driftwood": {
+    "name": "Driftwood",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 573,
+      "destinationHeight": 188
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "driftwood"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 573,
+      "height": 188
+    },
+    "friction": {
+      "x": 0.999,
+      "y": 0.999
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-rolled-paper-slap.mp3",
+      "sfx-metal-boom.mp3",
+      "sfx-metal-dink.mp3"
+    ]
+  },
+  "cup": {
+    "name": "Crushed red partycups",
+    "image": {
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 61,
+      "destinationHeight": 52
+    },
+    "type": "trash",
+    "animation": {
+      "time": 0,
+      "frame": 0,
+      "loop": true,
+      "speed": 1,
+      "name": "cup"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 61,
+      "height": 52
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  },
+  "straw": {
+    "name": "Single-use plastic sipping device",
+    "image": {
+      "name": "straw.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 64,
+      "destinationHeight": 52
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 64,
+      "height": 52
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  },
+  "buttTrash": {
+    "name": "Nonbiodegradable tobacco filter",
+    "image": {
+      "name": "buttTrash.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 39,
+      "destinationHeight": 15
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 39,
+      "height": 15
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  },
+  "banjo": {
+    "name": "Ba na ner ner ner ner ner ner ner",
+    "image": {
+      "name": "banjo.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 258,
+      "destinationHeight": 95
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 258,
+      "height": 95
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  },
+  "chicken-bucket": {
+    "name": "0% trans fat!",
+    "image": {
+      "name": "chicken-bucket.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 85,
+      "destinationHeight": 84
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 85,
+      "height": 84
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  },
+  "moonshine": {
+    "name": "800 proof",
+    "image": {
+      "name": "moonshine.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 154,
+      "destinationHeight": 192
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 154,
+      "height": 192
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  },
+  "ticket": {
+    "name": "Another downtown parking ticket",
+    "image": {
+      "name": "ticket.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 107,
+      "destinationHeight": 57
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 107,
+      "height": 57
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  },
+  "bourbon": {
+    "name": "Some hipster bourbon",
+    "image": {
+      "name": "bourbon.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 80,
+      "destinationHeight": 154
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 80,
+      "height": 154
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "collisions": [],
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-crush.mp3"
+    ]
+  },
   "particle-ooze-1": {
     "image": {
       "name": "particle-ooze-1.png",
@@ -1313,70 +1313,71 @@
       "width": 63,
       "height": 96
     }
-},
-"particle-ooze-2": {
-  "image": {
-    "name": "particle-ooze-2.png",
-    "destinationWidth": 17,
-    "destinationHeight": 19
   },
-  "size": {
-    "width": 17,
-    "height": 19
-  }
-},
-"particle-ooze-3": {
-  "image": {
-    "name": "particle-ooze-3.png",
-    "destinationWidth": 28,
-    "destinationHeight": 51
+  "particle-ooze-2": {
+    "image": {
+      "name": "particle-ooze-2.png",
+      "destinationWidth": 17,
+      "destinationHeight": 19
+    },
+    "size": {
+      "width": 17,
+      "height": 19
+    }
   },
-  "size": {
-    "width": 28,
-    "height": 51
-  }
-},
-"particle-ooze-4": {
-  "image": {
-    "name": "particle-ooze-4.png",
-    "destinationWidth": 36,
-    "destinationHeight": 41
+  "particle-ooze-3": {
+    "image": {
+      "name": "particle-ooze-3.png",
+      "destinationWidth": 28,
+      "destinationHeight": 51
+    },
+    "size": {
+      "width": 28,
+      "height": 51
+    }
   },
-  "size": {
-    "width": 36,
-    "height": 41
-  }
-},
-"particle-ooze-5": {
-  "image": {
-    "name": "particle-ooze-5.png",
-    "destinationWidth": 34,
-    "destinationHeight": 40
+  "particle-ooze-4": {
+    "image": {
+      "name": "particle-ooze-4.png",
+      "destinationWidth": 36,
+      "destinationHeight": 41
+    },
+    "size": {
+      "width": 36,
+      "height": 41
+    }
   },
-  "size": {
-    "width": 34,
-    "height": 40
-  }
-},
-"particle-ooze-6": {
-  "image": {
-    "name": "particle-ooze-6.png",
-    "destinationWidth": 10,
-    "destinationHeight": 7
+  "particle-ooze-5": {
+    "image": {
+      "name": "particle-ooze-5.png",
+      "destinationWidth": 34,
+      "destinationHeight": 40
+    },
+    "size": {
+      "width": 34,
+      "height": 40
+    }
   },
-  "size": {
-    "width": 10,
-    "height": 7
-  }
-},
-"particle-ooze-8": {
-  "image": {
-    "name": "particle-ooze-8.png",
-    "destinationWidth": 25,
-    "destinationHeight": 11
+  "particle-ooze-6": {
+    "image": {
+      "name": "particle-ooze-6.png",
+      "destinationWidth": 10,
+      "destinationHeight": 7
+    },
+    "size": {
+      "width": 10,
+      "height": 7
+    }
   },
-  "size": {
-    "width": 25,
-    "height": 11
+  "particle-ooze-8": {
+    "image": {
+      "name": "particle-ooze-8.png",
+      "destinationWidth": 25,
+      "destinationHeight": 11
+    },
+    "size": {
+      "width": 25,
+      "height": 11
+    }
   }
 }
