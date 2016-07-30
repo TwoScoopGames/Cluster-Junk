@@ -80,7 +80,15 @@
         "rightAccel": 0.02
       },
       "image": {
-        "name": "box.png"
+        "name": "box.png",
+        "sourceX": 0,
+        "sourceY": 0,
+        "sourceWidth": 101,
+        "sourceHeight": 88,
+        "destinationX": 0,
+        "destinationY": 0,
+        "destinationWidth": 101,
+        "destinationHeight": 88
       },
       "match": {
         "id": 2,
@@ -91,6 +99,14 @@
       "onPositionLeftOf": {
         "x": 1000,
         "script": "./scripts/strike-box"
+      },
+      "timers": {
+        "switchAnims": {
+          "running": false,
+          "time": 0,
+          "max": 770,
+          "script": "./scripts/switch-box-anims"
+        }
       }
     },
     {
@@ -625,6 +641,7 @@
         "y": 0.97
       },
       "image": {
+        "name": "box.png",
         "sourceX": 0,
         "sourceY": 0,
         "sourceWidth": 0,
@@ -633,13 +650,6 @@
         "destinationY": 0,
         "destinationWidth": 101,
         "destinationHeight": 88
-      },
-      "animation": {
-        "time": 0,
-        "frame": 0,
-        "loop": true,
-        "speed": 1,
-        "name": "box"
       },
       "position": {
         "x": 0,
