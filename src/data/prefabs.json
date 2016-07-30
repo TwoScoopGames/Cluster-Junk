@@ -1302,5 +1302,81 @@
 			"sfx-crunch.mp3",
 			"sfx-crush.mp3"
 		]
-	}
+	},
+  "particle-ooze-1": {
+    "image": {
+      "name": "particle-ooze-1.png",
+      "destinationWidth": 63,
+      "destinationHeight": 96
+    },
+    "size": {
+      "width": 63,
+      "height": 96
+    }
+},
+"particle-ooze-2": {
+  "image": {
+    "name": "particle-ooze-2.png",
+    "destinationWidth": 17,
+    "destinationHeight": 19
+  },
+  "size": {
+    "width": 17,
+    "height": 19
+  }
+},
+"particle-ooze-3": {
+  "image": {
+    "name": "particle-ooze-3.png",
+    "destinationWidth": 28,
+    "destinationHeight": 51
+  },
+  "size": {
+    "width": 28,
+    "height": 51
+  }
+},
+"particle-ooze-4": {
+  "image": {
+    "name": "particle-ooze-4.png",
+    "destinationWidth": 36,
+    "destinationHeight": 41
+  },
+  "size": {
+    "width": 36,
+    "height": 41
+  }
+},
+"particle-ooze-5": {
+  "image": {
+    "name": "particle-ooze-5.png",
+    "destinationWidth": 34,
+    "destinationHeight": 40
+  },
+  "size": {
+    "width": 34,
+    "height": 40
+  }
+},
+"particle-ooze-6": {
+  "image": {
+    "name": "particle-ooze-6.png",
+    "destinationWidth": 10,
+    "destinationHeight": 7
+  },
+  "size": {
+    "width": 10,
+    "height": 7
+  }
+},
+"particle-ooze-8": {
+  "image": {
+    "name": "particle-ooze-8.png",
+    "destinationWidth": 25,
+    "destinationHeight": 11
+  },
+  "size": {
+    "width": 25,
+    "height": 11
+  }
 }
