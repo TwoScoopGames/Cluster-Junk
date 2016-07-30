@@ -17,10 +17,10 @@ module.exports = function(entity, game) {
       "id": entity,
       "distance": 200
     });
-    game.entities.set(entity, "velocity", {
-      "x": 0.1,
-      "y": 0.1,
-      "z": 0
+    game.entities.set(entity, "moveToPoint", {
+      "x": 1500,
+      "y": 1500,
+      "maxDistanceAway": 10
     });
     game.entities.set(entity, "easing", {
       "scale.scale": {

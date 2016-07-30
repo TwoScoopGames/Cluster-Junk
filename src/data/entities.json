@@ -65,6 +65,20 @@
         "y": 0,
         "z": 0
       },
+      "friction": {
+        "x": 0.97,
+        "y": 0.97
+      },
+      "movement2d": {
+        "upMax": -0.1,
+        "downMax": 0.1,
+        "leftMax": -0.1,
+        "rightMax": 0.1,
+        "upAccel": -0.02,
+        "downAccel": 0.02,
+        "leftAccel": -0.02,
+        "rightAccel": 0.02
+      },
       "image": {
         "name": "box.png"
       },
@@ -77,8 +91,6 @@
       "onPositionLeftOf": {
         "x": 1000,
         "script": "./scripts/strike-box"
-      },
-      "timers": {
       }
     },
     {
@@ -110,6 +122,18 @@
         "offsetX": 550,
         "offsetY": 220,
         "offsetZ": 0
+      }
+    },
+    {
+      "id": 5,
+      "name": "barrel",
+      "position": {
+        "x": 1500,
+        "y": 1500,
+        "z": 0
+      },
+      "image": {
+        "name": "barrel.png"
       }
     }
   ],
