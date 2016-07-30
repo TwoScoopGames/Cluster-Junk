@@ -128,12 +128,24 @@
       "id": 5,
       "name": "barrel",
       "position": {
-        "x": 1500,
+        "x": 1700,
         "y": 1500,
         "z": 0
       },
       "image": {
-        "name": "barrel.png"
+        "name": "toxic-barrel.png"
+      }
+    },
+    {
+      "id": 6,
+      "name": "hazard area",
+      "position": {
+        "x": 1200,
+        "y": 1400,
+        "z": 0
+      },
+      "image": {
+        "name": "hazardArea.png"
       }
     }
   ],
