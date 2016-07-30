@@ -28,7 +28,7 @@ var lidFrames = [2, 1, 0, 1, 2, 1];
 var lidFrameTimes = [2000, 200, 2500, 60, 60, 60];
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
-  game.entities.registerSearch("renderEyes", ["player", "position", "size", "movement2d", "eyes"]);
+  game.entities.registerSearch("renderEyes", ["position", "size", "movement2d", "eyes"]);
   ecs.addEach(function renderEyes(entity, elapsed) { // eslint-disable-line no-unused-vars
     var position = game.entities.get(entity, "position");
     var size = game.entities.get(entity, "size");

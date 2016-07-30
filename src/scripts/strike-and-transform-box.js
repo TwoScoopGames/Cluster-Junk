@@ -18,4 +18,21 @@ module.exports = function(entity, game) {
     "speed": 1
   });
   game.entities.get(entity, "timers").switchAnims.running = true;
+  game.entities.get(camera, "follow").distance = 0;
+  game.entities.set(camera, "easing", {
+    "size.width": {
+      "type": "easeOutCubic",
+      "start": 1136,
+      "end": 400,
+      "time": 0,
+      "max": 2000
+    },
+    "size.height": {
+      "type": "easeOutCubic",
+      "start": 640,
+      "end": 225,
+      "time": 0,
+      "max": 2000
+    }
+  });
 };

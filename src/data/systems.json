@@ -154,9 +154,7 @@
   },
   {
    "name": "./systems/renderer/render-eyes",
-   "scenes": [
-    "level"
-   ]
+   "scenes": "all"
   },
   {
    "name": "./systems/renderer/render-level-end",
