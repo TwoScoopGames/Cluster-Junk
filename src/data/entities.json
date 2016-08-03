@@ -97,10 +97,16 @@
         "offsetZ": 0
       },
       "onPositionLeftOf": {
-        "x": 1000,
+        "x": 500,
         "script": "./scripts/strike-box"
       },
       "timers": {
+        "moveBoxIntoWater": {
+          "running": false,
+          "time": 0,
+          "max": 300,
+          "script": "./scripts/move-box-into-water"
+        },
         "playSplashSfx": {
           "running": false,
           "time": 0,
