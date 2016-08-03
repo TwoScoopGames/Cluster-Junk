@@ -8,4 +8,5 @@ module.exports = function(entity, game) {
     "lidFrame": 0,
     "lidTime": 0
   });
+  game.entities.get(entity, "timers").switchToTitle.running = true;
 };

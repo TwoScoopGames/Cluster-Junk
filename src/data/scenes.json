@@ -1,11 +1,11 @@
 {
+	"intro": {
+		"first": true
+	},
 	"title": {
 		"first": false,
 		"onEnter": "./scripts/title-enter",
 		"onExit": "./scripts/title-exit"
-	},
-	"intro": {
-		"first": true
 	},
 	"level-select": {
 		"first": false

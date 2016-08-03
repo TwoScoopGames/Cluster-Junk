@@ -101,6 +101,12 @@
         "script": "./scripts/strike-box"
       },
       "timers": {
+        "switchToTitle": {
+          "running": false,
+          "time": 0,
+          "max": 5000,
+          "script": "./scripts/switch-to-title"
+        },
         "switchAnims": {
           "running": false,
           "time": 0,
