@@ -1,6 +1,8 @@
 {
 	"intro": {
-		"first": true
+		"first": true,
+		"onEnter": "./scripts/intro-enter",
+		"onExit": "./scripts/intro-exit"
 	},
 	"title": {
 		"first": false,
