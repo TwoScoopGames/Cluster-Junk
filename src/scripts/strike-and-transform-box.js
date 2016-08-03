@@ -4,10 +4,10 @@ var spawnLightning = require("../spawn-lightning");
 
 module.exports = function(entity, game) {
   var position = game.entities.get(entity, "position");
+  var viewport = 0;
   var camera = 1;
   var cameraPosition = game.entities.get(camera, "position");
-  var x = cameraPosition.x;
-  spawnLightning(x, cameraPosition.y, position.x + 50, position.y + 40, game, 0.5);
+  spawnLightning(cameraPosition.x, cameraPosition.y, position.x + 50, position.y + 40, game, 0.5);
 
   game.entities.remove(entity, "scale");
   game.entities.set(entity, "animation", {
@@ -18,7 +18,8 @@ module.exports = function(entity, game) {
     "speed": 1
   });
   game.entities.get(entity, "timers").switchAnims.running = true;
-  game.entities.get(camera, "follow").distance = 0;
+  game.entities.get(viewport, "follow").distance = 0;
+  game.entities.remove(camera, "matchCanvasSize");
   game.entities.set(camera, "easing", {
     "size.width": {
       "type": "easeOutCubic",
