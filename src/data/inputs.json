@@ -4,6 +4,14 @@
     "action": [
       {
         "device": "keyboard",
+        "button": "escape"
+      },
+      {
+        "device": "keyboard",
+        "button": "enter"
+      },
+      {
+        "device": "keyboard",
         "button": "space"
       },
       {
