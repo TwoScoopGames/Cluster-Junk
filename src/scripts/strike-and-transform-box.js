@@ -7,7 +7,7 @@ module.exports = function(entity, game) {
   var viewport = 0;
   var camera = 1;
   var cameraPosition = game.entities.get(camera, "position");
-  spawnLightning(cameraPosition.x, cameraPosition.y, position.x + 50, position.y + 40, game, 0.5);
+  spawnLightning(cameraPosition.x, cameraPosition.y, position.x + 50, position.y, game, 0.5);
 
   game.entities.remove(entity, "scale");
   game.entities.set(entity, "animation", {
@@ -22,18 +22,18 @@ module.exports = function(entity, game) {
   game.entities.remove(camera, "matchCanvasSize");
   game.entities.set(camera, "easing", {
     "size.width": {
-      "type": "easeOutCubic",
+      "type": "easeInOutElastic",
       "start": 1136,
       "end": 400,
       "time": 0,
-      "max": 2000
+      "max": 1000
     },
     "size.height": {
-      "type": "easeOutCubic",
+      "type": "easeInOutElastic",
       "start": 640,
       "end": 225,
       "time": 0,
-      "max": 2000
+      "max": 1000
     }
   });
 };
