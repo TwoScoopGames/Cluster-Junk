@@ -1304,6 +1304,9 @@
     ]
   },
   "particle-ooze-1": {
+    "alpha": {
+      "alpha": 0.5
+    },
     "image": {
       "name": "particle-ooze-1.png",
       "destinationWidth": 63,
@@ -1315,6 +1318,9 @@
     }
   },
   "particle-ooze-2": {
+    "alpha": {
+      "alpha": 0.5
+    },
     "image": {
       "name": "particle-ooze-2.png",
       "destinationWidth": 17,
@@ -1326,6 +1332,9 @@
     }
   },
   "particle-ooze-3": {
+    "alpha": {
+      "alpha": 0.5
+    },
     "image": {
       "name": "particle-ooze-3.png",
       "destinationWidth": 28,
@@ -1337,6 +1346,9 @@
     }
   },
   "particle-ooze-4": {
+    "alpha": {
+      "alpha": 0.5
+    },
     "image": {
       "name": "particle-ooze-4.png",
       "destinationWidth": 36,
@@ -1348,6 +1360,9 @@
     }
   },
   "particle-ooze-5": {
+    "alpha": {
+      "alpha": 0.5
+    },
     "image": {
       "name": "particle-ooze-5.png",
       "destinationWidth": 34,
@@ -1359,6 +1374,9 @@
     }
   },
   "particle-ooze-6": {
+    "alpha": {
+      "alpha": 0.5
+    },
     "image": {
       "name": "particle-ooze-6.png",
       "destinationWidth": 10,
@@ -1381,6 +1399,9 @@
     }
   },
   "particle-ooze-8": {
+    "alpha": {
+      "alpha": 0.5
+    },
     "image": {
       "name": "particle-ooze-8.png",
       "destinationWidth": 25,
