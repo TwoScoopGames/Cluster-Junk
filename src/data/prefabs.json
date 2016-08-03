@@ -1305,10 +1305,7 @@
   },
   "particle-ooze-1": {
     "image": {
-      "name": "particle-ooze-1.png",
-      "destinationWidth": 63,
-      "destinationHeight": 96,
-      "alpha": 0.1
+      "name": "particle-ooze-1.png"
     },
     "size": {
       "width": 63,
@@ -1317,10 +1314,7 @@
   },
   "particle-ooze-2": {
     "image": {
-      "name": "particle-ooze-2.png",
-      "destinationWidth": 17,
-      "destinationHeight": 19,
-      "alpha": 0.1
+      "name": "particle-ooze-2.png"
     },
     "size": {
       "width": 17,
@@ -1329,10 +1323,7 @@
   },
   "particle-ooze-3": {
     "image": {
-      "name": "particle-ooze-3.png",
-      "destinationWidth": 28,
-      "destinationHeight": 51,
-      "alpha": 0.1
+      "name": "particle-ooze-3.png"
     },
     "size": {
       "width": 28,
@@ -1341,10 +1332,7 @@
   },
   "particle-ooze-4": {
     "image": {
-      "name": "particle-ooze-4.png",
-      "destinationWidth": 36,
-      "destinationHeight": 41,
-      "alpha": 0.1
+      "name": "particle-ooze-4.png"
     },
     "size": {
       "width": 36,
@@ -1353,10 +1341,7 @@
   },
   "particle-ooze-5": {
     "image": {
-      "name": "particle-ooze-5.png",
-      "destinationWidth": 34,
-      "destinationHeight": 40,
-      "alpha": 0.1
+      "name": "particle-ooze-5.png"
     },
     "size": {
       "width": 34,
@@ -1365,10 +1350,7 @@
   },
   "particle-ooze-6": {
     "image": {
-      "name": "particle-ooze-6.png",
-      "destinationWidth": 10,
-      "destinationHeight": 7,
-      "alpha": 0.1
+      "name": "particle-ooze-6.png"
     },
     "size": {
       "width": 10,
@@ -1377,10 +1359,7 @@
   },
   "particle-ooze-7": {
     "image": {
-      "name": "particle-ooze-7.png",
-      "destinationWidth": 58,
-      "destinationHeight": 50,
-      "alpha": 0.1
+      "name": "particle-ooze-7.png"
     },
     "size": {
       "width": 58,
@@ -1389,10 +1368,7 @@
   },
   "particle-ooze-8": {
     "image": {
-      "name": "particle-ooze-8.png",
-      "destinationWidth": 25,
-      "destinationHeight": 11,
-      "alpha": 0.1
+      "name": "particle-ooze-8.png"
     },
     "size": {
       "width": 25,

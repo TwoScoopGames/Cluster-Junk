@@ -4,10 +4,12 @@ var random = require("splat-ecs/lib/random");
 var waste = new particles.Config("particle-ooze-1");
 waste.angle = Math.PI;
 waste.arcWidth = Math.PI / 8;
-waste.lifeSpanMin = 6000;
-waste.lifeSpanMax = 6000;
+waste.lifeSpanMin = 4000;
+waste.lifeSpanMax = 4000;
 waste.qtyMin = 1;
 waste.qtyMax = 1;
+waste.sizeMin = 1;
+waste.sizeMax = 1.5;
 waste.velocityMin = 0.01;
 waste.velocityMax = 0.1;
 
@@ -28,7 +30,7 @@ module.exports = function(entity, game) {
   waste.origin.x = pos.x + 20;
   waste.origin.y = pos.y + 110;
 
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 4; i++) {
     waste.prefab = random.from(prefabs);
     particles.create(game, waste);
   }
