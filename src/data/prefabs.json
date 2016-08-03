@@ -1369,6 +1369,17 @@
       "height": 7
     }
   },
+  "particle-ooze-7": {
+    "image": {
+      "name": "particle-ooze-7.png",
+      "destinationWidth": 58,
+      "destinationHeight": 50
+    },
+    "size": {
+      "width": 58,
+      "height": 50
+    }
+  },
   "particle-ooze-8": {
     "image": {
       "name": "particle-ooze-8.png",

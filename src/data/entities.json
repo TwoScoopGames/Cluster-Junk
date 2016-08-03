@@ -150,6 +150,15 @@
       },
       "image": {
         "name": "toxic-barrel.png"
+      },
+      "timers": {
+        "spawnToxicWaste": {
+          "running": true,
+          "time": 0,
+          "max": 100,
+          "loop": true,
+          "script": "./scripts/spawn-toxic-waste"
+        }
       }
     },
     {

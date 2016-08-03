@@ -19,7 +19,7 @@ module.exports = function(entity, game) {
     });
     game.entities.set(entity, "moveToPoint", {
       "x": 1500,
-      "y": 1500,
+      "y": 1550,
       "maxDistanceAway": 10,
       "script": "./scripts/strike-and-transform-box"
     });
