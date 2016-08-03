@@ -101,6 +101,12 @@
         "script": "./scripts/strike-box"
       },
       "timers": {
+        "playSplashSfx": {
+          "running": false,
+          "time": 0,
+          "max": 300,
+          "script": "./scripts/play-splash-sfx"
+        },
         "switchToTitle": {
           "running": false,
           "time": 0,

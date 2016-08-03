@@ -19,6 +19,7 @@ module.exports = function(entity, game) {
       "id": entity,
       "distance": 200
     });
+    game.entities.get(entity, "timers").playSplashSfx.running = true;
     game.entities.set(entity, "moveToPoint", {
       "x": 1500,
       "y": 1550,
