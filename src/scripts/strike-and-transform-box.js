@@ -8,6 +8,7 @@ module.exports = function(entity, game) {
   var camera = 1;
   var cameraPosition = game.entities.get(camera, "position");
   spawnLightning(cameraPosition.x, cameraPosition.y, position.x + 50, position.y, game, 0.5);
+  game.sounds.play("sfx-lightning-2.mp3");
 
   game.entities.remove(entity, "scale");
   game.entities.set(entity, "animation", {

@@ -11,6 +11,8 @@ module.exports = function(entity, game) {
   var x = lastLeft ? viewportPosition.x : viewportPosition.x + viewportSize.width;
   lastLeft = !lastLeft;
   spawnLightning(x, viewportPosition.y, position.x + 50, position.y + 40, game, 0.5);
+  game.sounds.play(lastLeft ? "sfx-lightning-1.mp3" : "sfx-lightning-2.mp3");
+
   game.entities.remove(entity, "onPositionLeftOf");
   if (position.x < 500) {
     game.entities.set(viewport, "follow", {
