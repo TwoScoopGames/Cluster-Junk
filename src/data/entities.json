@@ -122,7 +122,7 @@
         "switchAnims": {
           "running": false,
           "time": 0,
-          "max": 770,
+          "max": 870,
           "script": "./scripts/switch-box-anims"
         }
       }
