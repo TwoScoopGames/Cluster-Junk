@@ -26,6 +26,7 @@ function tween(start, end, pct) {
 
 var lidFrames = [2, 1, 0, 1, 2, 1];
 var lidFrameTimes = [2000, 200, 2500, 60, 60, 60];
+var lidFramesToSpeedUp = [true, false, true, false, false, false];
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   game.entities.registerSearch("renderEyes", ["position", "size", "movement2d", "eyes"]);
@@ -64,7 +65,11 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     game.context.drawImage(pupils, px, py);
 
     var lids = game.images.get("eyelashes-f3.png");
-    eyesComponent.lidTime += elapsed;
+    if (lidFramesToSpeedUp[eyesComponent.lidFrame]) {
+      eyesComponent.lidTime += elapsed * (eyesComponent.speed || 1.0);
+    } else {
+      eyesComponent.lidTime += elapsed;
+    }
     while (eyesComponent.lidTime > lidFrameTimes[eyesComponent.lidFrame]) {
       eyesComponent.lidTime -= lidFrameTimes[eyesComponent.lidFrame];
       eyesComponent.lidFrame++;
@@ -77,6 +82,9 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       var script = game.require(eyesComponent.script);
       script(entity, game);
       delete eyesComponent.script;
+    }
+    if (eyesComponent.blinkSound && eyesComponent.lidFrame === 4) {
+      game.sounds.play(eyesComponent.blinkSound);
     }
 
     var lw = lids.width / 3;
