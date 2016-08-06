@@ -101,6 +101,12 @@
         "script": "./scripts/strike-box"
       },
       "timers": {
+        "addEyes": {
+          "running": false,
+          "time": 0,
+          "max": 1000,
+          "script": "./scripts/add-eyes"
+        },
         "moveBoxIntoWater": {
           "running": false,
           "time": 0,
