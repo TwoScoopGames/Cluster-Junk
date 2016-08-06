@@ -5,7 +5,7 @@ module.exports = function(entity, game) {
   var viewport = 0;
   game.entities.set(viewport, "follow", {
     "id": entity,
-    "distance": 200
+    "distance": 0
   });
   game.entities.get(entity, "timers").playSplashSfx.running = true;
   game.entities.set(entity, "moveToPoint", {
