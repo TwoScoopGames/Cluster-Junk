@@ -16,13 +16,23 @@ function drawLines(points, width, style, context) {
   }
 }
 
-var whiteFlashTime = 50;
-var colorFadeTime = 150;
-var whiteFadeTime = 700;
+var whiteFlashTime = 100;
+var colorFadeTime = 200;
+var whiteFadeTime = 750;
 
-function drawLightning(points, context, elapsed) {
+function drawLightning(points, context, elapsed, cameraPos, cameraSize) {
   if (elapsed < whiteFlashTime) {
-    drawLines(points, 10, "rgba(255,255,255,1)", context);
+    if (elapsed < whiteFlashTime / 2) {
+      context.fillStyle = "rgba(0,0,0, 0.5)";
+      context.fillRect(cameraPos.x, cameraPos.y, cameraSize.width, cameraSize.height);
+
+      drawLines(points, 10, "rgba(255,255,255,1)", context);
+    } else {
+      context.fillStyle = "rgba(255,255,255, 0.5)";
+      context.fillRect(cameraPos.x, cameraPos.y, cameraSize.width, cameraSize.height);
+
+      drawLines(points, 10, "rgba(0,0,0,1)", context);
+    }
   } else if (elapsed < whiteFlashTime + whiteFadeTime) {
     var opacity = Math.min(1 - ((elapsed - whiteFlashTime) / colorFadeTime), 1);
     var opacity2 = Math.min(1 - ((elapsed - whiteFlashTime) / whiteFadeTime), 1);
@@ -33,9 +43,14 @@ function drawLightning(points, context, elapsed) {
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   ecs.addEach(function drawLightningSystem(entity, elapsed) { // eslint-disable-line no-unused-vars
+
+    var camera = game.entities.find("camera")[0];
+    var cameraPos = game.entities.get(camera, "position");
+    var cameraSize = game.entities.get(camera, "size");
+
     var lightning = game.entities.get(entity, "lightning");
     if (lightning.elapsed > whiteFadeTime) {
-      game.entities.remove(entity);
+      game.entities.destroy(entity);
     } else {
       if (lightning.elapsed === undefined) {
         lightning.elapsed = 0;
@@ -43,7 +58,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         lightning.elapsed += elapsed;
       }
 
-      drawLightning(lightning.points, game.context, lightning.elapsed);
+      drawLightning(lightning.points, game.context, lightning.elapsed, cameraPos, cameraSize);
     }
 
   }, "lightning");
