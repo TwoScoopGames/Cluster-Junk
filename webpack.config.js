@@ -26,10 +26,13 @@ function pathForRegexp(url) {
 }
 
 module.exports = {
-  entry: "./src/game",
+  entry: {
+    index: [ "./src/game" ]
+  },
+  devtool: "source-map",
   output: {
     path: __dirname + "/build/html",
-    filename: "index.js"
+    filename: "[name].js"
   },
   module: {
     preLoaders: [
