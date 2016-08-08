@@ -28,7 +28,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     game.context.fillRect(quarterWidth + 3, halfHeight - 12, barWidth, 24);
 
     if (loaded === 1) {
-      game.switchScene("title");
+      game.switchScene("intro");
     }
   });
 };
