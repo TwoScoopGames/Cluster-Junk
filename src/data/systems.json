@@ -133,7 +133,13 @@
   },
   {
    "name": "./systems/renderer/tile-background",
-   "scenes": "all"
+   "scenes": [
+    "intro",
+    "title",
+    "level-select",
+    "level",
+    "finished"
+   ]
   },
   {
    "name": "splat-ecs/lib/systems/draw-image",
