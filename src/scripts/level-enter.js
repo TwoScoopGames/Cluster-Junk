@@ -36,7 +36,7 @@ function loadTilemap(game, map) {
     shrinkBoundingBox(tileSize, tileImage, 0.4);
     var prefab = game.entities.get(tile, "prefab");
     if (prefab) {
-      var trash = game.instantiatePrefab(prefab);
+      var trash = game.prefabs.instantiate(game.entities, prefab);
       var trashImage = game.entities.get(trash, "image");
       var trashPosition = game.entities.get(trash, "position");
       var trashSize = game.entities.get(trash, "size");
