@@ -14,11 +14,11 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 
     var dist = distanceSquared(position.x, position.y, target.x, target.y);
     if (dist <= target.maxDistanceAway * target.maxDistanceAway) {
-      game.entities.removeComponent(entity, "moveToPoint");
       if (target.script) {
         var script = game.require(target.script);
         script(entity, game);
       }
+      game.entities.removeComponent(entity, "moveToPoint");
       return;
     }
     if (position.y > target.y) {
