@@ -1,4 +1,5 @@
-"use strict";
+var particles = require("splat-ecs/lib/particles");
+var random = require("splat-ecs/lib/random");
 
 function center(position, size) {
   var x = position.x + (size.width / 2);
@@ -16,14 +17,9 @@ function distanceSquared(aPosition, aSize, bPosition, bSize) {
   return dx * dx + dy * dy;
 }
 
-function randomFrom(array) {
-  return array[Math.floor(Math.random() * array.length)];
-}
-
 var camera = 1;
 var viewport = 3;
 
-var particles = require("splat-ecs/lib/particles");
 var cfg = new particles.Config("debris");
 cfg.arcWidth = Math.PI * 2;
 cfg.qtyMin = 2;
@@ -75,7 +71,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 
       var otherNoises = game.entities.getComponent(other, "noises");
       if (otherNoises && !playerTimers.silent.running) {
-        game.sounds.play(randomFrom(otherNoises));
+        game.sounds.play(random.from(otherNoises));
         playerTimers.silent.running = true;
       }
 
