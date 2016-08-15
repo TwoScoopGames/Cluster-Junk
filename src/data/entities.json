@@ -776,14 +776,6 @@
       "size": {
         "width": 101,
         "height": 88
-      },
-      "timers": {
-        "noticeTimer": {
-          "running": false,
-          "time": 0,
-          "max": 500,
-          "script": "./scripts/notice"
-        }
       }
     },
     {
