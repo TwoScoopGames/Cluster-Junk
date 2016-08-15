@@ -7,8 +7,8 @@ var radius = 50;
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   ecs.addEach(function renderGoal(entity, elapsed) { // eslint-disable-line no-unused-vars
 
-    var playerRadius = game.entities.get(entity, "radius");
-    var goalRadius = game.entities.get(entity, "goalRadius");
+    var playerRadius = game.entities.getComponent(entity, "radius");
+    var goalRadius = game.entities.getComponent(entity, "goalRadius");
     var progressRadius = (playerRadius / goalRadius) * radius;
 
     game.context.lineWidth = 1;

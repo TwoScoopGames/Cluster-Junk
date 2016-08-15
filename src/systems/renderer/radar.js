@@ -44,13 +44,13 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       };
       drawLine(game.context, linePoints, "1px", "#6abd44");
 
-      var playerPosition = game.entities.get(entity, "position");
+      var playerPosition = game.entities.getComponent(entity, "position");
 
       game.entities.find("position").forEach(function(id) {
-        var entityType = game.entities.get(id, "type");
-        var entitySticky = game.entities.get(id, "sticky");
-        var entityPlayer = game.entities.get(id, "player");
-        var entityPosition = game.entities.get(id, "position");
+        var entityType = game.entities.getComponent(id, "type");
+        var entitySticky = game.entities.getComponent(id, "sticky");
+        var entityPlayer = game.entities.getComponent(id, "player");
+        var entityPosition = game.entities.getComponent(id, "position");
 
         if ((entityType !== "trash" && entityType !== "obstacle") || entitySticky || entityPlayer) {
           return;

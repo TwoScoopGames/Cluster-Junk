@@ -22,7 +22,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     if (time >= duration) {
       game.context.fillStyle = "#3e311a";
       game.context.font = "55px blanch";
-      var message = game.entities.get(entity, "message");
+      var message = game.entities.getComponent(entity, "message");
       centerText(game.canvas, game.context, message, 0, 130);
     }
   }, "drawNotice");

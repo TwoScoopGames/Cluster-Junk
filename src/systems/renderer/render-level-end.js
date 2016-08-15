@@ -2,13 +2,13 @@
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   game.entities.registerSearch("renderLevelEndSearch", ["gameOver", "goalRadius", "radius", "timers"]);
   ecs.addEach(function renderLevelEnd(entity, elapsed) { // eslint-disable-line no-unused-vars
-    var timers = game.entities.get(entity, "timers");
+    var timers = game.entities.getComponent(entity, "timers");
     if (timers.endOfGameTimer.running) {
       return;
     }
 
-    var radius = game.entities.get(entity, "radius");
-    var goalRadius = game.entities.get(entity, "goalRadius");
+    var radius = game.entities.getComponent(entity, "radius");
+    var goalRadius = game.entities.getComponent(entity, "goalRadius");
     var won = radius >= goalRadius;
 
     var rope = game.images.get("rope-tall.png");

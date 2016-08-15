@@ -26,7 +26,7 @@ var prefabs = [
 ];
 
 module.exports = function(entity, game) {
-  var pos = game.entities.get(entity, "position");
+  var pos = game.entities.getComponent(entity, "position");
   waste.origin.x = pos.x + 20;
   waste.origin.y = pos.y + 110;
 

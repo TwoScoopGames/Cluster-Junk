@@ -10,8 +10,8 @@ var rowsOffset = Math.PI * 2 / rowsBeforeRepeat;
 module.exports = function(ecs, game) {
   ecs.add(function tileBackground(entities, elapsed) {
     var camera = 1;
-    var cameraPosition = game.entities.get(camera, "position");
-    var cameraSize = game.entities.get(camera, "size");
+    var cameraPosition = game.entities.getComponent(camera, "position");
+    var cameraSize = game.entities.getComponent(camera, "size");
 
     game.context.fillStyle = "#1c325f";
     game.context.fillRect(Math.floor(cameraPosition.x), Math.floor(cameraPosition.y), cameraSize.width, cameraSize.height);

@@ -31,16 +31,16 @@ var lidFramesToSpeedUp = [true, false, true, false, false, false];
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   game.entities.registerSearch("renderEyes", ["position", "size", "movement2d", "eyes"]);
   ecs.addEach(function renderEyes(entity, elapsed) { // eslint-disable-line no-unused-vars
-    var position = game.entities.get(entity, "position");
-    var size = game.entities.get(entity, "size");
-    var eyesComponent = game.entities.get(entity, "eyes");
+    var position = game.entities.getComponent(entity, "position");
+    var size = game.entities.getComponent(entity, "size");
+    var eyesComponent = game.entities.getComponent(entity, "eyes");
 
     var cx = position.x + size.width / 2;
     var cy = position.y + size.height / 2;
 
     var camera = 1;
-    var cameraPosition = game.entities.get(camera, "position");
-    var cameraSize = game.entities.get(camera, "size");
+    var cameraPosition = game.entities.getComponent(camera, "position");
+    var cameraSize = game.entities.getComponent(camera, "size");
 
     var cpctx = (cx - cameraPosition.x) / cameraSize.width;
     var x = game.canvas.width * cpctx;
@@ -56,7 +56,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var px = x - (pupils.width / 2);
     var py = y - (pupils.height / 2);
 
-    var po = pupilOffset(game.entities.get(entity, "movement2d"));
+    var po = pupilOffset(game.entities.getComponent(entity, "movement2d"));
     eyesComponent.pupilOffsetX = tween(eyesComponent.pupilOffsetX, po.x);
     eyesComponent.pupilOffsetY = tween(eyesComponent.pupilOffsetY, po.y);
     px += eyesComponent.pupilOffsetX;

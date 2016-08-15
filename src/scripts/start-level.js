@@ -13,7 +13,7 @@ var songs = {
 var levels = require("../data/levels.json");
 
 module.exports = function(entity, game) {
-  var timers = game.entities.get(entity, "timers");
+  var timers = game.entities.getComponent(entity, "timers");
 
   timers.goalTimer.running = true;
   var levelData = levels[game.arguments.level || 0];

@@ -6,9 +6,9 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     game.context.strokeStyle = "yellow";
     game.context.beginPath();
 
-    var position = game.entities.get(entity, "position");
-    var size = game.entities.get(size, "position");
-    var radius = game.entities.get(size, "radius");
+    var position = game.entities.getComponent(entity, "position");
+    var size = game.entities.getComponent(size, "position");
+    var radius = game.entities.getComponent(size, "radius");
 
     var cx = position.x + size.width / 2;
     var cy = position.y + size.height / 2;

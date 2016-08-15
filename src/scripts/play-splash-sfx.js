@@ -15,7 +15,7 @@ water.velocityMax = 1.0;
 module.exports = function(entity, game) {
   game.sounds.play("sfx-water-splash.mp3");
 
-  var pos = game.entities.get(entity, "position");
+  var pos = game.entities.getComponent(entity, "position");
   water.origin.x = pos.x + 50;
   water.origin.y = pos.y + 40;
   particles.create(game, water);

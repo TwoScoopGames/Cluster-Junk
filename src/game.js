@@ -37,6 +37,30 @@ var soundManifest = generateManifest(soundContext.keys(), "sounds");
 var localDataPath = "./data";
 var localDataRequire = require.context("./data", true, /\.json$/);
 
+var componentContext = require.context("./components", true, /\.js(on)?$/);
+var componentManifest = generateComponentManifest(componentContext);
+
+function generateComponentManifest(context) {
+  var files = context.keys();
+  return files.reduce(function(manifest, file) {
+    var name = snakeToCamelCase(basename(file).substr(2));
+    manifest[name] = context(file);
+    return manifest;
+  }, {});
+}
+
+function snakeToCamelCase(str) {
+  return str.replace(/-([a-z])/g, function(g) { return g[1].toUpperCase(); });
+}
+
+function basename(path) {
+  var pos = path.lastIndexOf(".");
+  if (pos !== -1) {
+    return path.substring(0, pos);
+  }
+  return path;
+}
+
 function customRequire(path) {
   if (path.indexOf(splatSystemPath) === 0) {
     var splatName = "./" + path.substr(splatSystemPath.length + 1) + ".js";
@@ -49,6 +73,9 @@ function customRequire(path) {
   if (path.indexOf(localScriptPath) === 0) {
     var scriptName = "./" + path.substr(localScriptPath.length + 1) + ".js";
     return localScriptRequire(scriptName);
+  }
+  if (path === "./data/components") {
+    return componentManifest;
   }
   if (path === "./data/images") {
     return imageManifest;

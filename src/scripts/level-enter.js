@@ -7,10 +7,10 @@ var player = 0;
 module.exports = function(game) { // eslint-disable-line no-unused-vars
   var level = levels[game.arguments.level || 0];
 
-  game.entities.set(player, "radius", level.radius);
-  game.entities.set(player, "goalRadius", level.goalRadius);
-  game.entities.get(player, "timers").goalTimer.max = level.maxTime * 1000;
-  game.entities.set(2, "message", level.message);
+  game.entities.setComponent(player, "radius", level.radius);
+  game.entities.setComponent(player, "goalRadius", level.goalRadius);
+  game.entities.getComponent(player, "timers").goalTimer.max = level.maxTime * 1000;
+  game.entities.setComponent(2, "message", level.message);
   loadTilemap(game, level.map);
 
   game.sounds.play("ambient-sea-track.mp3", {
@@ -55,11 +55,11 @@ function loadTilemap(game, map) {
 }
 
 function center(game, entity, target) {
-  var targetPosition = game.entities.get(target, "position");
-  var targetSize = game.entities.get(target, "size");
+  var targetPosition = game.entities.getComponent(target, "position");
+  var targetSize = game.entities.getComponent(target, "size");
 
-  var entityPosition = game.entities.get(entity, "position");
-  var entitySize = game.entities.get(entity, "size");
+  var entityPosition = game.entities.getComponent(entity, "position");
+  var entitySize = game.entities.getComponent(entity, "size");
 
   entityPosition.x = targetPosition.x + (targetSize.width / 2) - (entitySize.width / 2);
   entityPosition.y = targetPosition.y + (targetSize.height / 2) - (entitySize.height / 2);

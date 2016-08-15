@@ -22,7 +22,7 @@ var duration = 500;
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   ecs.addEach(function renderTimer(entity, elapsed) { // eslint-disable-line no-unused-vars
-    var timers = game.entities.get(entity, "timers");
+    var timers = game.entities.getComponent(entity, "timers");
 
     //timer image
     var timerY = 5;
@@ -48,7 +48,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     }
 
     var camera = game.entities.find("camera")[0];
-    var cameraHeight = game.entities.get(camera, "size").height;
+    var cameraHeight = game.entities.getComponent(camera, "size").height;
     if (timers.startFasterMusicTimer.running) {
       drawTimeNotice("Time is running out!", game.canvas, game.context, cameraHeight);
     }

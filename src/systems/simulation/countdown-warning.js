@@ -17,7 +17,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     if (warningDeployed) {
       if (
         !musicStarted &&
-        !game.entities.get(entity, "timers").startFasterMusicTimer.running
+        !game.entities.getComponent(entity, "timers").startFasterMusicTimer.running
       ) {
         if (newTrackToStart === "trash-island-theme-2x.mp3") {
           game.sounds.play("trash-island-theme-2x.mp3", {
@@ -34,17 +34,17 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       }
       return;
     }
-    var goalTimer = game.entities.get(entity, "timers").goalTimer;
+    var goalTimer = game.entities.getComponent(entity, "timers").goalTimer;
     var remainingSeconds = (goalTimer.max - goalTimer.time) / 1000;
     if (remainingSeconds > 10) {
       return;
     }
 
-    game.entities.set(entity, "showTimeRunningOut", true);
+    game.entities.setComponent(entity, "showTimeRunningOut", true);
 
     game.sounds.play("trash-island-time-running-out.mp3");
 
-    game.entities.get(entity, "timers").startFasterMusicTimer.running = true;
+    game.entities.getComponent(entity, "timers").startFasterMusicTimer.running = true;
     tracksToStop.forEach(function(track) {
       if (game.sounds.looping[track]) {
         newTrackToStart = track.replace(".mp3", "-2x.mp3");

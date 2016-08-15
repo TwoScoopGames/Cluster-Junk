@@ -32,15 +32,15 @@ cfg.velocityMax = 2;
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   function resolveCollisionShortest(a, b, target) {
-    var aPosition = game.entities.get(a, "position");
-    var aSize = game.entities.get(a, "size");
-    var bPosition = game.entities.get(b, "position");
-    var bSize = game.entities.get(b, "size");
+    var aPosition = game.entities.getComponent(a, "position");
+    var aSize = game.entities.getComponent(a, "size");
+    var bPosition = game.entities.getComponent(b, "position");
+    var bSize = game.entities.getComponent(b, "size");
     if (target === undefined) {
       target = a;
     }
-    var targetPosition = game.entities.get(target, "position");
-    var targetVelocity = game.entities.get(target, "velocity");
+    var targetPosition = game.entities.getComponent(target, "position");
+    var targetVelocity = game.entities.getComponent(target, "velocity");
 
     var bottom = [0, bPosition.y + bSize.height - aPosition.y, 0, 0.5];
     var top = [0, bPosition.y - aSize.height - aPosition.y, 0, -0.5];
@@ -62,55 +62,55 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   game.entities.registerSearch("handleCollisions", ["sticky", "collisions"]);
   ecs.addEach(function handleCollisions(entity, elapsed) { // eslint-disable-line no-unused-vars
     var player = 0;
-    var playerPosition = game.entities.get(player, "position");
-    var playerSize = game.entities.get(player, "size");
-    var playerRadius = game.entities.get(player, "radius");
-    var playerArea = game.entities.get(player, "area");
-    var playerTimers = game.entities.get(player, "timers");
+    var playerPosition = game.entities.getComponent(player, "position");
+    var playerSize = game.entities.getComponent(player, "size");
+    var playerRadius = game.entities.getComponent(player, "radius");
+    var playerArea = game.entities.getComponent(player, "area");
+    var playerTimers = game.entities.getComponent(player, "timers");
 
-    game.entities.get(entity, "collisions").forEach(function(other) {
-      if (game.entities.get(other, "sticky")) {
+    game.entities.getComponent(entity, "collisions").forEach(function(other) {
+      if (game.entities.getComponent(other, "sticky")) {
         return;
       }
 
-      var otherNoises = game.entities.get(other, "noises");
+      var otherNoises = game.entities.getComponent(other, "noises");
       if (otherNoises && !playerTimers.silent.running) {
         game.sounds.play(randomFrom(otherNoises));
         playerTimers.silent.running = true;
       }
 
-      game.entities.set(other, "velocity", { x: 0, y: 0 });
+      game.entities.addComponent(other, "velocity");
 
-      var otherPosition = game.entities.get(other, "position");
-      var otherSize = game.entities.get(other, "size");
-      var otherType = game.entities.get(other, "type");
+      var otherPosition = game.entities.getComponent(other, "position");
+      var otherSize = game.entities.getComponent(other, "size");
+      var otherType = game.entities.getComponent(other, "type");
 
       var distSq = distanceSquared(playerPosition, playerSize, otherPosition, otherSize);
       var otherArea = otherSize.width * otherSize.height;
       if (distSq < playerRadius * playerRadius) {
         playerArea += otherArea;
-        game.entities.set(other, "match", {
-          id: player,
-          offsetX: otherPosition.x - playerPosition.x,
-          offsetY: otherPosition.y - playerPosition.y
-        });
-        game.entities.set(other, "sticky", true);
+
+        var match = game.entities.addComponent(other, "match");
+        match.id = player;
+        match.offsetX = otherPosition.x - playerPosition.x;
+        match.offsetY = otherPosition.y - playerPosition.y;
+
+        game.entities.setComponent(other, "sticky", true);
         game.sounds.play("sfx-power-up.mp3");
         var notice = game.entities.find("notice")[0];
         if (notice) {
-          game.entities.set(notice, "message", game.entities.get(other, "name"));
+          game.entities.setComponent(notice, "message", game.entities.getComponent(other, "name"));
         }
 
-        game.entities.set(camera, "shake", {
-          duration: 100,
-          magnitude: 10
-        });
+        var shakeSmall = game.entities.addComponent(camera, "shake");
+        shakeSmall.duration = 100;
+        shakeSmall.magnitude = 10;
       } else if (otherType === "obstacle") {
         resolveCollisionShortest(entity, other, player);
-        game.entities.set(camera, "shake", {
-          duration: 100,
-          magnitude: 30
-        });
+
+        var shakeLarge = game.entities.addComponent(camera, "shake");
+        shakeLarge.duration = 100;
+        shakeLarge.magnitude = 30;
 
         cfg.origin = other;
         particles.create(game, cfg);
@@ -119,15 +119,15 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       }
     });
     playerRadius = Math.sqrt(playerArea / Math.PI * 2);
-    game.entities.set(player, "radius", playerRadius);
-    game.entities.set(player, "area", playerArea);
+    game.entities.setComponent(player, "radius", playerRadius);
+    game.entities.setComponent(player, "area", playerArea);
 
-    var viewportSize = game.entities.get(viewport, "size");
+    var viewportSize = game.entities.getComponent(viewport, "size");
     var viewportAspectRatio = viewportSize.width / viewportSize.height;
 
-    var cameraSize = game.entities.get(camera, "size");
+    var cameraSize = game.entities.getComponent(camera, "size");
     var size = Math.floor(playerRadius * 2 * 3);
-    var easing = game.entities.get(camera, "easing");
+    var easing = game.entities.getComponent(camera, "easing");
     if (cameraSize.height !== size && (easing["size.height"] === undefined || easing["size.height"].end !== size)) {
       easing["size.width"] = {
         time: 0,

@@ -35,9 +35,8 @@ module.exports = function spawnLightning(x1, y1, x2, y2, game, forkChance) {
   var points = getLightningPoints({ "x": x1, "y": y1 }, { "x": x2, "y": y2 });
 
   var entity = game.entities.create();
-  game.entities.set(entity, "lightning", {
-    "points": points
-  });
+  var lightning = game.entities.addComponent(entity, "lightning");
+  lightning.points = points;
 
   if (Math.random() < forkChance) {
     var forkStart = points[Math.floor(Math.random() * points.length)];

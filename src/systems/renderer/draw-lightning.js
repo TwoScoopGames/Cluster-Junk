@@ -45,10 +45,10 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
   ecs.addEach(function drawLightningSystem(entity, elapsed) { // eslint-disable-line no-unused-vars
 
     var camera = game.entities.find("camera")[0];
-    var cameraPos = game.entities.get(camera, "position");
-    var cameraSize = game.entities.get(camera, "size");
+    var cameraPos = game.entities.getComponent(camera, "position");
+    var cameraSize = game.entities.getComponent(camera, "size");
 
-    var lightning = game.entities.get(entity, "lightning");
+    var lightning = game.entities.getComponent(entity, "lightning");
     if (lightning.elapsed > whiteFadeTime) {
       game.entities.destroy(entity);
     } else {

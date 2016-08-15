@@ -1,31 +1,31 @@
 {
  "simulation": [
   {
-   "name": "splat-ecs/lib/systems/match-canvas-size",
+   "name": "splat-ecs/lib/systems/simulation/match-canvas-size",
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/match-center-x",
+   "name": "splat-ecs/lib/systems/simulation/match-center-x",
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/match-center-y",
+   "name": "splat-ecs/lib/systems/simulation/match-center-y",
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/decay-life-span",
+   "name": "splat-ecs/lib/systems/simulation/decay-life-span",
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/advance-timers",
+   "name": "splat-ecs/lib/systems/simulation/advance-timers",
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/advance-animations",
+   "name": "splat-ecs/lib/systems/simulation/advance-animations",
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/apply-easing",
+   "name": "splat-ecs/lib/systems/simulation/apply-easing",
    "scenes": "all"
   },
   {
@@ -37,27 +37,27 @@
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/control-player",
+   "name": "splat-ecs/lib/systems/simulation/control-player",
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/apply-movement-2d",
+   "name": "splat-ecs/lib/systems/simulation/apply-movement-2d",
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/apply-velocity",
+   "name": "splat-ecs/lib/systems/simulation/apply-velocity",
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/apply-friction",
+   "name": "splat-ecs/lib/systems/simulation/apply-friction",
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/match-parent",
+   "name": "splat-ecs/lib/systems/simulation/match-parent",
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/follow-parent",
+   "name": "splat-ecs/lib/systems/simulation/follow-parent",
    "scenes": "all"
   },
   {
@@ -73,7 +73,7 @@
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/box-collider",
+   "name": "splat-ecs/lib/systems/simulation/box-collider",
    "scenes": "all"
   },
   {
@@ -83,7 +83,7 @@
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/match-aspect-ratio",
+   "name": "splat-ecs/lib/systems/simulation/match-aspect-ratio",
    "scenes": "all"
   },
   {
@@ -119,16 +119,16 @@
  ],
  "renderer": [
   {
-   "name": "splat-ecs/lib/systems/apply-shake",
+   "name": "splat-ecs/lib/systems/renderer/apply-shake",
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/clear-screen",
+   "name": "splat-ecs/lib/systems/renderer/clear-screen",
    "scenes": [
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/viewport-move-to-camera",
+   "name": "splat-ecs/lib/systems/renderer/viewport-move-to-camera",
    "scenes": "all"
   },
   {
@@ -142,7 +142,7 @@
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/draw-image",
+   "name": "splat-ecs/lib/systems/renderer/draw-image",
    "scenes": "all"
   },
   {
@@ -161,7 +161,7 @@
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/viewport-reset",
+   "name": "splat-ecs/lib/systems/renderer/viewport-reset",
    "scenes": [
    ]
   },
@@ -178,7 +178,7 @@
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/viewport-reset",
+   "name": "splat-ecs/lib/systems/renderer/viewport-reset",
    "scenes": "all"
   },
   {
@@ -222,7 +222,7 @@
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/revert-shake",
+   "name": "splat-ecs/lib/systems/renderer/revert-shake",
    "scenes": "all"
   }
  ]
