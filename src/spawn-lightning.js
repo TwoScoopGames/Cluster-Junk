@@ -1,4 +1,4 @@
-"use strict";
+var distanceSquared = require("splat-ecs/lib/math2d").distanceSquared;
 
 var midpoint = function(p1, p2) {
   var x = ((p2.x - p1.x) / 2) + p1.x;
@@ -16,12 +16,8 @@ var offset = function(point1, point2, range) {
   return { "x": x, "y": y };
 };
 
-var distance = function(start, end) {
-  return Math.sqrt(Math.pow((end.x - start.x), 2) + Math.pow((end.y - start.y),2));
-};
-
 var getLightningPoints = function(start, end) {
-  if (distance(start,end) < 30) {
+  if (distanceSquared(start.x, start.y, end.x, end.y) < 30 * 30) {
     return [start, end];
   }
 
