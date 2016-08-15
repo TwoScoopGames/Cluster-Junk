@@ -1,8 +1,11 @@
 module.exports = {
   factory: function() {
-    return {};
+    return {
+      elapsed: 0
+    };
   },
   reset: function(lightning) {
+    lightning.elapsed = 0;
     delete lightning.points;
   }
 };
