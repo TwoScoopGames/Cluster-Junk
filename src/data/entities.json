@@ -752,10 +752,7 @@
         "x": -518,
         "y": 0
       },
-      "camera": {
-        "x": 0,
-        "y": 0
-      },
+      "camera": true,
       "size": {
         "width": 4000,
         "height": 2000
