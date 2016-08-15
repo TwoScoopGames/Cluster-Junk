@@ -21,10 +21,7 @@
         "y": 0
       },
       "matchCanvasSize": true,
-      "matchCenterX": {
-        "id": 0
-      },
-      "matchCenterY": {
+      "matchCenter": {
         "id": 0
       }
     },
@@ -228,10 +225,7 @@
         "y": 0
       },
       "matchCanvasSize": true,
-      "matchCenterX": {
-        "id": 0
-      },
-      "matchCenterY": {
+      "matchCenter": {
         "id": 0
       }
     },
@@ -288,10 +282,7 @@
         "y": 0
       },
       "matchCanvasSize": true,
-      "matchCenterX": {
-        "id": 0
-      },
-      "matchCenterY": {
+      "matchCenter": {
         "id": 0
       }
     },
@@ -614,10 +605,7 @@
         "y": 0
       },
       "matchCanvasSize": true,
-      "matchCenterX": {
-        "id": 0
-      },
-      "matchCenterY": {
+      "matchCenter": {
         "id": 0
       }
     },

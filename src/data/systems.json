@@ -5,11 +5,7 @@
    "scenes": "all"
   },
   {
-   "name": "splat-ecs/lib/systems/simulation/match-center-x",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/match-center-y",
+   "name": "splat-ecs/lib/systems/simulation/match-center",
    "scenes": "all"
   },
   {
