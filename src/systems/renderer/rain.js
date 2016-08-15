@@ -1,8 +1,6 @@
 "use strict";
 
-function randomInRange(min, max) {
-  return min + Math.random() * (max - min);
-}
+var random = require("splat-ecs/lib/random");
 
 function spawnDrop(array, position, length, thickness, color) {
   array.push({
@@ -21,7 +19,7 @@ function drawDrop(context, drop) {
   context.lineWidth = drop.thickness;
   context.beginPath();
   context.moveTo(drop.position.x, drop.position.y);
-  context.lineTo(drop.position.x + drop.length, drop.position.y - randomInRange(drop.length + 2, drop.length + 4));
+  context.lineTo(drop.position.x + drop.length, drop.position.y - random.inRange(drop.length + 2, drop.length + 4));
   context.stroke();
 }
 
@@ -55,11 +53,11 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 
     if (rainDrops.length < maxDrops) {
       var randomXY = {
-        "x": randomInRange(-500, -50),
-        "y": randomInRange(0, 3000)
+        "x": random.inRange(-500, -50),
+        "y": random.inRange(0, 3000)
       };
-      var randomLength = randomInRange(50, 100);
-      var randomThickness = randomInRange(0.5, 4);
+      var randomLength = random.inRange(50, 100);
+      var randomThickness = random.inRange(0.5, 4);
       spawnDrop(rainDrops, randomXY, randomLength, randomThickness, "rgba(255,255,255,0.5)");
     }
     moveDrops(rainDrops, elapsed);
