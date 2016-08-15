@@ -69,6 +69,7 @@
   "box": {
     "name": "Undelivered package from 2011",
     "image": {
+      "name": "box.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -79,13 +80,6 @@
       "destinationHeight": 88
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "box"
-    },
     "position": {
       "x": 0,
       "y": 0
