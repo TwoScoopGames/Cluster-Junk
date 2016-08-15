@@ -30,25 +30,23 @@ function loadTilemap(game, map) {
   var tiles = game.entities.find("tile").slice();
   for (var i = 0; i < tiles.length; i++) {
     var tile = tiles[i];
-    var tileImage = game.entities.get(tile, "image");
-    var tilePosition = game.entities.get(tile, "position");
-    var tileSize = game.entities.get(tile, "size");
+    var tileImage = game.entities.getComponent(tile, "image");
+    var tilePosition = game.entities.getComponent(tile, "position");
+    var tileSize = game.entities.getComponent(tile, "size");
     shrinkBoundingBox(tileSize, tileImage, 0.4);
-    var prefab = game.entities.get(tile, "prefab");
+    var prefab = game.entities.getComponent(tile, "prefab");
     if (prefab) {
       var trash = game.prefabs.instantiate(game.entities, prefab);
-      var trashImage = game.entities.get(trash, "image");
-      var trashPosition = game.entities.get(trash, "position");
-      var trashSize = game.entities.get(trash, "size");
+      var trashImage = game.entities.getComponent(trash, "image");
+      var trashPosition = game.entities.getComponent(trash, "position");
+      var trashSize = game.entities.getComponent(trash, "size");
       trashPosition.x = tilePosition.x;
       trashPosition.y = tilePosition.y;
       shrinkBoundingBox(trashSize, trashImage, 0.4);
 
-      game.entities.set(trash, "rotation", {
-        "angle": game.entities.get(trash, "type") === "obstacle" ? 0 : random.inRange((Math.PI / -3), (Math.PI / 3)),
-        "x": trashSize.width / 2,
-        "y": trashSize.height / 2
-      });
+      var rotation = game.entities.addComponent(trash, "rotation");
+      rotation.angle = game.entities.getComponent(trash, "type") === "obstacle" ? 0 : random.inRange((Math.PI / -3), (Math.PI / 3));
+
       game.entities.destroy(tile);
     }
   }
