@@ -33,13 +33,17 @@
         "y": 0,
         "z": 2
       },
+      "size":{
+        "width": 3131,
+        "height": 641
+      },
       "velocity": {
         "x": -0.15,
         "y": 0,
         "z": 0
       },
       "image": {
-        "name": "barge.png"
+        "name": "barge.svg"
       },
       "timers": {
         "playFogHorn": {
