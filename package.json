@@ -38,6 +38,6 @@
   },
   "dependencies": {
     "easing-js": "^1.0.1",
-    "splat-ecs": "7.0.0"
+    "splat-ecs": "^7.1.0"
   }
 }
