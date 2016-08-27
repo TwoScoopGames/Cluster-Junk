@@ -142,6 +142,10 @@
    ]
   },
   {
+   "name": "./systems/renderer/background-color",
+   "scenes": "all"
+ },
+  {
    "name": "splat-ecs/lib/systems/renderer/draw-image",
    "scenes": "all"
   },
@@ -224,6 +228,10 @@
   {
    "name": "splat-ecs/lib/systems/renderer/revert-shake",
    "scenes": "all"
-  }
+ },
+  {
+   "name": "splat-ecs/lib/systems/renderer/draw-rectangles",
+   "scenes": []
+ }
  ]
 }
