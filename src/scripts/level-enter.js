@@ -26,32 +26,42 @@ function loadTilemap(game, map) {
   importTilemap(tilemap, game.entities, game.images);
 
   var spawn = game.entities.find("spawn")[0];
-  center(game, player, spawn);
-  game.entities.destroy(spawn);
+  if (spawn) {
+    center(game, player, spawn);
+    game.entities.destroy(spawn);
+  }
 
   var tiles = game.entities.find("tile").slice();
   for (var i = 0; i < tiles.length; i++) {
     var tile = tiles[i];
     var tileImage = game.entities.getComponent(tile, "image");
-    var tilePosition = game.entities.getComponent(tile, "position");
     var tileSize = game.entities.getComponent(tile, "size");
     shrinkBoundingBox(tileSize, tileImage, 0.4);
+
     var prefab = game.entities.getComponent(tile, "prefab");
     if (prefab) {
-      var trash = game.prefabs.instantiate(game.entities, prefab);
-      var trashImage = game.entities.getComponent(trash, "image");
-      var trashPosition = game.entities.getComponent(trash, "position");
-      var trashSize = game.entities.getComponent(trash, "size");
-      trashPosition.x = tilePosition.x;
-      trashPosition.y = tilePosition.y;
-      shrinkBoundingBox(trashSize, trashImage, 0.4);
-
-      var rotation = game.entities.addComponent(trash, "rotation");
-      rotation.angle = game.entities.getComponent(trash, "type") === "obstacle" ? 0 : random.inRange((Math.PI / -3), (Math.PI / 3));
-
-      game.entities.destroy(tile);
+      convertToPrefab(game, prefab, tile);
+    } else {
+      game.entities.addComponent(tile, "collisions");
+      game.entities.setComponent(tile, "type", "terrain");
     }
   }
+}
+
+function convertToPrefab(game, prefab, tile) {
+  var tilePosition = game.entities.getComponent(tile, "position");
+  var trash = game.prefabs.instantiate(game.entities, prefab);
+  var trashImage = game.entities.getComponent(trash, "image");
+  var trashPosition = game.entities.getComponent(trash, "position");
+  var trashSize = game.entities.getComponent(trash, "size");
+  trashPosition.x = tilePosition.x;
+  trashPosition.y = tilePosition.y;
+  shrinkBoundingBox(trashSize, trashImage, 0.4);
+
+  var rotation = game.entities.addComponent(trash, "rotation");
+  rotation.angle = game.entities.getComponent(trash, "type") === "obstacle" ? 0 : random.inRange((Math.PI / -3), (Math.PI / 3));
+
+  game.entities.destroy(tile);
 }
 
 function center(game, entity, target) {

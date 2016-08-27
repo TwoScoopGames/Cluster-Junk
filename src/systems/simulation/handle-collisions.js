@@ -83,7 +83,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 
       var distSq = distanceSquared(playerPosition, playerSize, otherPosition, otherSize);
       var otherArea = otherSize.width * otherSize.height;
-      if (distSq < playerRadius * playerRadius) {
+      if (distSq < playerRadius * playerRadius && otherType !== "terrain") {
         playerArea += otherArea;
 
         var match = game.entities.addComponent(other, "match");
@@ -101,7 +101,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         var shakeSmall = game.entities.addComponent(camera, "shake");
         shakeSmall.duration = 100;
         shakeSmall.magnitude = 10;
-      } else if (otherType === "obstacle") {
+      } else if (otherType === "obstacle" || otherType === "terrain") {
         resolveCollisionShortest(entity, other, player);
 
         var shakeLarge = game.entities.addComponent(camera, "shake");

@@ -226,12 +226,16 @@
    ]
   },
   {
+   "name": "splat-ecs/lib/systems/renderer/draw-frame-rate",
+   "scenes": "all"
+  },
+  {
    "name": "splat-ecs/lib/systems/renderer/revert-shake",
    "scenes": "all"
- },
+  },
   {
    "name": "splat-ecs/lib/systems/renderer/draw-rectangles",
    "scenes": []
- }
+  }
  ]
 }
