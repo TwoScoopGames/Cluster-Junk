@@ -11,7 +11,9 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
   game.entities.setComponent(player, "goalRadius", level.goalRadius);
   game.entities.getComponent(player, "timers").goalTimer.max = level.maxTime * 1000;
   game.entities.setComponent(2, "message", level.message);
-  loadTilemap(game, level.map);
+  for (var i = 0; i < level.maps.length; i++) {
+    loadTilemap(game, level.maps[i]);
+  }
 
   game.sounds.play("ambient-sea-track.mp3", {
     "loopStart": 0,

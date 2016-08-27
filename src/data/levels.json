@@ -1,6 +1,8 @@
 [
   {
-    "map": "level1",
+    "maps": [
+      "level1"
+    ],
     "music": "trash-island-theme.mp3",
     "radius": 0,
     "goalRadius": 50,
@@ -8,7 +10,9 @@
     "maxTime": 10
   },
   {
-    "map": "sunshine",
+    "maps": [
+      "sunshine"
+    ],
     "music": "trash-island-bossa.mp3",
     "radius": 0,
     "goalRadius": 100,
@@ -16,7 +20,9 @@
     "maxTime": 20
   },
   {
-    "map": "level4",
+    "maps": [
+      "level4"
+    ],
     "music": "trash-island-theme.mp3",
     "radius": 0,
     "goalRadius": 150,
@@ -24,7 +30,9 @@
     "maxTime": 30
   },
   {
-    "map": "level3",
+    "maps": [
+      "level3"
+    ],
     "music": "trash-island-bossa.mp3",
     "radius": 0,
     "goalRadius": 200,
@@ -32,7 +40,9 @@
     "maxTime": 40
   },
   {
-    "map": "KFP",
+    "maps": [
+      "KFP"
+    ],
     "music": "trash-island-theme.mp3",
     "radius": 0,
     "goalRadius": 275,
@@ -40,7 +50,9 @@
     "maxTime": 50
   },
   {
-    "map": "level2",
+    "maps": [
+      "level2"
+    ],
     "music": "trash-island-bossa.mp3",
     "radius": 0,
     "goalRadius": 325,
@@ -48,7 +60,9 @@
     "maxTime": 60
   },
   {
-    "map": "cluster1",
+    "maps": [
+      "cluster1"
+    ],
     "music": "trash-island-theme.mp3",
     "radius": 0,
     "goalRadius": 400,
@@ -56,7 +70,9 @@
     "maxTime": 90
   },
   {
-    "map": "funnel",
+    "maps": [
+      "funnel"
+    ],
     "music": "trash-island-bossa.mp3",
     "radius": 0,
     "goalRadius": 500,
@@ -64,7 +80,9 @@
     "maxTime": 120
   },
   {
-    "map": "trail",
+    "maps": [
+      "trail"
+    ],
     "music": "trash-island-theme.mp3",
     "radius": 0,
     "goalRadius": 500,
