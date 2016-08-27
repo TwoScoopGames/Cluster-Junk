@@ -2,6 +2,11 @@
 	"loading": {
 		"first": true
 	},
+  "play-button": {
+		"first": false,
+		"onEnter": "./scripts/play-button-enter",
+		"onExit": "./scripts/play-button-exit"
+	},
 	"intro": {
 		"first": false,
 		"onEnter": "./scripts/intro-enter",

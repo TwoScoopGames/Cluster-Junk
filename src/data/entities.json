@@ -1,4 +1,66 @@
 {
+  "play-button": [
+    {
+      "id": 0,
+      "name": "viewport",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1136,
+        "height": 640
+      }
+    },
+    {
+      "id": 1,
+      "name": "camera",
+      "camera": true,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "matchCanvasSize": true,
+      "matchCenter": {
+        "id": 0
+      }
+    },
+    {
+      "id": 3,
+      "name": "play-button-background",
+      "backgroundColor": "rgba(0,0,0,1)",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "matchCanvasSize": true,
+      "matchCenter": {
+        "id": 0
+      }
+    },
+    {
+      "id": 4,
+      "name": "play-button",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "size": {
+        "width": 55,
+        "height": 107
+      },
+      "image": {
+        "name": "play.png"
+      },
+      "matchCenter": {
+        "id": 0
+      },
+      "onPress": {
+        "script": "./scripts/go-to-intro-scene"
+      }
+    }
+  ],
   "intro": [
     {
       "id": 0,
