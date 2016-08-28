@@ -1,5 +1,33 @@
 var particles = require("splat-ecs/lib/particles");
 var random = require("splat-ecs/lib/random");
+var Soundfont = require("soundfont-player");
+
+var marimba = null;
+Soundfont.instrument(new AudioContext(), "marimba")
+  .then(function(m) {
+    marimba = m;
+  });
+
+var notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
+var comboNotes = [];
+for (var i = 4; i < 6; i++) {
+  comboNotes = comboNotes.concat(notes.map(function(note) {
+    return note + i;
+  }));
+}
+comboNotes = comboNotes.concat("C6");
+
+var lastNoteNumber = -1;
+function handleCombo(comboTimer) {
+  comboTimer.time = 0;
+  if (comboTimer.running) {
+    marimba.play(comboNotes[++lastNoteNumber % comboNotes.length]);
+  } else {
+    comboTimer.running = true;
+    lastNoteNumber++;
+  }
+  comboTimer.running = true;
+}
 
 function center(position, size) {
   var x = position.x + (size.width / 2);
@@ -92,7 +120,8 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         match.offsetY = otherPosition.y - playerPosition.y;
 
         game.entities.setComponent(other, "sticky", true);
-        game.sounds.play("sfx-power-up.mp3");
+        //game.sounds.play("sfx-power-up.mp3");
+        handleCombo(playerTimers.combo);
         var notice = game.entities.find("notice")[0];
         if (notice) {
           game.entities.setComponent(notice, "message", game.entities.getComponent(other, "name"));

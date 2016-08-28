@@ -803,6 +803,11 @@
           "time": 0,
           "max": 2000,
           "script": "./scripts/end-of-game-timer"
+        },
+        "combo": {
+          "running": false,
+          "time": 0,
+          "max": 500
         }
       }
     },
