@@ -103,12 +103,6 @@
    ]
   },
   {
-   "name": "./systems/simulation/start-game",
-   "scenes": [
-    "title"
-   ]
-  },
-  {
    "name": "./systems/simulation/restart-game",
    "scenes": [
     "finished"
