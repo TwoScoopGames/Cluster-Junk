@@ -1,16 +1,6 @@
 {
   "axes": {},
   "buttons": {
-    "reset": [
-      {
-        "device": "keyboard",
-        "button": "r"
-      },
-      {
-        "device": "gamepad",
-        "button": "home"
-      }
-    ],
     "action": [
       {
         "device": "keyboard",
@@ -109,6 +99,10 @@
       {
         "device": "keyboard",
         "button": "r"
+      },
+      {
+        "device": "gamepad",
+        "button": "home"
       }
     ]
   }
