@@ -34,9 +34,6 @@ function loadTilemap(game, map) {
   var tiles = game.entities.find("tile").slice();
   for (var i = 0; i < tiles.length; i++) {
     var tile = tiles[i];
-    var tileImage = game.entities.getComponent(tile, "image");
-    var tileSize = game.entities.getComponent(tile, "size");
-    shrinkBoundingBox(tileSize, tileImage, 0.4);
 
     var prefab = game.entities.getComponent(tile, "prefab");
     if (prefab) {
@@ -49,6 +46,10 @@ function loadTilemap(game, map) {
 }
 
 function convertToPrefab(game, prefab, tile) {
+  var tileImage = game.entities.getComponent(tile, "image");
+  var tileSize = game.entities.getComponent(tile, "size");
+  shrinkBoundingBox(tileSize, tileImage, 0.4);
+
   var tilePosition = game.entities.getComponent(tile, "position");
   var trash = game.prefabs.instantiate(game.entities, prefab);
   var trashImage = game.entities.getComponent(trash, "image");
