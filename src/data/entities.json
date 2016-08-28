@@ -23,6 +23,9 @@
       "matchCanvasSize": true,
       "matchCenter": {
         "id": 0
+      },
+      "onButtonPressed": {
+        "action": "./scripts/go-to-intro-scene"
       }
     },
     {
@@ -55,9 +58,6 @@
       },
       "matchCenter": {
         "id": 0
-      },
-      "onPress": {
-        "script": "./scripts/go-to-intro-scene"
       }
     }
   ],
