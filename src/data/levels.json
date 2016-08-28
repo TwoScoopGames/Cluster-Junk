@@ -1,6 +1,17 @@
 [
   {
     "maps": [
+      "garbageGulf-terrain",
+      "garbageGulf"
+    ],
+    "music": "trash-island-theme.mp3",
+    "radius": 0,
+    "goalRadius": 500,
+    "message": "Can you grow to 50 meters?",
+    "maxTime": 1000
+  },
+  {
+    "maps": [
       "level1"
     ],
     "music": "trash-island-theme.mp3",

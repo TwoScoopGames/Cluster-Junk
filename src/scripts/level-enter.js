@@ -39,7 +39,7 @@ function loadTilemap(game, map) {
     if (prefab) {
       convertToPrefab(game, prefab, tile);
     } else {
-      game.entities.addComponent(tile, "collisions");
+      // game.entities.addComponent(tile, "collisions");
       game.entities.setComponent(tile, "type", "terrain");
     }
   }
