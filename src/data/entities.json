@@ -85,6 +85,9 @@
       "matchCanvasSize": true,
       "matchCenter": {
         "id": 0
+      },
+      "onButtonPressed": {
+        "action": "./scripts/skip-intro"
       }
     },
     {

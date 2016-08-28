@@ -103,12 +103,6 @@
    ]
   },
   {
-   "name": "./systems/simulation/skip-intro",
-   "scenes": [
-    "intro"
-   ]
-  },
-  {
    "name": "./systems/simulation/start-game",
    "scenes": [
     "title"
