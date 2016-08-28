@@ -104,6 +104,12 @@
         "device": "gamepad",
         "button": "left stick right"
       }
+    ],
+    "restart": [
+      {
+        "device": "keyboard",
+        "button": "r"
+      }
     ]
   }
 }
