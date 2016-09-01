@@ -4,9 +4,9 @@ var Soundfont = require("soundfont-player");
 
 var marimba = null;
 Soundfont.instrument(new AudioContext(), "marimba")
-  .then(function(m) {
-    marimba = m;
-  });
+.then(function(m) {
+  marimba = m;
+});
 
 var notes = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
 var comboNotes = [];
@@ -124,7 +124,17 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         handleCombo(playerTimers.combo);
         var notice = game.entities.find("notice")[0];
         if (notice) {
-          game.entities.setComponent(notice, "message", game.entities.getComponent(other, "name"));
+
+          var namesArray = game.entities.getComponent(other, "names");
+          if (namesArray) {
+            game.entities.setComponent(notice, "message", random.from(namesArray));
+          }
+
+          var nameString = game.entities.getComponent(other, "name");
+          if (nameString) {
+            game.entities.setComponent(notice, "message", nameString);
+          }
+
         }
 
         var shakeSmall = game.entities.addComponent(camera, "shake");
