@@ -46,6 +46,140 @@
                 }],
          "tilecount":180,
          "tileheight":256,
+         "tileproperties":
+            {
+             "0":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "1":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "12":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "14":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "15":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "17":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "2":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "24":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "25":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "26":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "27":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "28":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "29":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "3":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "4":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                },
+             "5":
+                {
+                 "boxCollider":"{ \"group\": \"terrain\" }"
+                }
+            },
+         "tilepropertytypes":
+            {
+             "0":
+                {
+                 "boxCollider":"string"
+                },
+             "1":
+                {
+                 "boxCollider":"string"
+                },
+             "12":
+                {
+                 "boxCollider":"string"
+                },
+             "14":
+                {
+                 "boxCollider":"string"
+                },
+             "15":
+                {
+                 "boxCollider":"string"
+                },
+             "17":
+                {
+                 "boxCollider":"string"
+                },
+             "2":
+                {
+                 "boxCollider":"string"
+                },
+             "24":
+                {
+                 "boxCollider":"string"
+                },
+             "25":
+                {
+                 "boxCollider":"string"
+                },
+             "26":
+                {
+                 "boxCollider":"string"
+                },
+             "27":
+                {
+                 "boxCollider":"string"
+                },
+             "28":
+                {
+                 "boxCollider":"string"
+                },
+             "29":
+                {
+                 "boxCollider":"string"
+                },
+             "3":
+                {
+                 "boxCollider":"string"
+                },
+             "4":
+                {
+                 "boxCollider":"string"
+                },
+             "5":
+                {
+                 "boxCollider":"string"
+                }
+            },
          "tiles":
             {
              "0":

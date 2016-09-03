@@ -39,6 +39,6 @@
   "dependencies": {
     "easing-js": "^1.0.1",
     "soundfont-player": "^0.10.1",
-    "splat-ecs": "^7.2.1"
+    "splat-ecs": "^7.3.0"
   }
 }

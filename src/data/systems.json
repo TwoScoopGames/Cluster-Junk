@@ -77,7 +77,7 @@
    ]
   },
   {
-   "name": "splat-ecs/lib/systems/simulation/box-collider",
+   "name": "splat-ecs/lib/systems/simulation/box-group-collider",
    "scenes": "all"
   },
   {

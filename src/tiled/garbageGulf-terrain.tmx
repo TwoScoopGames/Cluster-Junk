@@ -8,35 +8,99 @@
    <terrain name="grass" tile="-1"/>
    <terrain name="dirt" tile="-1"/>
   </terraintypes>
-  <tile id="0" terrain="0,0,0,"/>
-  <tile id="1" terrain="0,0,,"/>
-  <tile id="2" terrain="0,0,,0"/>
-  <tile id="3" terrain=",,,0"/>
-  <tile id="4" terrain=",,0,0"/>
-  <tile id="5" terrain=",,0,"/>
+  <tile id="0" terrain="0,0,0,">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
+  <tile id="1" terrain="0,0,,">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
+  <tile id="2" terrain="0,0,,0">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
+  <tile id="3" terrain=",,,0">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
+  <tile id="4" terrain=",,0,0">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
+  <tile id="5" terrain=",,0,">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
   <tile id="6" terrain="0,0,0,1"/>
   <tile id="7" terrain="0,0,1,1"/>
   <tile id="8" terrain="0,0,1,0"/>
   <tile id="9" terrain="1,1,1,0"/>
   <tile id="10" terrain="1,1,0,0"/>
   <tile id="11" terrain="1,1,0,1"/>
-  <tile id="12" terrain="0,,0,"/>
-  <tile id="14" terrain=",0,,0"/>
-  <tile id="15" terrain=",0,,0"/>
+  <tile id="12" terrain="0,,0,">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
+  <tile id="14" terrain=",0,,0">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
+  <tile id="15" terrain=",0,,0">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
   <tile id="16" terrain="0,0,0,0"/>
-  <tile id="17" terrain="0,,0,"/>
+  <tile id="17" terrain="0,,0,">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
   <tile id="18" terrain="0,1,0,1"/>
   <tile id="19" terrain="1,1,1,1"/>
   <tile id="20" terrain="1,0,1,0"/>
   <tile id="21" terrain="1,0,1,0"/>
   <tile id="22" terrain="0,0,0,0"/>
   <tile id="23" terrain="0,1,0,1"/>
-  <tile id="24" terrain="0,,0,0"/>
-  <tile id="25" terrain=",,0,0"/>
-  <tile id="26" terrain=",0,0,0"/>
-  <tile id="27" terrain=",0,,"/>
-  <tile id="28" terrain="0,0,,"/>
-  <tile id="29" terrain="0,,,"/>
+  <tile id="24" terrain="0,,0,0">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
+  <tile id="25" terrain=",,0,0">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
+  <tile id="26" terrain=",0,0,0">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
+  <tile id="27" terrain=",0,,">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
+  <tile id="28" terrain="0,0,,">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
+  <tile id="29" terrain="0,,,">
+   <properties>
+    <property name="boxCollider" value="{ &quot;group&quot;: &quot;terrain&quot; }"/>
+   </properties>
+  </tile>
   <tile id="30" terrain="0,1,0,0"/>
   <tile id="31" terrain="1,1,0,0"/>
   <tile id="32" terrain="1,0,0,0"/>

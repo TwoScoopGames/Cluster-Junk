@@ -765,7 +765,9 @@
         "x": 0,
         "y": 0
       },
-      "collisions": [],
+      "boxCollider": {
+        "group": "player"
+      },
       "eyes": {
         "pupilOffsetX": 0,
         "pupilOffsetY": 0,

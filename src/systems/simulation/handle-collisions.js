@@ -83,7 +83,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     targetVelocity.y += smallest[3];
   }
 
-  game.entities.registerSearch("handleCollisions", ["sticky", "collisions"]);
+  game.entities.registerSearch("handleCollisions", ["sticky", "boxCollider"]);
   ecs.addEach(function handleCollisions(entity, elapsed) { // eslint-disable-line no-unused-vars
     var player = 0;
     var playerPosition = game.entities.getComponent(player, "position");
@@ -92,7 +92,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var playerArea = game.entities.getComponent(player, "area");
     var playerTimers = game.entities.getComponent(player, "timers");
 
-    game.entities.getComponent(entity, "collisions").forEach(function(other) {
+    game.entities.getComponent(entity, "boxCollider").entities.forEach(function(other) {
       if (game.entities.getComponent(other, "sticky")) {
         return;
       }
@@ -119,6 +119,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         match.offsetX = otherPosition.x - playerPosition.x;
         match.offsetY = otherPosition.y - playerPosition.y;
 
+        game.entities.getComponent(other, "boxCollider").group = "player";
         game.entities.setComponent(other, "sticky", true);
         //game.sounds.play("sfx-power-up.mp3");
         handleCombo(playerTimers.combo);
