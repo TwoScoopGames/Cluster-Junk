@@ -2,30 +2,7 @@
   "loading": {
     "first": true
   },
-  "play-button": {
-    "first": false,
-    "onEnter": "./scripts/play-button-enter",
-    "onExit": "./scripts/play-button-exit"
-  },
-  "intro": {
-    "first": false,
-    "onEnter": "./scripts/intro-enter",
-    "onExit": "./scripts/intro-exit"
-  },
   "title": {
-    "first": false,
-    "onEnter": "./scripts/title-enter",
-    "onExit": "./scripts/title-exit"
-  },
-  "level-select": {
-    "first": false
-  },
-  "level": {
-    "first": false,
-    "onEnter": "./scripts/level-enter",
-    "onExit": "./scripts/level-exit"
-  },
-  "finished": {
     "first": false,
     "onEnter": "./scripts/title-enter",
     "onExit": "./scripts/title-exit"
