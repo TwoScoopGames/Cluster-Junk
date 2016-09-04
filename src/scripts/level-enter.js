@@ -41,6 +41,12 @@ function loadTilemap(game, map) {
     } else {
       // var collisions = game.entities.addComponent(tile, "boxCollider");
       // collisions.group = "terrain";
+
+      // stretch tiles by 2 pixels to get rid of gaps caused by zooming in/out
+      var image = game.entities.getComponent(tile, "image");
+      image.destinationWidth += 2;
+      image.destinationHeight += 2;
+
       game.entities.setComponent(tile, "type", "terrain");
     }
   }
