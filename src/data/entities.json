@@ -374,9 +374,20 @@
         "name": "level-select-1.png"
       },
       "text": {
+        "fillStyle": "red",
         "text": "1"
       },
       "level": 0,
+      "menuItem": {
+        "selected": true,
+        "up": 6,
+        "down": 6,
+        "left": 5,
+        "right": 3,
+        "onActivate": "./scripts/select-level",
+        "onSelect": "./scripts/select-menu-item",
+        "onDeselect": "./scripts/deselect-menu-item"
+      },
       "onPress": {
         "script": "./scripts/select-level"
       }
@@ -399,6 +410,15 @@
         "text": "2"
       },
       "level": 1,
+      "menuItem": {
+        "up": 7,
+        "down": 7,
+        "left": 2,
+        "right": 4,
+        "onActivate": "./scripts/select-level",
+        "onSelect": "./scripts/select-menu-item",
+        "onDeselect": "./scripts/deselect-menu-item"
+      },
       "onPress": {
         "script": "./scripts/select-level"
       }
@@ -421,6 +441,15 @@
         "text": "3"
       },
       "level": 2,
+      "menuItem": {
+        "up": 8,
+        "down": 8,
+        "left": 3,
+        "right": 5,
+        "onActivate": "./scripts/select-level",
+        "onSelect": "./scripts/select-menu-item",
+        "onDeselect": "./scripts/deselect-menu-item"
+      },
       "onPress": {
         "script": "./scripts/select-level"
       }
@@ -443,6 +472,15 @@
         "text": "4"
       },
       "level": 3,
+      "menuItem": {
+        "up": 9,
+        "down": 9,
+        "left": 4,
+        "right": 2,
+        "onActivate": "./scripts/select-level",
+        "onSelect": "./scripts/select-menu-item",
+        "onDeselect": "./scripts/deselect-menu-item"
+      },
       "onPress": {
         "script": "./scripts/select-level"
       }
@@ -465,6 +503,15 @@
         "text": "5"
       },
       "level": 4,
+      "menuItem": {
+        "up": 2,
+        "down": 2,
+        "left": 9,
+        "right": 7,
+        "onActivate": "./scripts/select-level",
+        "onSelect": "./scripts/select-menu-item",
+        "onDeselect": "./scripts/deselect-menu-item"
+      },
       "onPress": {
         "script": "./scripts/select-level"
       }
@@ -487,6 +534,15 @@
         "name": "level-select-6.png"
       },
       "level": 5,
+      "menuItem": {
+        "up": 3,
+        "down": 3,
+        "left": 6,
+        "right": 8,
+        "onActivate": "./scripts/select-level",
+        "onSelect": "./scripts/select-menu-item",
+        "onDeselect": "./scripts/deselect-menu-item"
+      },
       "onPress": {
         "script": "./scripts/select-level"
       }
@@ -509,6 +565,15 @@
         "text": "7"
       },
       "level": 6,
+      "menuItem": {
+        "up": 4,
+        "down": 4,
+        "left": 7,
+        "right": 9,
+        "onActivate": "./scripts/select-level",
+        "onSelect": "./scripts/select-menu-item",
+        "onDeselect": "./scripts/deselect-menu-item"
+      },
       "onPress": {
         "script": "./scripts/select-level"
       }
@@ -531,6 +596,15 @@
         "text": "8"
       },
       "level": 7,
+      "menuItem": {
+        "up": 5,
+        "down": 5,
+        "left": 8,
+        "right": 6,
+        "onActivate": "./scripts/select-level",
+        "onSelect": "./scripts/select-menu-item",
+        "onDeselect": "./scripts/deselect-menu-item"
+      },
       "onPress": {
         "script": "./scripts/select-level"
       }
