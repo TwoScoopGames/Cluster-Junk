@@ -7,8 +7,8 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     game.context.beginPath();
 
     var position = game.entities.getComponent(entity, "position");
-    var size = game.entities.getComponent(size, "position");
-    var radius = game.entities.getComponent(size, "radius");
+    var size = game.entities.getComponent(entity, "size");
+    var radius = game.entities.getComponent(entity, "radius");
 
     var cx = position.x + size.width / 2;
     var cy = position.y + size.height / 2;

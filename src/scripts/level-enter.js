@@ -64,7 +64,10 @@ function convertToPrefab(game, prefab, tile) {
   var trashSize = game.entities.getComponent(trash, "size");
   trashPosition.x = tilePosition.x;
   trashPosition.y = tilePosition.y;
-  shrinkBoundingBox(trashSize, trashImage, 0.4);
+  if (game.entities.getComponent(trash, "type") !== "obstacle") {
+    shrinkBoundingBox(trashSize, trashImage, 0.4);
+  }
+
 
   var rotation = game.entities.addComponent(trash, "rotation");
   rotation.angle = game.entities.getComponent(trash, "type") === "obstacle" ? 0 : random.inRange((Math.PI / -3), (Math.PI / 3));

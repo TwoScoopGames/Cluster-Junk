@@ -1,237 +1,241 @@
 {
- "simulation": [
-  {
-   "name": "splat-ecs/lib/systems/simulation/match-canvas-size",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/match-center",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/decay-life-span",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/advance-timers",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/advance-animations",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/apply-easing",
-   "scenes": "all"
-  },
-  {
-   "name": "./systems/simulation/on-press",
-   "scenes": "all"
-  },
-  {
-   "name": "./systems/simulation/on-button-pressed",
-   "scenes": "all"
-  },
-  {
-   "name": "./systems/simulation/rotate-around-center",
-   "scenes": "all"
-  },
-  {
-   "name": "./systems/simulation/select-menu-items",
-   "scenes": "all"
-  },
-  {
-   "name": "./systems/simulation/move-to-point",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/control-player",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/apply-movement-2d",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/apply-velocity",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/apply-friction",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/match-parent",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/follow-parent",
-   "scenes": "all"
-  },
-  {
-   "name": "./systems/simulation/on-position-left-of",
-   "scenes": [
-     "intro"
-   ]
-  },
-  {
-   "name": "./systems/simulation/apply-scale",
-   "scenes": [
-     "intro"
-   ]
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/box-group-collider",
-   "scenes": "all"
-  },
-  {
-   "name": "./systems/simulation/handle-collisions",
-   "scenes": [
-    "level"
-   ]
-  },
-  {
-   "name": "splat-ecs/lib/systems/simulation/match-aspect-ratio",
-   "scenes": "all"
-  },
-  {
-   "name": "./systems/simulation/countdown-warning",
-   "scenes": [
-    "level"
-   ]
-  },
-  {
-   "name": "./systems/simulation/jingle-on-success",
-   "scenes": [
-    "level"
-   ]
-  },
-  {
-   "name": "./systems/simulation/restart-game",
-   "scenes": [
-    "finished"
-   ]
-  }
- ],
- "renderer": [
-  {
-   "name": "splat-ecs/lib/systems/renderer/apply-shake",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/renderer/clear-screen",
-   "scenes": [
-   ]
-  },
-  {
-   "name": "splat-ecs/lib/systems/renderer/viewport-move-to-camera",
-   "scenes": "all"
-  },
-  {
-   "name": "./systems/renderer/tile-background",
-   "scenes": [
-    "intro",
-    "title",
-    "level-select",
-    "level",
-    "finished"
-   ]
-  },
-  {
-   "name": "./systems/renderer/background-color",
-   "scenes": "all"
- },
-  {
-   "name": "splat-ecs/lib/systems/renderer/draw-image",
-   "scenes": "all"
-  },
-  {
-   "name": "./systems/renderer/draw-text",
-   "scenes": "all"
-  },
-  {
-   "name": "./systems/renderer/draw-grid",
-   "scenes": [
-   ]
-  },
-  {
-   "name": "./systems/renderer/render-loading-bar",
-   "scenes": [
-    "loading"
-   ]
-  },
-  {
-   "name": "splat-ecs/lib/systems/renderer/viewport-reset",
-   "scenes": [
-   ]
-  },
-  {
-   "name": "./systems/renderer/flash",
-   "scenes": [
-    "intro"
-   ]
-  },
-  {
-   "name": "./systems/renderer/draw-lightning",
-   "scenes": [
-    "intro"
-   ]
-  },
-  {
-   "name": "splat-ecs/lib/systems/renderer/viewport-reset",
-   "scenes": "all"
-  },
-  {
-   "name": "./systems/renderer/render-eyes",
-   "scenes": "all"
-  },
-  {
-   "name": "./systems/renderer/render-level-end",
-   "scenes": [
-    "level"
-   ]
-  },
-  {
-   "name": "./systems/renderer/timer",
-   "scenes": [
-    "level"
-   ]
-  },
-  {
-   "name": "./systems/renderer/radar",
-   "scenes": [
-    "level"
-   ]
-  },
-  {
-   "name": "./systems/renderer/goal",
-   "scenes": [
-    "level"
-   ]
-  },
-  {
-   "name": "./systems/renderer/rain",
-   "scenes": [
-    "intro"
-   ]
-  },
-  {
-   "name": "./systems/renderer/draw-notice",
-   "scenes": [
-    "level"
-   ]
-  },
-  {
-   "name": "splat-ecs/lib/systems/renderer/draw-frame-rate",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/renderer/revert-shake",
-   "scenes": "all"
-  },
-  {
-   "name": "splat-ecs/lib/systems/renderer/draw-rectangles",
-   "scenes": []
-  }
- ]
+  "simulation": [
+    {
+      "name": "splat-ecs/lib/systems/simulation/match-canvas-size",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/match-center",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/decay-life-span",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/advance-timers",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/advance-animations",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/apply-easing",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/simulation/on-press",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/simulation/on-button-pressed",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/simulation/rotate-around-center",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/simulation/select-menu-items",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/simulation/move-to-point",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/control-player",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/apply-movement-2d",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/apply-velocity",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/apply-friction",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/match-parent",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/follow-parent",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/simulation/on-position-left-of",
+      "scenes": [
+        "intro"
+      ]
+    },
+    {
+      "name": "./systems/simulation/apply-scale",
+      "scenes": [
+        "intro"
+      ]
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/box-group-collider",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/simulation/handle-collisions",
+      "scenes": [
+        "level"
+      ]
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/match-aspect-ratio",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/simulation/countdown-warning",
+      "scenes": [
+        "level"
+      ]
+    },
+    {
+      "name": "./systems/simulation/jingle-on-success",
+      "scenes": [
+        "level"
+      ]
+    },
+    {
+      "name": "./systems/simulation/restart-game",
+      "scenes": [
+        "finished"
+      ]
+    }
+  ],
+  "renderer": [
+    {
+      "name": "splat-ecs/lib/systems/renderer/apply-shake",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/renderer/clear-screen",
+      "scenes": [
+      ]
+    },
+    {
+      "name": "splat-ecs/lib/systems/renderer/viewport-move-to-camera",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/renderer/tile-background",
+      "scenes": [
+        "intro",
+        "title",
+        "level-select",
+        "level",
+        "finished"
+      ]
+    },
+    {
+      "name": "./systems/renderer/background-color",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/renderer/draw-image",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/renderer/draw-text",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/renderer/draw-grid",
+      "scenes": [
+      ]
+    },
+    {
+      "name": "./systems/renderer/render-loading-bar",
+      "scenes": [
+        "loading"
+      ]
+    },
+    {
+      "name": "splat-ecs/lib/systems/renderer/viewport-reset",
+      "scenes": [
+      ]
+    },
+    {
+      "name": "./systems/renderer/flash",
+      "scenes": [
+        "intro"
+      ]
+    },
+    {
+      "name": "./systems/renderer/draw-lightning",
+      "scenes": [
+        "intro"
+      ]
+    },
+    {
+      "name": "splat-ecs/lib/systems/renderer/draw-rectangles",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/renderer/render-player",
+      "scenes": ["level"]
+    },
+    {
+      "name": "splat-ecs/lib/systems/renderer/viewport-reset",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/renderer/render-eyes",
+      "scenes": "all"
+    },
+
+    {
+      "name": "./systems/renderer/render-level-end",
+      "scenes": [
+        "level"
+      ]
+    },
+    {
+      "name": "./systems/renderer/timer",
+      "scenes": [
+        "level"
+      ]
+    },
+    {
+      "name": "./systems/renderer/radar",
+      "scenes": [
+        "level"
+      ]
+    },
+    {
+      "name": "./systems/renderer/goal",
+      "scenes": [
+        "level"
+      ]
+    },
+    {
+      "name": "./systems/renderer/rain",
+      "scenes": [
+        "intro"
+      ]
+    },
+    {
+      "name": "./systems/renderer/draw-notice",
+      "scenes": []
+    },
+    {
+      "name": "splat-ecs/lib/systems/renderer/draw-frame-rate",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/renderer/revert-shake",
+      "scenes": "all"
+    }
+
+  ]
 }
