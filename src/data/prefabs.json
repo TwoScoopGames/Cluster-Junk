@@ -1,73 +1,470 @@
 {
-  "controls": {
-    "name": "controls",
-    "position": {
-      "x": 230,
-      "y": 200,
-      "z": 1
-    },
-    "easing": {
-      "position.y": {
-        "type": "easeOutElastic",
-        "start": 350,
-        "end": 400,
-        "time": 0,
-        "max": 2000
-      }
-    },
+
+  "anchor": {
+    "names": ["anchor"],
     "image": {
-      "name": "controls.png"
-    }
-  },
-  "play-again": {
-    "name": "play again",
-    "position": {
-      "x": 230,
-      "y": 200,
-      "z": 1
+      "name": "anchor.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 144,
+      "destinationHeight": 177
     },
-    "easing": {
-      "position.y": {
-        "type": "easeOutElastic",
-        "start": 350,
-        "end": 400,
-        "time": 0,
-        "max": 2000
-      }
-    },
-    "image": {
-      "name": "play-again.png"
-    }
-  },
-  "debris": {
-    "name": "debris",
-    "image": {
-      "name": "particle-water-drop.png"
-    },
+    "type": "trash",
     "position": {
       "x": 0,
       "y": 0
     },
     "size": {
-      "width": 28,
-      "height": 19
+      "width": 144,
+      "height": 177
     },
-    "lifeSpan": {
-      "current": 0,
-      "max": 300
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
     },
-    "easing": {
-      "image.alpha": {
-        "time": 0,
-        "max": 300,
-        "start": 1,
-        "end": 0,
-        "type": "easeInOutQuad"
-      }
-    }
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "boogie-board-1": {
+    "names": ["boogie-board-1"],
+    "image": {
+      "name": "boogie-board-1.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 108,
+      "destinationHeight": 187
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 108,
+      "height": 187
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "boogie-board-2": {
+    "names": ["boogie-board-2"],
+    "image": {
+      "name": "boogie-board-2.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 109,
+      "destinationHeight": 186
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 109,
+      "height": 186
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+
+  "surfboard-1": {
+    "name": "surfboard-1",
+    "image": {
+      "name": "surfboard-1.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 108,
+      "destinationHeight": 308
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 108,
+      "height": 308
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "surfboard-2": {
+    "names": ["surfboard-2"],
+    "image": {
+      "name": "surfboard-2.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 108,
+      "destinationHeight": 308
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 108,
+      "height": 308
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "surfboard-3": {
+    "names": ["surfboard-3"],
+    "image": {
+      "name": "surfboard-3.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 89,
+      "destinationHeight": 314
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 89,
+      "height": 314
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "surfboard-4": {
+    "names": ["surfboard-4"],
+    "image": {
+      "name": "surfboard-4.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 385,
+      "destinationHeight": 62
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 385,
+      "height": 62
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "dock-1-left": {
+    "names": ["dock-1-left"],
+    "image": {
+      "name": "dock-1-left.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 449,
+      "destinationHeight": 284
+    },
+    "type": "obstacle",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 449,
+      "height": 284
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "dock-2-left": {
+    "names": ["dock-2-left"],
+    "image": {
+      "name": "dock-2-left.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 205,
+      "destinationHeight": 285
+    },
+    "type": "obstacle",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 205,
+      "height": 285
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "dock-3-left": {
+    "names": ["dock-3-left"],
+    "image": {
+      "name": "dock-3-left.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 205,
+      "destinationHeight": 235
+    },
+    "type": "obstacle",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 205,
+      "height": 235
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "dock-1": {
+    "names": ["dock-1"],
+    "image": {
+      "name": "dock-1.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 284,
+      "destinationHeight": 449
+    },
+    "type": "obstacle",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 284,
+      "height": 449
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "dock-2": {
+    "names": ["dock-2"],
+    "image": {
+      "name": "dock-2.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 285,
+      "destinationHeight": 205
+    },
+    "type": "obstacle",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 285,
+      "height": 205
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "dock-3": {
+    "names": ["dock-3"],
+    "image": {
+      "name": "dock-3.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 235,
+      "destinationHeight": 205
+    },
+    "type": "obstacle",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 235,
+      "height": 205
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "tube": {
+    "names": ["tube"],
+    "image": {
+      "name": "tube.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 190,
+      "destinationHeight": 190
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 190,
+      "height": 190
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
   },
   "box": {
-    "name": "Undelivered package from 2011",
+    "names": ["Undelivered package from 2011"],
     "image": {
       "name": "box.png",
       "sourceX": 0,
@@ -100,7 +497,7 @@
     ]
   },
   "box2": {
-    "name": "Vagabox tiny house",
+    "names": ["Vagabox tiny house"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -139,7 +536,7 @@
     ]
   },
   "milk": {
-    "name": "Organic extra D vitamin milk",
+    "names": ["Organic extra D vitamin milk"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -223,7 +620,7 @@
     ]
   },
   "tire": {
-    "name": "Tire - Do not burn",
+    "names": ["Tire - Do not burn"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -261,7 +658,7 @@
     ]
   },
   "barrel": {
-    "name": "Dinosaur Oil Company barrel",
+    "names": ["Dinosaur Oil Company barrel"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -301,7 +698,7 @@
     ]
   },
   "Fries": {
-    "name": "Fries Queen XL fries",
+    "names": ["Fries Queen XL fries"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -341,7 +738,7 @@
     ]
   },
   "boot": {
-    "name": "Sole Mate branded boot",
+    "names": ["Sole Mate branded boot"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -379,7 +776,7 @@
     ]
   },
   "bottle": {
-    "name": "Tap Dat H2O water bottle",
+    "names": ["Tap Dat H2O water bottle"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -417,7 +814,7 @@
     ]
   },
   "box3": {
-    "name": "Wait, was something in there...?",
+    "names": ["Wait, was something in there...?"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -456,7 +853,7 @@
     ]
   },
   "cheese": {
-    "name": "Weathered cheddar",
+    "names": ["Weathered cheddar"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -494,7 +891,7 @@
     ]
   },
   "chickenLeg": {
-    "name": "Piece of poultry",
+    "names": ["Piece of poultry"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -532,7 +929,7 @@
     ]
   },
   "egg-carton": {
-    "name": "Baby chicken transporter",
+    "names": ["Baby chicken transporter"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -572,7 +969,7 @@
     ]
   },
   "fishbone": {
-    "name": "Expired aquatic being",
+    "names": ["Expired aquatic being"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -610,7 +1007,7 @@
     ]
   },
   "foam-plate": {
-    "name": "Totally wasteful food carrier",
+    "names": ["Totally wasteful food carrier"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -649,7 +1046,7 @@
     ]
   },
   "paper-wad2": {
-    "name": "Trump ballots",
+    "names": ["Trump ballots"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -689,7 +1086,7 @@
     ]
   },
   "trashbag": {
-    "name": "Hastily discarded bag",
+    "names": ["Hastily discarded bag"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -729,7 +1126,7 @@
     ]
   },
   "iceberg": {
-    "name": "OMG an iceberg!",
+    "names": ["OMG an iceberg!"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -763,7 +1160,7 @@
     ]
   },
   "buoy": {
-    "name": "Swim at your own risk",
+    "names": ["Swim at your own risk"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -803,7 +1200,7 @@
     ]
   },
   "fishingBoat": {
-    "name": "SS Not-So-Swole fishing boat",
+    "names": ["SS Not-So-Swole fishing boat"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -843,7 +1240,7 @@
     ]
   },
   "birbArea": {
-    "name": "@ProBirdsRights",
+    "names": ["@ProBirdsRights"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -882,7 +1279,7 @@
     ]
   },
   "hazardArea": {
-    "name": "Posted hazard area",
+    "names": ["Posted hazard area"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -922,7 +1319,7 @@
     ]
   },
   "orangeBuoy": {
-    "name": "No ships allowed!",
+    "names": ["No ships allowed!"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -962,7 +1359,7 @@
     ]
   },
   "seaweed": {
-    "name": "No ships allowed!",
+    "names": ["No ships allowed!"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1000,7 +1397,7 @@
     ]
   },
   "driftwood": {
-    "name": "Driftwood",
+    "names": ["Driftwood"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1040,7 +1437,7 @@
     ]
   },
   "cup": {
-    "name": "Crushed red partycups",
+    "names": ["Crushed red partycups"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1078,7 +1475,7 @@
     ]
   },
   "straw": {
-    "name": "Single-use plastic sipping device",
+    "names": ["Single-use plastic sipping device"],
     "image": {
       "name": "straw.png",
       "sourceX": 0,
@@ -1110,7 +1507,7 @@
     ]
   },
   "buttTrash": {
-    "name": "Nonbiodegradable tobacco filter",
+    "names": ["Nonbiodegradable tobacco filter"],
     "image": {
       "name": "buttTrash.png",
       "sourceX": 0,
@@ -1142,7 +1539,7 @@
     ]
   },
   "banjo": {
-    "name": "Ba na ner ner ner ner ner ner ner",
+    "names": ["Ba na ner ner ner ner ner ner ner"],
     "image": {
       "name": "banjo.png",
       "sourceX": 0,
@@ -1174,7 +1571,7 @@
     ]
   },
   "chicken-bucket": {
-    "name": "0% trans fat!",
+    "names": ["0% trans fat!"],
     "image": {
       "name": "chicken-bucket.png",
       "sourceX": 0,
@@ -1206,7 +1603,7 @@
     ]
   },
   "moonshine": {
-    "name": "800 proof",
+    "names": ["800 proof"],
     "image": {
       "name": "moonshine.png",
       "sourceX": 0,
@@ -1238,7 +1635,7 @@
     ]
   },
   "ticket": {
-    "name": "Another downtown parking ticket",
+    "names": ["Another downtown parking ticket"],
     "image": {
       "name": "ticket.png",
       "sourceX": 0,
@@ -1270,7 +1667,7 @@
     ]
   },
   "bourbon": {
-    "name": "Some hipster bourbon",
+    "names": ["Some hipster bourbon"],
     "image": {
       "name": "bourbon.png",
       "sourceX": 0,
@@ -1300,6 +1697,77 @@
       "sfx-crunch.mp3",
       "sfx-crush.mp3"
     ]
+  },
+
+
+
+
+  "controls": {
+    "name": "controls",
+    "position": {
+      "x": 230,
+      "y": 200,
+      "z": 1
+    },
+    "easing": {
+      "position.y": {
+        "type": "easeOutElastic",
+        "start": 350,
+        "end": 400,
+        "time": 0,
+        "max": 2000
+      }
+    },
+    "image": {
+      "name": "controls.png"
+    }
+  },
+  "play-again": {
+    "name": "play again",
+    "position": {
+      "x": 230,
+      "y": 200,
+      "z": 1
+    },
+    "easing": {
+      "position.y": {
+        "type": "easeOutElastic",
+        "start": 350,
+        "end": 400,
+        "time": 0,
+        "max": 2000
+      }
+    },
+    "image": {
+      "name": "play-again.png"
+    }
+  },
+  "debris": {
+    "name": "debris",
+    "image": {
+      "name": "particle-water-drop.png"
+    },
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 28,
+      "height": 19
+    },
+    "lifeSpan": {
+      "current": 0,
+      "max": 300
+    },
+    "easing": {
+      "image.alpha": {
+        "time": 0,
+        "max": 300,
+        "start": 1,
+        "end": 0,
+        "type": "easeInOutQuad"
+      }
+    }
   },
   "particle-ooze-1": {
     "image": {
@@ -1373,4 +1841,7 @@
       "height": 11
     }
   }
+
+
+
 }

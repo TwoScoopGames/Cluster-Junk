@@ -125,17 +125,8 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         //handleCombo(playerTimers.combo);
         var notice = game.entities.find("notice")[0];
         if (notice) {
-
           var namesArray = game.entities.getComponent(other, "names");
-          if (namesArray) {
-            game.entities.setComponent(notice, "message", random.from(namesArray));
-          }
-
-          var nameString = game.entities.getComponent(other, "name");
-          if (nameString) {
-            game.entities.setComponent(notice, "message", nameString);
-          }
-
+          game.entities.setComponent(notice, "message", random.from(namesArray));
         }
 
         var shakeSmall = game.entities.addComponent(camera, "shake");
@@ -154,7 +145,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         resolveCollisionShortest(other, entity);
       }
     });
-    playerRadius = Math.sqrt(playerArea / Math.PI * 2);
+    playerRadius = Math.sqrt(playerArea / 2);
     game.entities.setComponent(player, "radius", playerRadius);
     game.entities.setComponent(player, "area", playerArea);
 
