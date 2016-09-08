@@ -230,6 +230,10 @@
     },
     {
       "name": "splat-ecs/lib/systems/renderer/draw-frame-rate",
+      "scenes": []
+    },
+    {
+      "name": "./systems/renderer/frame-rate-graph",
       "scenes": "all"
     },
     {
