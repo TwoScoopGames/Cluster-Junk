@@ -15,6 +15,7 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
     loadTilemap(game, level.maps[i]);
   }
 
+  game.sounds.stop("trash-island-thunderstorm.mp3");
   game.sounds.play("ambient-sea-track.mp3", {
     "loopStart": 0,
     "loopEnd": 0
