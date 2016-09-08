@@ -47,8 +47,75 @@ function loadTilemap(game, map) {
       image.destinationWidth += 2;
       image.destinationHeight += 2;
 
+      resizeCollisionRectangles(game, tile);
       game.entities.setComponent(tile, "type", "terrain");
+      game.entities.removeComponent(tile, "tile");
     }
+  }
+}
+
+function resizeCollisionRectangles(game, tile) {
+  var position = game.entities.getComponent(tile, "position");
+  var size = game.entities.getComponent(tile, "size");
+  var image = game.entities.getComponent(tile, "image");
+  var collisionPattern = game.entities.getComponent(tile, "collisionPattern");
+  if (!collisionPattern) {
+    return;
+  }
+  collisionPattern = collisionPattern.toString();
+
+  if (collisionPattern === "12") {
+    size.height /= 2;
+    image.sourceHeight = size.height;
+    image.destinationHeight = size.height;
+  } else if (collisionPattern === "34") {
+    size.height /= 2;
+    position.y += size.height;
+    image.sourceY += size.height;
+  } else if (collisionPattern === "13") {
+    size.width /= 2;
+    image.sourceWidth = size.width;
+    image.destinationWidth = size.width;
+  } else if (collisionPattern === "24") {
+    size.width /= 2;
+    position.x += size.width;
+    image.sourceX += size.width;
+  } else if (collisionPattern === "1") {
+    size.height /= 2;
+    image.sourceHeight = size.height;
+    image.destinationHeight = size.height;
+    size.width /= 2;
+    image.sourceWidth = size.width;
+    image.destinationWidth = size.width;
+  } else if (collisionPattern === "2") {
+    size.height /= 2;
+    image.sourceHeight = size.height;
+    image.destinationHeight = size.height;
+    size.width /= 2;
+    image.sourceWidth = size.width;
+    image.destinationWidth = size.width;
+    position.x += size.width;
+    image.sourceX += size.width;
+  } else if (collisionPattern === "3") {
+    size.height /= 2;
+    image.sourceHeight = size.height;
+    image.destinationHeight = size.height;
+    position.y += size.height;
+    image.sourceY += size.height;
+    size.width /= 2;
+    image.sourceWidth = size.width;
+    image.destinationWidth = size.width;
+  } else if (collisionPattern === "4") {
+    size.height /= 2;
+    image.sourceHeight = size.height;
+    image.destinationHeight = size.height;
+    position.y += size.height;
+    image.sourceY += size.height;
+    size.width /= 2;
+    image.sourceWidth = size.width;
+    image.destinationWidth = size.width;
+    position.x += size.width;
+    image.sourceX += size.width;
   }
 }
 

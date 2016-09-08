@@ -50,134 +50,198 @@
             {
              "0":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"123"
                 },
              "1":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"12"
                 },
              "12":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"13"
                 },
              "14":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"24"
                 },
              "15":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"24"
+                },
+             "16":
+                {
+                 "collisionPattern":"1234"
                 },
              "17":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"13"
                 },
              "2":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"124"
+                },
+             "22":
+                {
+                 "collisionPattern":"1234"
                 },
              "24":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"134"
                 },
              "25":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"34"
                 },
              "26":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"234"
                 },
              "27":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"2"
                 },
              "28":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"12"
                 },
              "29":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"1"
                 },
              "3":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"4"
                 },
              "4":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"34"
                 },
              "5":
                 {
-                 "boxCollider":"{ \"group\": \"terrain\" }"
+                 "boxCollider":"{ \"group\": \"terrain\" }",
+                 "collisionPattern":"3"
+                },
+             "58":
+                {
+                 "collisionPattern":"1234"
+                },
+             "91":
+                {
+                 "collisionPattern":"1234"
                 }
             },
          "tilepropertytypes":
             {
              "0":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
                 },
              "1":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
                 },
              "12":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
                 },
              "14":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
                 },
              "15":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
+                },
+             "16":
+                {
+                 "collisionPattern":"string"
                 },
              "17":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
                 },
              "2":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
+                },
+             "22":
+                {
+                 "collisionPattern":"string"
                 },
              "24":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
                 },
              "25":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
                 },
              "26":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
                 },
              "27":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
                 },
              "28":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
                 },
              "29":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
                 },
              "3":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
                 },
              "4":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
                 },
              "5":
                 {
-                 "boxCollider":"string"
+                 "boxCollider":"string",
+                 "collisionPattern":"string"
+                },
+             "58":
+                {
+                 "collisionPattern":"string"
+                },
+             "91":
+                {
+                 "collisionPattern":"string"
                 }
             },
          "tiles":
