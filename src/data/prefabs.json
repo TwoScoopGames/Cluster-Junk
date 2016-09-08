@@ -120,17 +120,7 @@
     "size": {
       "width": 134,
       "height": 93
-    },
-    "friction": {
-      "x": 0.97,
-      "y": 0.97
-    },
-    "boxCollider": {},
-    "noises": [
-      "sfx-crunch.mp3",
-      "sfx-paper-flip.mp3",
-      "sfx-rolled-paper-slap.mp3"
-    ]
+    }
   },
   "beach-towel2": {
     "names": ["beach-towel2"],
@@ -154,17 +144,7 @@
     "size": {
       "width": 231,
       "height": 134
-    },
-    "friction": {
-      "x": 0.97,
-      "y": 0.97
-    },
-    "boxCollider": {},
-    "noises": [
-      "sfx-crunch.mp3",
-      "sfx-paper-flip.mp3",
-      "sfx-rolled-paper-slap.mp3"
-    ]
+    }
   },
   "beach-towel3": {
     "names": ["beach-towel3"],
@@ -188,17 +168,7 @@
     "size": {
       "width": 172,
       "height": 109
-    },
-    "friction": {
-      "x": 0.97,
-      "y": 0.97
-    },
-    "boxCollider": {},
-    "noises": [
-      "sfx-crunch.mp3",
-      "sfx-paper-flip.mp3",
-      "sfx-rolled-paper-slap.mp3"
-    ]
+    }
   },
   "beachball": {
     "names": ["beachball"],
@@ -254,17 +224,7 @@
     "size": {
       "width": 75,
       "height": 56
-    },
-    "friction": {
-      "x": 0.97,
-      "y": 0.97
-    },
-    "boxCollider": {},
-    "noises": [
-      "sfx-crunch.mp3",
-      "sfx-paper-flip.mp3",
-      "sfx-rolled-paper-slap.mp3"
-    ]
+    }
   },
   "sunglasses-green": {
     "names": ["sunglasses-green"],
@@ -354,17 +314,7 @@
     "size": {
       "width": 364,
       "height": 302
-    },
-    "friction": {
-      "x": 0.97,
-      "y": 0.97
-    },
-    "boxCollider": {},
-    "noises": [
-      "sfx-crunch.mp3",
-      "sfx-paper-flip.mp3",
-      "sfx-rolled-paper-slap.mp3"
-    ]
+    }
   },
 
 
