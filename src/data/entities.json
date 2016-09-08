@@ -304,20 +304,50 @@
     },
     {
       "id": 2,
-      "name": "logo",
+      "name": "logo-bg",
       "title": true,
       "position": {
         "x": 93,
-        "y": -600,
+        "y": -900,
         "z": 2
       },
       "easing": {
         "position.y": {
           "type": "easeOutElastic",
-          "start": -500,
-          "end": -140,
+          "start": -1200,
+          "end": -520,
           "time": 0,
           "max": 2000
+        }
+      },
+      "image": {
+        "name": "logo-bg.png"
+      },
+      "timers": {
+        "spawn-controls": {
+          "running": true,
+          "time": 0,
+          "max": 1000,
+          "script": "./scripts/spawn-controls"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "logo",
+      "title": true,
+      "position": {
+        "x": 330,
+        "y": -600,
+        "z": 3
+      },
+      "easing": {
+        "position.y": {
+          "type": "easeOutElastic",
+          "start": -500,
+          "end": 50,
+          "time": 0,
+          "max": 1800
         }
       },
       "image": {
