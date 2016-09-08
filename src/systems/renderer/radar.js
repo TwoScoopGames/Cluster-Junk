@@ -42,7 +42,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         "endX": cx + x,
         "endY": cy + y
       };
-      drawLine(game.context, linePoints, "1px", "#6abd44");
+      drawLine(game.context, linePoints, 1, "#6abd44");
 
       var playerPosition = game.entities.getComponent(entity, "position");
 
