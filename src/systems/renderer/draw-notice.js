@@ -21,9 +21,9 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 
     if (time >= duration) {
       game.context.fillStyle = "#3e311a";
-      game.context.font = "55px blanch";
+      game.context.font = "35px blanch";
       var message = game.entities.getComponent(entity, "message");
-      centerText(game.canvas, game.context, message, 0, 130);
+      centerText(game.canvas, game.context, message, 0, 68);
     }
   }, "drawNotice");
 };

@@ -226,7 +226,7 @@
     },
     {
       "name": "./systems/renderer/draw-notice",
-      "scenes": []
+      "scenes": "level"
     },
     {
       "name": "splat-ecs/lib/systems/renderer/draw-frame-rate",

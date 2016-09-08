@@ -8,7 +8,7 @@
     "radius": 0,
     "goalRadius": 550,
     "message": "Garbage Gulf",
-    "maxTime": 200
+    "maxTime": 250
   },
   {
     "maps": [
