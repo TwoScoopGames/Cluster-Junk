@@ -21,6 +21,22 @@
       {
         "device": "gamepad",
         "button": "a"
+      },
+      {
+        "device": "gamepad",
+        "button": "b"
+      },
+      {
+        "device": "gamepad",
+        "button": "x"
+      },
+      {
+        "device": "gamepad",
+        "button": "y"
+      },
+      {
+        "device": "gamepad",
+        "button": "left stick"
       }
     ],
     "up": [
