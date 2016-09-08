@@ -60,6 +60,10 @@
       {
         "device": "gamepad",
         "button": "left shoulder"
+      },
+      {
+        "device": "gamepad",
+        "button": "back"
       }
     ],
     "blink2": [
@@ -70,22 +74,6 @@
       {
         "device": "gamepad",
         "button": "right shoulder"
-      }
-    ],
-    "blink3": [
-      {
-        "device": "keyboard",
-        "button": "n"
-      },
-      {
-        "device": "gamepad",
-        "button": "back"
-      }
-    ],
-    "blink4": [
-      {
-        "device": "keyboard",
-        "button": "m"
       },
       {
         "device": "gamepad",
