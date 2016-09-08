@@ -24,6 +24,11 @@ function tween(start, end, pct) {
   return start + (diff * pct);
 }
 
+//This is hand-tweaked for the playstation 2 controller
+function stickDeadZone(game, axis) {
+  return game.inputs.axis(axis) < 0.6 && game.inputs.axis(axis) > 0.4;
+}
+
 var lidFrames = [2, 1, 0, 1, 2, 1];
 var lidFrameTimes = [2000, 200, 2500, 60, 60, 60];
 var lidFramesToSpeedUp = [true, false, true, false, false, false];
@@ -56,11 +61,25 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var px = x - (pupils.width / 2);
     var py = y - (pupils.height / 2);
 
+
     var po = pupilOffset(game.entities.getComponent(entity, "movement2d"));
+
     eyesComponent.pupilOffsetX = tween(eyesComponent.pupilOffsetX, po.x);
     eyesComponent.pupilOffsetY = tween(eyesComponent.pupilOffsetY, po.y);
-    px += eyesComponent.pupilOffsetX;
-    py += eyesComponent.pupilOffsetY;
+
+    if (!stickDeadZone(game, "right-stick-x") || !stickDeadZone(game, "right-stick-y")) {
+      if (!stickDeadZone(game, "right-stick-x")) {
+        var xAxis = game.inputs.axis("right-stick-x") - 0.5;
+        px += xAxis * 25;
+      }
+      if (!stickDeadZone(game, "right-stick-y")) {
+        var yAxis = game.inputs.axis("right-stick-y") - 0.5;
+        py += yAxis * 25;
+      }
+    } else {
+      px += eyesComponent.pupilOffsetX;
+      py += eyesComponent.pupilOffsetY;
+    }
 
     game.context.drawImage(pupils, px, py);
 

@@ -1,5 +1,18 @@
 {
-  "axes": {},
+  "axes": {
+    "right-stick-x": [
+      {
+        "device": "gamepad",
+        "axis": "right trigger"
+      }
+    ],
+    "right-stick-y": [
+      {
+        "device": "gamepad",
+        "axis": "left trigger"
+      }
+    ]
+  },
   "buttons": {
     "action": [
       {
