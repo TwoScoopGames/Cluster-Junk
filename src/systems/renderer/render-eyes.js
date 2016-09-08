@@ -67,19 +67,22 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     eyesComponent.pupilOffsetX = tween(eyesComponent.pupilOffsetX, po.x);
     eyesComponent.pupilOffsetY = tween(eyesComponent.pupilOffsetY, po.y);
 
-    if (!stickDeadZone(game, "right-stick-x") || !stickDeadZone(game, "right-stick-y")) {
-      if (!stickDeadZone(game, "right-stick-x")) {
-        var xAxis = game.inputs.axis("right-stick-x") - 0.5;
-        px += xAxis * 25;
-      }
-      if (!stickDeadZone(game, "right-stick-y")) {
-        var yAxis = game.inputs.axis("right-stick-y") - 0.5;
-        py += yAxis * 25;
+    if (game.inputs.gamepad.gamepads.length > 0) {
+      if (!stickDeadZone(game, "right-stick-x") || !stickDeadZone(game, "right-stick-y")) {
+        if (!stickDeadZone(game, "right-stick-x")) {
+          var xAxis = game.inputs.axis("right-stick-x") - 0.5;
+          px += xAxis * 25;
+        }
+        if (!stickDeadZone(game, "right-stick-y")) {
+          var yAxis = game.inputs.axis("right-stick-y") - 0.5;
+          py += yAxis * 25;
+        }
       }
     } else {
       px += eyesComponent.pupilOffsetX;
       py += eyesComponent.pupilOffsetY;
     }
+
 
     game.context.drawImage(pupils, px, py);
 
