@@ -1,5 +1,37 @@
 {
-
+  "waste-basket": {
+    "names": ["Waste Basket"],
+    "image": {
+      "name": "waste-basket.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 121,
+      "destinationHeight": 150
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 121,
+      "height": 150
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
   "tablet": {
     "names": ["Tablet - I guess it was time for an upgrade."],
     "image": {
