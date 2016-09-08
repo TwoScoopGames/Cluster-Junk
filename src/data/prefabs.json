@@ -1,4 +1,314 @@
 {
+  "life-preserver": {
+    "names": ["life-preserver"],
+    "image": {
+      "name": "life-preserver.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 121,
+      "destinationHeight": 84
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 121,
+      "height": 84
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "beach-towel1": {
+    "names": ["beach-towel1"],
+    "image": {
+      "name": "beach-towel1.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 134,
+      "destinationHeight": 93
+    },
+    "type": "obstacle",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 10
+    },
+    "size": {
+      "width": 134,
+      "height": 93
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "beach-towel2": {
+    "names": ["beach-towel2"],
+    "image": {
+      "name": "beach-towel2.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 231,
+      "destinationHeight": 134
+    },
+    "type": "obstacle",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 10
+    },
+    "size": {
+      "width": 231,
+      "height": 134
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "beach-towel3": {
+    "names": ["beach-towel3"],
+    "image": {
+      "name": "beach-towel3.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 172,
+      "destinationHeight": 109
+    },
+    "type": "obstacle",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 10
+    },
+    "size": {
+      "width": 172,
+      "height": 109
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "beachball": {
+    "names": ["beachball"],
+    "image": {
+      "name": "beachball.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 42,
+      "destinationHeight": 41
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 42,
+      "height": 41
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "sandcastle": {
+    "names": ["sandcastle"],
+    "image": {
+      "name": "sandcastle.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 75,
+      "destinationHeight": 56
+    },
+    "type": "obstacle",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 75,
+      "height": 56
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "sunglasses-green": {
+    "names": ["sunglasses-green"],
+    "image": {
+      "name": "sunglasses-green.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 47,
+      "destinationHeight": 46
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 47,
+      "height": 46
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "sunglasses-red": {
+    "names": ["sunglasses-red"],
+    "image": {
+      "name": "sunglasses-red.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 84,
+      "destinationHeight": 41
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 84,
+      "height": 41
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "umbrella": {
+    "names": ["umbrella"],
+    "image": {
+      "name": "umbrella.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 364,
+      "destinationHeight": 302
+    },
+    "type": "obstacle",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 10
+    },
+    "size": {
+      "width": 364,
+      "height": 302
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+
+
+
+
+
+
+
+
+
   "starfish": {
     "names": ["starfish"],
     "image": {
@@ -42,8 +352,8 @@
       "sourceHeight": 0,
       "destinationX": 0,
       "destinationY": 0,
-      "destinationWidth": 45,
-      "destinationHeight": 82
+      "destinationWidth": 36,
+      "destinationHeight": 63
     },
     "type": "trash",
     "position": {
@@ -51,8 +361,8 @@
       "y": 0
     },
     "size": {
-      "width": 45,
-      "height": 82
+      "width": 36,
+      "height": 63
     },
     "friction": {
       "x": 0.97,
