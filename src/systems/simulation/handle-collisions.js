@@ -1,5 +1,7 @@
 var particles = require("splat-ecs/lib/particles");
 var random = require("splat-ecs/lib/random");
+
+/* marimba stuff
 var Soundfont = require("soundfont-player");
 
 var marimba = null;
@@ -28,6 +30,7 @@ function handleCombo(comboTimer) {
   }
   comboTimer.running = true;
 }
+*/
 
 function center(position, size) {
   var x = position.x + (size.width / 2);
