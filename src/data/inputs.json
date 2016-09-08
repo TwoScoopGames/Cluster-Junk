@@ -39,6 +39,46 @@
         "button": "left stick"
       }
     ],
+    "blink1": [
+      {
+        "device": "keyboard",
+        "button": "v"
+      },
+      {
+        "device": "gamepad",
+        "button": "left shoulder"
+      }
+    ],
+    "blink2": [
+      {
+        "device": "keyboard",
+        "button": "b"
+      },
+      {
+        "device": "gamepad",
+        "button": "right shoulder"
+      }
+    ],
+    "blink3": [
+      {
+        "device": "keyboard",
+        "button": "n"
+      },
+      {
+        "device": "gamepad",
+        "button": "back"
+      }
+    ],
+    "blink4": [
+      {
+        "device": "keyboard",
+        "button": "m"
+      },
+      {
+        "device": "gamepad",
+        "button": "start"
+      }
+    ],
     "up": [
       {
         "device": "keyboard",

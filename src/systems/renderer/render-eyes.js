@@ -87,6 +87,23 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       game.sounds.play(eyesComponent.blinkSound);
     }
 
+    // Blink button
+    if (game.inputs.buttonPressed("blink1")) {
+      game.sounds.play("sfx-blink.mp3");
+    }
+    if (game.inputs.buttonPressed("blink2")) {
+      game.sounds.play("sfx-blink-2.mp3");
+    }
+    if (game.inputs.buttonPressed("blink3")) {
+      game.sounds.play("sfx-blink-3.mp3");
+    }
+    if (game.inputs.buttonPressed("blink4")) {
+      game.sounds.play("sfx-blink-4.mp3");
+    }
+    if (game.inputs.button("blink1") || game.inputs.button("blink2") || game.inputs.button("blink3") || game.inputs.button("blink4")) {
+      eyesComponent.lidFrame = 4;
+    }
+
     var lw = lids.width / 3;
     var lx = x - (lw / 2);
     var ly = y - (lids.height / 2);
