@@ -1836,21 +1836,41 @@
   "controls": {
     "name": "controls",
     "position": {
-      "x": 230,
-      "y": 200,
+      "x": 256,
+      "y": 362,
       "z": 1
     },
     "easing": {
       "position.y": {
         "type": "easeOutElastic",
-        "start": 350,
-        "end": 400,
+        "start": 200,
+        "end": 362,
+        "time": 0,
+        "max": 1800
+      }
+    },
+    "image": {
+      "name": "controls.png"
+    }
+  },
+  "controller": {
+    "name": "controls",
+    "position": {
+      "x": 695,
+      "y": 309,
+      "z": 2
+    },
+    "easing": {
+      "position.y": {
+        "type": "easeOutElastic",
+        "start": 20,
+        "end": 309,
         "time": 0,
         "max": 2000
       }
     },
     "image": {
-      "name": "controls.png"
+      "name": "controller.png"
     }
   },
   "play-again": {

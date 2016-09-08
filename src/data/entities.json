@@ -309,7 +309,7 @@
       "position": {
         "x": 93,
         "y": -900,
-        "z": 2
+        "z": 3
       },
       "easing": {
         "position.y": {
@@ -329,6 +329,12 @@
           "time": 0,
           "max": 1000,
           "script": "./scripts/spawn-controls"
+        },
+        "spawn-controller": {
+          "running": true,
+          "time": 0,
+          "max": 1200,
+          "script": "./scripts/spawn-controller"
         }
       }
     },
@@ -339,7 +345,7 @@
       "position": {
         "x": 330,
         "y": -600,
-        "z": 3
+        "z": 4
       },
       "easing": {
         "position.y": {
@@ -352,14 +358,6 @@
       },
       "image": {
         "name": "logo.png"
-      },
-      "timers": {
-        "spawn-controls": {
-          "running": true,
-          "time": 0,
-          "max": 1000,
-          "script": "./scripts/spawn-controls"
-        }
       }
     }
   ],
