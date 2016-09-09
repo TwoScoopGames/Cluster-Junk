@@ -6,4 +6,5 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
     "loopStart": 0,
     "loopEnd": 0
   });
+  game.sounds.play("trash-island-storm-intro-a.mp3");
 };

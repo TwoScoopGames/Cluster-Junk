@@ -8,6 +8,7 @@ module.exports = function(entity, game) {
   follow.id = entity;
 
   game.entities.getComponent(entity, "timers").playSplashSfx.running = true;
+  game.entities.getComponent(entity, "timers").playIntroMusicPartTwo.running = true;
 
   var moveToPoint = game.entities.addComponent(entity, "moveToPoint");
   moveToPoint.x = 1500;

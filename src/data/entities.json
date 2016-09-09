@@ -114,7 +114,7 @@
         "playFogHorn": {
           "running": true,
           "time": 0,
-          "max": 4000,
+          "max": 3300,
           "script": "./scripts/play-fog-horn"
         }
       }
@@ -192,6 +192,12 @@
           "time": 0,
           "max": 300,
           "script": "./scripts/play-splash-sfx"
+        },
+        "playIntroMusicPartTwo": {
+          "running": false,
+          "time": 0,
+          "max": 2200,
+          "script": "./scripts/play-intro-part-2"
         },
         "switchToTitle": {
           "running": false,
