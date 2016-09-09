@@ -117,7 +117,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       var sizeRatio = otherArea / playerArea;
       if (distSq < playerRadius * playerRadius && sizeRatio < 0.15 && otherType !== "terrain") {
         console.log(otherArea / playerArea);
-        playerArea += otherArea;
+        playerArea += otherArea * 1.15;
 
         var match = game.entities.addComponent(other, "match");
         match.id = player;
