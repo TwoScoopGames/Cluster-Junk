@@ -226,7 +226,7 @@
     },
     {
       "name": "./systems/renderer/frame-rate-graph",
-      "scenes": "all"
+      "scenes": []
     },
     {
       "name": "splat-ecs/lib/systems/renderer/revert-shake",
