@@ -208,9 +208,7 @@
     },
     {
       "name": "./systems/renderer/radar",
-      "scenes": [
-        "level"
-      ]
+      "scenes": []
     },
     {
       "name": "./systems/renderer/goal",
