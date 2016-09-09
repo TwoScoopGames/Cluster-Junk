@@ -179,11 +179,11 @@
     },
     {
       "name": "splat-ecs/lib/systems/renderer/draw-rectangles",
-      "scenes": "all"
+      "scenes": []
     },
     {
       "name": "./systems/renderer/render-player",
-      "scenes": ["level"]
+      "scenes": []
     },
     {
       "name": "splat-ecs/lib/systems/renderer/viewport-reset",
