@@ -1,4 +1,136 @@
 {
+  "energy-drink": {
+    "names": ["Energy Drink"],
+    "image": {
+      "name": "energy-drink.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 23,
+      "destinationHeight": 57
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 23,
+      "height": 57
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "reciept": {
+    "names": ["Today's coffee reciept"],
+    "image": {
+      "name": "reciept.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 14,
+      "destinationHeight": 10
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 14,
+      "height": 10
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "isp-disc": {
+    "names": ["You've got trash!"],
+    "image": {
+      "name": "isp-disc.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 58,
+      "destinationHeight": 59
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 58,
+      "height": 59
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "k-cup": {
+    "names": ["Single use coffee container"],
+    "image": {
+      "name": "k-cup.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 16,
+      "destinationHeight": 13
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 16,
+      "height": 13
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
   "plastic-fork": {
     "names": ["Plastic fork"],
     "image": {
@@ -117,8 +249,8 @@
       "y": 0
     },
     "size": {
-      "width": 150,
-      "height": 108
+      "width": 75,
+      "height": 50
     },
     "friction": {
       "x": 0.97,
@@ -312,8 +444,8 @@
       "sourceHeight": 0,
       "destinationX": 0,
       "destinationY": 0,
-      "destinationWidth": 42,
-      "destinationHeight": 41
+      "destinationWidth": 104,
+      "destinationHeight": 100
     },
     "type": "trash",
     "position": {
@@ -321,8 +453,8 @@
       "y": 0
     },
     "size": {
-      "width": 42,
-      "height": 41
+      "width": 104,
+      "height": 100
     },
     "friction": {
       "x": 0.97,
@@ -359,7 +491,7 @@
     }
   },
   "sunglasses-green": {
-    "names": ["sunglasses-green"],
+    "names": ["People blockers"],
     "image": {
       "name": "sunglasses-green.png",
       "sourceX": 0,
@@ -392,7 +524,7 @@
     ]
   },
   "sunglasses-red": {
-    "names": ["sunglasses-red"],
+    "names": ["Totally red shades"],
     "image": {
       "name": "sunglasses-red.png",
       "sourceX": 0,
@@ -1149,8 +1281,8 @@
       "y": 0
     },
     "size": {
-      "width": 51,
-      "height": 90
+      "width": 35,
+      "height": 80
     },
     "friction": {
       "x": 0.97,
@@ -1932,8 +2064,8 @@
       "y": 0
     },
     "size": {
-      "width": 134,
-      "height": 165
+      "width": 100,
+      "height": 100
     },
     "friction": {
       "x": 0.97,
