@@ -4,6 +4,10 @@ var random = require("splat-ecs/lib/random");
 
 var player = 0;
 
+var boxGroupCollider = require("splat-ecs/lib/systems/simulation/box-group-collider");
+boxGroupCollider.collideGroups("player", "trash");
+boxGroupCollider.collideGroups("player", "terrain");
+
 module.exports = function(game) { // eslint-disable-line no-unused-vars
   var level = levels[game.arguments.level || 0];
 
