@@ -193,6 +193,12 @@
           "max": 300,
           "script": "./scripts/play-splash-sfx"
         },
+        "playIntroMusicPartTwo": {
+          "running": false,
+          "time": 0,
+          "max": 2200,
+          "script": "./scripts/play-intro-part-2"
+        },
         "switchToTitle": {
           "running": false,
           "time": 0,
