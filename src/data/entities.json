@@ -114,7 +114,7 @@
         "playFogHorn": {
           "running": true,
           "time": 0,
-          "max": 4000,
+          "max": 3300,
           "script": "./scripts/play-fog-horn"
         }
       }
