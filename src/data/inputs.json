@@ -3,6 +3,10 @@
     "right-stick-x": [
       {
         "device": "gamepad",
+        "axis": "right stick x"
+      },
+      {
+        "device": "gamepad",
         "axis": "right trigger"
       }
     ],

@@ -8,5 +8,6 @@ module.exports = function(entity, data) { // eslint-disable-line no-unused-vars
   } else {
     data.sounds.play("trash-island-failure.mp3");
   }
+  data.switchScene("thanks");
   // add on screen time's up message with failure/victory
 };

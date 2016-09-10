@@ -105,12 +105,6 @@
       "scenes": [
         "level"
       ]
-    },
-    {
-      "name": "./systems/simulation/restart-game",
-      "scenes": [
-        "finished"
-      ]
     }
   ],
   "renderer": [
@@ -134,6 +128,7 @@
         "title",
         "level-select",
         "level",
+        "thanks",
         "finished"
       ]
     },
@@ -179,11 +174,11 @@
     },
     {
       "name": "splat-ecs/lib/systems/renderer/draw-rectangles",
-      "scenes": "all"
+      "scenes": []
     },
     {
       "name": "./systems/renderer/render-player",
-      "scenes": ["level"]
+      "scenes": []
     },
     {
       "name": "splat-ecs/lib/systems/renderer/viewport-reset",
@@ -197,7 +192,6 @@
     {
       "name": "./systems/renderer/render-level-end",
       "scenes": [
-        "level"
       ]
     },
     {
@@ -208,9 +202,7 @@
     },
     {
       "name": "./systems/renderer/radar",
-      "scenes": [
-        "level"
-      ]
+      "scenes": []
     },
     {
       "name": "./systems/renderer/goal",

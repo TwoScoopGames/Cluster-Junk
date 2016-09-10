@@ -1,7 +1,7 @@
 "use strict";
 
-var cx = 100;
-var cy = 300;
+var cx = 60;
+var cy = 60;
 var radius = 50;
 
 module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars

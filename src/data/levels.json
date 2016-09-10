@@ -6,9 +6,9 @@
     ],
     "music": "trash-island-bossa.mp3",
     "radius": 0,
-    "goalRadius": 550,
+    "goalRadius": 500,
     "message": "Garbage Gulf",
-    "maxTime": 250
+    "maxTime": 10
   },
   {
     "maps": [

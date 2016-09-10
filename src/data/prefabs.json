@@ -1,4 +1,140 @@
 {
+  "energy-drink": {
+    "names": ["Energy Drink"],
+    "image": {
+      "name": "energy-drink.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 23,
+      "destinationHeight": 57
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 9
+    },
+    "size": {
+      "width": 23,
+      "height": 57
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "reciept": {
+    "names": ["Today's coffee reciept"],
+    "image": {
+      "name": "reciept.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 14,
+      "destinationHeight": 10
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 9
+    },
+    "size": {
+      "width": 14,
+      "height": 10
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "isp-disc": {
+    "names": ["You've got trash!"],
+    "image": {
+      "name": "isp-disc.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 58,
+      "destinationHeight": 59
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 9
+    },
+    "size": {
+      "width": 58,
+      "height": 59
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
+  "k-cup": {
+    "names": ["Single use coffee container"],
+    "image": {
+      "name": "k-cup.png",
+      "sourceX": 0,
+      "sourceY": 0,
+      "sourceWidth": 0,
+      "sourceHeight": 0,
+      "destinationX": 0,
+      "destinationY": 0,
+      "destinationWidth": 16,
+      "destinationHeight": 13
+    },
+    "type": "trash",
+    "position": {
+      "x": 0,
+      "y": 0,
+      "z": 9
+    },
+    "size": {
+      "width": 16,
+      "height": 13
+    },
+    "friction": {
+      "x": 0.97,
+      "y": 0.97
+    },
+    "boxCollider": {},
+    "noises": [
+      "sfx-crunch.mp3",
+      "sfx-paper-flip.mp3",
+      "sfx-rolled-paper-slap.mp3"
+    ]
+  },
   "plastic-fork": {
     "names": ["Plastic fork"],
     "image": {
@@ -15,7 +151,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 22,
@@ -48,7 +185,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 14,
@@ -81,7 +219,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 28,
@@ -114,11 +253,12 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
-      "width": 150,
-      "height": 108
+      "width": 75,
+      "height": 50
     },
     "friction": {
       "x": 0.97,
@@ -147,7 +287,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 121,
@@ -180,7 +321,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 77,
@@ -198,7 +340,10 @@
     ]
   },
   "life-preserver": {
-    "names": ["life-preserver"],
+    "names": [
+      "Man overboard, hope he’s safe",
+      "Broken life preserver"
+    ],
     "image": {
       "name": "life-preserver.png",
       "sourceX": 0,
@@ -213,7 +358,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 121,
@@ -231,7 +377,7 @@
     ]
   },
   "beach-towel1": {
-    "names": ["beach-towel1"],
+    "names": ["Sand-covered towel"],
     "image": {
       "name": "beach-towel1.png",
       "sourceX": 0,
@@ -247,7 +393,7 @@
     "position": {
       "x": 0,
       "y": 0,
-      "z": 10
+      "z": 9
     },
     "size": {
       "width": 134,
@@ -255,7 +401,7 @@
     }
   },
   "beach-towel2": {
-    "names": ["beach-towel2"],
+    "names": ["Colorful wad of cotton"],
     "image": {
       "name": "beach-towel2.png",
       "sourceX": 0,
@@ -271,7 +417,7 @@
     "position": {
       "x": 0,
       "y": 0,
-      "z": 10
+      "z": 9
     },
     "size": {
       "width": 231,
@@ -279,7 +425,10 @@
     }
   },
   "beach-towel3": {
-    "names": ["beach-towel3"],
+    "names": ["beach-towel3",
+      "Stained beach towel",
+      "Abandoned towel"
+    ],
     "image": {
       "name": "beach-towel3.png",
       "sourceX": 0,
@@ -295,7 +444,7 @@
     "position": {
       "x": 0,
       "y": 0,
-      "z": 10
+      "z": 9
     },
     "size": {
       "width": 172,
@@ -303,7 +452,10 @@
     }
   },
   "beachball": {
-    "names": ["beachball"],
+    "names": ["beachball",
+      "Nearly-deflated ball",
+      "Discarded beach ball"
+    ],
     "image": {
       "name": "beachball.png",
       "sourceX": 0,
@@ -312,17 +464,18 @@
       "sourceHeight": 0,
       "destinationX": 0,
       "destinationY": 0,
-      "destinationWidth": 42,
-      "destinationHeight": 41
+      "destinationWidth": 104,
+      "destinationHeight": 100
     },
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
-      "width": 42,
-      "height": 41
+      "width": 104,
+      "height": 100
     },
     "friction": {
       "x": 0.97,
@@ -336,7 +489,9 @@
     ]
   },
   "sandcastle": {
-    "names": ["sandcastle"],
+    "names": ["Amateur sandcastle",
+      "Novice sandcastle"
+    ],
     "image": {
       "name": "sandcastle.png",
       "sourceX": 0,
@@ -351,7 +506,8 @@
     "type": "obstacle",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 75,
@@ -359,7 +515,10 @@
     }
   },
   "sunglasses-green": {
-    "names": ["sunglasses-green"],
+    "names": ["People blockers",
+      "Totally rad sunglasses",
+      "Sunglasses lost at sea"
+    ],
     "image": {
       "name": "sunglasses-green.png",
       "sourceX": 0,
@@ -374,7 +533,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 47,
@@ -392,7 +552,10 @@
     ]
   },
   "sunglasses-red": {
-    "names": ["sunglasses-red"],
+    "names": ["Totally red shades",
+      "Superstar glasses",
+      "Broken super cool sunglasses"
+    ],
     "image": {
       "name": "sunglasses-red.png",
       "sourceX": 0,
@@ -407,7 +570,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 84,
@@ -425,7 +589,7 @@
     ]
   },
   "umbrella": {
-    "names": ["umbrella"],
+    "names": ["'Shady Umbrella' brand umbrella"],
     "image": {
       "name": "umbrella.png",
       "sourceX": 0,
@@ -441,7 +605,7 @@
     "position": {
       "x": 0,
       "y": 0,
-      "z": 10
+      "z": 11
     },
     "size": {
       "width": 364,
@@ -473,7 +637,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 57,
@@ -506,7 +671,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 36,
@@ -539,7 +705,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 144,
@@ -572,7 +739,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 149,
@@ -590,7 +758,7 @@
     ]
   },
   "anchor": {
-    "names": ["anchor"],
+    "names": ["How is this floating?"],
     "image": {
       "name": "anchor.png",
       "sourceX": 0,
@@ -605,7 +773,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 144,
@@ -623,7 +792,9 @@
     ]
   },
   "boogie-board-1": {
-    "names": ["boogie-board-1"],
+    "names": ["Like far out man",
+      "Professional boogie board"
+    ],
     "image": {
       "name": "boogie-board-1.png",
       "sourceX": 0,
@@ -638,7 +809,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 108,
@@ -656,7 +828,9 @@
     ]
   },
   "boogie-board-2": {
-    "names": ["boogie-board-2"],
+    "names": ["Why is there a bite out of this board?",
+      "Boogie woogie boogie board"
+    ],
     "image": {
       "name": "boogie-board-2.png",
       "sourceX": 0,
@@ -671,7 +845,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 109,
@@ -690,7 +865,7 @@
   },
 
   "surfboard-1": {
-    "name": "surfboard-1",
+    "names": ["Like far out man"],
     "image": {
       "name": "surfboard-1.png",
       "sourceX": 0,
@@ -705,7 +880,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 108,
@@ -723,7 +899,7 @@
     ]
   },
   "surfboard-2": {
-    "names": ["surfboard-2"],
+    "names": ["Like far out man"],
     "image": {
       "name": "surfboard-2.png",
       "sourceX": 0,
@@ -738,7 +914,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 108,
@@ -756,7 +933,7 @@
     ]
   },
   "surfboard-3": {
-    "names": ["surfboard-3"],
+    "names": ["Like far out man"],
     "image": {
       "name": "surfboard-3.png",
       "sourceX": 0,
@@ -771,7 +948,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 89,
@@ -789,7 +967,7 @@
     ]
   },
   "surfboard-4": {
-    "names": ["surfboard-4"],
+    "names": ["Like far out man"],
     "image": {
       "name": "surfboard-4.png",
       "sourceX": 0,
@@ -804,7 +982,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 385,
@@ -837,7 +1016,8 @@
     "type": "obstacle",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 449,
@@ -870,7 +1050,8 @@
     "type": "obstacle",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 205,
@@ -903,7 +1084,8 @@
     "type": "obstacle",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 205,
@@ -936,7 +1118,8 @@
     "type": "obstacle",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 284,
@@ -969,7 +1152,8 @@
     "type": "obstacle",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 285,
@@ -1002,7 +1186,8 @@
     "type": "obstacle",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 235,
@@ -1035,7 +1220,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 190,
@@ -1053,7 +1239,7 @@
     ]
   },
   "box": {
-    "names": ["Undelivered package from 2011"],
+    "names": ["Undelivered package from 2011", "Soggy bottom box", "Wet box"],
     "image": {
       "name": "box.png",
       "sourceX": 0,
@@ -1068,7 +1254,8 @@
     "type": "trash",
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 101,
@@ -1086,7 +1273,7 @@
     ]
   },
   "box2": {
-    "names": ["Vagabox tiny house"],
+    "names": ["Vagabox tiny house", "Medium-sized box"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1107,7 +1294,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 173,
@@ -1125,7 +1313,10 @@
     ]
   },
   "milk": {
-    "names": ["Organic extra D vitamin milk"],
+    "names": ["Organic extra D vitamin milk",
+      "Calcium is what bones crave",
+      "Milk: the bourbon of the sea"
+    ],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1146,11 +1337,12 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
-      "width": 51,
-      "height": 90
+      "width": 35,
+      "height": 80
     },
     "friction": {
       "x": 0.97,
@@ -1168,7 +1360,11 @@
     "names": [
       "'Do not litter' posters",
       "Unpaid PARC tickets",
-      "'Where your garbage goes' essay B-"
+      "'Where your garbage goes' essay B-",
+      "Design document for the font papyrus",
+      "Plagiarized speech",
+      "Research paper 'C+'",
+      "Plans for removing headphone jacks from phones"
     ],
     "image": {
       "sourceX": 0,
@@ -1190,7 +1386,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 76,
@@ -1230,7 +1427,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 145,
@@ -1247,7 +1445,10 @@
     ]
   },
   "barrel": {
-    "names": ["Dinosaur Oil Company barrel"],
+    "names": ["Dinosaur Oil Company barrel",
+      "Is there bourbon in there?",
+      "Caution: Do not step in contents"
+    ],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1268,7 +1469,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 273,
@@ -1287,7 +1489,11 @@
     ]
   },
   "Fries": {
-    "names": ["Fries Queen XL fries"],
+    "names": ["Fries Queen XL fries",
+      "Burger Queen supersize fries",
+      "Burger Queen super deluxe fries",
+      "You didn’t mean to eat all of those"
+    ],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1308,7 +1514,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 89,
@@ -1327,7 +1534,10 @@
     ]
   },
   "boot": {
-    "names": ["Sole Mate branded boot"],
+    "names": ["Sole-mate brand boot",
+      "Worn leather shoe",
+      "Steel-toe boot"
+    ],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1348,7 +1558,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 101,
@@ -1365,7 +1576,11 @@
     ]
   },
   "bottle": {
-    "names": ["Tap Dat H2O water bottle"],
+    "names": ["Tap Dat H2O water bottle",
+      "Bottled tap water",
+      "Simply tap",
+      "Over-priced artisanal water"
+    ],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1386,7 +1601,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 57,
@@ -1403,7 +1619,11 @@
     ]
   },
   "box3": {
-    "names": ["Wait, was something in there...?"],
+    "names": [
+      "Wait, was something in there...?",
+      "Is there something living in there?",
+      "Cardboard box"
+    ],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1424,7 +1644,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 75,
@@ -1442,7 +1663,11 @@
     ]
   },
   "cheese": {
-    "names": ["Weathered cheddar"],
+    "names": [
+      "Artisanal premium cheese",
+      "Aged cheddar",
+      "Trashed Wisconsin headwear"
+    ],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1463,7 +1688,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 40,
@@ -1480,7 +1706,7 @@
     ]
   },
   "chickenLeg": {
-    "names": ["Piece of poultry"],
+    "names": ["Piece of poultry", "Chicken of the sea"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1501,7 +1727,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 69,
@@ -1539,7 +1766,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 155,
@@ -1579,7 +1807,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 100,
@@ -1617,7 +1846,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 119,
@@ -1656,7 +1886,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 93,
@@ -1696,7 +1927,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 233,
@@ -1736,7 +1968,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 1353,
@@ -1770,7 +2003,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 300,
@@ -1810,7 +2044,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 1142,
@@ -1829,7 +2064,12 @@
     ]
   },
   "birbArea": {
-    "names": ["@ProBirdsRights"],
+    "names": [
+      "@ProBirdsRights",
+      "Hello yes this is bird",
+      "No motors: bird area",
+      "Birb for presdident"
+    ],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1850,7 +2090,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 50,
@@ -1889,7 +2130,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 86,
@@ -1908,7 +2150,17 @@
     ]
   },
   "orangeBuoy": {
-    "names": ["No ships allowed!"],
+    "names": ["No ships allowed!",
+      "Posted: No swimming",
+      "Warning: High tide",
+      "No boats allowed",
+      "Do not swim",
+      "Boat barrier",
+      "Swim barrier",
+      "Do not cross",
+      "Warning: sand bar",
+      "Seriously, stop trying to go through here"
+    ],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -1929,11 +2181,12 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
-      "width": 134,
-      "height": 165
+      "width": 100,
+      "height": 100
     },
     "friction": {
       "x": 0.97,
@@ -1969,7 +2222,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 145,
@@ -1986,7 +2240,7 @@
     ]
   },
   "driftwood": {
-    "names": ["Driftwood"],
+    "names": ["You didn’t get away this time"],
     "image": {
       "sourceX": 0,
       "sourceY": 0,
@@ -2007,7 +2261,8 @@
     },
     "position": {
       "x": 0,
-      "y": 0
+      "y": 0,
+      "z": 9
     },
     "size": {
       "width": 573,
@@ -2096,7 +2351,7 @@
     ]
   },
   "buttTrash": {
-    "names": ["Nonbiodegradable tobacco filter"],
+    "names": ["Nonbiodegradable tobacco filter", "Cigarette butt"],
     "image": {
       "name": "buttTrash.png",
       "sourceX": 0,
@@ -2128,7 +2383,11 @@
     ]
   },
   "banjo": {
-    "names": ["Ba na ner ner ner ner ner ner ner"],
+    "names": ["Ba na ner ner ner ner ner ner ner",
+      "How south are we?",
+      "Dueling banjos",
+      "Bleng bleurng blerg nern nerg ber der"
+    ],
     "image": {
       "name": "banjo.png",
       "sourceX": 0,
@@ -2192,7 +2451,10 @@
     ]
   },
   "moonshine": {
-    "names": ["800 proof"],
+    "names": ["800 proof",
+      "Kentucky boys moonshine",
+      "Home brew"
+    ],
     "image": {
       "name": "moonshine.png",
       "sourceX": 0,
@@ -2256,7 +2518,10 @@
     ]
   },
   "bourbon": {
-    "names": ["Some hipster bourbon"],
+    "names": ["Some hipster bourbon",
+      "Kentucky gold",
+      "Moonshine boys bourbon by the bucket"
+    ],
     "image": {
       "name": "bourbon.png",
       "sourceX": 0,
