@@ -26,9 +26,6 @@ function tween(start, end, pct) {
 
 //This is hand-tweaked for the playstation 2 controller
 function stickDeadZone(game, axis) {
-  if (axis === "right-stick-x") {
-    return game.inputs.axis(axis) < 0.1 && game.inputs.axis(axis) > -0.1;
-  }
   return game.inputs.axis(axis) < 0.6 && game.inputs.axis(axis) > 0.4;
 }
 
@@ -75,7 +72,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     if (game.inputs.gamepad.gamepads.length > 0) {
       if (!stickDeadZone(game, "right-stick-x") || !stickDeadZone(game, "right-stick-y")) {
         if (!stickDeadZone(game, "right-stick-x")) {
-          var xAxis = game.inputs.axis("right-stick-x");
+          var xAxis = game.inputs.axis("right-stick-x") - 0.5;
           px += xAxis * 25;
           usingRightStick = true;
         }
