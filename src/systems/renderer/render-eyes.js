@@ -26,6 +26,9 @@ function tween(start, end, pct) {
 
 //This is hand-tweaked for the playstation 2 controller
 function stickDeadZone(game, axis) {
+  if (axis === "right-stick-x") {
+    return game.inputs.axis(axis) < 0.1 && game.inputs.axis(axis) > -0.1;
+  }
   return game.inputs.axis(axis) < 0.6 && game.inputs.axis(axis) > 0.4;
 }
 
@@ -67,18 +70,23 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     eyesComponent.pupilOffsetX = tween(eyesComponent.pupilOffsetX, po.x);
     eyesComponent.pupilOffsetY = tween(eyesComponent.pupilOffsetY, po.y);
 
+    // console.log(game.inputs.axis("right-stick-x"), game.inputs.axis("right-stick-y"));
+    var usingRightStick = false;
     if (game.inputs.gamepad.gamepads.length > 0) {
       if (!stickDeadZone(game, "right-stick-x") || !stickDeadZone(game, "right-stick-y")) {
         if (!stickDeadZone(game, "right-stick-x")) {
-          var xAxis = game.inputs.axis("right-stick-x") - 0.5;
+          var xAxis = game.inputs.axis("right-stick-x");
           px += xAxis * 25;
+          usingRightStick = true;
         }
         if (!stickDeadZone(game, "right-stick-y")) {
           var yAxis = game.inputs.axis("right-stick-y") - 0.5;
           py += yAxis * 25;
+          usingRightStick = true;
         }
       }
-    } else {
+    }
+    if (!usingRightStick) {
       px += eyesComponent.pupilOffsetX;
       py += eyesComponent.pupilOffsetY;
     }
