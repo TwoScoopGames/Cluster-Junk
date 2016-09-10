@@ -17,6 +17,11 @@
     "onEnter": "./scripts/title-enter",
     "onExit": "./scripts/title-exit"
   },
+  "thanks": {
+    "first": false,
+    "onEnter": "./scripts/title-enter",
+    "onExit": "./scripts/title-exit"
+  },
   "level-select": {
     "first": false
   },
@@ -26,8 +31,6 @@
     "onExit": "./scripts/level-exit"
   },
   "finished": {
-    "first": false,
-    "onEnter": "./scripts/title-enter",
-    "onExit": "./scripts/title-exit"
+    "first": false
   }
 }
