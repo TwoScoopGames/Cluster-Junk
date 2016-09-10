@@ -4,7 +4,7 @@
       "garbageGulf-terrain",
       "garbageGulf"
     ],
-    "music": "trash-island-bossa.mp3",
+    "music": "trash-island-theme.mp3",
     "radius": 0,
     "goalRadius": 500,
     "message": "Garbage Gulf",

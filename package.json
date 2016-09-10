@@ -39,6 +39,6 @@
   "dependencies": {
     "easing-js": "^1.0.1",
     "soundfont-player": "^0.10.1",
-    "splat-ecs": "^7.3.0"
+    "splat-ecs": "git+https://github.com/SplatJS/splat-ecs.git#more-perf"
   }
 }
