@@ -1028,7 +1028,7 @@
       },
       "follow": {
         "id": 0,
-        "distance": 200
+        "distance": 100
       },
       "onButtonPressed": {
         "restart": "./scripts/restart-level"
