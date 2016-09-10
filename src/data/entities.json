@@ -367,6 +367,94 @@
       }
     }
   ],
+  "thanks": [
+    {
+      "id": 0,
+      "name": "viewport",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1136,
+        "height": 640
+      }
+    },
+    {
+      "id": 1,
+      "name": "camera",
+      "camera": true,
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "matchCanvasSize": true,
+      "matchCenter": {
+        "id": 0
+      },
+      "onButtonPressed": {
+        "action": "./scripts/go-to-intro-scene"
+      }
+    },
+    {
+      "id": 2,
+      "name": "logo-bg",
+      "title": true,
+      "position": {
+        "x": 93,
+        "y": -900,
+        "z": 3
+      },
+      "easing": {
+        "position.y": {
+          "type": "easeOutElastic",
+          "start": -1200,
+          "end": -520,
+          "time": 0,
+          "max": 2000
+        }
+      },
+      "image": {
+        "name": "logo-bg.png"
+      },
+      "timers": {
+        "spawn-controls": {
+          "running": true,
+          "time": 0,
+          "max": 1000,
+          "script": "./scripts/spawn-controls"
+        },
+        "spawn-controller": {
+          "running": true,
+          "time": 0,
+          "max": 1200,
+          "script": "./scripts/spawn-controller"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "logo",
+      "title": true,
+      "position": {
+        "x": 330,
+        "y": -600,
+        "z": 4
+      },
+      "easing": {
+        "position.y": {
+          "type": "easeOutElastic",
+          "start": -500,
+          "end": 50,
+          "time": 0,
+          "max": 1800
+        }
+      },
+      "image": {
+        "name": "logo.png"
+      }
+    }
+  ],
   "level-select": [
     {
       "id": 0,
@@ -810,6 +898,9 @@
       },
       "image": {
         "name": "credits.png"
+      },
+      "onButtonPressed": {
+        "action": "./scripts/go-to-intro-scene"
       },
       "timers": {
         "spawn-play-again": {
