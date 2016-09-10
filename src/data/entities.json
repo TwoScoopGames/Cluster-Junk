@@ -398,10 +398,10 @@
     },
     {
       "id": 2,
-      "name": "logo-bg",
+      "name": "credits",
       "title": true,
       "position": {
-        "x": 93,
+        "x": 0,
         "y": -900,
         "z": 3
       },
@@ -415,7 +415,7 @@
         }
       },
       "image": {
-        "name": "logo-bg.png"
+        "name": "credits.png"
       },
       "timers": {
         "spawn-controls": {
@@ -430,28 +430,6 @@
           "max": 1200,
           "script": "./scripts/spawn-controller"
         }
-      }
-    },
-    {
-      "id": 3,
-      "name": "logo",
-      "title": true,
-      "position": {
-        "x": 330,
-        "y": -600,
-        "z": 4
-      },
-      "easing": {
-        "position.y": {
-          "type": "easeOutElastic",
-          "start": -500,
-          "end": 50,
-          "time": 0,
-          "max": 1800
-        }
-      },
-      "image": {
-        "name": "logo.png"
       }
     }
   ],
