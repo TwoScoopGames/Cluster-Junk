@@ -28,7 +28,12 @@
   "level": {
     "first": false,
     "onEnter": "./scripts/level-enter",
-    "onExit": "./scripts/level-exit"
+    "onExit": "./scripts/level-exit",
+    "box-group-collider": {
+      "skip": [
+        ["trash", "terrain"]
+      ]
+    }
   },
   "finished": {
     "first": false
