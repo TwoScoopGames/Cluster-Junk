@@ -53,6 +53,14 @@
       "scenes": "all"
     },
     {
+      "name": "./systems/simulation/spin-spinner",
+      "scenes": "all"
+    },
+    {
+      "name": "./systems/simulation/move-to-spinner",
+      "scenes": "all"
+    },
+    {
       "name": "splat-ecs/lib/systems/simulation/apply-velocity",
       "scenes": "all"
     },

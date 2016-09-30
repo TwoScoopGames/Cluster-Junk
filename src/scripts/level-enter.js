@@ -22,6 +22,24 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
   });
 };
 
+function createSpinner(game, x, y, prefabs, count) {
+  var spinner = game.entities.create();
+  var pos = game.entities.addComponent(spinner, "position");
+  pos.x = x;
+  pos.y = y;
+  var spinnerConfig = game.entities.addComponent(spinner, "spinner");
+  spinnerConfig.radius = 100;
+
+  var angleSlice = Math.PI * 2 / count;
+
+  for (var i = 0; i < count; i++) {
+    var trash = game.prefabs.instantiate(game.entities, prefabs[i % prefabs.length]);
+    var move = game.entities.addComponent(trash, "moveToSpinner");
+    move.id = spinner;
+    move.angle = i * angleSlice;
+  }
+}
+
 function loadTilemap(game, map) {
   var tilemap = require("../tiled/" + map + ".json");
   importTilemap(tilemap, game.entities, game.images);
@@ -31,6 +49,9 @@ function loadTilemap(game, map) {
     center(game, player, spawn);
     game.entities.destroy(spawn);
   }
+
+  var playerPos = game.entities.getComponent(player, "position");
+  createSpinner(game, playerPos.x, playerPos.y, ["soda-can", "isp-disc"], 10);
 
   var tiles = game.entities.find("tile").slice();
   for (var i = 0; i < tiles.length; i++) {

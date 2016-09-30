@@ -126,6 +126,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 
         game.entities.getComponent(other, "boxCollider").group = "player";
         game.entities.setComponent(other, "sticky", true);
+        game.entities.removeComponent(other, "moveToSpinner");
         game.sounds.play("sfx-power-up.mp3");
         //handleCombo(playerTimers.combo);
         var notice = game.entities.find("notice")[0];
