@@ -50,7 +50,7 @@ function generateComponentManifest(context) {
 }
 
 function snakeToCamelCase(str) {
-  return str.replace(/-([a-z])/g, function(g) { return g[1].toUpperCase(); });
+  return str.replace(/-([a-z0-9])/g, function(g) { return g[1].toUpperCase(); });
 }
 
 function basename(path) {
