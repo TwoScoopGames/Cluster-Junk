@@ -900,6 +900,7 @@
       "area": 8888,
       "points": 0,
       "movement2dAnalog": {
+        "accel": 0.02,
         "max": 1
       },
       "playerController2dAnalog": {
