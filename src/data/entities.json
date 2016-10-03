@@ -899,21 +899,16 @@
       "goalRadius": 500,
       "area": 8888,
       "points": 0,
-      "movement2d": {
-        "upMax": -1.0,
-        "downMax": 1.0,
-        "leftMax": -1.0,
-        "rightMax": 1.0,
-        "upAccel": -0.02,
-        "downAccel": 0.02,
-        "leftAccel": -0.02,
-        "rightAccel": 0.02
+      "movement2dAnalog": {
+        "max": 1
       },
-      "playerController2d": {
-        "up": "up",
-        "down": "down",
-        "left": "left",
-        "right": "right"
+      "playerController2dAnalog": {
+        "x": "left stick x",
+        "y": "left stick y"
+      },
+      "acceleration": {
+        "x": 0,
+        "y": 0
       },
       "friction": {
         "x": 0.97,

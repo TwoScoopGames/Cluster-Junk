@@ -1,5 +1,17 @@
 {
   "axes": {
+    "left stick x": [
+      {
+        "device": "gamepad",
+        "axis": "left stick x"
+      }
+    ],
+    "left stick y": [
+      {
+        "device": "gamepad",
+        "axis": "left stick y"
+      }
+    ],
     "right-stick-x": [
       {
         "device": "gamepad",

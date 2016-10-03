@@ -45,12 +45,20 @@
       "scenes": "all"
     },
     {
-      "name": "splat-ecs/lib/systems/simulation/control-player",
+      "name": "./systems/simulation/control-player-analog",
       "scenes": "all"
     },
     {
-      "name": "splat-ecs/lib/systems/simulation/apply-movement-2d",
+      "name": "./systems/simulation/apply-movement-2d-analog",
       "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/control-player",
+      "scenes": []
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/apply-movement-2d",
+      "scenes": []
     },
     {
       "name": "./systems/simulation/spin-spinner",
@@ -58,6 +66,10 @@
     },
     {
       "name": "./systems/simulation/move-to-spinner",
+      "scenes": "all"
+    },
+    {
+      "name": "splat-ecs/lib/systems/simulation/apply-acceleration",
       "scenes": "all"
     },
     {
