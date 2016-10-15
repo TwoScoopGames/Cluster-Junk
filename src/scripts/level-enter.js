@@ -27,19 +27,22 @@ function createSpinner(game, entity) {
   var size = game.entities.getComponent(entity, "size");
 
   var prefabs = spinnerPrefabsInRectangle(game, pos.x, pos.y, size.width, size.height);
-  console.log(prefabs);
 
   pos.x += Math.floor(size.width / 2);
   pos.y += Math.floor(size.height / 2);
 
-  var radius = Math.floor(Math.min(size.width, size.height) / 2);
-  var speed = game.entities.getComponent(entity, "speed");
   var spinnerConfig = game.entities.addComponent(entity, "spinner");
+
+  var radius = Math.floor(Math.min(size.width, size.height) / 2);
   spinnerConfig.radius = radius;
-  spinnerConfig.speed = speed;
+
+  var speed = game.entities.getComponent(entity, "speed");
+  if (speed) {
+    spinnerConfig.speed = speed;
+  }
+  game.entities.removeComponent(entity, "speed");
 
   game.entities.removeComponent(entity, "size");
-  game.entities.removeComponent(entity, "speed");
 
   var angleSlice = Math.PI * 2 / prefabs.length;
 
@@ -63,19 +66,15 @@ function spinnerPrefabsInRectangle(game, x, y, width, height) {
         pos.y <= y + height) {
 
       var prefab = game.entities.getComponent(prefabs[i], "prefab");
-      console.log(prefab);
       if (counts[prefab]) {
         counts[prefab]++;
       } else {
         counts[prefab] = 1;
       }
       game.entities.destroy(prefabs[i]);
-    } else {
-      console.log("skipped", pos.x, pos.y, x, y, x + width, y + height);
     }
   }
 
-  console.log(counts);
   var list = [];
   var keys = Object.keys(counts);
   var found = false;
