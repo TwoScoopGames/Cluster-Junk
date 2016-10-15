@@ -39,6 +39,6 @@
   },
   "dependencies": {
     "easing-js": "^1.0.1",
-    "splat-ecs": "^7.4.0"
+    "splat-ecs": "^7.4.1"
   }
 }
