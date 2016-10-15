@@ -22,22 +22,75 @@ module.exports = function(game) { // eslint-disable-line no-unused-vars
   });
 };
 
-function createSpinner(game, x, y, prefabs, count) {
-  var spinner = game.entities.create();
-  var pos = game.entities.addComponent(spinner, "position");
-  pos.x = x;
-  pos.y = y;
-  var spinnerConfig = game.entities.addComponent(spinner, "spinner");
-  spinnerConfig.radius = 100;
+function createSpinner(game, entity) {
+  var pos = game.entities.getComponent(entity, "position");
+  var size = game.entities.getComponent(entity, "size");
 
-  var angleSlice = Math.PI * 2 / count;
+  var prefabs = spinnerPrefabsInRectangle(game, pos.x, pos.y, size.width, size.height);
+  console.log(prefabs);
 
-  for (var i = 0; i < count; i++) {
+  pos.x += Math.floor(size.width / 2);
+  pos.y += Math.floor(size.height / 2);
+
+  var radius = Math.floor(Math.min(size.width, size.height) / 2);
+  var speed = game.entities.getComponent(entity, "speed");
+  var spinnerConfig = game.entities.addComponent(entity, "spinner");
+  spinnerConfig.radius = radius;
+  spinnerConfig.speed = speed;
+
+  game.entities.removeComponent(entity, "size");
+  game.entities.removeComponent(entity, "speed");
+
+  var angleSlice = Math.PI * 2 / prefabs.length;
+
+  for (var i = 0; i < prefabs.length; i++) {
     var trash = game.prefabs.instantiate(game.entities, prefabs[i % prefabs.length]);
     var move = game.entities.addComponent(trash, "moveToSpinner");
-    move.id = spinner;
+    move.id = entity;
     move.angle = i * angleSlice;
   }
+}
+
+function spinnerPrefabsInRectangle(game, x, y, width, height) {
+  var prefabs = game.entities.find("spinnerPrefab").slice(0);
+
+  var counts = {};
+  for (var i = 0; i < prefabs.length; i++) {
+    var pos = game.entities.getComponent(prefabs[i], "position");
+    if (pos.x >= x &&
+        pos.x <= x + width &&
+        pos.y >= y &&
+        pos.y <= y + height) {
+
+      var prefab = game.entities.getComponent(prefabs[i], "prefab");
+      console.log(prefab);
+      if (counts[prefab]) {
+        counts[prefab]++;
+      } else {
+        counts[prefab] = 1;
+      }
+      game.entities.destroy(prefabs[i]);
+    } else {
+      console.log("skipped", pos.x, pos.y, x, y, x + width, y + height);
+    }
+  }
+
+  console.log(counts);
+  var list = [];
+  var keys = Object.keys(counts);
+  var found = false;
+  do {
+    found = false;
+    for (i = 0; i < keys.length; i++) {
+      if (counts[keys[i]] > 0) {
+        list.push(keys[i]);
+        found = true;
+        counts[keys[i]]--;
+      }
+    }
+  } while (found);
+
+  return list;
 }
 
 function loadTilemap(game, map) {
@@ -50,11 +103,13 @@ function loadTilemap(game, map) {
     game.entities.destroy(spawn);
   }
 
-  var playerPos = game.entities.getComponent(player, "position");
-  createSpinner(game, playerPos.x, playerPos.y, ["soda-can", "isp-disc"], 10);
+  var spinners = game.entities.find("spinner");
+  for (var i = 0; i < spinners.length; i++) {
+    createSpinner(game, spinners[i]);
+  }
 
   var tiles = game.entities.find("tile").slice();
-  for (var i = 0; i < tiles.length; i++) {
+  for (i = 0; i < tiles.length; i++) {
     var tile = tiles[i];
 
     var prefab = game.entities.getComponent(tile, "prefab");

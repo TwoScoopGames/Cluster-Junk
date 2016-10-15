@@ -11,6 +11,5 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 
     position.x = spinnerPosition.x - (size.width / 2) + (spinnerConfig.radius * Math.cos(spinnerConfig.angle + moveToSpinner.angle));
     position.y = spinnerPosition.y - (size.height / 2) + (spinnerConfig.radius * Math.sin(spinnerConfig.angle + moveToSpinner.angle));
-    // console.log("move to", position.x, position.y);
   }, "move-to-spinner-search");
 };

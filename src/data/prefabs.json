@@ -659,8 +659,8 @@
       "sourceHeight": 0,
       "destinationX": 0,
       "destinationY": 0,
-      "destinationWidth": 57,
-      "destinationHeight": 54
+      "destinationWidth": 63,
+      "destinationHeight": 59
     },
     "type": "trash",
     "position": {
@@ -669,8 +669,8 @@
       "z": 9
     },
     "size": {
-      "width": 57,
-      "height": 54
+      "width": 63,
+      "height": 59
     },
     "friction": {
       "x": 0.97,
