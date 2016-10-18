@@ -14,7 +14,7 @@ module.exports = function(ecs, game) {
 
     game.context.fillStyle = "rgba(106, 189, 68, 0.55)";
     game.context.beginPath();
-    game.context.arc(game.inputs.mouse.x, game.inputs.mouse.y, 20, 0, Math.PI * 2);
+    game.context.arc(game.inputs.mouse.x, game.inputs.mouse.y, onScreenJoystick.radius / 5, 0, Math.PI * 2);
     game.context.fill();
   }, ["onScreenJoystick"]);
 };

@@ -19,13 +19,19 @@ module.exports = function(ecs, game) {
       if (onScreenJoystick.pressed) {
         var dx = mx - onScreenJoystick.centerX;
         var dy = my - onScreenJoystick.centerY;
-        var dist = Math.sqrt((dx * dx) + (dy + dy)) / onScreenJoystick.radius;
+        var dist = Math.sqrt((dx * dx) + (dy * dy));
         var angle = Math.atan2(dy, dx);
+        if (dist > onScreenJoystick.radius) {
+          var toMove = dist - onScreenJoystick.radius;
+          onScreenJoystick.centerX += toMove * Math.cos(angle);
+          onScreenJoystick.centerY += toMove * Math.sin(angle);
+          dist = onScreenJoystick.radius;
+        }
+        dist /= onScreenJoystick.radius;
         var x = dist * Math.cos(angle);
         var y = dist * Math.sin(angle);
-        // FIXME: move joystick if outside the radius
-        // console.log("setAxis(" + onScreenJoystick.xAxis + ", " + x + ")");
-        // console.log("setAxis(" + onScreenJoystick.yAxis + ", " + y + ")");
+        game.inputs.setAxis(onScreenJoystick.xAxis, entity, x);
+        game.inputs.setAxis(onScreenJoystick.yAxis, entity, y);
       } else {
         onScreenJoystick.pressed = true;
         onScreenJoystick.centerX = mx;
@@ -33,8 +39,8 @@ module.exports = function(ecs, game) {
       }
     } else {
       onScreenJoystick.pressed = false;
-      // console.log("setAxis(" + onScreenJoystick.xAxis + ", 0)");
-      // console.log("setAxis(" + onScreenJoystick.yAxis + ", 0)");
+      game.inputs.setAxis(onScreenJoystick.xAxis, entity, 0);
+      game.inputs.setAxis(onScreenJoystick.yAxis, entity, 0);
     }
   }, "on-screen-joystick");
 };

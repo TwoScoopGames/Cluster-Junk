@@ -58,11 +58,11 @@
     },
     {
       "name": "splat-ecs/lib/systems/simulation/control-player",
-      "scenes": []
+      "scenes": "all"
     },
     {
       "name": "splat-ecs/lib/systems/simulation/apply-movement-2d",
-      "scenes": []
+      "scenes": "all"
     },
     {
       "name": "./systems/simulation/spin-spinner",

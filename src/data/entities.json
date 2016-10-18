@@ -1037,6 +1037,7 @@
       },
       "matchCanvasSize": true,
       "onScreenJoystick": {
+        "radius": 50,
         "xAxis": "left stick x",
         "yAxis": "left stick y"
       }
