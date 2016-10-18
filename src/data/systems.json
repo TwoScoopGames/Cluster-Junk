@@ -29,6 +29,10 @@
       "scenes": "all"
     },
     {
+      "name": "./systems/simulation/on-screen-joystick",
+      "scenes": "all"
+    },
+    {
       "name": "./systems/simulation/on-button-pressed",
       "scenes": "all"
     },
@@ -237,6 +241,10 @@
       ]
     },
     {
+      "name": "./systems/renderer/on-screen-joystick",
+      "scenes": "all"
+    },
+    {
       "name": "./systems/renderer/rain",
       "scenes": [
         "intro"
@@ -252,7 +260,7 @@
     },
     {
       "name": "./systems/renderer/frame-rate-graph",
-      "scenes": []
+      "scenes": "all"
     },
     {
       "name": "splat-ecs/lib/systems/renderer/revert-shake",
