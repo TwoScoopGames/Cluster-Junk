@@ -90,7 +90,14 @@
     },
     {
       "name": "splat-ecs/lib/systems/simulation/box-group-collider",
-      "scenes": "all"
+      "scenes": [
+      ]
+    },
+    {
+      "name": "./systems/simulation/quadtree",
+      "scenes": [
+        "level"
+      ]
     },
     {
       "name": "./systems/simulation/handle-collisions",
@@ -234,7 +241,7 @@
     },
     {
       "name": "./systems/renderer/frame-rate-graph",
-      "scenes": []
+      "scenes": "all"
     },
     {
       "name": "splat-ecs/lib/systems/renderer/revert-shake",
