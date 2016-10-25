@@ -37,90 +37,6 @@
    }
   }
  ],
- "cup": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "cup.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 61,
-     "sourceHeight": 52
-    }
-   }
-  }
- ],
- "driftwood": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "driftwood.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 573,
-     "sourceHeight": 188
-    }
-   }
-  }
- ],
- "box2": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "box2.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 173,
-     "sourceHeight": 135
-    }
-   }
-  }
- ],
- "milk": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "milk.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 51,
-     "sourceHeight": 90
-    }
-   }
-  }
- ],
- "paper-wad": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "paper-wad.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 76,
-     "sourceHeight": 55
-    }
-   }
-  }
- ],
- "tire": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "tire.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 145,
-     "sourceHeight": 144
-    }
-   }
-  }
- ],
  "waves": [
   {
    "time": 100,
@@ -135,118 +51,6 @@
    }
   }
  ],
- "Fries": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "Fries.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 89,
-     "sourceHeight": 94
-    }
-   }
-  }
- ],
- "barrel": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "barrel.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 273,
-     "sourceHeight": 158
-    }
-   }
-  }
- ],
- "boot": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "boot.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 101,
-     "sourceHeight": 125
-    }
-   }
-  }
- ],
- "bottle": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "bottle.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 57,
-     "sourceHeight": 149
-    }
-   }
-  }
- ],
- "box3": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "box3.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 75,
-     "sourceHeight": 53
-    }
-   }
-  }
- ],
- "cheese": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "cheese.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 40,
-     "sourceHeight": 39
-    }
-   }
-  }
- ],
- "chickenLeg": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "chickenLeg.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 69,
-     "sourceHeight": 55
-    }
-   }
-  }
- ],
- "egg-carton": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "egg-carton.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 155,
-     "sourceHeight": 58
-    }
-   }
-  }
- ],
  "eyes": [
   {
    "time": 100,
@@ -257,76 +61,6 @@
      "sourceY": 0,
      "sourceWidth": 246,
      "sourceHeight": 88
-    }
-   }
-  }
- ],
- "fishbone": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "fishbone.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 100,
-     "sourceHeight": 52
-    }
-   }
-  }
- ],
- "fishingBoat": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "fishingBoat.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 1142,
-     "sourceHeight": 443
-    }
-   }
-  }
- ],
- "foam-plate": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "foam-plate.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 119,
-     "sourceHeight": 84
-    }
-   }
-  }
- ],
- "iceberg": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "iceberg.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 1353,
-     "sourceHeight": 751
-    }
-   }
-  }
- ],
- "paper-wad2": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "paper-wad2.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 93,
-     "sourceHeight": 78
     }
    }
   }
@@ -359,20 +93,6 @@
    }
   }
  ],
- "trashbag": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "trashbag.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 243,
-     "sourceHeight": 177
-    }
-   }
-  }
- ],
  "announcementBox": [
   {
    "time": 100,
@@ -387,62 +107,6 @@
    }
   }
  ],
- "birbArea": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "birbArea.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 318,
-     "sourceHeight": 344
-    }
-   }
-  }
- ],
- "buoy": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "buoy.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 300,
-     "sourceHeight": 326
-    }
-   }
-  }
- ],
- "hazardArea": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "hazardArea.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 86,
-     "sourceHeight": 220
-    }
-   }
-  }
- ],
- "orangeBuoy": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "orangeBuoy.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 134,
-     "sourceHeight": 165
-    }
-   }
-  }
- ],
  "radar": [
   {
    "time": 100,
@@ -453,20 +117,6 @@
      "sourceY": 0,
      "sourceWidth": 206,
      "sourceHeight": 206
-    }
-   }
-  }
- ],
- "seaweed": [
-  {
-   "time": 100,
-   "properties": {
-    "image": {
-     "name": "seaweed.png",
-     "sourceX": 0,
-     "sourceY": 0,
-     "sourceWidth": 145,
-     "sourceHeight": 267
     }
    }
   }

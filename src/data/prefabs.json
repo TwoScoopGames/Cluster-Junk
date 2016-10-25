@@ -1341,6 +1341,7 @@
   "box2": {
     "names": ["Vagabox tiny house", "Medium-sized box"],
     "image": {
+      "name": "box2.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1351,13 +1352,6 @@
       "destinationHeight": 135
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "box2"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1386,6 +1380,7 @@
       "Milk: the bourbon of the sea"
     ],
     "image": {
+      "name": "milk.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1396,13 +1391,6 @@
       "destinationHeight": 90
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "milk"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1437,6 +1425,7 @@
       "Plans for removing headphone jacks from phones"
     ],
     "image": {
+      "name": "paper-wad.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1447,13 +1436,6 @@
       "destinationHeight": 55
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "paper-wad"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1480,6 +1462,7 @@
   "tire": {
     "names": ["Tire - Do not burn"],
     "image": {
+      "name": "tire.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1490,13 +1473,6 @@
       "destinationHeight": 144
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "tire"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1524,6 +1500,7 @@
       "Caution: Do not step in contents"
     ],
     "image": {
+      "name": "barrel.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1534,13 +1511,6 @@
       "destinationHeight": 158
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "barrel"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1571,6 +1541,7 @@
       "You didn’t mean to eat all of those"
     ],
     "image": {
+      "name": "Fries.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1581,13 +1552,6 @@
       "destinationHeight": 94
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "Fries"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1617,6 +1581,7 @@
       "Steel-toe boot"
     ],
     "image": {
+      "name": "boot.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1627,13 +1592,6 @@
       "destinationHeight": 125
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "boot"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1662,6 +1620,7 @@
       "Over-priced artisanal water"
     ],
     "image": {
+      "name": "bottle.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1672,13 +1631,6 @@
       "destinationHeight": 149
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "bottle"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1707,6 +1659,7 @@
       "Cardboard box"
     ],
     "image": {
+      "name": "box3.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1717,13 +1670,6 @@
       "destinationHeight": 53
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "box3"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1753,6 +1699,7 @@
       "Trashed Wisconsin headwear"
     ],
     "image": {
+      "name": "cheese.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1763,13 +1710,6 @@
       "destinationHeight": 39
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "cheese"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1794,6 +1734,7 @@
   "chickenLeg": {
     "names": ["Piece of poultry", "Chicken of the sea"],
     "image": {
+      "name": "chickenLeg.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1804,13 +1745,6 @@
       "destinationHeight": 55
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "chickenLeg"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1835,6 +1769,7 @@
   "egg-carton": {
     "names": ["Baby chicken transporter"],
     "image": {
+      "name": "egg-carton.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1845,13 +1780,6 @@
       "destinationHeight": 58
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "egg-carton"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1878,6 +1806,7 @@
   "fishbone": {
     "names": ["Expired aquatic being"],
     "image": {
+      "name": "fishbone.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1888,13 +1817,6 @@
       "destinationHeight": 52
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "fishbone"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1919,6 +1841,7 @@
   "foam-plate": {
     "names": ["Totally wasteful food carrier"],
     "image": {
+      "name": "foam-plate.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1929,13 +1852,6 @@
       "destinationHeight": 84
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "foam-plate"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -1961,6 +1877,7 @@
   "paper-wad2": {
     "names": ["Trump ballots"],
     "image": {
+      "name": "paper-wad2.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -1971,13 +1888,6 @@
       "destinationHeight": 78
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "paper-wad2"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -2004,6 +1914,7 @@
   "trashbag": {
     "names": ["Hastily discarded bag"],
     "image": {
+      "name": "trashbag.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -2014,13 +1925,6 @@
       "destinationHeight": 177
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "trashbag"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -2047,6 +1951,7 @@
   "iceberg": {
     "names": ["OMG an iceberg!"],
     "image": {
+      "name": "iceberg.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -2057,13 +1962,6 @@
       "destinationHeight": 751
     },
     "type": "obstacle",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "iceberg"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -2084,6 +1982,7 @@
   "buoy": {
     "names": ["Swim at your own risk"],
     "image": {
+      "name": "buoy.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -2094,13 +1993,6 @@
       "destinationHeight": 326
     },
     "type": "obstacle",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "buoy"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -2127,6 +2019,7 @@
   "fishingBoat": {
     "names": ["SS Not-So-Swole fishing boat"],
     "image": {
+      "name": "fishingBoat.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -2137,13 +2030,6 @@
       "destinationHeight": 443
     },
     "type": "obstacle",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "fishingBoat"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -2175,6 +2061,7 @@
       "Birb for presdident"
     ],
     "image": {
+      "name": "birbArea.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -2185,13 +2072,6 @@
       "destinationHeight": 344
     },
     "type": "obstacle",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "birbArea"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -2217,6 +2097,7 @@
   "hazardArea": {
     "names": ["Posted hazard area"],
     "image": {
+      "name": "hazardArea.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -2227,13 +2108,6 @@
       "destinationHeight": 220
     },
     "type": "obstacle",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "hazardArea"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -2270,6 +2144,7 @@
       "Seriously, stop trying to go through here"
     ],
     "image": {
+      "name": "orangeBuoy.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -2280,13 +2155,6 @@
       "destinationHeight": 165
     },
     "type": "obstacle",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "orangeBuoy"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -2313,6 +2181,7 @@
   "seaweed": {
     "names": ["No ships allowed!"],
     "image": {
+      "name": "seaweed.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -2323,13 +2192,6 @@
       "destinationHeight": 267
     },
     "type": "obstacle",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "seaweed"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -2354,6 +2216,7 @@
   "driftwood": {
     "names": ["You didn’t get away this time"],
     "image": {
+      "name": "driftwood.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -2364,13 +2227,6 @@
       "destinationHeight": 188
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "driftwood"
-    },
     "position": {
       "x": 0,
       "y": 0,
@@ -2397,6 +2253,7 @@
   "cup": {
     "names": ["Crushed red partycups"],
     "image": {
+      "name": "cup.png",
       "sourceX": 0,
       "sourceY": 0,
       "sourceWidth": 0,
@@ -2407,13 +2264,6 @@
       "destinationHeight": 52
     },
     "type": "trash",
-    "animation": {
-      "time": 0,
-      "frame": 0,
-      "loop": true,
-      "speed": 1,
-      "name": "cup"
-    },
     "position": {
       "x": 0,
       "y": 0
