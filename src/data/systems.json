@@ -219,6 +219,12 @@
       ]
     },
     {
+      "name": "./systems/renderer/show-results",
+      "scenes": [
+        "level"
+      ]
+    },
+    {
       "name": "./systems/renderer/rain",
       "scenes": [
         "intro"

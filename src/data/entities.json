@@ -983,6 +983,12 @@
           "max": 2000,
           "script": "./scripts/end-of-game-timer"
         },
+        "continuePastResultsTimer": {
+          "running": false,
+          "time": 0,
+          "max": 1000,
+          "script": "./scripts/continue-past-results-timer"
+        },
         "combo": {
           "running": false,
           "time": 0,
