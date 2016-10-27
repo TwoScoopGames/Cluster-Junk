@@ -335,12 +335,6 @@
           "time": 0,
           "max": 1000,
           "script": "./scripts/spawn-controls"
-        },
-        "spawn-controller": {
-          "running": true,
-          "time": 0,
-          "max": 1200,
-          "script": "./scripts/spawn-controller"
         }
       }
     },
