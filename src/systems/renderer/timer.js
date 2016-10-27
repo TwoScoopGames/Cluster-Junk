@@ -10,7 +10,7 @@ function drawTimeNotice(text, canvas, context, cameraHeight) {
   context.font = fontSize + "px blanch";
   var w = context.measureText(text).width;
   var x = (canvas.width / 2) - (w / 2) | 0;
-  var y = (canvas.height / 2) - (fontSize / 2 * canvas.height / cameraHeight) | 0;
+  var y = (canvas.height / 2) - (fontSize / 2/* * canvas.height / cameraHeight*/) | 0;
   context.strokeText(text, x, y);
   context.fillText(text, x, y);
 }

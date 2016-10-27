@@ -88,23 +88,23 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var drawY = canvas.height * 0.2 | 0;
 
     drawText(level.message, 100, drawY, 10, canvas, context);
-    drawY += 100 * canvas.height / cameraHeight;
+    drawY += 100 /* * canvas.height / cameraHeight*/;
 
     drawText(statusMessage, 70, drawY, 7, canvas, context);
-    drawY += 70 * canvas.height / cameraHeight;
+    drawY += 70 /* * canvas.height / cameraHeight*/;
 
     if (successTimeMessage) {
       drawText(successTimeMessage, 70, drawY, 7, canvas, context);
-      drawY += 70 * canvas.height / cameraHeight;
+      drawY += 70 /* * canvas.height / cameraHeight*/;
     }
 
-    drawY += 20 * canvas.height / cameraHeight;
+    drawY += 20 /* * canvas.height / cameraHeight*/;
 
     drawText("Best Times", 60, drawY, 6, canvas, context);
-    drawY += 60 * canvas.height / cameraHeight;
+    drawY += 60 /* * canvas.height / cameraHeight*/;
     for (var i = 0; renderedBestTimes && i < renderedBestTimes.length; i++) {
       drawText(renderedBestTimes[i], 50, drawY, 5, canvas, context);
-      drawY += 50 * canvas.height / cameraHeight;
+      drawY += 50 /* * canvas.height / cameraHeight*/;
     }
   }
 
