@@ -2,7 +2,7 @@
 
 var saveData = require("splat-ecs/lib/save-data");
 
-function registerNewTime(time, level, callback) {
+function registerNewTime(time, level) {
   var when = new Date().toISOString();
   var storageKey = "scores-" + level;
   saveData.get(storageKey, function computeNewBestTimes(err, data) {
@@ -26,7 +26,6 @@ function registerNewTime(time, level, callback) {
       if (err) {
         console.error(err);
       }
-      callback(newBestTimes);
     });
   });
 }
@@ -38,9 +37,8 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
       game.sounds.play("trash-island-success.mp3");
 
       var time = game.entities.getComponent(entity, "timers").goalTimer.time;
-      registerNewTime(time, game.arguments.level || 0, function(bestTimes) {
-        game.entities.setComponent(entity, "bestTimes", bestTimes); // string
-      });
+      registerNewTime(time, game.arguments.level || 0);
+      game.entities.setComponent(entity, "successTime", time);
     }
   }, "player");
 };

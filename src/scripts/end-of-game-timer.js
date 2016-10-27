@@ -8,7 +8,7 @@ module.exports = function(entity, data) { // eslint-disable-line no-unused-vars
   } else {
     data.sounds.play("trash-island-failure.mp3");
   }
-  data.entities.setComponent(entity, "hasResults", true);
+  data.entities.setComponent(entity, "showResults", true);
   data.entities.getComponent(entity, "timers").continuePastResultsTimer.running = true;
   // add on screen time's up message with failure/victory
 };
