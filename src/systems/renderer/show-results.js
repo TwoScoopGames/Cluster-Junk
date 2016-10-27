@@ -5,6 +5,11 @@ var levels = require("../../data/levels.json");
 
 var dateFormatCache = {};
 
+var blinkPlayerTime = false;
+setInterval(function togglePlayerTimeBlink(){
+  blinkPlayerTime = !blinkPlayerTime;
+}, 500);
+
 function drawText(text, fontSize, y, lineWidth, canvas, context) {
   context.fillStyle = "#3e311a";
   context.strokeStyle = "#ffffff";
@@ -85,25 +90,37 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var camera = game.entities.find("camera")[0];
     var cameraHeight = game.entities.getComponent(camera, "size").height;
 
-    var drawY = canvas.height * 0.2 | 0;
+    var drawY = 200;
 
     drawText(level.message, 100, drawY, 10, canvas, context);
     drawY += 100 /* * canvas.height / cameraHeight*/;
 
-    drawText(statusMessage, 70, drawY, 7, canvas, context);
-    drawY += 70 /* * canvas.height / cameraHeight*/;
+    drawText(statusMessage, 60, drawY, 6, canvas, context);
+    drawY += 60 /* * canvas.height / cameraHeight*/;
 
     if (successTimeMessage) {
-      drawText(successTimeMessage, 70, drawY, 7, canvas, context);
-      drawY += 70 /* * canvas.height / cameraHeight*/;
+      drawText(successTimeMessage, 60, drawY, 6, canvas, context);
+      drawY += 60 /* * canvas.height / cameraHeight*/;
     }
 
-    drawY += 20 /* * canvas.height / cameraHeight*/;
+    drawY += 15 /* * canvas.height / cameraHeight*/;
 
     drawText("Best Times", 60, drawY, 6, canvas, context);
     drawY += 60 /* * canvas.height / cameraHeight*/;
-    for (var i = 0; renderedBestTimes && i < renderedBestTimes.length; i++) {
-      drawText(renderedBestTimes[i], 50, drawY, 5, canvas, context);
+
+    var playerTimeFound = false;
+    for (var i = 0; renderedBestTimes && drawY <= canvas.height && i < renderedBestTimes.length; i++) {
+      var record = renderedBestTimes[i];
+      if (
+        successTime &&
+        blinkPlayerTime &&
+        !playerTimeFound &&
+        record.indexOf((successTime / 1000).toFixed(1)) === 0
+      ) {
+        playerTimeFound = true;
+      } else {
+        drawText(renderedBestTimes[i], 50, drawY, 5, canvas, context);
+      }
       drawY += 50 /* * canvas.height / cameraHeight*/;
     }
   }
