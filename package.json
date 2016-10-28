@@ -40,6 +40,6 @@
   "dependencies": {
     "easing-js": "^1.0.1",
     "moment": "^2.15.2",
-    "splat-ecs": "^7.4.1"
+    "splat-ecs": "^7.5.0"
   }
 }
