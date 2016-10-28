@@ -24,12 +24,8 @@ function tween(start, end, pct) {
   return start + (diff * pct);
 }
 
-//This is hand-tweaked for the playstation 2 controller
 function stickDeadZone(game, axis) {
-  if (axis === "right-stick-x") {
-    return game.inputs.axis(axis) < 0.1 && game.inputs.axis(axis) > -0.1;
-  }
-  return game.inputs.axis(axis) < 0.6 && game.inputs.axis(axis) > 0.4;
+  return game.inputs.axis(axis) < 0.3 && game.inputs.axis(axis) > -0.3;
 }
 
 var lidFrames = [2, 1, 0, 1, 2, 1];
@@ -80,7 +76,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
           usingRightStick = true;
         }
         if (!stickDeadZone(game, "right-stick-y")) {
-          var yAxis = game.inputs.axis("right-stick-y") - 0.5;
+          var yAxis = game.inputs.axis("right-stick-y");
           py += yAxis * 25;
           usingRightStick = true;
         }

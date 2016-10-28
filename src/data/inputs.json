@@ -4,16 +4,12 @@
       {
         "device": "gamepad",
         "axis": "right stick x"
-      },
-      {
-        "device": "gamepad",
-        "axis": "right trigger"
       }
     ],
     "right-stick-y": [
       {
         "device": "gamepad",
-        "axis": "left trigger"
+        "axis": "right stick y"
       }
     ]
   },
