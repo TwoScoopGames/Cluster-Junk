@@ -1,3 +1,5 @@
+"use strict";
+
 var saveData = require("splat-ecs/lib/save-data");
 var moment = require("moment");
 
@@ -53,7 +55,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
         var record = bestTimes[i];
         renderedBestTimes[i] = (
           (record.time / 1000).toFixed(1) + "s" +
-          "     " +
+          "    " +
           isoStringToFormatted(record.when) +
           "\n"
         );
@@ -83,45 +85,45 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
     var statusMessage = playerRadius >= goalRadius ? "You're really big!" : "Not this time...";
     statusMessage += " (" + Math.floor(playerRadius) + "m)";
     var successTime = game.entities.getComponent(entity, "successTime");
-    var successTimeMessage = successTime && "Goal reached at " + (successTime / 1000).toFixed(1) + "s";
+    var successTimeMessage = typeof successTime === 'number' && "Goal reached in " + (successTime / 1000).toFixed(1) + "s";
 
     var canvas = game.canvas;
     var context = game.context;
     var camera = game.entities.find("camera")[0];
     var cameraHeight = game.entities.getComponent(camera, "size").height;
 
-    var drawY = 200;
+    var drawY = 150;
 
-    drawText(level.message, 100, drawY, 10, canvas, context);
-    drawY += 100 /* * canvas.height / cameraHeight*/;
+    drawText(level.message, 70, drawY, 10, canvas, context);
+    drawY += 55 /* * canvas.height / cameraHeight*/;
 
-    drawText(statusMessage, 60, drawY, 6, canvas, context);
-    drawY += 60 /* * canvas.height / cameraHeight*/;
+    drawText(statusMessage, 50, drawY, 6, canvas, context);
+    drawY += 40 /* * canvas.height / cameraHeight*/;
 
     if (successTimeMessage) {
-      drawText(successTimeMessage, 60, drawY, 6, canvas, context);
-      drawY += 60 /* * canvas.height / cameraHeight*/;
+      drawText(successTimeMessage, 50, drawY, 6, canvas, context);
+      drawY += 40 /* * canvas.height / cameraHeight*/;
     }
 
-    drawY += 15 /* * canvas.height / cameraHeight*/;
+    drawY += 10 /* * canvas.height / cameraHeight*/;
 
-    drawText("Best Times", 60, drawY, 6, canvas, context);
-    drawY += 60 /* * canvas.height / cameraHeight*/;
+    drawText("Best Times", 45, drawY, 6, canvas, context);
+    drawY += 45 /* * canvas.height / cameraHeight*/;
 
     var playerTimeFound = false;
     for (var i = 0; renderedBestTimes && drawY <= canvas.height && i < renderedBestTimes.length; i++) {
       var record = renderedBestTimes[i];
       if (
-        successTime &&
         blinkPlayerTime &&
         !playerTimeFound &&
+        typeof successTime === "number" &&
         record.indexOf((successTime / 1000).toFixed(1)) === 0
       ) {
         playerTimeFound = true;
       } else {
-        drawText(renderedBestTimes[i], 50, drawY, 5, canvas, context);
+        drawText(i + 1 + ".   " + renderedBestTimes[i], 38, drawY, 5, canvas, context);
       }
-      drawY += 50 /* * canvas.height / cameraHeight*/;
+      drawY += 34 /* * canvas.height / cameraHeight*/;
     }
   }
 
