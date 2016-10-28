@@ -36,7 +36,7 @@ module.exports = {
   },
   module: {
     preLoaders: [
-      { test: /\.(js|json)$/, exclude: /node_modules/, loader: "eslint-loader" },
+      // { test: /\.(js|json)$/, exclude: /node_modules/, loader: "eslint-loader" },
       {
         test: soundRegExp,
         loader: "file?hash=sha512&digest=hex&name=[path][name].[ext]&context=src"
