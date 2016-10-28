@@ -89,7 +89,7 @@
       ]
     },
     {
-      "name": "splat-ecs/lib/systems/simulation/box-group-collider",
+      "name": "./systems/simulation/box-group-collider",
       "scenes": "all"
     },
     {
