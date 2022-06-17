@@ -68,7 +68,7 @@ module.exports = function(ecs, game) { // eslint-disable-line no-unused-vars
 
     // console.log(game.inputs.axis("right-stick-x"), game.inputs.axis("right-stick-y"));
     var usingRightStick = false;
-    if (game.inputs.gamepad.gamepads.length > 0) {
+    if (game.inputs.gamepads.length > 0) {
       if (!stickDeadZone(game, "right-stick-x") || !stickDeadZone(game, "right-stick-y")) {
         if (!stickDeadZone(game, "right-stick-x")) {
           var xAxis = game.inputs.axis("right-stick-x");
